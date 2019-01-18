@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on The DIY Blogger</title>
+    <link>https://www.thediyblogger.com/categories/</link>
+    <description>Recent content in Categories on The DIY Blogger</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://www.thediyblogger.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web Development</title>
+      <link>https://www.thediyblogger.com/categories/web-development/</link>
+      <pubDate>Tue, 01 Mar 2016 13:22:41 -0500</pubDate>
+      
+      <guid>https://www.thediyblogger.com/categories/web-development/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
