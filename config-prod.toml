@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "The DIY Blogger"
 theme = "massively"
 disqusShortname = "thediyblogger"
-# googleAnalytics = "UA-73309318-2"
+googleAnalytics = "UA-132745738-1"
 
 # set below parameter to define a favicon
 [params]
