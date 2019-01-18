@@ -1,7 +1,7 @@
 ---
 title: "Why great Web Design is more than just pretty pictures"
-description: 'At DrawBuildPlay, our mission is to build great web experiences through beautiful design.
-We believe great web experiences are achieved only by producing beautiful web design.'
+description: 'Our mission is to help our readers build great web experiences through beautiful design.
+We believe these great web experiences are achieved only by producing beautiful web design.'
 image: 'images/webdesign.png'
 images: ['images/webdesign.png']
 date: 2016-02-24T13:51:42-05:00

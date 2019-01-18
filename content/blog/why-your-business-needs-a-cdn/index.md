@@ -50,5 +50,5 @@ A CDN will generally absorb a lot of this traffic, thus allowing you to serve mo
 WHICH CDN PROVIDER SHOULD YOU USE?
 ----------------------------------
 
-There are many CDN providers out there such as Akamai, Amazon CloudFront, Verizon Edgecast, Fastly, MaxCDN, and the list can go on.
+There are many CDN providers out there such as Akamai, Amazon CloudFront, CloudFlare, Verizon Edgecast, Fastly, MaxCDN, and the list can go on.  We are fans of CloudFlare if you are starting out due to their free plans and free SSL certificate options.
 

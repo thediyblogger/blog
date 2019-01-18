@@ -12,7 +12,7 @@ resources:
   src: 'images/links.png'
 ---
 
-_By this time, you should have already optimized your website with the Basic SEO techniques I outlined in my previous post._
+_By this time, you should have already optimized your website with the [Basic SEO techniques]({{<ref "introduction-to-seo">}}) I outlined in my previous post._
 
 Never fear.  There are a few things we can do to get started.  But before we do, here is a term we will refer to a lot.  "Link Juice".  Link juice is the amount of "juice" that one page can send to another.  
 
@@ -69,4 +69,5 @@ BE IN THE NEWS
 --------------
 
 Okay, calm down.  Lets make our own news, and not do anything we would be embarrassed if our mom's found out.  But if you do something newsworthy, then tell the press.  They will publish the press release, and usually have a link back to your website.
-Source: https://moz.com/beginners-guide-to-seo/growing-popularit
+
+Source: https://moz.com/beginners-guide-to-seo/growing-popularity
