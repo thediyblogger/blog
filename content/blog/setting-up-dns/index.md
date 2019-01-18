@@ -1,8 +1,8 @@
 ---
 title: "Setting up DNS"
 description: 'You just created a beautiful website.  Great!  Now you need customers to be able to get to it.  This is where the Domain Name Server (DNS) comes in.'
-date: 2018-12-09T13:22:41-05:00
-categories: [web development]
+date: 2019-01-02
+categories: [blogging]
 aliases: ["blog/2016/2/9/setting-up-dns","blog/2016/02/09/setting-up-dns"]
 images:
 - 'images/dns.png'

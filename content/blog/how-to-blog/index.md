@@ -7,8 +7,8 @@ A month later, you learn that your website traffic has not increased all that mu
 Your rank in google is pretty much stationary.  
 
 Customers that make it to your site say how great it is.  You now have a web presence, and the customers who already know about you are finding you.  But you want more.  You want to grow faster.  You want to get new customers. Well, lets start with blogging.'
-date: 2019-01-01T13:22:41-05:00
-categories: [web development]
+date: 2019-01-08
+categories: [blogging]
 aliases: ["blog/2016/3/1/blogging-about-your-business","blog/2016/03/01/how-to-blog"]
 images:
 - 'images/blogging.png'

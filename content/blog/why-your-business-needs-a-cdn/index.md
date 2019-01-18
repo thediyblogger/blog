@@ -1,10 +1,10 @@
 ---
 title: "Why your business needs a CDN"
 description: 'A CDN (Content Delivery Network) is a network of servers around the world that work together to provide a faster web experience for your users.'
-date: 2018-12-22T13:22:41-05:00
+date: 2019-01-04
 image: 'images/cdn.png'
 images: ['images/cdn.png']
-categories: [web development]
+categories: [blogging]
 aliases: ["blog/2016/2/22/why-your-business-needs-a-cdn", "blog/2016/02/22/why-your-business-needs-a-cdn"]
 images:
 - 'images/cdn.png'

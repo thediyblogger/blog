@@ -1,8 +1,8 @@
 ---
 title: "Introduction to SSL"
 description: 'The infamous question.  What is SSL?  Or, more importantly, why should I care about it?'
-date: 2018-12-16T13:38:48-05:00
-categories: [web development]
+date: 2019-01-03
+categories: [blogging]
 aliases: ["blog/2016/2/16/introduction-to-ssl","blog/2016/02/16/introduction-to-ssl"]
 
 images:

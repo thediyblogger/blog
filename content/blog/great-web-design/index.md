@@ -4,8 +4,8 @@ description: 'Our mission is to help our readers build great web experiences thr
 We believe these great web experiences are achieved only by producing beautiful web design.'
 image: 'images/webdesign.png'
 images: ['images/webdesign.png']
-date: 2018-12-24T13:51:42-05:00
-categories: [web development]
+date: 2019-01-05
+categories: [blogging]
 aliases: ["blog/2016/2/24/why-great-web-design-is-more-than-just-pretty-pictures","blog/2016/02/24/why-great-web-design-is-more-than-just-pretty-pictures"]
 images:
 - 'images/webdesign.png'
