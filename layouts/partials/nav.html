@@ -1,0 +1,63 @@
+<!-- Nav -->
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{- $categoryListPage := print (index (split .URL "/") 2) -}}
+{{- $category :=   .Params.categories -}}
+            
+<nav id="nav">
+    <ul class="links">
+        <li class="{{if eq .URL "/"}}active{{end}}">
+            <a href='{{ "/" | relLangURL }}'>{{ .Site.Title }}</a>
+        </li>
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+            {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+                <li class="{{if or (eq ($categoryListPage) ($name)) (in $category $name)}}active{{end}}">
+                    <a title="{{$name}}" href="{{ .Permalink }}">{{ $name }}</a>
+                </li>
+            {{ end }}
+        {{ end }}
+
+        {{ with $data.contactinfo }}
+        <li><a href='{{ "#about" | relLangURL }}'>{{ i18n "NAV_CONTACT" . }}</a></li>
+        {{ end }}
+        {{ if .IsTranslated }}
+        {{ range .AllTranslations }}
+        <li {{if eq ($.Site.Language) (.Language)}}class="active"{{end}}><a href='{{ .Permalink }}'>{{ .Language.LanguageName }}</a></li>
+        {{ end }}
+        {{ end }}
+    </ul>
+
+    {{ with $data.social }}
+    <ul class="icons">
+        {{ with .twitter }}
+        <li><a href="{{ . }}" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+        {{ end }}
+        {{ with .facebook }}
+        <li><a href="{{ . }}" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+        {{ end }}
+        {{ with .instagram }}
+        <li><a href="{{ . }}" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+        {{ end }}
+        {{ with .linkedin }}
+        <li><a href="{{ . }}" class="icon fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+        {{ end }}
+        {{ with .github }}
+        <li><a href="{{ . }}" class="icon fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+        {{ end }}
+        {{ with .youtube }}
+        <li><a href="{{ . }}" class="icon fa-youtube" target="_blank"><span class="label">Youtube</span></a></li>
+        {{ end }}
+        {{ with .googleplus }}
+        <li><a href="{{ . }}" class="icon fa-google-plus" target="_blank"><span class="label">Google Plus</span></a></li>
+        {{ end }}
+        {{ with .lastfm }}
+        <li><a href="{{ . }}" class="icon fa-lastfm" target="_blank"><span class="label">Last.fm</span></a></li>
+        {{ end }}
+        {{ with .flickr }}
+        <li><a href="{{ . }}" class="icon fa-flickr" target="_blank"><span class="label">Flickr</span></a></li>
+        {{ end }}
+        {{ with .pinterest }}
+        <li><a href="{{ . }}" class="icon fa-pinterest" target="_blank"><span class="label">Pinterest</span></a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</nav>

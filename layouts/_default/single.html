@@ -1,0 +1,48 @@
+{{ partial "htmlhead" . }}
+	<body lang='{{ .Site.Language.Lang | default "en-us" }}' class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+                {{ partial "header" . }}
+                {{ partial "nav" . }}
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+                        <section class="post">
+                            <header class="major">
+                                <h1>{{ .Title }}</h1>
+                                <p>{{ .Description }}</p>
+                            </header>
+                            {{ $cover := .Resources.GetMatch "*"}}
+                            {{ with $cover }}
+                            {{ $scaled := .Fill "1200x760" }}
+                            <div class="image main"><img src="{{ $scaled.Permalink }}" alt="{{ .Name }}"></div>
+                            {{ end }}
+
+                            {{ .Content }}
+
+                            {{ partial "postcustom" . }}
+                            
+                            {{ if not .Date.IsZero }}
+                            <h6><span class="date">Last Updated: {{ .Date.Format "January 2, 2006" }}</span></h6>
+                            {{ end }}
+
+                            {{ if not (eq .Params.disableComments true) }}
+                            {{ template "_internal/disqus.html" . }}
+                            {{ end }}
+                        </section>
+                    
+
+					</div>
+
+                    {{ partial "footer/index" . }}
+                    {{ partial "copyright" . }}
+
+            </div>
+            {{ template "_internal/google_analytics.html" . }}
+            {{ partial "scripts/index" . }}
+	</body>
+</html>

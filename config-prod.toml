@@ -1,0 +1,34 @@
+baseURL = "https://www.thediyblogger.com/"
+languageCode = "en-us"
+title = "The DIY Blogger"
+theme = "massively"
+disqusShortname = "thediyblogger"
+# googleAnalytics = "UA-73309318-2"
+
+# set below parameter to define a favicon
+[params]
+    favicon = "/favicon.png"
+    author = "Amit Gandhi"
+  site_description = "Your guide to building blog traffic from scratch"
+  description = "Your guide to building blog traffic from scratch"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+
+# Below parameters can be set to override default post settings
+[params.posts]
+     foldername = "blog"
+     pagesize = "10"
+     featuredpost = "false"
+
+[permalinks]
+  blog = "/blog/:title/"
+
+[taxonomies]
+  category = "categories"
+
+[languages]
+[languages.en]
+  languageName = "English"
+
