@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.thediyblogger.com/blog/how-to-blog/</loc>
+    <lastmod>2016-03-01T13:22:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.thediyblogger.com/blog/how-to-build-links-to-your-website/</loc>
+    <lastmod>2016-02-26T15:02:28-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.thediyblogger.com/blog/why-great-web-design-is-more-than-just-pretty-pictures/</loc>
+    <lastmod>2016-02-24T13:51:42-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.thediyblogger.com/blog/why-your-business-needs-a-cdn/</loc>
+    <lastmod>2016-02-22T13:22:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.thediyblogger.com/blog/introduction-to-ssl/</loc>
+    <lastmod>2016-02-16T13:38:48-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.thediyblogger.com/blog/setting-up-dns/</loc>
+    <lastmod>2016-02-09T13:22:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.thediyblogger.com/blog/introduction-to-seo/</loc>
+    <lastmod>2016-02-08T13:22:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.thediyblogger.com/blog/</loc>
+    <lastmod>2016-03-01T13:22:41-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.thediyblogger.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.thediyblogger.com/</loc>
+    <lastmod>2016-03-01T13:22:41-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.thediyblogger.com/categories/web-development/</loc>
+    <lastmod>2016-03-01T13:22:41-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
