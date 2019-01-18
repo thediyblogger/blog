@@ -1,7 +1,3 @@
 [submodule "themes/massively"]
 	path = themes/massively
 	url = https://github.com/curttimson/hugo-theme-massively.git
-[submodule "public"]
-	path = public
-	url = git@github.com:thediyblogger/thediyblogger.github.io.git
-	branch = master
