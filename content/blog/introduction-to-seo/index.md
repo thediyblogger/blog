@@ -1,5 +1,5 @@
 ---
-title: "Introduction to SEO and SEM"
+title: "Introduction to SEO and SEM for Beginners"
 description: 'Search Engine Optimization (SEO) is the art form of optimizing your website for targeted keywords so that you rank as high as possible on search engines such as Google. Search Engine Marketing (SEM) is the art of marketing your page through paid ads or social awareness.  Learn the basics of SEO/SEM to get started driving traffic to your website.'
 image: 'images/seo.png'
 images: ['images/seo.png']
