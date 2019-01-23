@@ -4,6 +4,7 @@ description: 'Link building is one of the hardest things to do when it comes to 
 date: 2019-01-06
 categories: [blogging, seo/sem]
 aliases: ["blog/2016/2/26/how-to-build-links-to-your-website","blog/2016/02/26/how-to-build-links-to-your-website"]
+pinnableImage: 'images/pinterest.png'
 images:
 - 'images/links.png'
 
@@ -55,13 +56,13 @@ The next step in finding where to add links to your website is see what your com
 BE SOCIAL
 ---------
 
-With the uptick in conversations moving from websites to instead happening on Social Media sites such as Facebook and Twitter, Search Engines are now using these as signals in your page rank.  Be sure to engage your community on your Facebook and Twitter pages.  If there is a lot of discussion about a post you just made, chances are that page will start to rank higher.  Your domain will also start to earn more trust (since lots of people are talking about it).
+With the uptick in conversations moving from websites to instead happening on Social Media sites such as Facebook and Twitter, Search Engines are now using these as signals in your page rank.  Be sure to engage your community on your Facebook and Twitter pages.  If there is a lot of discussion about a post you just made, chances are that page will start to rank higher.  Your domain will also start to earn more trust (since lots of people are talking about it). Also, dont underestimate the power of Pinterest.  Pin your pages to pinterest and to group boards to spread the word.  Every time someone pins your post, its another link generated back to your website.
 
-Get your customers to link to you and talk about you (hopefully in a positive manner).  If their sites is popular, you stand to benefit from it.
+Get your customers to link to you and talk about you (hopefully in a positive manner).  If their site is popular, you stand to benefit from it.
 
 Blog frequently, and make it interesting that others will want to share it and chat about it.  Blogs will generate fresh material on a consistent basis if you keep doing it.  It's also valuable to your customers and a way to give back to the community by sharing your knowledge.  Who knows, maybe one of your readers will one day become a customer.
 
-Get on the forums, and help others out.  Your goodwill can only help you.  Who knows, that person you helped out might just lead to a new customer.
+Get on the forums (such as Reddit), and help others out.  Your goodwill can only help you.  Who knows, that person you helped out might just lead to a new customer.
 
  
 

@@ -2,7 +2,7 @@
 {{ $title := .Title }}
 {{ $url := printf "%s" .URL | absLangURL }}
 {{ $body := print .Title " - " .Params.description }}
-{{ $pinImage := .Params.pinableImage}}
+{{ $pinImage := .Params.pinnableImage}}
 {{ $cover := print .Permalink $pinImage }}
 
 {{ with $data.social }}
