@@ -5,6 +5,7 @@ image: 'images/seo.png'
 images: ['images/seo.png']
 date: 2019-01-07
 categories: [blogging, seo/sem]
+pinableImage: 'images/seosem.png'
 aliases: ["blog/2016/2/8/introduction-to-seo","blog/2016/02/08/introduction-to-seo"]
 images:
 - 'images/seo.png'
