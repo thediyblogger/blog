@@ -1,19 +1,18 @@
 +++
+aliases = ["blog/2016/2/26/how-to-build-links-to-your-website", "blog/2016/02/26/how-to-build-links-to-your-website"]
 categories = ["blogging", "seo/sem"]
 date = "2019-01-06"
 description = "Link building is one of the hardest things to do when it comes to Search Engine Optimization (SEO)."
 title = "How to Build Links to Your Website"
-aliases = ["blog/2016/2/26/how-to-build-links-to-your-website","blog/2016/02/26/how-to-build-links-to-your-website"]
 [images]
 is_pin_friendly = false
 name = "How to Build Links to Your Website"
-src = '/uploads/links.png'
+src = "/uploads/links.png"
+
 +++
+_By this time, you should have already optimized your website with the_ [_Basic SEO Techniques_](/blog/introduction-to-seo-and-sem-for-beginners "Basic SEO Techniques") _I outlined in my previous post._
 
-
-_By this time, you should have already optimized your website with the [Basic SEO techniques]({{<ref "introduction-to-seo">}}) I outlined in my previous post._
-
-Never fear.  There are a few things we can do to get started.  But before we do, here is a term we will refer to a lot.  "Link Juice".  Link juice is the amount of "juice" that one page can send to another.  
+Never fear.  There are a few things we can do to get started.  But before we do, here is a term we will refer to a lot.  "Link Juice".  Link juice is the amount of "juice" that one page can send to another.
 
 **Global Popularity**
 
@@ -29,10 +28,7 @@ Alternatively, if a website which doesn't have a high (or decent) page rank link
 
 Okay, so how do we build these links in an ethical (white-hat) manner?
 
- 
-
-GET LISTED.
------------
+## GET LISTED.
 
 Get your website added to high ranking directories.  It's not worth going overboard here and listing in every directory you find, as there are a lot of spammy ones and Google doesn't care about them much anymore.  But, by listing your business and website in a few high ranking directories and social media sites, you can get some free link juice.
 
@@ -42,17 +38,12 @@ Here are some basic directories to get started:
 * www.yelp.com
 * www.facebook.com
 * www.twitter.com
- 
 
-LOOK AT YOUR COMPETITORS
-------------------------
+## LOOK AT YOUR COMPETITORS
 
 The next step in finding where to add links to your website is see what your competitors are doing.  There are some useful tools such as the moztool which allows you to check backlinks (sites that are linking to you).  This will be a good indicator to target where and how you could be spending your time getting your links added to other relevant websites.
 
- 
-
-BE SOCIAL
----------
+## BE SOCIAL
 
 With the uptick in conversations moving from websites to instead happening on Social Media sites such as Facebook and Twitter, Search Engines are now using these as signals in your page rank.  Be sure to engage your community on your Facebook and Twitter pages.  If there is a lot of discussion about a post you just made, chances are that page will start to rank higher.  Your domain will also start to earn more trust (since lots of people are talking about it). Also, dont underestimate the power of Pinterest.  Pin your pages to pinterest and to group boards to spread the word.  Every time someone pins your post, its another link generated back to your website.
 
@@ -62,10 +53,7 @@ Blog frequently, and make it interesting that others will want to share it and c
 
 Get on the forums (such as Reddit), and help others out.  Your goodwill can only help you.  Who knows, that person you helped out might just lead to a new customer.
 
- 
-
-BE IN THE NEWS
---------------
+## BE IN THE NEWS
 
 Okay, calm down.  Lets make our own news, and not do anything we would be embarrassed if our mom's found out.  But if you do something newsworthy, then tell the press.  They will publish the press release, and usually have a link back to your website.
 
