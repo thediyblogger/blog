@@ -1,0 +1,521 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<!DOCTYPE HTML>
+<!--
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang='{{ .Site.Language.Lang | default "en-us" }}'>
+    <head>
+        <title>{{ if eq (.Site.Title) (.Title) }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+        <meta name="description" content="{{ if (.Description) }}{{ .Description }}{{ end }}">
+        {{ template "_internal/google_analytics_async.html" . }}
+
+        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href='{{ "assets/css/main.css" | relURL }}' />
+        <noscript><link rel="stylesheet" href='{{ "assets/css/noscript.css" | relURL }}' /></noscript>
+
+        {{ with .Site.Params.favicon }}
+        <link rel="shortcut icon" href="{{ . }}">
+        {{ end }}
+
+        <script>
+            
+
+            var desktopScore = 0;
+            var mobileScore = 0;
+
+            function analyzeWebsite(){
+                $("#seoResults").hide();
+                $("#btnAnalyze").html("<span class='fa fa-spinner fa-spin'></span>  Analyzing Website ...");
+
+                // reset scores
+                desktopScore = 0;
+                mobileScore = 0;
+
+                this.runPageSpeed("Desktop");
+                this.runPageSpeed("Mobile");
+            }
+
+            function runPageSpeed(strategy) {
+              const url = setUpQuery(strategy);
+              fetch(url)
+                .then(response => response.json())
+                .then(json => {
+                  // See https://developers.google.com/speed/docs/insights/v5/reference/pagespeedapi/runpagespeed#response
+                  // to learn more about each of the properties in the response object.
+
+                  const lighthouse = json.lighthouseResult;
+
+                  const metrics = {
+                    'Strategy': strategy,
+                    'OverallPerformance': lighthouse.categories['performance'].score * 100,
+                    'Performance': lighthouse.categories['performance'].score * 100,
+                    'audits': lighthouse.audits
+                  }
+
+                  if (strategy === "Desktop") 
+                        desktopScore = lighthouse.categories['performance'].score * 100
+                  else if (strategy === "Mobile") 
+                        mobileScore = lighthouse.categories['performance'].score * 100
+                    
+                  renderSpeed(metrics);
+                });
+            }
+
+            function setUpQuery(strategy) {
+              const api = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
+              const parameters = {
+                url: encodeURIComponent("https://www.drawbuildplay.com"),
+                strategy: strategy
+              };
+              let query = `${api}?`;
+              for (key in parameters) {
+                query += `${key}=${parameters[key]}&`;
+              }
+              return query;
+            }
+
+
+            function renderSpeed(metrics) {
+
+                averageScore = 0;
+                if (mobileScore > 0 && desktopScore > 0)
+                    averageScore = (desktopScore + mobileScore) / 2;
+
+                if (averageScore >= 90)
+                    metrics['OverallPerformanceText'] = "Fast (" + averageScore + ")"
+                else if (averageScore >= 50 && averageScore < 90)
+                    metrics['OverallPerformanceText'] = "Average (" + averageScore + ")"
+                else if (averageScore > 0 && averageScore < 50)
+                    metrics['OverallPerformanceText'] = "Slow (" + averageScore + ")"
+
+
+                $('#pageSpeedScore').text(metrics['OverallPerformanceText']);
+                
+                if (metrics["Strategy"] === "Desktop"){
+                    $('#pageSpeedScoreDesktop').text("Desktop (" + metrics['Performance'] + ")");
+                    $('#firstContentPaintDesktop').text(metrics.audits['first-contentful-paint'].displayValue);
+                    $('#speedIndexDesktop').text(metrics.audits['speed-index'].displayValue);
+                    $('#timeToInteractiveDesktop').text(metrics.audits['interactive'].displayValue);
+                    $('#firstMeaningfulPaintDesktop').text(metrics.audits['first-meaningful-paint'].displayValue);
+                    $('#firstCPUIdleDesktop').text(metrics.audits['first-cpu-idle'].displayValue);
+                    $('#estimatedInputLatencyDesktop').text(metrics.audits['estimated-input-latency'].displayValue);
+                }
+                else if (metrics["Strategy"] === "Mobile"){
+                    $('#pageSpeedScoreMobile').text("Mobile (" + metrics['Performance'] + ")");
+                    $('#firstContentPaintMobile').text(metrics.audits['first-contentful-paint'].displayValue);
+                    $('#speedIndexMobile').text(metrics.audits['speed-index'].displayValue);
+                    $('#timeToInteractiveMobile').text(metrics.audits['interactive'].displayValue);
+                    $('#firstMeaningfulPaintMobile').text(metrics.audits['first-meaningful-paint'].displayValue);
+                    $('#firstCPUIdleMobile').text(metrics.audits['first-cpu-idle'].displayValue);
+                    $('#estimatedInputLatencyMobile').text(metrics.audits['estimated-input-latency'].displayValue);
+                }
+
+                // list of desktop opportunities
+                if (metrics["Strategy"] === "Desktop"){
+                    $.each(metrics.audits, function (index, result){
+                        if (result.details && result.details.type === "opportunity" && result.score < 0.8){
+                            $("#pageSpeedRecommendationsDesktop").append("<tr><td>" + result.title + "</td><td>" + result.details.overallSavingsMs + "ms</td></tr>");
+                        }
+                    });
+                }
+
+                // list of mobile opportunities
+                if (metrics["Strategy"] === "Mobile"){
+                    $.each(metrics.audits, function (index, result){
+                        if (result.details && result.details.type === "opportunity" && result.score < 0.8){
+                            $("#pageSpeedRecommendationsMobile").append("<tr><td>" + result.title + "</td><td>" + result.details.overallSavingsMs + "ms</td></tr>");
+                        }
+                    });
+                }
+
+                // Diagnostics
+                if (metrics["Strategy"] === "Desktop"){
+                    $.each(metrics.audits, function (index, result){
+                        if (result.details && result.details.type === "table" && result.score !== null && result.score < 0.8){
+                            $("#pageSpeedDiagnosticsDesktop").append("<tr><td>" + result.title  + "</td></tr>");
+                        }
+                    });
+                }
+
+                if (metrics["Strategy"] === "Mobile"){
+                    $.each(metrics.audits, function (index, result){
+                        if (result.details && result.details.type === "table" && result.score !== null && result.score < 0.8){
+                            $("#pageSpeedDiagnosticsMobile").append("<tr><td>" + result.title + "</td></tr>");
+                        }
+                    });
+                }
+
+                // passed audits desktop
+                if (metrics["Strategy"] === "Desktop"){
+                    $.each(metrics.audits, function (index, result){
+                        if (result.details && (result.score >= 0.8 || result.score === null)){
+                            $("#pageSpeedAccomplishmentsDesktop").append("<tr><td><i class='fa fa-check-square' aria-hidden='true'></i>&nbsp;" + result.title + "</td></tr>");
+                        }
+                    });
+                }
+
+                // passed audits mobile
+                if (metrics["Strategy"] === "Mobile"){
+                    $.each(metrics.audits, function (index, result){
+                        if (result.details && (result.score >= 0.8 || result.score === null)){
+                            $("#pageSpeedAccomplishmentsMobile").append("<tr><td><i class='fa fa-check-square' aria-hidden='true'></i>&nbsp;" + result.title + "</td></tr>");
+                        }
+                    });
+                }
+
+                
+
+                $("#seoResults").show();
+                $("#btnAnalyze").html("Analyze Website");
+
+            }
+        </script>
+    </head>
+
+
+	<body lang='{{ .Site.Language.Lang | default "en-us" }}' class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+                {{ partial "header" . }}
+                {{ partial "nav" . }}
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Scan -->
+                        <section class="post">
+                            <header class="major">
+                                <h1>SEO Analyzer</h1>
+                            </header>
+
+                            <div class="row">
+                                <div class="col-9 col-12-xsmall">
+                                    <input type="text" name="website" id="website" value="https://www.drawbuildplay.com" placeholder="https://www.drawbuildplay.com">
+                                </div>
+                                <div class="col-3 col-12-xsmall">
+                                    <a href="#" id="btnAnalyze" class="button primary" onclick="analyzeWebsite(); return false;">Analyze Website</a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Summary -->
+                        <div id="seoResults" style="display:visible">
+                            <section class="post">
+                                <header class="major">
+                                    <h1>Website Results</h1>
+                                </header>
+
+                                <div class="row">
+                                    <div class="col-6 col-12-xsmall">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3>Page SEO Score</h3>
+                                                <p>
+                                                    <a href="#" class="button primary fit">Good (84)</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-6">
+                                                <a href="#" class="button fit">Warnings (2)</a>
+                                            </div>
+                                            <div class="col-6">
+                                                <a href="#" class="button fit">Passed (18)</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-12-xsmall">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3>Page Speed Score</h3>
+                                                <p>
+                                                    <a href="#pagespeed" id="pageSpeedScore" class="button primary fit"></a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <a href="#mobile" id="pageSpeedScoreMobile" class="button fit"></a>
+                                            </div>
+                                            <div class="col-6">
+                                                <a href="#desktop" id="pageSpeedScoreDesktop" class="button fit"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr/>
+                            </section>
+
+                            <!-- Page SEO -->
+                            <section class="post" id="onPageSEOResults">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2>Keywords</h2>
+                                        <div class="table-wrapper">
+                                            <table class="alt">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Top Words</th>
+                                                        <th>Frequency</th>
+                                                        <th>&lt;Title&gt;</th>
+                                                        <th>&lt;Desc&gt;</th>
+                                                        <th>&lt;H&gt;</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>laundry</td>
+                                                        <td>18</td>
+                                                        <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>wood</td>
+                                                        <td>14</td>
+                                                        <td><i class="fa fa-close" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>room</td>
+                                                        <td>13</td>
+                                                        <td><i class="fa fa-close" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>home</td>
+                                                        <td>10</td>
+                                                        <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-close" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>makeover</td>
+                                                        <td>7</td>
+                                                        <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+                                                        <td><i class="fa fa-close" aria-hidden="true"></i></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr/>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2>On Page SEO Analysis</h2>
+
+                                        <ul class="actions fit small">
+                                            <li><a href="#" class="button primary fit small">Warnings (2)</a></li>
+                                            <li><a href="#" class="button fit small">Passed (18)</a></li>
+                                        </ul>
+
+                                        <dl>
+                                            <dt>
+                                                Description is too short (less than 140 characters).
+                                            </dt>
+                                            <dd><i>Descriptions are important as Google may use them as page snippets.</i></dd>
+                                            <dd><code><i class="fa fa-warning" aria-hidden="true"></i> DIY Small Laundry Room Makeover Reveal with a Farmhouse Vibe and Wooden Countertop.</code></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                Avoid using lengthy links with unnecessary parameters (more than 100 characters).
+                                            </dt>
+                                            <dd></dd>
+                                            <dd><code><i class="fa fa-warning" aria-hidden="true"></i> http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.drawbuildplay.com%2fblog%2flaundry-room-makeover%2f</code></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <hr/>
+                            </section>
+
+
+                            <section class="post" id="pageSpeedResults">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2>Page Speed - Overall Speed</h2>
+                                        <div class="table-wrapper">
+                                            <a name="pagespeed" style="display:none;"></a>
+                                            <table class="alt">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Desktop</th>
+                                                        <th>Mobile</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            First Content Paint<br/>
+                                                            <sup><i>Marks the time at which the first text or image is painted.</i></sup>
+                                                        </td>
+                                                        <td id="firstContentPaintDesktop"></td>
+                                                        <td id="firstContentPaintMobile"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            First Meaningful Paint<br/>
+                                                            <sup><i>Measures when the primary content of a page is visible.</i></sup>
+                                                        </td>
+                                                        <td id="firstMeaningfulPaintDesktop"></td>
+                                                        <td id="firstMeaningfulPaintMobile"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Speed Index<br/>
+                                                            <sup><i>How quickly the contents of a page are visibly populated.</i></sup>
+                                                        </td>
+                                                        <td id="speedIndexDesktop"></td>
+                                                        <td id="speedIndexMobile"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            First CPU Idle<br/>
+                                                            <sup><i>The first time at which the page is ready to handle user input.</i></sup>
+                                                        </td>
+                                                        <td id="firstCPUIdleDesktop"></td>
+                                                        <td id="firstCPUIdleMobile"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Time to interactive<br/>
+                                                            <sup><i>The amount of time it takes for the page to become fully interactive.</i></sup>
+                                                        </td>
+                                                        <td id="timeToInteractiveDesktop"></td>
+                                                        <td id="timeToInteractiveMobile"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Estimated Input Latency<br/>
+                                                            <sup><i>Estimate of how long your app takes to respond to user input. If it is higher than 50ms, your app as seen as slow.</i></sup>
+                                                        </td>
+                                                        <td id="estimatedInputLatencyDesktop"></td>
+                                                        <td id="estimatedInputLatencyMobile"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr/>
+
+                                <h2>Page Speed - Recommendations</h2>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="table-wrapper">
+                                            <table class="alt">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Desktop</th>
+                                                        <th>Savings</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="pageSpeedRecommendationsDesktop">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="table-wrapper">
+                                            <table class="alt">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Mobile</th>
+                                                        <th>Savings</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="pageSpeedRecommendationsMobile">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr/>
+
+                                <h2>Page Speed - Diagnostics</h2>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="table-wrapper">
+                                            <table class="alt">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Desktop</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="pageSpeedDiagnosticsDesktop">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="table-wrapper">
+                                            <table class="alt">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Mobile</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="pageSpeedDiagnosticsMobile">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr/>
+
+
+                                <h2>Page Speed - Accomplishments</h2>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="table-wrapper">
+                                            <table class="alt">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Desktop</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="pageSpeedAccomplishmentsDesktop">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="table-wrapper">
+                                            <table class="alt">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Mobile</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="pageSpeedAccomplishmentsMobile">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
+                        </div>
+					</div>
+
+                    {{ partial "footer/index" . }}
+                    {{ partial "copyright" . }}
+
+            </div>
+            {{ template "_internal/google_analytics.html" . }}
+            {{ partial "scripts/index" . }}
+	</body>
+</html>

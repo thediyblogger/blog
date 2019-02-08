@@ -1,9 +1,11 @@
----
-title: "{{ replace .Name "-" " " | title }}"
-description: '{{ replace .Name "-" " " | title }}'
-image: 'images/pic01.png'
-images: ['images/pic01.png']
-date: {{ .Date }}
-categories: [home-improvement]
-draft: true
----
++++
+categories = ["blogging"]
+date = {{ .Date }}
+description = "{{ replace .Name "-" " " | title }}"
+title = "{{ replace .Name "-" " " | title }}"
+aliases = []
+[images]
+is_pin_friendly = false
+name = "How To Blog"
+src = "/uploads/image.png"
++++

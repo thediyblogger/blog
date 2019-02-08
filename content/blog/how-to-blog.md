@@ -1,23 +1,14 @@
----
-title: "How to blog"
-description: 'You just built a brand new sexy website.  It looks awesome.  Your existing clients are going to love it.  You are about to get a ton of new customers.  The world is great.
-
-A month later, you learn that your website traffic has not increased all that much.  
-
-Your rank in google is pretty much stationary.  
-
-Customers that make it to your site say how great it is.  You now have a web presence, and the customers who already know about you are finding you.  But you want more.  You want to grow faster.  You want to get new customers. Well, lets start with blogging.'
-date: 2019-01-08
-categories: [blogging]
-aliases: ["blog/2016/3/1/blogging-about-your-business","blog/2016/03/01/how-to-blog"]
-images:
-- 'images/blogging.png'
-
-resources:
-- name: How To Blog
-  src: 'images/blogging.png'
----
-
++++
+categories = ["blogging"]
+date = "2019-01-08"
+title = "How to blog"
+description = "You just built a brand new sexy website.  It looks awesome.  Your existing clients are going to love it.  You are about to get a ton of new customers.  The world is great. A month later, you learn that your website traffic has not increased all that much.  Your rank in google is pretty much stationary."
+aliases = ["blog/2016/3/1/blogging-about-your-business","blog/2016/03/01/how-to-blog"]
+[images]
+is_pin_friendly = false
+name = "How To Blog"
+src = "/uploads/blogging.png"
++++
 
 
 BLOGGING 101

@@ -1,19 +1,16 @@
----
-title: "Introduction to SEO and SEM for Beginners"
-description: 'Search Engine Optimization (SEO) is the art form of optimizing your website for targeted keywords so that you rank as high as possible on search engines such as Google. Search Engine Marketing (SEM) is the art of marketing your page through paid ads or social awareness.  Learn the basics of SEO/SEM to get started driving traffic to your website.'
-image: 'images/seo.png'
-images: ['images/seo.png']
-date: 2019-01-07
-categories: [blogging, seo/sem]
-pinnableImage: 'images/seosem.png'
-aliases: ["blog/2016/2/8/introduction-to-seo","blog/2016/02/08/introduction-to-seo"]
-images:
-- 'images/seo.png'
 
-resources:
-- name: Introduction to SEO
-  src: 'images/seo.png'
----
++++
+title = "Introduction to SEO and SEM for Beginners"
+description = "Search Engine Optimization (SEO) is the art form of optimizing your website for targeted keywords so that you rank as high as possible on search engines such as Google. Search Engine Marketing (SEM) is the art of marketing your page through paid ads or social awareness.  Learn the basics of SEO/SEM to get started driving traffic to your website."
+date = "2019-01-07"
+categories = ["blogging", "seo/sem"]
+aliases = ["blog/2016/2/8/introduction-to-seo","blog/2016/02/08/introduction-to-seo"]
+[images]
+is_pin_friendly = false
+name = "Introduction to SEO"
+src = '/uploads/seo.png'
++++
+
 
 Welcome to my first post on SEO and SEM.  
 

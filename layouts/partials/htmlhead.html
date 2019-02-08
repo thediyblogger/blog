@@ -9,7 +9,7 @@
 <html lang='{{ .Site.Language.Lang | default "en-us" }}'>
 	<head>
 		<title>{{ if eq (.Site.Title) (.Title) }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
-		<meta name="description" content="{{ if (.Description) }}{{ .Description }}{{ else }}Useful tips and tricks for designing and building things yourself{{ end }}">
+		<meta name="description" content="{{ if (.Description) }}{{ .Description }}{{ else }}Your DIY Guide to Building a Blog{{ end }}">
 		<meta name="p:domain_verify" content="33586c70c7c22eb964eecdf59d0cb90e"/>
 		<meta name="msvalidate.01" content="3E5C24AE74957914451DD85E5044D9E0" />
 		{{ template "_internal/google_analytics_async.html" . }}
@@ -40,37 +40,20 @@
 	    <meta property="og:description" content="{{ .Description }}">
 	    <meta property="og:url" content="{{ .Permalink }}">
 	    <meta property="og:site_name" content="{{ .Site.Title }}">
-	    {{ if .Params.pinableImage }}
-	    <meta property="og:image" content="{{ .Permalink }}{{ .Params.pinableImage }}">
-	    {{ else }}
-	    	{{ $cover := .Resources.GetMatch "*"}}
-	        {{ with $cover }}
-	    <meta property="og:image" content="{{ $cover.Permalink }}">
-		    {{ end }}
+	    
+	    {{ $imageResources := .Site.GetPage "/uploads" }}
+        {{ with .Params.images }}
+            {{ $imageName := .name }}
+            {{ $imgToFind := strings.TrimPrefix "/uploads/" .src }}
+            {{ $imageResource := $imageResources.Resources.GetMatch ($imgToFind) }}
+	    <meta property="og:image" content="{{ $imageResource.Permalink }}">
 	    {{ end }}
-	    {{ range .Params.tags }}
+
+	    {{ range .Params.categories }}
 	    <meta property="og:tags" content="{{ . }}">
 	    {{ end }}
 	    <!-- End of Open Graph -->
-	    <!-- Start of Twitter -->
-    	{{ if .Description }}
-	    <meta property="twitter:card" content="{{ .Description }}">
-        {{ else }}
-	    <meta property="twitter:card" content="{{ .Title }}">
-        {{ end }}
-
-	    <meta property="twitter:description" content="{{ .Description }}">
-	    <meta property="twitter:title" content="{{ .Title }}">
 	    
-	    {{ if .Params.pinableImage }}
-	    <meta property="twitter:image" content="{{ .Permalink }}{{ .Params.pinableImage }}">
-	    {{ else }}
-	    	{{ $cover := .Resources.GetMatch "*"}}
-	        {{ with $cover }}
-	    <meta property="twitter:image" content="{{ $cover.Permalink }}">
-		    {{ end }}
-	    {{ end }}
-	    <!-- End of Twitter -->
 		
 		
 		<meta charset="utf-8" />

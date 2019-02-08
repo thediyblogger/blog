@@ -1,25 +1,24 @@
 {{ partial "htmlhead" . }}
-	<body lang='{{ .Site.Language.Lang | default "en-us" }}' class="is-loading">
+    <body lang='{{ .Site.Language.Lang | default "en-us" }}' class="is-loading">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        <!-- Wrapper -->
+            <div id="wrapper">
 
                 {{ partial "header" . }}
                 {{ partial "nav" . }}
 
-				<!-- Main -->
-					<div id="main">
+                <!-- Main -->
+                    <div id="main">
 
-						<!-- Post -->
+                        <!-- Post -->
                         <section class="post">
                             <header class="major">
                                 <h1>{{ .Title }}</h1>
                                 <p>{{ .Description }}</p>
                             </header>
-                            {{ $cover := .Resources.GetMatch "*"}}
-                            {{ with $cover }}
-                            {{ $scaled := .Fill "1200x760" }}
-                            <div class="image main"><img src="{{ $scaled.Permalink }}" alt="{{ .Name }}"></div>
+                            
+                            {{ with .Params.images }}
+                                <div class="image main"><img src="{{ .src }}" alt="{{ .name }}" /></div>
                             {{ end }}
 
                             {{ .Content }}
@@ -36,7 +35,7 @@
                         </section>
                     
 
-					</div>
+                    </div>
 
                     {{ partial "footer/index" . }}
                     {{ partial "copyright" . }}
@@ -44,5 +43,5 @@
             </div>
             {{ template "_internal/google_analytics.html" . }}
             {{ partial "scripts/index" . }}
-	</body>
+    </body>
 </html>

@@ -19,11 +19,7 @@
         {{ with $data.contactinfo }}
         <li><a href='{{ "#about" | relLangURL }}'>{{ i18n "NAV_CONTACT" . }}</a></li>
         {{ end }}
-        {{ if .IsTranslated }}
-        {{ range .AllTranslations }}
-        <li {{if eq ($.Site.Language) (.Language)}}class="active"{{end}}><a href='{{ .Permalink }}'>{{ .Language.LanguageName }}</a></li>
-        {{ end }}
-        {{ end }}
+        <!--<li><a href='{{ "/seo-analyzer" | relLangURL }}'>SEO Analyzer</a></li>-->
     </ul>
 
     {{ with $data.social }}

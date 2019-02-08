@@ -8,11 +8,17 @@
         </header>
 
         <a href="{{ .Permalink }}" class="image fit">
-            {{ $cover := .Resources.GetMatch "*"}}
-            {{ with $cover }}
-            {{ $scaled := .Fill "600x400" }}
-            <img src="{{ $scaled.Permalink }}" alt="{{ $.title }}">
+
+            {{ $imageResources := .Site.GetPage "/uploads" }}
+            {{ with .Params.images }}
+                {{ $imageName := .name }}
+                {{ $imgToFind := strings.TrimPrefix "/uploads/" .src }}
+                {{ $imageResource := $imageResources.Resources.GetMatch ($imgToFind) }}
+                {{ $resized := $imageResource.Fill "600x400" }}
+
+                <img src="{{ $resized.Permalink }}" alt="{{ $imageName }}">
             {{ end }}
+
         </a>    
 
         <p>{{ .Description }}</p>

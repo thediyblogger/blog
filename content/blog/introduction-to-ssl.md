@@ -1,17 +1,16 @@
----
-title: "Introduction to SSL"
-description: 'The infamous question.  What is SSL?  Or, more importantly, why should I care about it?'
-date: 2019-01-03
-categories: [blogging]
-aliases: ["blog/2016/2/16/introduction-to-ssl","blog/2016/02/16/introduction-to-ssl"]
 
-images:
-- 'images/ssl.png'
++++
+title = "Introduction to SSL"
+description = "The infamous question.  What is SSL?  Or, more importantly, why should I care about it?"
+date = "2019-01-03"
+categories = ["blogging"]
+aliases = ["blog/2016/2/16/introduction-to-ssl","blog/2016/02/16/introduction-to-ssl"]
+[images]
+is_pin_friendly = false
+name = "Introduction to SSL"
+src = '/uploads/ssl.png'
++++
 
-resources:
-- name: Introduction to SSL
-  src: 'images/ssl.png'
----
 
 SSL stands for Secure Socket Layer. It's actually a deprecated technology, now replaced by a newer acronym - TLS.  TLS stands for Transport Layer Security.
 
@@ -19,7 +18,7 @@ Okay, enough of this gobbledygook!  What do all these fancy words mean?!?!  In a
 
 When you visit your bank website, or these days even Facebook and Google, you will see a lock icon next to the URL in the address bar.
 
-{{< figure src="images/ssl_lock.png" title="The Green Lock" >}}
+{{< figure src="/uploads/ssl_lock.png" title="The Green Lock" >}}
 
 
 THE GREEN LOCK

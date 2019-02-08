@@ -1,18 +1,15 @@
----
-title: "Why your business needs a CDN"
-description: 'A CDN (Content Delivery Network) is a network of servers around the world that work together to provide a faster web experience for your users.'
-date: 2019-01-04
-image: 'images/cdn.png'
-images: ['images/cdn.png']
-categories: [blogging]
-aliases: ["blog/2016/2/22/why-your-business-needs-a-cdn", "blog/2016/02/22/why-your-business-needs-a-cdn"]
-images:
-- 'images/cdn.png'
 
-resources:
-- name: Why your business needs a CDN
-  src: 'images/cdn.png'
----
++++
+title = "Why your business needs a CDN"
+description = "A CDN (Content Delivery Network) is a network of servers around the world that work together to provide a faster web experience for your users."
+date = "2019-01-04"
+categories = ["blogging"]
+aliases = ["blog/2016/2/22/why-your-business-needs-a-cdn", "blog/2016/02/22/why-your-business-needs-a-cdn"]
+[images]
+is_pin_friendly = false
+name = "Why your business needs a CDN"
+src = '/uploads/cdn.png'
++++
 
 
 For example, lets say your website was hosted on a server in Atlanta GA.  Then, whenever your customer requested your website that did not use a CDN, the request would always come to your server in Atlanta.  Local customers may have a decent experience because they are local, but requests from customers on the west coast would have to travel the span of the US.  Even worse for global customers.

@@ -1,17 +1,15 @@
----
-title: "How to Build Links to Your Website"
-description: 'Link building is one of the hardest things to do when it comes to Search Engine Optimization (SEO).'
-date: 2019-01-06
-categories: [blogging, seo/sem]
-aliases: ["blog/2016/2/26/how-to-build-links-to-your-website","blog/2016/02/26/how-to-build-links-to-your-website"]
-pinnableImage: 'images/pinterest.png'
-images:
-- 'images/links.png'
++++
+categories = ["blogging", "seo/sem"]
+date = "2019-01-06"
+description = "Link building is one of the hardest things to do when it comes to Search Engine Optimization (SEO)."
+title = "How to Build Links to Your Website"
+aliases = ["blog/2016/2/26/how-to-build-links-to-your-website","blog/2016/02/26/how-to-build-links-to-your-website"]
+[images]
+is_pin_friendly = false
+name = "How to Build Links to Your Website"
+src = '/uploads/links.png'
++++
 
-resources:
-- name: How to Build Links to Your Website
-  src: 'images/links.png'
----
 
 _By this time, you should have already optimized your website with the [Basic SEO techniques]({{<ref "introduction-to-seo">}}) I outlined in my previous post._
 
