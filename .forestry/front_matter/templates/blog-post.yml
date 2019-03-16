@@ -52,3 +52,5 @@ fields:
   description: Text to be posted alongside Social Media Images (Use Keywords)
   config:
     required: false
+pages:
+- content/blog/how-to-drive-4x-more-traffic-to-your-blog-with-pinterest-seo.md
