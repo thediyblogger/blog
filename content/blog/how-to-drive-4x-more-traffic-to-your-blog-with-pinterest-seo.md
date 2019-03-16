@@ -7,8 +7,8 @@ social_media_images = []
 social_media_text = ""
 title = "How to drive 4x more traffic to your blog with Pinterest SEO"
 [images]
-name = ""
-src = ""
+name = "How to drive 4x more traffic to your blog with Pinterest SEO"
+src = "/uploads/traffic.jpg"
 
 +++
 If you found this page, you probably found it through Pinterest.  If you came here via Google, then awesome.
