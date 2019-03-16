@@ -2,9 +2,8 @@
 categories = ["blogging", "seo/sem"]
 date = "2019-03-16T00:00:00-04:00"
 description = "Do you want crazy traffic on your new website or blog?  Google may get you results in the long term, but Pinterest will drive traffic now.  Learn how to optimize SEO for Pinterest to get insane traffic to your website."
-draft = true
-social_media_images = []
-social_media_text = ""
+social_media_images = ["/uploads/Drive 4x More Traffic.png"]
+social_media_text = "How to drive 4x more traffic to your blog using Pinterest SEO."
 title = "How to drive 4x more traffic to your blog with Pinterest SEO"
 [images]
 name = "How to drive 4x more traffic to your blog with Pinterest SEO"
@@ -33,7 +32,7 @@ Popular topics on Pinterest range from DIY ideas, Home Decor, Food Recipes, Heal
 
 The majority of users today on Pinterest tend to be female, but that is changing also, with a sizable Male population also starting to use it.
 
-## How Do I Get Started With Pinterest?
+## How do I get started with Pinterest?
 
 1. Create a Pinterest account.  If you already have an individual account, then upgrade it to a Business account (its free).  A Business Account gives you more power such as Analytics, the option to promote ads, as well as being able to claim your website domain.
 2. Once you have your business account set up, make sure your name and descriptions are SEO optimized, targeting the keywords for your niche.
@@ -42,7 +41,7 @@ The majority of users today on Pinterest tend to be female, but that is changing
 5. Over time, be active on Pinterest.  That means regularly pinning on many of your boards.  The more you do this and populate your boards with high quality content, others will find you interesting and the Pinterest algorithm will help you increase your reach.  Be careful though, don't pin anything and everything - be human, else this could also hurt you.  In other words, avoid pinning 100 pins within 5 minutes.  Spread them out throughout the day like you would with your personal account.
 6. Pin your own content!  This is the most critical piece.  As you publish content to your blog, make sure you pin it to your relevant boards.  
 
-## How Do I now start driving real traffic with Pinterest?
+## How do I start driving real traffic with Pinterest?
 
 Okay, so you got your basic Pinterest profile set up and you are starting to become an influencer with the type of content you are pinning.  Unfortunately, only pinning other users pins won't sky rocket your reach.
 
@@ -60,4 +59,4 @@ Once you determine the time of day your customers are clicking on your pins, the
 
 If you stop posting new content and pinning it, you may start to see a dip in your reach.  There are schedulers that can help with this by repining your pins at regular intervals.  But, don't repin the same pin to the same board within 4 months.  That is discouraged by Pinterest.  You can however, create multiple pin images for each blog post and pin those to your boards on a schedule.  A common scheduler you will see recommended by most Pinterest bloggers is Tailwinds.  This is due to a lot of the analytics they give you around your pins, as well as its scheduling and smart loop capabilities.
 
-I will go over each of these points in later blog posts to drill down into the details.
+I will go over each of these points in later blog posts to drill down into the details.  For now, this is just a teaser to get you started.  Follow me on Pinterest to stay up to date with how to improve your blog.
