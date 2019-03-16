@@ -2,31 +2,12 @@
 {{ $data := index .Site.Data .Site.Language.Lang }}
 <footer id="footer">
     <section class="split contact" id="about">
-        <section>
-            <figure>
-                <img src="/images/footer.jpg"  width="100%" alt="DrawBuildPlay - Amit Gandhi" title="DrawBuildPlay - Amit Gandhi" >
-            </figure>
-        </section>
-    </section>
-
-    <section class="split contact">
-        <section>
-            <div class="field">
-                <label>MY STORY</label>
-                <p>
-                    I am an Atlanta based software developer, who specializes in Web Design. Through my site, learn how to build and monetize your own blog and how to start to generate traffic to your website using SEO and SEM techniques.
-                </p>
-                <p>
-                    I will share insights and approaches I take building this site, <a href="https://www.thediyblogger.com">The DIY Blogger</a>, and its sibling site <a href="https://www.drawbuildplay.com">DrawBuildPlay</a>.
-                </p>
-            </div>
-        </section>
-
+        
         <section>
             <form action="https://drawbuildplay.us7.list-manage.com/subscribe/post?u=12399181fb539534b4cf8657c&amp;id=c386eb80b2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div class="fields">
                     <div id="mc_embed_signup_scroll" class="field">
-                        <label for="mce-EMAIL">Subscribe to our mailing list</label>
+                        <label for="mce-EMAIL">Subscribe to my mailing list</label>
                         <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                     </div>
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
@@ -40,45 +21,37 @@
             </form>
         </section>
 
-        {{ with $data.social }}
         <section>
-            <h3>{{ i18n "CONTACT_SOCIAL" . }}</h3>
-            <ul class="icons alt">
-                {{ with .twitter}}
-                <li><a href="{{ . }}" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-                {{ end }}
-                {{ with .facebook}}
-                <li><a href="{{ . }}" class="icon alt fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-                {{ end }}
-                {{ with .instagram}}
-                <li><a href="{{ . }}" class="icon alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-                {{ end }}
-                {{ with .linkedin}}
-                <li><a href="{{ . }}" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-                {{ end }}
-                {{ with .github}}
-                <li><a href="{{ . }}" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-                {{ end }}
-                {{ with .youtube}}
-                <li><a href="{{ . }}" class="icon alt fa-youtube" target="_blank"><span class="label">Youtube</span></a></li>
-                {{ end }}
-                {{ with .googleplus}}
-                <li><a href="{{ . }}" class="icon alt fa-google-plus" target="_blank"><span class="label">Google Plus</span></a></li>
-                {{ end }}
-                {{ with .lastfm}}
-                <li><a href="{{ . }}" class="icon alt fa-lastfm" target="_blank"><span class="label">Last.fm</span></a></li>
-                {{ end }}
-                {{ with .flickr}}
-                <li><a href="{{ . }}" class="icon alt fa-flickr" target="_blank"><span class="label">Flickr</span></a></li>
-                {{ end }}
-                {{ with .pinterest}}
-                <li><a href="{{ . }}" class="icon alt fa-pinterest" target="_blank"><span class="label">Pinterest</span></a></li>
-                {{ end }}
-            </ul>
+            <figure>
+                <img src="/images/footer.jpg"  width="100%" alt="DrawBuildPlay - Amit Gandhi" title="DrawBuildPlay - Amit Gandhi" >
+            </figure>
         </section>
-        {{ end }}
+
+    </section>
+
+    <section class="split contact">
+        <section>
+            <div class="field">
+                <label>Follow me on Pinterest</label>
+                <a data-pin-do="embedUser" data-pin-board-width="600" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/thediyblogger/"></a>
+            </div>
+        </section>
 
 
+        <section>
+            <div class="field">
+                <label>MY STORY</label>
+                <p>
+                    I am an Atlanta based software developer, who specializes in Web Design. Through my blog, learn how to build and monetize your own blog and how to start to generate traffic to your website using SEO and SEM techniques.
+                </p>
+                <p>
+                    I will share insights and approaches I take building this site, <a href="https://www.thediyblogger.com">The DIY Blogger</a>, and its sibling site <a href="https://www.drawbuildplay.com">DrawBuildPlay</a>.
+                </p>
+            </div>
+        </section>
+
+
+        
 
     </section>
 </footer>
