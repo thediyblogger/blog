@@ -52,13 +52,3 @@ fields:
   description: Text to be posted alongside Social Media Images (Use Keywords)
   config:
     required: false
-pages:
-- content/blog/how-to-save-your-new-car-from-kicking-feet.md
-- content/blog/diy-outdoor-lighting.md
-- content/blog/home-building-checklist-location.md
-- content/blog/free-over-the-air-tv.md
-- content/blog/laundry-room-makeover.md
-- content/blog/how-to-cut-the-cord.md
-- content/blog/home-building-checklist-floorplan.md
-- content/blog/diy-under-cabinet-lighting.md
-- content/blog/home-building-checklist.md
