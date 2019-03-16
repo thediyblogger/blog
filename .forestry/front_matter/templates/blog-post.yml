@@ -53,4 +53,5 @@ fields:
   config:
     required: false
 pages:
+- content/blog/how-to-blog.md
 - content/blog/how-to-drive-4x-more-traffic-to-your-blog-with-pinterest-seo.md
