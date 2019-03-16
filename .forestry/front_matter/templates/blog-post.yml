@@ -1,0 +1,64 @@
+---
+label: Blog Post
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+  description: Blog Title (Use KeyWords)
+- name: description
+  label: Description
+  type: textarea
+  hidden: false
+  default: ''
+  description: Description (Use Keywords)
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+  config:
+    required: true
+- name: categories
+  label: Categories
+  type: tag_list
+  hidden: false
+  default: ''
+- name: images
+  label: Images
+  type: field_group
+  fields:
+  - name: name
+    label: Name
+    type: text
+    hidden: false
+    default: ''
+  - type: file
+    name: src
+    label: SRC
+    description: Image Source
+  hidden: false
+  default: ''
+  description: Cover Image for the Post
+- type: image_gallery
+  name: social_media_images
+  label: Social Media Images
+  description: Images for Pinterest and Facebook
+- type: textarea
+  name: social_media_text
+  label: Social Media Text
+  description: Text to be posted alongside Social Media Images (Use Keywords)
+  config:
+    required: false
+pages:
+- content/blog/how-to-save-your-new-car-from-kicking-feet.md
+- content/blog/diy-outdoor-lighting.md
+- content/blog/home-building-checklist-location.md
+- content/blog/free-over-the-air-tv.md
+- content/blog/laundry-room-makeover.md
+- content/blog/how-to-cut-the-cord.md
+- content/blog/home-building-checklist-floorplan.md
+- content/blog/diy-under-cabinet-lighting.md
+- content/blog/home-building-checklist.md
