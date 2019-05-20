@@ -1,0 +1,625 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<!DOCTYPE HTML>
+<!--
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang='{{ .Site.Language.Lang | default "en-us" }}'>
+    <head>
+        <title>{{ if eq (.Site.Title) (.Title) }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+        <meta name="description" content="{{ if (.Description) }}{{ .Description }}{{ end }}">
+        {{ template "_internal/google_analytics_async.html" . }}
+
+        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+         <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       
+
+        <link rel="stylesheet" href='{{ "assets/css/main.css" | relURL }}' />
+        <link rel="stylesheet" href='{{ "assets/css/dashboard.css" | relURL }}' />
+        <noscript><link rel="stylesheet" href='{{ "assets/css/noscript.css" | relURL }}' /></noscript>
+
+        {{ with .Site.Params.favicon }}
+        <link rel="shortcut icon" href="{{ . }}">
+        {{ end }}
+
+
+        <script>
+
+            function urlParam(name){
+                var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+
+                if (results){
+                    return results[1];
+                }
+                else{
+                    return false;
+                }
+            }
+
+            function handleResponse (response) {
+              let contentType = response.headers.get('content-type')
+              if (contentType.includes('application/json')) {
+                return handleJSONResponse(response)
+              } else if (contentType.includes('text/html')) {
+                return handleTextResponse(response)
+              } else {
+                // Other response types as necessary. I haven't found a need for them yet though.
+                throw new Error(`Sorry, content-type ${contentType} not supported`)
+              }
+            }
+
+            function handleJSONResponse (response) {
+              return response.json()
+                .then(json => {
+                  if (response.ok) {
+                    return json
+                  } 
+                  else {
+                    return Promise.reject(
+                        Object.assign(
+                            {}, 
+                            { "responseBody": json }, 
+                            {
+                              "status": response.status,
+                              "statusText": response.statusText
+                            }
+                        )
+                    )
+                  }
+                })
+            }
+            
+
+
+            function initializePage(){
+                // Initialize once with app id
+                // PDK.init({ appId: '{{ .Param "pinterest_client_id" }}', cookie: true });
+
+                if (urlParam('code')) {
+                    var code = urlParam('code');
+                    window.opener.completeSignup(code);
+                    window.close();
+                } 
+
+                if (loggedIn()){
+                    // if user is logged in,  
+
+                    signupCompleted = false;
+                    if (!signupCompleted){
+                        // prompt user for domain and email address if we dont already have it.
+                        completeSignup();
+                    }
+                    else{
+                        // user has a complete profile, so run the analysis.
+                        analyzePinterest();   
+                    }
+
+                    
+                }
+                else{
+                    // else show the signup intro page
+                    $("#signup").show();
+                }
+            }
+
+            function signup(){
+
+                /*
+                PDK.login(
+                    {
+                        scope: '{{ .Param "pinterest_scope" }}'
+                    }, 
+                    function(response){
+                        completeSignup()
+                    });
+                */
+
+                var CLIENT_ID = "5022942441869717972";
+
+                AUTHORIZATION_URL = "https://api.pinterest.com/oauth/" + 
+                    "?response_type=code" + 
+                    "&redirect_uri=" + window.location +
+                    "&client_id=" + CLIENT_ID +
+                    "&scope=read_public,write_public";
+
+                popup = window.open(
+                  AUTHORIZATION_URL,
+                  'Sign up with Pinterest',
+                  'width=800,height=600'
+                )
+
+            }
+
+
+
+            function completeSignup(code){
+                // show the complete signup modal
+                $('#signupModal').modal();
+                $('#signup_code').val(code);
+                $('[data-toggle="tooltip"]').tooltip();
+            }
+
+            function submitSignup(){
+                // save the users access token for future use
+                // session = PDK.getSession();
+
+                // store a permenant access token using this temporary access code
+                url = buildEndpoint("/accounts");
+                payload = {
+                    "email": $('#signup_email').val(),
+                    "password": $('#signup_password').val(),
+                    "website": $('#signup_website').val(),
+                    "pinterest_access_code": $('#signup_code').val()
+                }
+
+                // call out to the endpoint to complete the signup
+                fetch(
+                    url, 
+                    {
+                        headers: {
+                          'Accept': 'application/json',
+                          'Content-Type': 'application/json'
+                        },
+                        method: 'post', 
+                        body: JSON.stringify(payload)
+                    })
+                .then(handleResponse)
+                .then(data => console.log(data))
+                .catch(error => appendSignupMessage(error.responseBody))
+
+                // refresh the page with the dashboard
+                initializePage();
+
+            }
+
+            function appendSignupMessage(messages){
+                console.log(messages)
+
+                tooltipText = ""
+                $.each(messages, function (i, msg)
+                {
+                    tooltipText += "<i class='fa fa-times' aria-hidden='true'></i>" + msg["message"] + "<br/>"
+                });
+
+                messages = $("<div>");
+                messages.text("There are issues with your form.");
+                messages.attr("data-toggle", "tooltip")
+                messages.attr("data-placement", "left")
+                messages.attr("data-html", "true")
+                messages.attr("title", tooltipText)
+
+                $('#signupModal .fields').prepend(messages);
+                $('[data-toggle="tooltip"]').tooltip();
+
+
+            }
+
+            function logout(){
+                // PDK.logout();
+
+                // refresh the page
+                location.reload(true);
+            }
+
+            function loggedIn(){
+                // return !!PDK.getSession();
+                return false;
+            }
+
+            function analyzePinterest(){
+                $("#signup").hide();
+                $("#engagementResults").hide();
+                $("#boardResults").hide();
+
+                // change the login button to logout.
+                $('#btnLogin').hide();
+                $('#btnFreeTrial').hide();
+                $('#btnLogout').show();
+
+
+                this.analyze();
+            }
+
+
+            function buildEndpoint(path) {
+              // const endpoint = 'https://api.thediyblogger.com';
+              const endpoint = 'http://127.0.0.1:8001';
+              return endpoint + path;
+            }
+
+            function analyze(){
+                url = buildEndpoint("/report");
+
+                // call out to the endpoint to get the results
+                fetch(url)
+                .then(response => response.json())
+                .then(json => {
+                  renderResults(json);
+                });
+            }
+
+
+            function renderResults(report) {
+               
+                    
+                $('#current_score').text(report.engagement_score.score);
+                $('#current_score_pct').text(report.engagement_score.percentage);
+
+                // render the recommendations
+                $("#recommendations").empty();
+                $.each(report.recommendations, function(index, r){
+                    carouselitem = $("<div>");
+                    carouselitem.addClass("carousel-item");
+                    if (index == 0) carouselitem.addClass("active");
+
+                    header = $("<header>");
+                    header.html("<h2>Your Missions</h2>");
+
+                    metric = $("<header>");
+                    metric.html("<h4>" + r.metric + "</h4>");
+                    subtitle = $("<p>");
+                    $.each(r.value, function (index, v){
+                        value_item = $("<span>");
+                        value_item.html(v + "<br/>");
+                        subtitle.append(value_item);
+                    });
+                    metric.append(subtitle);
+
+                    message = $("<p>");
+                    message.text(r.details)
+
+                    impact = $("<p>");
+                    impact.html("<strong>Impact: " + r.impact + "</strong>");
+
+                    link = $("<a>");
+                    link.attr("href", r.link);
+                    link.attr("target", "_blank");
+                    link.addClass("button");
+                    link.text("Learn More");
+
+                    carouselitem.append(header);
+                    carouselitem.append(metric);
+                    carouselitem.append(message);
+                    carouselitem.append(impact);
+                    carouselitem.append(link);
+
+                    $("#recommendations").append(carouselitem);
+                });
+
+
+                // render the profile scan results
+                $("#profileScanResults").empty();
+                $.each(report.profile.scan, function(index, result){
+
+                    if (result.achieved){
+                        metric = createIcon("fa-check", result.metric, false);
+                    }
+                    else{
+                        metric = createIcon("fa-times", result.metric, false);
+                    }
+                    
+                    row = $("<tr>")
+                    profile_cell = $("<td>");
+                    profile_cell.append(createTooltip(result.details, false, metric));
+                    profile_cell.append($("<span>").html(" " + result.metric))
+                    row.append(profile_cell);
+                    $('#profileScanResults').append(row);
+                });
+
+                // render the list of boards
+                $("#boardRows").empty();
+                $.each(report.boards, function (index, board){
+
+                    name_cell = $("<td>");
+                    name_element = createTooltip(board.description, true, board.name + "<br/>");
+                    name_cell.append(name_element);
+
+                    if (board.scan.length > 0){
+                        var warnings = "";
+                        var num_warnings = 0;
+
+                        $.each(board.scan, function (index, scan){
+                            if (!scan.achieved){
+
+                                warning_icon = $("<i>");
+                                warning_icon.attr("class", "fa fa-times");
+                                warning_icon.attr("aria-hidden", "true");
+                                
+                                warning_span = $("<span>");
+                                warning_span.html(" " + scan.details + "<br/>");
+
+                                warning = $("<span>");
+                                warning.append(warning_icon);
+                                warning.append(warning_span);
+
+                                warnings += warning.prop('outerHTML');
+                                num_warnings++;
+                            }
+                        });
+
+                        if (num_warnings > 0){
+                            // add a warning icon
+                            icon = createIcon("fa-warning", warnings, true);
+                            name_cell.append(icon);
+                        }
+                    }
+
+                    if (board.counts.collaborators > 0){
+                        // add a group icon
+                        icon = createIcon("fa-group", "Group Board with " + board.counts.collaborators + " collaborators", true);
+                        name_cell.append(icon);
+                    }
+
+                    row = $("<tr>")
+                    row.append(name_cell);
+                    row.append($("<td>").text(board.counts.pins + " pins"));
+                    row.append($("<td>").text(board.counts.followers + " followers"));
+                    row.append($("<td>").text(board.counts.repins + " repins"));
+                    row.append($("<td>").text(board.counts.virality.toFixed(1)));
+                    row.append($("<td>").text(board.counts.engagement.toFixed(1)));
+                    row.append($("<td>").text(board.counts.quality.toFixed(0)));
+                    $('#boardRows').append(row);
+
+                        
+                });
+
+                $('[data-toggle="tooltip"]').tooltip()
+                $("#engagementResults").show();
+                $("#profileResults").show();
+                $("#boardResults").show();
+
+                $("#btnAnalyze").html("Analyze Pinterest");
+
+            }
+
+            function createIcon(icon_class, tooltip_title, is_tooltip_html){
+                icon_i = $("<i>");
+                icon_i.attr("class", "fa " + icon_class);
+                icon_i.attr("aria-hidden", true);
+
+                icon_with_tooltip = createTooltip(tooltip_title, is_tooltip_html, icon_i);
+                return icon_with_tooltip;
+            }
+
+            function createTooltip(tooltip_title, is_tooltip_html, inner){
+                tooltip = $("<span>");
+                tooltip.attr("data-toggle", "tooltip");
+                tooltip.attr("data-placement", "right");
+                tooltip.attr("data-html", is_tooltip_html);
+                tooltip.attr("title", tooltip_title);
+
+                tooltip.append(inner);
+
+                return tooltip;
+            }
+
+
+           
+
+
+
+        </script>
+
+    </head>
+
+
+	<body lang='{{ .Site.Language.Lang | default "en-us" }}' class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+                {{ partial "header" . }}
+                {{ partial "nav" . }}
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Scan -->
+                        <section id="signup" style="display: none;">
+                             <div id="banner" class="row">
+                                <div class="col-12">
+                                    Join our limited time Early Access Program for free today!
+                                </div>
+                            </div>
+                            <header class="major">
+                                <h1>Pin Karma</h1>
+                                <p>Your guide to winning on Pinterest and growing traffic to your blog.</p>
+                            </header>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-pin" onclick="signup();"><i class="fa fa-pinterest"></i> Sign up With Pinterest</button>
+                                    <p>Get Started Free Today</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Engagement -->
+                        <section id="engagementResults" style="display: none;">
+                            <div class="row">
+                                <div class="col-3 box">
+                                    <h2>PIN LEVEL: 1</h2>
+                                    <!-- Activity -->
+                                    <header class="activity_score">
+                                        <h1 id="current_score"></h1>
+                                        <p>Total Points (<span id="current_score_pct"></span>%)</p>
+                                    </header>
+                                </div>
+                                <div class="col-9">
+                                    <div class="box">
+                                        <div class="carousel slide" data-ride="carousel">
+                                            <div id="recommendations" class="carousel-inner">
+                                                <!-- dynamically populated -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Profile -->
+                        <section  id="profileResults"  style="display:none;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2>Profile</h2>
+                                    <div class="table-wrapper">
+                                        <a name="profile" style="display:none;"></a>
+                                        <table class="alt">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="profileScanResults">
+                                                <!-- dynamically populated -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>    
+
+                        <!-- Boards -->
+                        <section id="boardResults" style="display: none;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2>Boards</h2>
+                                    <div class="table-wrapper">
+                                        <table class="alt">
+                                            <thead>
+                                                <tr>
+                                                    <th>Board</th>
+                                                    <th>Pins</th>
+                                                    <th>Followers</th>
+                                                    <th>Repins</th>
+                                                    <th>
+                                                        <span data-toggle="tooltip" data-placement="right" title="Repins / Pin">
+                                                            Virality Score
+                                                        </span>
+                                                    </th>
+                                                    <th>
+                                                        <span data-toggle="tooltip" data-placement="right" title="Virality / Follower">
+                                                            Engagement Score
+                                                        </span>
+                                                   </th>
+                                                   <th>
+                                                        <span data-toggle="tooltip" data-placement="right" title="SEO vs Engagement vs Broken Pins">
+                                                            Quality Score
+                                                        </span>
+                                                   </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="boardRows">
+                                                <!-- dynamically populated rows -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Pins -->
+                        <section id="boardPins" style="display: none;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2>Board : Garage Ideas</h2>
+                                    <div class="table-wrapper">
+                                        <table class="alt">
+                                            <thead>
+                                                <tr>
+                                                    <th>Pin</th>
+                                                    <th>Repins</th>
+                                                    <th>Keywords</th>
+                                                    <th>
+                                                        <span data-toggle="tooltip" data-placement="right" title="Keywords, Linked Page SEO, Rich Pins, Optimally sized pin">
+                                                            <i class="fa fa-warning" aria-hidden="true"></i> Quality Score
+                                                        </span>
+                                                   </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://i.pinimg.com/564x/2b/91/f8/2b91f80fb3ffa64d2177e2a1db083caf.jpg">
+                                                        <span data-toggle="tooltip" data-placement="right" title="When building a new home, there are many builder upgrades available. Some cost more than others and your budget will likely require to choose. Read below for my top 10 builder upgrades you should do, and a few builder upgrades to avoid when building your dream home.">
+                                                            drawbuildplay.com
+                                                        </span>
+                                                        <i class="fa fa-external-link" aria-hidden="true">
+                                                    </td>
+                                                    <td>18</td>
+                                                    <td>lorem ipsum</td>
+                                                    <td>
+                                                        <span data-toggle="tooltip" data-placement="right" data-html="true"
+                                                            title="
+                                                                <i class='fa fa-times' aria-hidden='true'></i> Link is invalid<br/>
+                                                                <i class='fa fa-times' aria-hidden='true'></i> Going viral<br/>
+                                                                <i class='fa fa-times' aria-hidden='true'></i> Keywords found in Pin Title/Desc<br/>
+                                                                <i class='fa fa-times' aria-hidden='true'></i> Keywords found in Page Title/Desc<br/>
+                                                                <i class='fa fa-times' aria-hidden='true'></i> Pin is a Rich Pin<br/>
+                                                                <i class='fa fa-times' aria-hidden='true'></i> Image matches recommended size<br/>
+                                                            ">
+                                                            <i class="fa fa-warning" aria-hidden="true"></i> 0
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://i.pinimg.com/564x/2b/91/f8/2b91f80fb3ffa64d2177e2a1db083caf.jpg">
+                                                        <span data-toggle="tooltip" data-placement="right" title="When building a new home, there are many builder upgrades available. Some cost more than others and your budget will likely require to choose. Read below for my top 10 builder upgrades you should do, and a few builder upgrades to avoid when building your dream home.">
+                                                            drawbuildplay.com
+                                                        </span>
+                                                        <i class="fa fa-external-link" aria-hidden="true">
+                                                    </td>
+                                                    <td>18</td>
+                                                    <td>
+                                                        <span data-toggle="tooltip" data-placement="right" title="The pin keywords were not found on this board. Consider creating another board targeting these keywords.">
+                                                            <i class="fa fa-warning" aria-hidden="true"></i> building a home tips
+                                                        </span>
+                                                    <td>
+                                                        <span data-toggle="tooltip" data-placement="right" data-html="true"
+                                                            title="
+                                                                <i class='fa fa-check' aria-hidden='true'></i> Link is invalid<br/>
+                                                                <i class='fa fa-check' aria-hidden='true'></i> Going viral<br/>
+                                                                <i class='fa fa-check' aria-hidden='true'></i> Keywords found in Pin Title/Desc<br/>
+                                                                <i class='fa fa-check' aria-hidden='true'></i> Keywords found in Page Title/Desc<br/>
+                                                                <i class='fa fa-check' aria-hidden='true'></i> Pin is a Rich Pin<br/>
+                                                                <i class='fa fa-check' aria-hidden='true'></i> Image matches recommended size<br/>
+                                                            ">
+                                                            <i class="fa fa-warning" aria-hidden="true"></i> 0
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section> 
+					</div>
+
+                    {{ partial "footer/index" . }}
+                    {{ partial "copyright" . }}
+
+
+            </div>
+            {{ template "_internal/google_analytics.html" . }}
+            {{ partial "scripts/index" . }}
+
+            <script>
+                 // initialize the page when document is ready.
+                $( document ).ready(function(){
+                    initializePage();
+                });
+            </script>
+	</body>
+
+    {{ partial "login" . }}
+    {{ partial "signup" . }}
+
+</html>

@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://localhost:1313/"
 languageCode = "en-us"
 title = "The DIY Blogger"
 theme = "massively"
@@ -7,10 +7,12 @@ googleAnalytics = "UA-132745738-2"
 
 # set below parameter to define a favicon
 [params]
-    favicon = "/favicon.png"
-    author = "Amit Gandhi"
+  favicon = "/favicon.png"
+  author = "Amit Gandhi"
 	site_description = "Your guide to building blog traffic from scratch"
 	description = "Your guide to building blog traffic from scratch"
+  pinterest_client_id = "5022942441869717972"
+  pinterest_scope = "read_public, write_public"
 
 [outputs]
   home = ["HTML", "RSS"]

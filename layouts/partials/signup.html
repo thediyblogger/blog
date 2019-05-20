@@ -1,0 +1,36 @@
+<!-- Modal -->
+<div class="modal fade" id="signupModal" tabindex="1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="signupModalLabel">Create Profile</h2>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="#">
+          <div class="fields">
+              <div class="field">
+                <label for="email" data-toggle="tooltip" data-placement="left" title="We'll never share your email with anyone else.">
+                  Email
+                </label>
+                <input type="text" name="email" id="signup_email" placeholder="Your Email Address" />
+              </div>
+              <div class="field">
+                <label for="password" data-toggle="tooltip" data-placement="left" title="Please enter a secure password that is at least 8 characters, contains uppercase and lowercase letters, numbers, and a special character.">Password</label>
+                <input type="password" name="password" id="signup_password" placeholder="Create a secure password"/>
+                <input type="hidden" name="code" id="signup_code" />
+
+              </div>
+              <div class="field">
+                <label for="website" data-toggle="tooltip" data-placement="left" title="Please enter your website url (e.g. https://www.yourdomain.com).">Website</label>
+                <input type="text" name="website" id="signup_website" placeholder="https://www.yourdomain.com" />
+              </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="button small" data-dismiss="modal">Close</button>
+          <button type="button" class="button primary small" onclick="submitSignup();">Complete Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
