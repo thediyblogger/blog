@@ -80,25 +80,18 @@
             function initializePage(){
                 // Initialize once with app id
                 // PDK.init({ appId: '{{ .Param "pinterest_client_id" }}', cookie: true });
+                hideAll();
 
                 if (urlParam('code')) {
                     var code = urlParam('code');
-                    window.opener.completeSignup(code);
+                    window.opener.displaySignup(code);
                     window.close();
                 } 
 
                 if (loggedIn()){
                     // if user is logged in,  
-
-                    signupCompleted = false;
-                    if (!signupCompleted){
-                        // prompt user for domain and email address if we dont already have it.
-                        completeSignup();
-                    }
-                    else{
-                        // user has a complete profile, so run the analysis.
-                        analyzePinterest();   
-                    }
+                    // user has a complete profile, so run the analysis.
+                    analyzePinterest();   
 
                     
                 }
@@ -108,25 +101,29 @@
                 }
             }
 
+            function hideAll(){
+                $('#signup').hide();
+                $('#signupForm').hide();
+                $("#profiletResults").hide();
+                $("#engagementResults").hide();
+                $("#boardResults").hide();
+                $("#boardPins").hide();
+
+                if (($("#loginModal").data('bs.modal') || {})._isShown){
+                    $('#loginModal').modal('hide');
+                }
+            }
+
             function signup(){
 
-                /*
-                PDK.login(
-                    {
-                        scope: '{{ .Param "pinterest_scope" }}'
-                    }, 
-                    function(response){
-                        completeSignup()
-                    });
-                */
 
                 var CLIENT_ID = "5022942441869717972";
 
                 AUTHORIZATION_URL = "https://api.pinterest.com/oauth/" + 
                     "?response_type=code" + 
-                    "&redirect_uri=" + window.location +
                     "&client_id=" + CLIENT_ID +
-                    "&scope=read_public,write_public";
+                    "&scope=read_public,write_public" + 
+                    "&redirect_uri=" + window.location;
 
                 popup = window.open(
                   AUTHORIZATION_URL,
@@ -137,12 +134,12 @@
             }
 
 
+           
 
-            function completeSignup(code){
-                // show the complete signup modal
-                $('#signupModal').modal();
+            function displaySignup(code){
+                $("#signup").hide();
+                $('#signupForm').show();
                 $('#signup_code').val(code);
-                $('[data-toggle="tooltip"]').tooltip();
             }
 
             function submitSignup(){
@@ -170,46 +167,136 @@
                         body: JSON.stringify(payload)
                     })
                 .then(handleResponse)
-                .then(data => console.log(data))
-                .catch(error => appendSignupMessage(error.responseBody))
-
-                // refresh the page with the dashboard
-                initializePage();
+                .then(data => storeSession(data))
+                .catch(error => displaySignupErrors(error.responseBody))
 
             }
 
-            function appendSignupMessage(messages){
-                console.log(messages)
+            function displaySignupErrors(messages){
+                console.log(messages);
+                console.log("display errors");
 
-                tooltipText = ""
+                // clear the validation states
+                $('#signup_password').removeClass("is-invalid");
+                $('#signup_email').removeClass("is-invalid");
+                $('#signup_website').removeClass("is-invalid");
+                $('.invalid-feedback').remove();
+
+                $('#completeSignupForm').addClass("was-validated");
+
+
                 $.each(messages, function (i, msg)
                 {
-                    tooltipText += "<i class='fa fa-times' aria-hidden='true'></i>" + msg["message"] + "<br/>"
+                    error_message = $('<div>');
+                    error_message.addClass("invalid-feedback");
+                    error_message.text(msg['message']);
+
+                    field = msg['field'];
+
+                    if (field == "password"){
+                        $('#signup_password').after(error_message);
+                        $('#signup_password').addClass("is-invalid");
+                    }
+                    else if (field == "email"){
+                        $('#signup_email').after(error_message);
+                        $('#signup_email').addClass("is-invalid");
+                    }
+                    else if (field == "domain"){
+                        $('#signup_website').after(error_message);
+                        $('#signup_website').addClass("is-invalid");
+                    }
                 });
-
-                messages = $("<div>");
-                messages.text("There are issues with your form.");
-                messages.attr("data-toggle", "tooltip")
-                messages.attr("data-placement", "left")
-                messages.attr("data-html", "true")
-                messages.attr("title", tooltipText)
-
-                $('#signupModal .fields').prepend(messages);
-                $('[data-toggle="tooltip"]').tooltip();
-
-
             }
 
+            function storeSession(session){
+                console.log("session", session);
+
+                // store in the session with the token and expiration
+                localStorage.setItem('pinkarma_token', JSON.stringify(session));
+
+
+                // refresh the page (user is now logged in)
+                initializePage();
+            }
+
+            function getSession(){
+                token = JSON.parse(localStorage.getItem("pinkarma_token"));
+
+                return token;
+            }
+
+            function login(){
+                url = buildEndpoint("/auth/login");
+                payload = {
+                    "email": $('#email').val(),
+                    "password": $('#password').val()
+                }
+
+                // call out to the endpoint to log in
+                fetch(
+                    url, 
+                    {
+                        headers: {
+                          'Accept': 'application/json',
+                          'Content-Type': 'application/json'
+                        },
+                        method: 'post', 
+                        body: JSON.stringify(payload)
+                    })
+                .then(handleResponse)
+                .then(data => logUserIn(data))
+                .catch(error => displayLoginErrors(error.responseBody))
+            }
+
+            function logUserIn(data){
+                storeSession(data);
+            }
+
+            function displayLoginErrors(messages){
+                console.log("login error", messages);
+                console.log("display errors");
+
+                if (messages){
+
+                    // clear the validation states
+                    $('#password').removeClass("is-invalid");
+                    $('#email').removeClass("is-invalid");
+                    $('.invalid-feedback').remove();
+
+                    $('#loginForm').addClass("was-validated");
+
+
+                    $.each(messages, function (i, msg)
+                    {
+                        error_message = $('<div>');
+                        error_message.addClass("invalid-feedback");
+                        error_message.text(msg['message']);
+
+                        field = msg['field'];
+
+                        if (field == "password"){
+                            $('#password').after(error_message);
+                            $('#password').addClass("is-invalid");
+                        }
+                        else if (field == "email"){
+                            $('#email').after(error_message);
+                            $('#email').addClass("is-invalid");
+                        }
+                    });
+                }
+            }
+
+
             function logout(){
-                // PDK.logout();
+                // delete the session
+                localStorage.removeItem('pinkarma_token');
 
                 // refresh the page
                 location.reload(true);
             }
 
             function loggedIn(){
-                // return !!PDK.getSession();
-                return false;
+                return !!getSession();
             }
 
             function analyzePinterest(){
@@ -440,6 +527,39 @@
                             </div>
                         </section>
 
+                        <section id="signupForm" style="display: none;">
+                            <form id="completeSignupForm" method="post" action="#">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2>Complete Sign Up</h2>
+                                    </div>
+                                </div>
+                                <div class="fields">
+                                  <div class="field">
+                                    <label for="email" data-toggle="tooltip" data-placement="left" title="We'll never share your email with anyone else.">
+                                      Email
+                                    </label>
+                                    <input type="text" name="email" id="signup_email" placeholder="Your Email Address" required class="is-invalid" />
+                                  </div>
+                                  <div class="field">
+                                    <label for="password" data-toggle="tooltip" data-placement="left" title="Please enter a secure password that is at least 8 characters, contains uppercase and lowercase letters, numbers, and a special character.">Password</label>
+                                    <input type="password" name="password" id="signup_password" placeholder="Create a secure password" required/>
+                                    <input type="hidden" name="code" id="signup_code" />
+
+                                  </div>
+                                  <div class="field">
+                                    <label for="website" data-toggle="tooltip" data-placement="left" title="Please enter your website url (e.g. https://www.yourdomain.com).">Website</label>
+                                    <input type="text" name="website" id="signup_website" placeholder="https://www.yourdomain.com"  required/>
+                                  </div>
+                                </div>
+                                <ul class="actions">
+                                    <li>
+                                        <input type="submit" value="Complete Sign Up" name="signup" id="signup_button" class="button" onclick="submitSignup(); return false;">
+                                    </li>
+                                </ul>
+                            </form>
+                        </section>
+
                         <!-- Engagement -->
                         <section id="engagementResults" style="display: none;">
                             <div class="row">
@@ -620,6 +740,5 @@
 	</body>
 
     {{ partial "login" . }}
-    {{ partial "signup" . }}
 
 </html>

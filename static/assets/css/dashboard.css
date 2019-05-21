@@ -52,3 +52,7 @@
 .tooltip{
     z-index:100000000;
 }
+
+.invalid-feedback{
+    display: block !important;
+}
