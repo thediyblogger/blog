@@ -117,7 +117,7 @@
             function signup(){
 
 
-                var CLIENT_ID = "5022942441869717972";
+                var CLIENT_ID = "{{ .Site.Params.pinterest_client_id }}";
 
                 AUTHORIZATION_URL = "https://api.pinterest.com/oauth/" + 
                     "?response_type=code" + 
@@ -315,16 +315,22 @@
 
 
             function buildEndpoint(path) {
-              // const endpoint = 'https://api.thediyblogger.com';
-              const endpoint = 'http://127.0.0.1:8001';
+              const endpoint = "{{ .Site.Params.pinkarma_api }}";
               return endpoint + path;
             }
 
             function analyze(){
                 url = buildEndpoint("/report");
 
+                token = JSON.parse(localStorage.getItem("pinkarma_token")).token
+
                 // call out to the endpoint to get the results
-                fetch(url)
+                fetch(url, 
+                    { 
+                        'headers': {
+                            'Authorization': token
+                        }
+                    })
                 .then(response => response.json())
                 .then(json => {
                   renderResults(json);
@@ -334,9 +340,14 @@
 
             function renderResults(report) {
                
+                $('#avatar').attr("src", report.profile.image['60x60']['url'])
                     
                 $('#current_score').text(report.engagement_score.score);
                 $('#current_score_pct').text(report.engagement_score.percentage);
+
+                profileName = report.profile.name;
+
+                $('#missionHeader').text(profileName);
 
                 // render the recommendations
                 $("#recommendations").empty();
@@ -344,9 +355,6 @@
                     carouselitem = $("<div>");
                     carouselitem.addClass("carousel-item");
                     if (index == 0) carouselitem.addClass("active");
-
-                    header = $("<header>");
-                    header.html("<h2>Your Missions</h2>");
 
                     metric = $("<header>");
                     metric.html("<h4>" + r.metric + "</h4>");
@@ -370,7 +378,6 @@
                     link.addClass("button");
                     link.text("Learn More");
 
-                    carouselitem.append(header);
                     carouselitem.append(metric);
                     carouselitem.append(message);
                     carouselitem.append(impact);
@@ -443,14 +450,31 @@
                         name_cell.append(icon);
                     }
 
+                    if (board.privacy != "public"){
+                        // add a lock icon for secret boards
+                        icon = createIcon("fa-lock", "Secret Board", true);
+                        name_cell.append(icon);
+                    }
+
                     row = $("<tr>")
                     row.append(name_cell);
                     row.append($("<td>").text(board.counts.pins + " pins"));
                     row.append($("<td>").text(board.counts.followers + " followers"));
-                    row.append($("<td>").text(board.counts.repins + " repins"));
-                    row.append($("<td>").text(board.counts.virality.toFixed(1)));
-                    row.append($("<td>").text(board.counts.engagement.toFixed(1)));
-                    row.append($("<td>").text(board.counts.quality.toFixed(0)));
+
+                    if (board.stats != "in_progress"){
+                        row.append($("<td>").text(board.counts.repins + " repins"));
+                        row.append($("<td>").text(board.counts.virality.toFixed(1)));
+                        row.append($("<td>").text(board.counts.engagement.toFixed(1)));
+                        row.append($("<td>").text(board.counts.quality.toFixed(0)));
+                    }
+                    else{
+                        // we dont have stats yet for the pins.
+                        row.append($("<td>").text("-"));
+                        row.append($("<td>").text("-"));
+                        row.append($("<td>").text("-"));
+                        row.append($("<td>").text("-"));
+                    }
+
                     $('#boardRows').append(row);
 
                         
@@ -573,6 +597,9 @@
                                 </div>
                                 <div class="col-9">
                                     <div class="box">
+                                        <header>
+                                            <h2 id="missionHeader">Your Missions:</h2>
+                                        </header>
                                         <div class="carousel slide" data-ride="carousel">
                                             <div id="recommendations" class="carousel-inner">
                                                 <!-- dynamically populated -->

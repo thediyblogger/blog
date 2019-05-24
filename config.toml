@@ -9,9 +9,10 @@ googleAnalytics = "UA-132745738-2"
 [params]
   favicon = "/favicon.png"
   author = "Amit Gandhi"
-	site_description = "Your guide to building blog traffic from scratch"
-	description = "Your guide to building blog traffic from scratch"
-  pinterest_client_id = "5022942441869717972"
+	site_description = "Your guide to exponentially increasing your blog traffic."
+	description = "Your guide to exponentially increasing your blog traffic."
+  pinkarma_api = "http://127.0.0.1:8001"
+  pinterest_client_id = "5034711914840639840"
   pinterest_scope = "read_public, write_public"
 
 [outputs]

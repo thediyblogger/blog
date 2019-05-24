@@ -15,14 +15,22 @@
                 </li>
             {{ end }}
         {{ end }}
-
-
+        <li class="{{if eq .URL "/dashboard/"}}active{{end}}">
+            <a href='{{ "/dashboard" | relLangURL }}'>PIN KARMA</a>
+        </li>
     </ul>
 
     <ul class="icons">
+        {{if eq .URL "/dashboard/"}}
         <li id="btnLogin"><button type="button" class="button small" data-toggle="modal" data-target="#loginModal">Log In</button></li>
         <li id="btnFreeTrial"><button type="button" class="button primary small" onclick="signup();">Free Trial</button></li>
-        <li id="btnLogout" style="display:none;"><a href="/dashboard"><button type="button" class="button small" onclick="logout();">Log Out</button></a></li>
+        <li id="btnLogout" style="display:none;">
+            <button type="button" class="button small" onclick="logout(); return false;">
+                <img id="avatar" src="/images/avatar.png" alt="Avatar" class="avatar">
+                Log Out
+            </button>
+        </li>
+        {{end}}
     </ul>
 </nav>
 

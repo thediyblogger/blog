@@ -7,10 +7,13 @@ googleAnalytics = "UA-132745738-1"
 
 # set below parameter to define a favicon
 [params]
-    favicon = "/favicon.png"
-    author = "Amit Gandhi"
-  site_description = "Your guide to building blog traffic from scratch"
-  description = "Your guide to building blog traffic from scratch"
+  favicon = "/favicon.png"
+  author = "Amit Gandhi"
+  site_description = "Your guide to exponentially increasing your blog traffic."
+  description = "Your guide to exponentially increasing your blog traffic."
+  pinkarma_api = "https://api.thediyblogger.com"
+  pinterest_client_id = "5034711914840639840"
+  pinterest_scope = "read_public, write_public"
 
 [outputs]
   home = ["HTML", "RSS"]

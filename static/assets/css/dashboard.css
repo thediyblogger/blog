@@ -56,3 +56,11 @@
 .invalid-feedback{
     display: block !important;
 }
+
+.avatar {
+    text-align: middle;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
