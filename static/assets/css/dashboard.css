@@ -64,3 +64,61 @@
     height: 30px;
     border-radius: 50%;
 }
+
+
+button:hover,
+.button:hover,
+.button:hover a.button:hover {
+    box-shadow: inset 0 0 0 2px #deb150;
+    background-color: : #deb150 !important;
+    color: #deb150 !important;
+}
+
+#nav button:hover,
+#nav .button:hover {
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff !important;
+}
+
+.posts h2 a:hover{
+    color: #deb150 !important;
+}
+
+
+input[type="submit"].primary:hover,
+input[type="reset"].primary:hover,
+input[type="button"].primary:hover,
+button.primary:hover,
+.button.primary:hover {
+    box-shadow: inset 0 0 0 2px #c61118;
+    background-color: #c61118 !important;
+    color: #fff !important;
+}
+
+#nav ul.links li.active a:hover {
+    color: #c61118 !important;
+}
+
+#header .logo:hover {
+    border-color: #fff !important;
+    color: #fff !important;
+    text-decoration:  none !important;
+}
+
+a:hover{
+    color: #4259D2 !important;
+    text-decoration:  none !important;
+}
+
+#loading .icon{
+    text-align: center;
+}
+
+#boardRows td.loading{
+    text-align: center;
+}
+
+#boardRows td.loading img{
+    height: 2rem;
+    vertical-align: top;
+}
