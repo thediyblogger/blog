@@ -28,18 +28,18 @@ Pinterest users tend to also be slightly more affluent (50% of users have househ
 
 It is also still relatively easy to rank on Pinterest for keywords you are targeting.  This is due to the fact their user base is growing exponentially, and the platform is still much newer compared to google.  Also not all marketers have jumped onto the Pinterest bandwagon yet due to not fully understanding how to utilize the platform.
 
-Popular topics on Pinterest range from DIY ideas, Home Decor, Food Recipes, Health and Fitness, to Gardening, Making money, etc.  
+Popular topics on Pinterest range from DIY ideas, Home Decor, Food Recipes, Health and Fitness, to Gardening, Making money, etc.
 
 The majority of users today on Pinterest tend to be female, but that is changing also, with a sizable Male population also starting to use it.
 
 ## How do I get started with Pinterest?
 
-1. Create a Pinterest account.  If you already have an individual account, then upgrade it to a Business account (its free).  A Business Account gives you more power such as Analytics, the option to promote ads, as well as being able to claim your website domain.
-2. Once you have your business account set up, make sure your name and descriptions are SEO optimized, targeting the keywords for your niche.
-3. You will want to have between 20 - 50 boards initially do cover sub-niches you are interested in within your niche.  Make sure your boards and named and have descriptions that are also keyword optimized based on traditional SEO techniques.
+1. Create a Pinterest account.  If you already have an individual account, then [upgrade it to a Business account](/blog/how-to-set-up-a-pinterest-business-account/ "How to set up a Pinterest business account") (its free).  A Business Account gives you more power such as Analytics, the option to promote ads, as well as being able to claim your website domain.
+2. Once you have your [business account set up](/blog/how-to-set-up-a-pinterest-business-account/ "how to set up a Pinterest business account"), make sure your business name and descriptions are SEO optimized, targeting the keywords for your niche.
+3. You will want to have between 20 - 50 boards initially do cover sub-niches you are interested in within your niche.  Make sure your boards are named, and have descriptions that are also keyword optimized based on traditional SEO techniques.
 4. Try to have at lease 20 pins in each board to start off with.  The pins should be high quality (not broken, 404 links, good images, good descriptions, related to the sub niche).
 5. Over time, be active on Pinterest.  That means regularly pinning on many of your boards.  The more you do this and populate your boards with high quality content, others will find you interesting and the Pinterest algorithm will help you increase your reach.  Be careful though, don't pin anything and everything - be human, else this could also hurt you.  In other words, avoid pinning 100 pins within 5 minutes.  Spread them out throughout the day like you would with your personal account.
-6. Pin your own content!  This is the most critical piece.  As you publish content to your blog, make sure you pin it to your relevant boards.  
+6. Pin your own content!  This is the most critical piece.  As you publish content to your blog, make sure you pin it to your relevant boards.
 
 ## How do I start driving real traffic with Pinterest?
 
@@ -51,7 +51,7 @@ So, here's the big secret:
 
 If you want to get crazy traffic, you have to work for it.  That means, publish new content to your blog as often as possible (eg 4 - 5 times a week).  Over time you can probably reduce that to 2 - 3 times a week.  Pinterest rewards content creators.  So if you are creating new content, and pinning it, then your reach will really start to ramp up.
 
-Remember to watch what your audience is excited about, and tailor your content to that.  This is no different to Google SEO.  
+Remember to watch what your audience is excited about, and tailor your content to that.  This is no different to Google SEO.
 
 Keep track of what you are seeing in Google Analytics.  It will tell you what pages are viewed the most, time of day etc.
 
