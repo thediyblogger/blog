@@ -2,7 +2,6 @@
 categories = []
 date = "2019-05-28T00:00:00-04:00"
 description = "Learn how to set up a Pinterest Business Account for free to access Pinterest Analytics and other tools to help grow your business.  "
-draft = true
 social_media_images = []
 social_media_text = ""
 title = "How to set up a Pinterest Business Account"
