@@ -1,4 +1,4 @@
 ---
-title: "Pinterest Dashboard"
+title: "PinKarma Dashboard"
 type: "dashboard"
 ---

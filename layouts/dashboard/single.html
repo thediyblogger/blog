@@ -299,6 +299,31 @@
                 return !!getSession();
             }
 
+
+            function forceRefresh(){
+                url = buildEndpoint("/report");
+                token = JSON.parse(localStorage.getItem("pinkarma_token")).token
+
+                // call out to the endpoint to get the results
+                fetch(
+                    url, 
+                    {
+                        headers: {
+                          'Accept': 'application/json',
+                          'Content-Type': 'application/json',
+                          'Authorization': token
+                        },
+                        method: 'delete' 
+                    })
+                .then(function(response){
+                    if (response.status == 202) { return response.json() }
+                    else if (response.status == 401) { logout(); }
+                    else { throw Error(`Request rejected with status ${res.status}`); }
+                })
+                .then(json => analyze())
+                .catch(error => console.error);
+            }
+
             function analyzePinterest(){
                 $("#signup").hide();
                 $("#engagementResults").hide();
@@ -321,7 +346,6 @@
 
             function analyze(){
                 url = buildEndpoint("/report");
-
                 token = JSON.parse(localStorage.getItem("pinkarma_token")).token
 
                 // call out to the endpoint to get the results
@@ -331,15 +355,17 @@
                             'Authorization': token
                         }
                     })
-                .then(response => response.json())
-                .then(json => {
-                  renderResults(json);
-                });
+                .then(function(response){
+                    if (response.status == 200) { return response.json() }
+                    else if (response.status == 401) { logout(); }
+                    else { throw Error(`Request rejected with status ${res.status}`); }
+                })
+                .then(json => renderResults(json))
+                .catch(error => console.error);
             }
 
 
             function renderResults(report) {
-               
                 $('#avatar').attr("src", report.profile.image['60x60']['url'])
                     
                 $('#current_score').text(report.engagement_score.score);
@@ -372,6 +398,7 @@
                     impact = $("<p>");
                     impact.html("<strong>Impact: " + r.impact + "</strong>");
 
+
                     link = $("<a>");
                     link.attr("href", r.link);
                     link.attr("target", "_blank");
@@ -381,7 +408,10 @@
                     carouselitem.append(metric);
                     carouselitem.append(message);
                     carouselitem.append(impact);
-                    carouselitem.append(link);
+                    
+                    if (r.link != ""){
+                        carouselitem.append(link);
+                    }
 
                     $("#recommendations").append(carouselitem);
                 });
@@ -465,11 +495,11 @@
                         row.append($("<td>").text(board.counts.repins + " repins"));
                         row.append($("<td>").text(board.counts.virality.toFixed(1)));
                         row.append($("<td>").text(board.counts.engagement.toFixed(1)));
-                        row.append($("<td>").text(board.counts.quality.toFixed(0)));
+                        // row.append($("<td>").text(board.counts.quality.toFixed(0)));
                     }
                     else{
                         // we dont have stats yet for the pins.
-                        row.append($("<td colspan='4' class='loading'>").html("<img data-toggle='tooltip' data-placement='right' src='/images/loading-hz.svg' alt='-' title='Hold Tight.  We are still downloading your data.  Check back in a few hours.' />"));
+                        row.append($("<td colspan='3' class='loading'>").html("<img data-toggle='tooltip' data-placement='right' src='/images/loading-hz.svg' alt='-' title='Hold Tight.  We are still downloading your data.  Check back in a few hours.' />"));
                     }
 
                     $('#boardRows').append(row);
@@ -606,6 +636,11 @@
                                         <h1 id="current_score"></h1>
                                         <p>Total Points (<span id="current_score_pct"></span>%)</p>
                                     </header>
+                                    <div>
+                                        <!--
+                                            <button id="btnForceRefresh" onclick="forceRefresh(); return false;">Refresh Report</button>
+                                        -->
+                                    </div>
                                 </div>
                                 <div class="col-9">
                                     <div class="box">
@@ -667,11 +702,13 @@
                                                             Engagement Score
                                                         </span>
                                                    </th>
+                                                   <!--
                                                    <th>
                                                         <span data-toggle="tooltip" data-placement="right" title="SEO vs Engagement vs Broken Pins">
                                                             Quality Score
                                                         </span>
                                                    </th>
+                                                    -->
                                                 </tr>
                                             </thead>
                                             <tbody id="boardRows">

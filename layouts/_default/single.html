@@ -25,10 +25,6 @@
 
                             {{ partial "postcustom" . }}
                             
-                            {{ if not .Date.IsZero }}
-                            <h6><span class="date">Last Updated: {{ .Date.Format "January 2, 2006" }}</span></h6>
-                            {{ end }}
-
                             {{ if not (eq .Params.disableComments true) }}
                             {{ template "_internal/disqus.html" . }}
                             {{ end }}
