@@ -28,7 +28,9 @@ I always like to start by directing users to official documentation.  In this ca
 ## How to create a new Pinterest Business Account
 
 1. If you are already logged in on Pinterest, then please [log out](https://pinterest.com/logout "Log out of Pinterest") first.
-2. Go to [pinterest.com/business/create/](http://pinterest.com/business/create/) in order to create your business account. You can also click the "Sign up" button on Pinterest.
+2. Go to [pinterest.com/business/create/](http://pinterest.com/business/create/) in order to create your business account. You can also click the "Sign up" button on Pinterest.  
+     
+   {{<imgproc "/uploads/create-a-pinterest-business-account.png" Resize "400x" >}}Create a Pinterest business account{{</imgproc>}} 
 3. Enter your email address and password.
 4. Your account will be created at this point, but Pinterest will guide you through a series of steps to better optimize your account.
    1. The first step is to select your language and country.
@@ -46,7 +48,9 @@ At this point, your account will be ready to use.  I also recommend creating a f
 1. If you already have a personal Pinterest account which you want to convert to a business account, then start by logging into that account.
 2. Click on the `Add a free business profile` link under the `...` menu option on the top right on your window.  You can also click on `Edit settings` and convert your account from the Account tab.
 
-   ![](/uploads/add-a-free-business-profile-link.png)  
+     
+   {{<imgproc "/uploads/add-a-free-business-profile-link.png" Resize "300x" >}}Convert an existing Pinterest profile to a business account{{</imgproc>}}   
+     
    Alternatively, go to [http://pinterest.com/business/convert/](http://pinterest.com/business/convert/ "http://pinterest.com/business/convert/").
 3. You will be taken to a page to 'Get a free business account\`, prompting you to confirm your email address.  If it is correct, select continue.
 4. Your account will be converted at this point, but Pinterest will guide you through a series of steps to better optimize your account for the business profile.
