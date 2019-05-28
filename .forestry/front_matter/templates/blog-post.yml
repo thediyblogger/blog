@@ -53,7 +53,7 @@ fields:
   config:
     required: false
 pages:
-- content/blog/how-to-build-links-to-your-website.md
-- content/blog/introduction-to-seo.md
-- content/blog/how-to-drive-4x-more-traffic-to-your-blog-with-pinterest-seo.md
 - content/blog/how-to-blog.md
+- content/blog/how-to-drive-4x-more-traffic-to-your-blog-with-pinterest-seo.md
+- content/blog/introduction-to-seo.md
+- content/blog/how-to-build-links-to-your-website.md
