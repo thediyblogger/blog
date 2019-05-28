@@ -28,14 +28,12 @@ I always like to start by directing users to official documentation.  In this ca
 ## How to create a new Pinterest Business Account
 
 1. If you are already logged in on Pinterest, then please [log out](https://pinterest.com/logout "Log out of Pinterest") first.
-2. Go to [pinterest.com/business/create/](http://pinterest.com/business/create/) in order to create your business account. You can also click the "Sign up" button on Pinterest.  
-     
-   ![create a pinterest business account](/uploads/create-a-pinterest-business-account.png "create a pinterest business account")
+2. Go to [pinterest.com/business/create/](http://pinterest.com/business/create/) in order to create your business account. You can also click the "Sign up" button on Pinterest.
 3. Enter your email address and password.
 4. Your account will be created at this point, but Pinterest will guide you through a series of steps to better optimize your account.
    1. The first step is to select your language and country.
    2. The second step will prompt you for your business name and the type of business (eg retail, media, etc).
-   3.  The third step will request your website url.  This is really helpful as you will get insights into who has already pinned content leading to your website.
+   3. The third step will request your website url.  This is really helpful as you will get insights into who has already pinned content leading to your website.
    4. The fourth step lets you link other social accounts to your Pinterest account.  Feel free to skip this step for now.  You can always do it later (especially if you dont have much of a presence on Etsy, YouTube, or Instagram yet)
    5. Pinterest will then ask if you are interested in ads.  I don't recommend jumping straight into promoted ads unless you have disposable money and have exhausted all other traffic generation methods.  My recommendation for now is to answer "Not Sure Yet".  You will always have access to ads later.
    6. Finally, Pinterest will ask you for the **topics** that best describe your business/website.  Choose all relevant topics as it will help Pinterest know which topics to promote your pins towards.
@@ -46,15 +44,15 @@ At this point, your account will be ready to use.  I also recommend creating a f
 ## How to convert an existing Pinterest Profile to a Business Account
 
 1. If you already have a personal Pinterest account which you want to convert to a business account, then start by logging into that account.
-2. Click on the `Add a free business profile` link under the `...` menu option on the top right on your window.  You can also click on `Edit settings` and convert your account from the Account tab.  
-     
+2. Click on the `Add a free business profile` link under the `...` menu option on the top right on your window.  You can also click on `Edit settings` and convert your account from the Account tab.
+
    ![](/uploads/add-a-free-business-profile-link.png)  
    Alternatively, go to [http://pinterest.com/business/convert/](http://pinterest.com/business/convert/ "http://pinterest.com/business/convert/").
 3. You will be taken to a page to 'Get a free business account\`, prompting you to confirm your email address.  If it is correct, select continue.
 4. Your account will be converted at this point, but Pinterest will guide you through a series of steps to better optimize your account for the business profile.
    1. The first step is to select your language and country.
    2. The second step will prompt you for your business name and the type of business (eg retail, media, etc).
-   3.  The third step will request your website url.  This is really helpful as you will get insights into who has already pinned content leading to your website.
+   3. The third step will request your website url.  This is really helpful as you will get insights into who has already pinned content leading to your website.
    4. The fourth step lets you link other social accounts to your Pinterest account.  Feel free to skip this step for now.  You can always do it later (especially if you dont have much of a presence on Etsy, YouTube, or Instagram yet)
    5. Pinterest will then ask if you are interested in ads.  I don't recommend jumping straight into promoted ads unless you have disposable money and have exhausted all other traffic generation methods.  My recommendation for now is to answer "Not Sure Yet".  You will always have access to ads later.
    6. Finally, Pinterest will ask you for the **topics** that best describe your business/website.  Choose all relevant topics as it will help Pinterest know which topics to promote your pins towards.
