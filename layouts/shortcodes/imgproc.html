@@ -1,5 +1,5 @@
-
-{{ $original := .Page.Resources.GetMatch (printf "*%s*" (.Get 0)) }}
+{{ $imageResources := .Site.GetPage "/uploads" }}
+{{ $original := $imageResources.Resources.GetMatch (strings.TrimPrefix "/uploads/" (.Get 0)) }}
 {{ $command := .Get 1 }}
 {{ $options := .Get 2 }}
 {{ if eq $command "Fit"}}
