@@ -20,9 +20,9 @@ Great, now that we have cleared that up, there are two types of accounts on Pint
 
 The main difference between the two types of accounts is that Business Accounts are designed for brands, and gives you a bunch of extra tools like **Pinterest Analytics**, and **Pinterest Ad Tools** that are _extremely valuable_.
 
-{{<imgproc "/uploads/pinterest-analytics.png" Resize "400x" >}}Pinterest Analytics{{</imgproc>}} 
+{{<imgproc "/uploads/pinterest-analytics.png" Resize "600x" >}}Pinterest Analytics{{</imgproc>}}
 
-If you have a website which you are trying to grow, and build your brand, then it's critical you create a business account. The analytics alone makes it worth having, but it also gives your brand a professional look.  You can claim your website, and apply for rich pins, thus elevating your brand further.  
+If you have a website which you are trying to grow, and build your brand, then it's critical you create a business account. The analytics alone makes it worth having, but it also gives your brand a professional look.  You can claim your website, and apply for rich pins, thus elevating your brand further.
 
 If you already have followers and a bunch of pins on your individual account, then you can also upgrade that account to a business account.
 
