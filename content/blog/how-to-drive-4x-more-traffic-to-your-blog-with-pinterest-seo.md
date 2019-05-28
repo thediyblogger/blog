@@ -1,5 +1,5 @@
 +++
-categories = ["Pinterest"]
+categories = ["Pinterest SEO"]
 date = "2019-03-16T00:00:00-04:00"
 description = "Do you want crazy traffic on your new website or blog?  Google may get you results in the long term, but Pinterest will drive traffic now.  Learn how to optimize SEO for Pinterest to get insane traffic to your website."
 social_media_images = ["/uploads/Drive 4x More Traffic.png"]
