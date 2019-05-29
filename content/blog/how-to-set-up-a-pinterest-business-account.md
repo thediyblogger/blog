@@ -36,7 +36,7 @@ If you are already logged in on Pinterest, then please [log out](https://pintere
 
 Go to [pinterest.com/business/create/](http://pinterest.com/business/create/) in order to create your business account. You can also click the "Sign up" button on Pinterest.
 
-{{<imgproc "/uploads/create-a-pinterest-business-account.png" Resize "400x" >}}Create a Pinterest business account{{</imgproc>}}
+{{<imgproc "/uploads/create-a-pinterest-business-account.png" Resize "600x" >}}Create a Pinterest business account{{</imgproc>}}
 
 Enter your email address and password.
 
@@ -47,7 +47,7 @@ Your account will be created at this point, but Pinterest will guide you through
 3. The third step will request your `website url`.  This is really helpful as you will get insights into who has already pinned content leading to your website.
 4. The fourth step lets you link other social accounts to your Pinterest account.  Feel free to skip this step for now.  You can always do it later (especially if you dont have much of a presence on Etsy, YouTube, or Instagram yet)
 5. Pinterest will then ask if you are interested in ads.  I don't recommend jumping straight into promoted ads unless you have disposable money and have exhausted all other traffic generation methods.  My recommendation for now is to answer "Not Sure Yet".  You will always have access to ads later.
-6. Finally, Pinterest will ask you for the **topics** that best describe your business/website.  Choose all relevant topics as it will help Pinterest know which topics to promote your pins towards.
+6. Finally, Pinterest will ask you for the **topics** that best describe your business/website.  Choose all relevant topics as it will help Pinterest know which topics to promote your pins towards. It will also help populate your home feed with relevant pins to your business.  FYI, these topics are also the most popular topics on Pinterest <hint hint>.
 
 Finally, upload a profile picture for your business.  Usually this will be the business logo, or if you operate as an individual, then a good professional looking photo of you also helps build trust in your brand (if you are the brand!).
 
@@ -59,7 +59,7 @@ If you already have a personal Pinterest account which you want to convert to a 
 
 Click on the `Add a free business profile` link under the `...` menu option on the top right on your window.  You can also click on `Edit settings` and convert your account from the Account tab.
 
-{{<imgproc "/uploads/add-a-free-business-profile-link.png" Resize "300x" >}}Convert an existing Pinterest profile to a business account{{</imgproc>}}
+{{<imgproc "/uploads/add-a-free-business-profile-link.png" Resize "600x" >}}Convert an existing Pinterest profile to a business account{{</imgproc>}}
 
 Alternatively, go to [http://pinterest.com/business/convert/](http://pinterest.com/business/convert/ "http://pinterest.com/business/convert/").
 
