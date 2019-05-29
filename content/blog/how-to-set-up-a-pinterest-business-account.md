@@ -7,7 +7,7 @@ social_media_text = ""
 title = "How to set up a Pinterest Business Account"
 [images]
 name = "How to create a new Pinterest business account"
-src = "/uploads/create-a-pinterest-business-account.png"
+src = "/uploads/create-a-pinterest-business-account-1.png"
 
 +++
 If you have a website that you want to drive insane amounts of traffic to, it is critical that one of the first steps you do is set up a Pinterest Business Account.
