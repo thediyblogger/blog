@@ -104,7 +104,6 @@
                 $("#loading").hide();
                 $('#signup').hide();
                 $('#signupForm').hide();
-                $("#profiletResults").hide();
                 $("#engagementResults").hide();
                 $("#boardResults").hide();
                 $("#boardPins").hide();
@@ -370,12 +369,14 @@
                     
                 $('#current_score').text(report.engagement_score.score);
                 $('#current_score_pct').text(report.engagement_score.percentage);
+                $("#badges").empty();
 
                 
 
                 profileName = report.profile.name;
 
                 $('#missionHeader').text(profileName);
+                $("#carousel").empty();
                 $("#carousel").empty();
 
 
@@ -387,6 +388,8 @@
                 carouselitem = $("<div>");
                 carouselitem.addClass("carousel-item");
                 carouselitem.addClass("active");
+
+                var num_badges_earned = 0;
 
                 $.each(report.levels, function(level, metrics){
                     level_header = $("<header>");
@@ -425,6 +428,7 @@
                     carouselitem.append(level_header);
 
                     if (level_complete){
+                        num_badges_earned++;
                         // show the badge for this level
                         badge = $("<img>")
 
@@ -456,6 +460,7 @@
 
                 })
                 recommendationsElement.append(carouselitem);
+                $("#currentLevel").text("BADGES: " + num_badges_earned);
 
                 // render the recommendations
                 $.each(report.recommendations, function(index, r){
@@ -538,25 +543,6 @@
 
 
 
-                // render the profile scan results
-                $("#profileScanResults").empty();
-                $.each(report.profile.scan, function(index, result){
-
-                    if (result.achieved){
-                        metric = createIcon("fa-check", result.metric, false);
-                    }
-                    else{
-                        metric = createIcon("fa-times", result.metric, false);
-                    }
-                    
-                    row = $("<tr>")
-                    profile_cell = $("<td>");
-                    profile_cell.append(createTooltip(result.details, false, metric));
-                    profile_cell.append($("<span>").html(" " + result.metric))
-                    row.append(profile_cell);
-                    $('#profileScanResults').append(row);
-                });
-
                 // render the list of boards
                 $("#boardRows").empty();
                 $.each(report.boards, function (index, board){
@@ -632,7 +618,6 @@
 
                 $("#loading").hide();
                 $("#engagementResults").show();
-                $("#profileResults").show();
                 $("#boardResults").show();
 
                 $("#btnAnalyze").html("Analyze Pinterest");
@@ -755,7 +740,7 @@
                         <section id="engagementResults" style="display: none;">
                             <div class="row">
                                 <div class="col-3 box">
-                                    <h2 id="currentLevel">BADGES: 1</h2>
+                                    <h2 id="currentLevel"></h2>
                                     <!-- Activity -->
                                     <header class="activity_score">
                                         <h1 id="current_score"></h1>
@@ -787,27 +772,6 @@
                             </div>
                         </section>
 
-                        <!-- Profile -->
-                        <section  id="profileResults"  style="display:none;">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h2>Profile</h2>
-                                    <div class="table-wrapper">
-                                        <a name="profile" style="display:none;"></a>
-                                        <table class="alt">
-                                            <thead>
-                                                <tr>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="profileScanResults">
-                                                <!-- dynamically populated -->
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>    
 
                         <!-- Boards -->
                         <section id="boardResults" style="display: none;">
