@@ -371,16 +371,96 @@
                 $('#current_score').text(report.engagement_score.score);
                 $('#current_score_pct').text(report.engagement_score.percentage);
 
+                
+
                 profileName = report.profile.name;
 
                 $('#missionHeader').text(profileName);
+                $("#carousel").empty();
+
+
+                recommendationsElement = $("<div>");
+                recommendationsElement.attr("id", "recommendations");
+                recommendationsElement.addClass("carousel-inner")
+
+                // render the levels
+                carouselitem = $("<div>");
+                carouselitem.addClass("carousel-item");
+                carouselitem.addClass("active");
+
+                $.each(report.levels, function(level, metrics){
+                    level_header = $("<header>");
+                    level_header.html("<h4>" + level + "</h4>");
+
+                    level_metrics = $("<p>");
+
+                    level_complete = true;
+                    $.each(metrics, function (m, a){
+                        if (m != "order"){
+                            level_item_icon = $("<i>");
+                            level_item_icon.addClass("fa");
+                            level_item_icon.attr("aria-hidden", true);
+
+                            if (a){
+                                level_item_icon.addClass("fa-check");
+                            }
+                            else{
+                                level_item_icon.addClass("fa-times");
+                            }
+
+                            level_item = $("<div>")
+                            level_item.append(level_item_icon);
+                            level_item.append($("<span>").html(" " + m + "<br/>"));
+
+                            level_metrics.append(level_item);
+
+                            if (!a){
+                                // not achieved this level yet
+                                level_complete = false;
+                            }
+                        }
+                    });
+
+                    level_header.append(level_metrics);
+                    carouselitem.append(level_header);
+
+                    if (level_complete){
+                        // show the badge for this level
+                        badge = $("<img>")
+
+                        console.log(level)
+                        switch (level){
+                            case "Account Basics":
+                                src = "/images/badge-account-basics.png";
+                                break;
+                            case "Group Board Strategy":
+                                src = "/images/badge-groupie.png";
+                                break;
+                            case "Pinning Strategy":
+                                src = "/images/badge-strategist-1.png";
+                                break;
+                            case "Profile SEO":
+                                src = "/images/badge-pinterest-seo.png";
+                                break;
+                            case "Pinning Frequency":
+                                src = "/images/badge-strategist-2.png";
+                                break;
+                            default:
+                                src = "";
+                                break;
+                        }
+                        badge.attr("src", src)
+
+                        $("#badges").append(badge);
+                    }
+
+                })
+                recommendationsElement.append(carouselitem);
 
                 // render the recommendations
-                $("#recommendations").empty();
                 $.each(report.recommendations, function(index, r){
                     carouselitem = $("<div>");
                     carouselitem.addClass("carousel-item");
-                    if (index == 0) carouselitem.addClass("active");
 
                     metric = $("<header>");
                     metric.html("<h4>" + r.metric + "</h4>");
@@ -413,8 +493,49 @@
                         carouselitem.append(link);
                     }
 
-                    $("#recommendations").append(carouselitem);
+                    recommendationsElement.append(carouselitem);
                 });
+                $("#carousel").append(recommendationsElement);
+
+
+                // add buttons for navigating the carousel items
+                carouselindicators = $("<div>");
+                carouselindicators.addClass("carousel-buttons");
+                
+                for (i = 0; i < $(".carousel-item").length; i++){
+                    button = $("<button>");
+                    button.attr("data-target", "#carousel");
+                    button.attr("data-slide-to", i);
+                    var tooltipText = "Overall Progress";
+
+                    if (i > 0) {
+                        tooltipText = report.recommendations[i - 1]["metric"];
+                    }
+
+                    button.addClass("small")
+                    button.text(i + 1);
+
+                    addTooltip(button, tooltipText, false, "top");
+
+                    if (i == 0){ 
+                        button.addClass("active");
+                    }
+
+                    carouselindicators.append(button);
+                }
+
+                $("#carousel").prepend(carouselindicators);
+                $('#carousel').carousel({interval: 5000});
+
+                var $carouselIndicators = $(".carousel-buttons > button");
+                $('#carousel').on('slide.bs.carousel', function(e) {
+                      var currentSlideNo = e.to;
+                      var newItem = $(".carousel-buttons > button[data-slide-to='" + currentSlideNo + "']");
+                      
+                      $carouselIndicators.removeClass("active");
+                      newItem.addClass("active");
+                });
+
 
 
                 // render the profile scan results
@@ -529,14 +650,18 @@
 
             function createTooltip(tooltip_title, is_tooltip_html, inner){
                 tooltip = $("<span>");
-                tooltip.attr("data-toggle", "tooltip");
-                tooltip.attr("data-placement", "right");
-                tooltip.attr("data-html", is_tooltip_html);
-                tooltip.attr("title", tooltip_title);
+                addTooltip(tooltip, tooltip_title, is_tooltip_html)
 
                 tooltip.append(inner);
 
                 return tooltip;
+            }
+
+            function addTooltip(element, tooltip_title, is_tooltip_html, placement="right"){
+                element.attr("data-toggle", "tooltip");
+                element.attr("data-placement", placement);
+                element.attr("data-html", is_tooltip_html);
+                element.attr("title", tooltip_title);
             }
 
 
@@ -630,27 +755,32 @@
                         <section id="engagementResults" style="display: none;">
                             <div class="row">
                                 <div class="col-3 box">
-                                    <h2>PIN LEVEL: 1</h2>
+                                    <h2 id="currentLevel">BADGES: 1</h2>
                                     <!-- Activity -->
                                     <header class="activity_score">
                                         <h1 id="current_score"></h1>
                                         <p>Total Points (<span id="current_score_pct"></span>%)</p>
                                     </header>
-                                    <div>
+                                    
+                                    <div id="badges" class="badges">
+                                        
+                                    </div>
+
+                                    <div class="activity_buttons">
                                         <!--
-                                            <button id="btnForceRefresh" onclick="forceRefresh(); return false;">Refresh Report</button>
                                         -->
+                                            <button id="btnForceRefresh" onclick="forceRefresh(); return false;">Refresh Report</button>
                                     </div>
                                 </div>
-                                <div class="col-9">
+                                <div id="missions" class="col-9">
                                     <div class="box">
                                         <header>
                                             <h2 id="missionHeader">Your Missions:</h2>
                                         </header>
-                                        <div class="carousel slide" data-ride="carousel">
-                                            <div id="recommendations" class="carousel-inner">
+                                        <div id="carousel" class="carousel slide" data-ride="carousel">
+                                            
                                                 <!-- dynamically populated -->
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
