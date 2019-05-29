@@ -73,3 +73,15 @@ Your account will be converted at this point, but Pinterest will guide you throu
 4. The fourth step lets you link other social accounts to your Pinterest account.  Feel free to skip this step for now.  You can always do it later (especially if you dont have much of a presence on Etsy, YouTube, or Instagram yet)
 5. Pinterest will then ask if you are interested in ads.  I don't recommend jumping straight into promoted ads unless you have disposable money and have exhausted all other traffic generation methods.  My recommendation for now is to answer "Not Sure Yet".  You will always have access to ads later.
 6. Finally, Pinterest will ask you for the **topics** that best describe your business/website.  Choose all relevant topics as it will help Pinterest know which topics to promote your pins towards.
+
+### Cleaning up your personal account
+
+If you are taking the step of converting your personal account into a business account, then you probably have a bunch of boards and pins that have absolutely nothing to do with your business.
+
+If thats the case, you have a few options to clean up your new business account.
+
+1. Delete the boards and pins that aren't relevant.
+2. Make those boards _secret_ so that no one else can see them.
+3. Move the pins into a couple of boards so that they don't overwhelm your brand messaging.
+
+I am a big fan of #2 if you go down this route as it doesn't cause you to lose followers (since you aren't deleting pins or boards), nor are you "polluting" your brand and follower feed with irrelevant content, creating an undesirable experience for your audience.
