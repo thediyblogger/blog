@@ -563,7 +563,7 @@
                                 warning_icon.attr("aria-hidden", "true");
                                 
                                 warning_span = $("<span>");
-                                warning_span.html(" " + scan.details + "<br/>");
+                                warning_span.html(" " + scan.metric + "<br/>");
 
                                 warning = $("<span>");
                                 warning.append(warning_icon);
@@ -600,8 +600,8 @@
 
                     if (board.stats != "in_progress"){
                         row.append($("<td>").text(board.counts.repins + " repins"));
-                        row.append($("<td>").text(board.counts.virality.toFixed(1)));
-                        row.append($("<td>").text(board.counts.engagement.toFixed(1)));
+                        row.append($("<td>").text(board.counts.virality.toFixed(2)));
+                        row.append($("<td>").text(board.counts.engagement.toFixed(2)));
                         // row.append($("<td>").text(board.counts.quality.toFixed(0)));
                     }
                     else{
