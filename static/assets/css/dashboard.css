@@ -97,6 +97,10 @@
     color: #fff !important;
 }
 
+#carousel p{
+    text-align: left !important;
+}
+
 
 button:hover,
 .button:hover,

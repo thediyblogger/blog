@@ -22,7 +22,7 @@
 
     <ul class="icons">
         {{if eq .URL "/dashboard/"}}
-        <li id="btnLogin"><button type="button" class="button small" data-toggle="modal" data-target="#loginModal">Log In</button></li>
+        <li id="btnLogin"><button type="button" class="button small" onclick="showLogin();">Log In</button></li>
         <li id="btnFreeTrial"><button type="button" class="button primary small" onclick="signup();">Free Trial</button></li>
         <li id="btnLogout" style="display:none;">
             <button type="button" class="button small" onclick="logout(); return false;">

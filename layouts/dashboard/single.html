@@ -104,6 +104,7 @@
                 $("#loading").hide();
                 $('#signup').hide();
                 $('#signupForm').hide();
+                $('#loginSection').hide();
                 $("#engagementResults").hide();
                 $("#boardResults").hide();
                 $("#boardPins").hide();
@@ -222,6 +223,11 @@
                 token = JSON.parse(localStorage.getItem("pinkarma_token"));
 
                 return token;
+            }
+
+            function showLogin(){
+                hideAll();
+                $('#loginSection').show();
             }
 
             function login(){
@@ -391,13 +397,23 @@
 
                 var num_badges_earned = 0;
 
-                $.each(report.levels, function(level, metrics){
+                //$.each(report.levels, function(level, metrics){
+                level_keys = Object.keys(report.levels);
+                sorted_levels = level_keys.sort(function(a, b){
+                    return report.levels[a].order - report.levels[b].order
+                });
+
+                for (i = 0; i < sorted_levels.length; i++){
+                    level = sorted_levels[i];
+                    metrics = report.levels[level]
+
                     level_header = $("<header>");
                     level_header.html("<h4>" + level + "</h4>");
 
                     level_metrics = $("<p>");
 
                     level_complete = true;
+
                     $.each(metrics, function (m, a){
                         if (m != "order"){
                             level_item_icon = $("<i>");
@@ -413,7 +429,7 @@
 
                             level_item = $("<div>")
                             level_item.append(level_item_icon);
-                            level_item.append($("<span>").html(" " + m + "<br/>"));
+                            level_item.append($("<span>").html(" " + m  + "<br/>"));
 
                             level_metrics.append(level_item);
 
@@ -449,6 +465,9 @@
                             case "Pinning Frequency":
                                 src = "/images/badge-strategist-2.png";
                                 break;
+                            case "Blogging Superstar":
+                                src = "/images/badge-superstar.png";
+                                break;
                             default:
                                 src = "";
                                 break;
@@ -458,7 +477,8 @@
                         $("#badges").append(badge);
                     }
 
-                })
+                }
+
                 recommendationsElement.append(carouselitem);
                 $("#currentLevel").text("BADGES: " + num_badges_earned);
 
@@ -472,7 +492,27 @@
                     subtitle = $("<p>");
                     $.each(r.value, function (index, v){
                         value_item = $("<span>");
-                        value_item.html(v + "<br/>");
+                        value_item.html(v.value);
+
+                        if (v.examples.length > 0){
+                            examples = $("<ul>");
+
+                            $.each(v.examples, function (i, e){
+                                li = $("<li>");
+                                link = $("<a>");
+                                link.attr("href", e.url);
+                                link.attr("target", "_blank");
+                                link.text(e.text);
+                                li.append(link);
+                                examples.append(li);
+                            });
+
+                            value_item.append(examples);
+                        }
+                        else{
+                            value_item.append($("<br/>"));
+                        }
+
                         subtitle.append(value_item);
                     });
                     metric.append(subtitle);
@@ -545,10 +585,18 @@
 
                 // render the list of boards
                 $("#boardRows").empty();
-                $.each(report.boards, function (index, board){
+                sortedboards = report.boards.sort(function(a, b){
+                    aName = a.name.toLowerCase();
+                    bName = b.name.toLowerCase();
+                    return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
+                })
+
+                console.log(sortedboards)
+
+                $.each(sortedboards, function (index, board){
 
                     name_cell = $("<td>");
-                    name_element = createTooltip(board.description, true, board.name + "<br/>");
+                    name_element = createTooltip(board.description, true, board.name + " ");
                     name_cell.append(name_element);
 
                     if (board.scan.length > 0){
@@ -659,18 +707,18 @@
     </head>
 
 
-	<body lang='{{ .Site.Language.Lang | default "en-us" }}' class="is-loading">
+    <body lang='{{ .Site.Language.Lang | default "en-us" }}' class="is-loading">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        <!-- Wrapper -->
+            <div id="wrapper">
 
                 {{ partial "header" . }}
                 {{ partial "nav" . }}
 
-				<!-- Main -->
-					<div id="main">
+                <!-- Main -->
+                    <div id="main">
 
-						<!-- Scan -->
+                        <!-- Scan -->
                         <section id="signup" style="display: none;">
                              <div id="banner" class="row">
                                 <div class="col-12">
@@ -686,6 +734,7 @@
                                 <div class="col-12">
                                     <button type="button" class="btn btn-pin" onclick="signup();"><i class="fa fa-pinterest"></i> Sign up With Pinterest</button>
                                     <p>Get Started Free Today</p>
+                                    <p>Already a member?  <a href="#" onclick="showLogin(); return false;">Log In now!</a></label>
                                 </div>
                             </div>
                         </section>
@@ -718,6 +767,38 @@
                                 <ul class="actions">
                                     <li>
                                         <input type="submit" value="Complete Sign Up" name="signup" id="signup_button" class="button" onclick="submitSignup(); return false;">
+                                    </li>
+                                </ul>
+                            </form>
+                        </section>
+
+                        <section id="loginSection" style="display: none;">
+                            <form id="loginForm" method="post" action="#">
+                                 <header class="major">
+                                    <h1>Pin Karma</h1>
+                                    <p>Your guide to winning on Pinterest and growing traffic to your blog.</p>
+                                </header>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h2>Log In</h2>
+                                        </div>
+                                    </div>
+                                    <div class="fields row">
+                                          <div class="field col-6">
+                                            <label for="email">Email</label>
+                                            <input type="text" name="email" id="email" />
+                                          </div>
+                                          <div class="field col-6">
+                                            <label for="password">Password</label>
+                                            <input type="password" name="password" id="password" />
+                                          </div>
+                                          <div class="field">
+                                            <label>Not yet a member?  <a href="#" onclick="signup(); return false;" >Sign Up today!</a></label>
+                                          </div>
+                                    </div>
+                                <ul class="actions">
+                                    <li>
+                                        <button type="submit" class="button primary" onclick="login(); return false;">Log In</button>
                                     </li>
                                 </ul>
                             </form>
@@ -891,7 +972,7 @@
                                 </div>
                             </div>
                         </section> 
-					</div>
+                    </div>
 
                     {{ partial "footer/index" . }}
                     {{ partial "copyright" . }}
@@ -907,8 +988,6 @@
                     initializePage();
                 });
             </script>
-	</body>
-
-    {{ partial "login" . }}
+    </body>
 
 </html>
