@@ -209,8 +209,6 @@
             }
 
             function storeSession(session){
-                console.log("session", session);
-
                 // store in the session with the token and expiration
                 localStorage.setItem('pinkarma_token', JSON.stringify(session));
 
@@ -448,7 +446,6 @@
                         // show the badge for this level
                         badge = $("<img>")
 
-                        console.log(level)
                         switch (level){
                             case "Account Basics":
                                 src = "/images/badge-account-basics.png";
@@ -590,8 +587,6 @@
                     bName = b.name.toLowerCase();
                     return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
                 })
-
-                console.log(sortedboards)
 
                 $.each(sortedboards, function (index, board){
 
@@ -820,34 +815,19 @@
                         <!-- Engagement -->
                         <section id="engagementResults" style="display: none;">
                             <div class="row">
-                                <div class="col-3 box">
-                                    <h2 id="currentLevel"></h2>
-                                    <!-- Activity -->
-                                    <header class="activity_score">
-                                        <h1 id="current_score"></h1>
-                                        <p>Total Points (<span id="current_score_pct"></span>%)</p>
-                                    </header>
-                                    
-                                    <div id="badges" class="badges">
-                                        
-                                    </div>
-
-                                    <div class="activity_buttons">
+                                <div id="missions" class="col-12 box">
+                                    <header>
+                                        <h2 id="missionHeader">Your Missions:</h2>
                                         <!--
-                                        -->
                                             <button id="btnForceRefresh" onclick="forceRefresh(); return false;">Refresh Report</button>
-                                    </div>
-                                </div>
-                                <div id="missions" class="col-9">
-                                    <div class="box">
-                                        <header>
-                                            <h2 id="missionHeader">Your Missions:</h2>
-                                        </header>
-                                        <div id="carousel" class="carousel slide" data-ride="carousel">
-                                            
-                                                <!-- dynamically populated -->
-                                            
-                                        </div>
+                                        -->
+                                    </header>
+                                    <div id="badges" class="badges"></div>
+
+                                    <div id="carousel" class="carousel slide" data-interval="false" data-ride="carousel">
+                                        
+                                            <!-- dynamically populated -->
+                                        
                                     </div>
                                 </div>
                             </div>

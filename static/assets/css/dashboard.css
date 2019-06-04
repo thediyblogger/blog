@@ -44,10 +44,7 @@
 .activity_score{
     text-align: center;
     font-size: 1.5em;
-}
- .activity_score p{
-    text-align: center;
-    font-size: 0.5em;
+    float: left;
 }
 
 .activity_buttons{
