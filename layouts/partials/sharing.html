@@ -2,34 +2,40 @@
 {{ $title := .Title }}
 {{ $url := printf "%s" .URL | absLangURL }}
 {{ $body := print .Title " - " .Params.description }}
-{{ $socialImages := .Params.social_media_images }}
-{{ $socialDesc := .Params.social_media_text }}
+{{ $pins := .Params.pins }}
 
-{{ if $socialImages }}
+    {{ if $pins }}
     {{ with $data.social }}
     <section id="sharing" class="panelShare">
         <div class="box">
             <ul class="icons alt">
                 {{ with .pinterest}}
-                    {{ range first 1 $socialImages }}
+                    {{ range first 1 $pins }}
                     <li>
-                        <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-custom="true" data-pin-media="{{ . }}" data-pin-description="{{ $socialDesc }}">
+                        <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-custom="true" data-pin-media="{{ .pin_image }}" data-pin-description="{{ .pin_description }}">
                             <span class="button primary" id="btnShare">Pin This For Later</span>
                         </a>
                     </li>
                     {{ end }}
                 {{ end}}
+
                 
                 {{ with .facebook}}
                 <li><a href="http://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" class="icon alt fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
                 {{ end }}
+
             </ul>
                     
             <div class="accordion" id="pinView">
                 <div class="row gtr-50 gtr-uniform">
-                    {{ range $socialImages }}
-                    <div class="col-4"><span class="image fit"><img src="{{ . }}" data-pin-description="{{ $socialDesc }}" title="{{ $socialDesc }}"></span></div>
+                    {{ if $pins }}
+                        {{ range $pins }}
+                        <div class="col-4"><span class="image fit"><img src="{{ .pin_image }}" data-pin-description="{{ .pin_description }}"></span></div>
+                        {{ end }}
                     {{ end }}
+
+
+                    
                 </div>
             </div>
 
@@ -37,4 +43,7 @@
 
     </section>
     {{ end }}
-{{ end }}
+    {{ end }}
+
+
+
