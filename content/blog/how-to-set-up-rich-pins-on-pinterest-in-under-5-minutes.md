@@ -2,7 +2,6 @@
 categories = ["Pinterest"]
 date = "2019-06-04T00:00:00-04:00"
 description = "No matter the kind of content you are creating (eBooks, physical products, blog posts, recipes, DIY instructions, podcasts, etc), Pinterest is an essential platform to market your ideas for your business.  Rich Pins takes that marketing to the next level by pulling extra details from your website and exposing it on the pin. "
-draft = true
 pins = []
 title = "How to set up Rich Pins on Pinterest (in under 5 minutes)"
 [images]
