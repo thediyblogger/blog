@@ -9,7 +9,7 @@ title = "How to set up a Pinterest Business Account"
 name = "How to create a new Pinterest business account"
 src = "/uploads/create-a-pinterest-business-account-2.png"
 [[pins]]
-pin_description = "Are you starting a new business and want to drive an insane amount of traffic to your website.  Then setting up a Pinterest Business Account is essential.  Whether you are creating a new Pinterest Business Account or converting an Individual Pinterest Account to a business profile, our easy how to guide has you covered. Get insights into which pins are driving traffic to your blog with analytics only available to Pinterest business accounts.  Then convert that high traffic into revenue for your business."
+pin_description = "Are you starting a new business and want to drive an insane amount of traffic to your website.  Then setting up a Pinterest Business Account is essential.  Whether you are creating a new Pinterest Business Account or converting an Individual Pinterest Account to a business profile, our easy how to guide has you covered. Get insight into which pins are driving traffic to your blog with analytics only available to business accounts.  Then convert that high traffic into revenue for your business."
 pin_image = "/uploads/how-to-setup-your-pinterest-business-account.png"
 
 +++
