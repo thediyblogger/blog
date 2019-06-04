@@ -64,6 +64,17 @@ If you are using wordpress, then the [Yoast SEO](https://wordpress.org/plugins/w
 
 If you want to add these yourself, then [http://ogp.me](http://ogp.me "http://ogp.me") has a good list of the types of meta tags to add to describe your content.
 
+For example, if you look at the page source for this blog post, you should see something similar to below in the `<head>` element.  The meta data tags are targeted towards the Article type.
+
+    <meta property="og:title" content="How to set up Rich Pins on Pinterest (in under 5 minutes)">	    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2019-06-04">
+    <meta property="og:description" content="No matter the kind of content you are creating (eBooks, physical products, blog posts, recipes, DIY instructions, podcasts, etc), Pinterest is an essential platform to market your ideas for your business.  Rich Pins takes that marketing to the next level by pulling extra details from your website and exposing it on the pin. ">
+    <meta property="og:url" content="https://www.thediyblogger.com/blog/how-to-set-up-rich-pins-on-pinterest-in-under-5-minutes/">
+    <meta property="og:site_name" content="The DIY Blogger">
+    <meta property="og:image" content="https://www.thediyblogger.com/uploads/richpins.png">
+    <meta property="og:tags" content="pinterest-seo">
+
 #### 2. Validate your page
 
 Once you have your meta data set up and published live, the next step is to validate your page with Pinterest.  Visit the [Pinterest Rich Pins Validator](https://developers.pinterest.com/tools/url-debugger/ "Pinterest Rich Pin Validator") page and enter the full URL of your page that has the meta data added.
