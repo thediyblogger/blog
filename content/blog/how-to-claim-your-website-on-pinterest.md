@@ -7,15 +7,15 @@ title = "How to claim your website on Pinterest"
 name = "How to claim your website on Pinterest"
 src = "/uploads/claim-website.png"
 [[pins]]
-pin_description = ""
-pin_image = ""
+pin_description = "Claiming your website on Pinterest is a great way to make your brand official and grow brand awareness. It will help drive more traffic to your website. You will also get access to Pinterest Analytics to help make smarter decisions on what pins work and which don't. Find out why claiming your website is so critical to building your Pinterest traffic strategy, and how to claim your website. #pinteresttips #pinterestmarketing #pinteresthacks #businesstips #blogging #pinkarma"
+pin_image = "/uploads/how-to-claim-your-website-on-pinterest.png"
 
 +++
 ## Why should I claim my website on Pinterest?
 
-Claiming your website on Pinterest is a very important step on your way to driving crazy traffic to your website.  You need to have a claimed (and verified) website before you can apply for Rich Pins on your site.  You need a claimed website to also gain invaluable analytics from Pinterest about how pins are doing sending traffic to your website.
+Claiming your website on Pinterest is a very important step on your way to driving crazy traffic to your website.  You need to have a claimed (and verified) website before you can apply for Rich Pins on your site.  You need a claimed website to also gain invaluable analytics from Pinterest about how pins are doing sending traffic to your website.  This data can be used to make critical decisions on how to build and target your future pins to drive more traffic.
 
-Claiming your website also signals to Pinterest that you are a legitimate business, and that Pinterest should start distributing your content to other Pinners.
+Claiming your website signals to Pinterest that you are a legitimate business, and that Pinterest should start distributing your content to other Pinners.  Thereby helping building out your brand awareness and making it official.
 
 You website address is displayed prominently on your Pinterest profile, and your pins will be displayed with your business name and logo.
 
