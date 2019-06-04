@@ -2,11 +2,13 @@
 categories = ["pinterest-seo"]
 date = "2019-06-04T00:00:00-04:00"
 description = "No matter the kind of content you are creating (eBooks, physical products, blog posts, recipes, DIY instructions, podcasts, etc), Pinterest is an essential platform to market your ideas for your business.  Rich Pins takes that marketing to the next level by pulling extra details from your website and exposing it on the pin. "
-pins = []
 title = "How to set up Rich Pins on Pinterest (in under 5 minutes)"
 [images]
 name = "How to set up rich pins on Pinterest (in under 5 minutes)"
 src = "/uploads/richpins.png"
+[[pins]]
+pin_description = "How to set up Rich Pins on Pinterest in under 5 minutes. Rich Pins supercharge your pins by bringing in contextual information from your website, making your Product Pins, Article Pins, Blog Pins, and Recipe Pins much more useful. This in turn will help drive more traffic to your website from your engaged audience. #richpins #blogtraffic #seo #pinterest #blogging"
+pin_image = "/uploads/how-to-set-up-rich-pins.png"
 
 +++
 ## What are Rich Pins?
