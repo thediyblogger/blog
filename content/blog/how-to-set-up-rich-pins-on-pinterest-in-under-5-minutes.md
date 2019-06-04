@@ -2,11 +2,13 @@
 categories = ["pinterest-seo"]
 date = "2019-06-04T00:00:00-04:00"
 description = "No matter the kind of content you are creating (eBooks, physical products, blog posts, recipes, DIY instructions, podcasts, etc), Pinterest is an essential platform to market your ideas for your business.  Rich Pins takes that marketing to the next level by pulling extra details from your website and exposing it on the pin. "
-pins = []
 title = "How to set up Rich Pins on Pinterest (in under 5 minutes)"
 [images]
 name = "How to set up rich pins on Pinterest (in under 5 minutes)"
 src = "/uploads/richpins.png"
+[[pins]]
+pin_description = "How to set up Rich Pins on Pinterest in under 5 minutes. Rich Pins supercharge your pins by bringing in contextual information from your website, making your Product Pins, Article Pins, Blog Pins, and Recipe Pins much more useful. This in turn will help drive more traffic to your website from your engaged audience. #richpins #blogtraffic #seo #pinterest #blogging"
+pin_image = "/uploads/how-to-set-up-rich-pins.png"
 
 +++
 ## What are Rich Pins?
@@ -61,6 +63,24 @@ This follows the opengraph format, and essentially consists of you adding some `
 If you are using wordpress, then the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/ "Yoast SEO for Opengraph Tags") plugin is a popular choice to handle adding these tags for you.
 
 If you want to add these yourself, then [http://ogp.me](http://ogp.me "http://ogp.me") has a good list of the types of meta tags to add to describe your content.
+
+For example, if you look at the page source for this blog post, you should see something similar to below.  The meta data tags are targeted towards the Article type.
+
+    <html>
+    	<head>
+        	...
+            <meta property="og:title" content="How to set up Rich Pins on Pinterest (in under 5 minutes)">	    
+            <meta property="og:type" content="article">
+            <meta property="article:published_time" content="2019-06-04">
+            <meta property="og:description" content="No matter the kind of content you are creating (eBooks, physical products, blog posts, recipes, DIY instructions, podcasts, etc), Pinterest is an essential platform to market your ideas for your business.  Rich Pins takes that marketing to the next level by pulling extra details from your website and exposing it on the pin. ">
+            <meta property="og:url" content="https://www.thediyblogger.com/blog/how-to-set-up-rich-pins-on-pinterest-in-under-5-minutes/">
+            <meta property="og:site_name" content="The DIY Blogger">
+            <meta property="og:image" content="https://www.thediyblogger.com/uploads/richpins.png">
+            <meta property="og:tags" content="pinterest-seo">
+        	...
+        </head>
+        ...
+    </html>
 
 #### 2. Validate your page
 
