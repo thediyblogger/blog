@@ -1,5 +1,5 @@
 +++
-categories = ["pinterest-seo"]
+categories = ["Pinterest Tips"]
 date = "2019-06-04T00:00:00-04:00"
 description = "Pinterest is the place to be to market your website.  It has the ability to drive an insane amount of immediate traffic to your website. If you are a business, an important step is to show the world you are legit by claiming and verifying your website on Pinterest. "
 title = "How to claim your website on Pinterest"
@@ -69,4 +69,4 @@ Once your site has been claimed, you can remove the HTML tag or file. Only makin
 
 You will also now have access to website analytics which is an extremely useful tool for measuring impressions and engagement of your pins on Pinterest.
 
-{{<imgproc "/uploads/analytics.png" Resize "600x" >}}Pinterest Analytics{{</imgproc>}} 
+{{<imgproc "/uploads/analytics.png" Resize "600x" >}}Pinterest Analytics{{</imgproc>}}
