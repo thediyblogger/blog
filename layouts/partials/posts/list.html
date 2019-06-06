@@ -3,9 +3,7 @@
 <section class="posts">
     {{ range .posts.Pages }}
     <article>
-        <header>
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        </header>
+        
 
         <a href="{{ .Permalink }}" class="image fit">
 
@@ -19,7 +17,10 @@
                 <img src="{{ $resized.Permalink }}" alt="{{ $imageName }}">
             {{ end }}
 
-        </a>    
+        </a>   
+        <header>
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        </header> 
 
         <p>{{ .Description }}</p>
         <ul class="actions">
