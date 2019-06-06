@@ -125,6 +125,8 @@ button.primary:hover,
     vertical-align: middle;
 }
 
+
+
 #signup div{
     text-align: center;
 }
@@ -139,6 +141,7 @@ button.primary:hover,
     margin: 0px 0px 50px 0px;
     font-family: "Merriweather";
 }
+
 
 
 
@@ -258,7 +261,9 @@ button.primary:hover,
     color: #deb150 !important;
 }
 
-
+.salesbtn {
+    text-align: center !important;
+}
 
 
 #nav ul.links li.active a:hover {
