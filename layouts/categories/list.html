@@ -25,7 +25,6 @@
 
                 <!-- Main -->
                     <div id="main">
-
                         {{ if eq $postsFeaturedPost "true" }}
                         {{ partial "posts/featured.html" (dict "firstpost" $firstPost "siteData" (index .Site.Data .Site.Language.Lang)) }}
                         {{ end }}

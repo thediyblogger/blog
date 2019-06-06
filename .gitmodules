@@ -5,3 +5,6 @@
 	path = public
 	url = git@github.com:thediyblogger/thediyblogger.github.io.git
 	branch = master
+[submodule "themes/hugo-future-imperfect-slim"]
+	path = themes/hugo-future-imperfect-slim
+	url = https://github.com/pacollins/hugo-future-imperfect-slim.git

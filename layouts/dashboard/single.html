@@ -729,10 +729,11 @@
                                 <div class="col-12">
                                     <button type="button" class="btn btn-pin" onclick="signup();"><i class="fa fa-pinterest"></i> Sign up With Pinterest</button>
                                     <p>Get Started Free Today</p>
-                                    <p>Already a member?  <a href="#" onclick="showLogin(); return false;">Log In now!</a></label>
+                                    <p>Already a member?  <a href="#" onclick="showLogin(); return false;">Log In now!</a></p>
                                 </div>
                             </div>
                         </section>
+
 
                         <section id="signupForm" style="display: none;">
                             <form id="completeSignupForm" method="post" action="#">
@@ -767,30 +768,32 @@
                             </form>
                         </section>
 
+
                         <section id="loginSection" style="display: none;">
                             <form id="loginForm" method="post" action="#">
-                                 <header class="major">
+                                <header class="major">
                                     <h1>Pin Karma</h1>
                                     <p>Your guide to winning on Pinterest and growing traffic to your blog.</p>
                                 </header>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <h2>Log In</h2>
-                                        </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2>Log In</h2>
                                     </div>
-                                    <div class="fields row">
-                                          <div class="field col-6">
-                                            <label for="email">Email</label>
-                                            <input type="text" name="email" id="email" />
-                                          </div>
-                                          <div class="field col-6">
-                                            <label for="password">Password</label>
-                                            <input type="password" name="password" id="password" />
-                                          </div>
-                                          <div class="field">
-                                            <label>Not yet a member?  <a href="#" onclick="signup(); return false;" >Sign Up today!</a></label>
-                                          </div>
-                                    </div>
+                                </div>
+                                <div class="row fields">
+                                      <div class="field col-6">
+                                        <label for="email">Email</label>
+                                        <input type="text" name="email" id="email" />
+                                      </div>
+                                      <div class="field col-6">
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" id="password"/>
+                                      </div>
+                                      <div class="field">
+                                        <label>Not yet a member?  <a href="#" onclick="signup(); return false;" >Sign Up today!</a></label>
+                                      </div>
+                                </div>
                                 <ul class="actions">
                                     <li>
                                         <button type="submit" class="button primary" onclick="login(); return false;">Log In</button>
@@ -798,6 +801,7 @@
                                 </ul>
                             </form>
                         </section>
+
 
                         <section id="loading" style="display: none;">
                             <header class="major">

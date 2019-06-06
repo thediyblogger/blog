@@ -1,0 +1,141 @@
+{{ partial "htmlhead" . }}
+	<body lang='{{ .Site.Language.Lang | default "en-us" }}' class="is-loading">
+
+		{{ $postsFoldername := .Site.Params.Posts.foldername | default "post" }}
+		{{ $postsPageSize := 4 }}
+		{{ $postsFeaturedPost := "false" }}
+
+		{{ $posts := where .Data.Pages "Type" $postsFoldername }}
+		{{ $firstPost := first 1 $posts }}
+
+		{{ if and (eq $postsFeaturedPost "true") (gt (len $posts) 1) }}
+			{{ .Scratch.Set "postsForPaging" (after 1 $posts) }}
+		{{ else }}
+			{{ .Scratch.Set "postsForPaging" $posts }}
+		{{ end }}
+		{{ $postsForPaging := .Scratch.Get "postsForPaging" }}
+
+		{{ $postsPaging := .Paginate $postsForPaging $postsPageSize }}
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in" data-pfn="{{ $postsFoldername }}" data-ps="{{ $postsPageSize }}" data-pfp="{{ $postsFeaturedPost }}">
+				{{ if eq $postsPaging.PageNumber 1 }}
+				{{ partial "intro.html" . }}
+				{{ end }}
+
+				{{ partial "header" . }}
+				{{ partial "nav" . }}
+
+				<!-- Main -->
+				<div id="main">
+					<section id="introduction" class="posts">
+						<article>
+							<figure class="profileImage">
+				                <img src="/images/footer.jpg"  height="300px" alt="DrawBuildPlay - Amit Gandhi" title="DrawBuildPlay - Amit Gandhi" >
+				            </figure>
+						</article>
+						<article>
+							<header>
+								<h2>
+									Welcome!
+								</h2>
+								<p>
+				                    I'm Amit, The DIY Blogger. <br/>
+				                    I can't wait for us to work together to build your blogging business so you can spend more time doing what you love!
+			                    </p>
+							</header>
+		                    <p class="subtext">
+			                    My passion over the past 20 years has been to build websites. My latest mission is to empower you to to build and monetize your own website or blog and start to rapidly generate mountains of traffic to your website using secret Pinterest strategies and Google SEO techniques.
+			                </p>
+						</article>
+					</section>
+
+					<section id="testimonials">
+						<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+						  <div class="carousel-inner">
+						    <div class="carousel-item active">
+					      		<p>
+					      			<img src="/images/logo-drawbuildplay.png" />
+					      		</p>
+					      		<quote><a href="https://www.drawbuildplay.com">DrawBuildPlay</a> boosted their traffic by 600% using these techniques in their first 3 months!</quote>
+
+						    </div>
+						  </div>
+						</div>
+					</section>
+
+					<section id="products">
+						<div class="row">
+							<div class="col-4">
+								<div>
+									<img src="/images/free-audit-checklist-cover.png" />
+								</div>
+								<div>
+									<h4>FREE Pinterest Audit Checklist</h4>
+									<a href="/free-pinterest-audit-checklist" class="button">Get Your Free List</a>
+								</div>
+							</div>
+							<div class="col-4">
+								<div>
+									<img src="/images/pin-karma-cover.png" />
+								</div>
+								<div>
+									<h4>Pin Karma - Online Mentor</h4>
+									<a href="/dashboard" class="button">Learn More</a>
+								</div>
+							</div>
+							<div class="col-4">
+								<div>
+									<img src="/images/free-audit-checklist-cover.png" />
+								</div>
+								<div>
+									<h4>Grow your Pinterest Traffic</h4>
+									<a href="https://courses.thediyblogger.com" class="button">Enroll</a>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section id="freeProduct">
+						<div class="row">
+							<div class="col-5">
+								<img src="/images/free-audit-checklist-cover.png" />
+							</div>
+							<div class="col-7">
+								<h4>Free Pinterest Audit Checklist</h4>
+								<h2>struggling to get page views?</h2>
+
+								<p>
+									Sign up for our FREE Pinterest Audit Checklist and locate your problems in a few minutes.
+								</p>
+
+								<div class="row">
+									<div class="col-12">
+										<a href="/free-pinterest-audit-checklist" class="button">Get Your Free List</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+
+					</section>
+
+					<section>
+						<h2>From the blog</h2>
+					</section>
+
+					{{ partial "posts/preview.html" (dict "posts" $postsPaging "siteData" (index .Site.Data .Site.Language.Lang)) }}
+
+
+
+				</div>
+
+				{{ partial "footer/index" . }}
+				{{ partial "copyright" . }}
+			</div>
+
+			{{ template "_internal/google_analytics.html" . }}
+			{{ partial "scripts/index" . }}
+
+	</body>
+</html>

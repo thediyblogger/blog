@@ -10,8 +10,9 @@
         </li>
         {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
             {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+                {{ $friendlyname := replace $name "-" " " }}
                 <li class="{{if or (eq ($categoryListPage) ($name)) (in $category $name)}}active{{end}}">
-                    <a title="{{$name}}" href="{{ .Permalink }}">{{ $name }}</a>
+                    <a title="{{$friendlyname}}" href="{{ .Permalink }}">{{ $friendlyname }}</a>
                 </li>
             {{ end }}
         {{ end }}
