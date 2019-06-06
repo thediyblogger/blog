@@ -97,32 +97,37 @@ button.primary:hover,
     width: 50%;
 }
 
-#freeProduct{
+.freeProduct{
     background-color: #fff7f7;
     font-size: 1.3em;
     text-align: center;
     padding: 4rem;
 }
 
-#freeProduct div{
+.freeProduct div{
     padding: 0;
     margin: 0;
 }
 
-#freeProduct #getlist_button{
+.freeProduct #getlist_button{
     background-color: #c61118 !important;
     color: #fff !important;
     border: 0px !important;
     box-shadow: inset 0 0 0 0px #212931;
 }
-#freeProduct p{
+.freeProduct p{
     text-align: center;
     font-size: 0.6em;
 }
 
-#freeProduct img{
+.freeProduct img{
     height: 300px;
     vertical-align: middle;
+}
+
+.salesPitchList, .salesPitchList li{
+    text-align: left !important;
+    font-size: 0.7em;
 }
 
 
@@ -134,12 +139,13 @@ button.primary:hover,
     text-align: center;
     font-size: 0.7em;
 }
-#signup #banner{
+#banner{
     background-color: #4259D2;
     color: #fff;
     border-radius: 20px;
     margin: 0px 0px 50px 0px;
     font-family: "Merriweather";
+    text-align: center;
 }
 
 

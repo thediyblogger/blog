@@ -1,0 +1,109 @@
+{{ partial "htmlhead" . }}
+	<body lang='{{ .Site.Language.Lang | default "en-us" }}' class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in" >
+
+				{{ partial "header" . }}
+				{{ partial "nav" . }}
+
+				<!-- Main -->
+				<div id="main">
+
+					<section class="freeProduct">
+
+						<div class="row">
+							<div class="col-3">
+								<img src="/images/pin-karma-cover.png" />
+							</div>
+							<div class="col-9">
+
+								<h4>Pin Karma</h4>
+								<h2>Can't keep up with your Pinterest Strategy?</h2>
+
+								<p>
+									With Pin Karma, we will monitor your Pinterest account and blog for you, and tell you when you make strategic mistakes, and where to focus your Pinterest and SEO efforts.
+								</p>
+									
+								<p><i>We are your always on, always watching Pinterest and SEO assistant!!!</i></p>
+
+								<div class="row">
+									<div class="col-12">
+										<a href="/dashboard" class="button primary">Join Pin Karma</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>The smartest way to track your Pinterest Strategy</h2>
+
+						<div class="row">
+							<div class="col-4">
+								<img src="/images/features-auto-guidance.png" />
+								Periodically scans your account and makes suggestions based on our proven Pinterest Strategies.
+							</div>
+							
+							<div class="col-4">
+								<img src="/images/features-fix-issues.png" />
+								Learn where you are screwing up, its likely impact, and exactly how to fix it.
+							</div>
+
+							<div class="col-4">
+								<img src="/images/features-earn-badges.png" />
+								Earn badges as you accomplish specific goals.
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Intelligence</h2>
+						<p>
+							Focus on the insights that are important to level up your Pinterest game and drive traffic to your website.
+						</p>
+
+						<ul>
+							<li><i>Coming Soon: Analytics on your top pins to determine what is making them successful.</i></li>
+							<li><i>Coming Soon: Trending graphs for your followers and engagement over time.</i></li>
+							<li><i>Coming Soon: Smart Loop recommendations for your most viral pins.</i></li>
+						</ul>
+					</section>
+
+					<section class="freeProduct">
+						<div class="row">
+							<div class="col-9">
+								<div id="banner" class="row">
+	                                <div class="col-12">
+	                                    Join our limited time Early Access Program for free today!
+	                                </div>
+	                            </div>
+
+								<p>We just launched, and to celebrate we have a limited time promotion where it is <strong>FREE</strong> to use Pin Karma!</p>
+								<p>We want your feedback, so try it out before the price goes up.</p>
+
+								<div class="row">
+									<div class="col-12">
+										<a href="/dashboard" class="button primary">Join Pin Karma</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<img src="/images/pin-karma-cover.png" />
+							</div>
+						</div>
+
+					</section>
+
+				</div>
+
+				{{ partial "footer/index" . }}
+				{{ partial "copyright" . }}
+			</div>
+
+			{{ template "_internal/google_analytics.html" . }}
+			{{ partial "scripts/index" . }}
+
+	</body>
+</html>
