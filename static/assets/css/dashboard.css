@@ -148,7 +148,12 @@ button.primary:hover,
     text-align: center;
 }
 
-
+div.signupBox{
+    border-radius: 25px;
+    border: 2px solid #e60023;
+    padding: 20px; 
+    background-color: #fff7f7;
+}
 
 
 .btn-pin{
