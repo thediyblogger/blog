@@ -306,46 +306,49 @@ a:hover{
 }
 
 
-section.pricing {
+section.grabber {
   background: #c61118;
 }
 
-.pricing .card {
+.pricing .card, 
+.features .card,
+.grabber .card, 
+#products .card {
   border: none;
   border-radius: 1rem;
   transition: all 0.2s;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
 
-.pricing hr {
+.card hr {
   margin: 1.5rem 0;
 }
 
-.pricing .card-title {
+.card .card-title {
   margin: 0.5rem 0;
   font-size: 0.9rem;
   letter-spacing: .1rem;
   font-weight: bold;
 }
 
-.pricing .card-price {
+.card .card-price {
   font-size: 3rem;
   margin: 0;
 }
 
-.pricing .card-price .period {
+.card .card-price .period {
   font-size: 0.8rem;
 }
 
-.pricing ul li {
+.card ul li {
     font-size: 0.8em;
 }
 
-.pricing .text-muted {
+.card .text-muted {
   opacity: 0.7;
 }
 
-.pricing .button {
+.card .button {
   text-align: center;
   width: 100%;
 }
@@ -353,7 +356,9 @@ section.pricing {
 /* Hover Effects on Card */
 
 @media (min-width: 992px) {
-  .pricing .card:hover {
+  .pricing .card:hover,
+  .features .card:hover,
+  .grabber .card:hover{
     margin-top: -.25rem;
     margin-bottom: .25rem;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
@@ -361,4 +366,46 @@ section.pricing {
   .pricing .card:hover .btn {
     opacity: 1;
   }
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  height: 16em;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, 
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+  text-align: left !important;
 }
