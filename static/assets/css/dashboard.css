@@ -370,7 +370,6 @@ section.grabber {
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-  background-color: #fff;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   height: 16em;
 }
@@ -398,15 +397,28 @@ section.grabber {
   backface-visibility: hidden;
   background-color: #fff;
   position: absolute;
+
+  -webkit-backface-visibility: hidden;
+         backface-visibility: hidden;
+ -webkit-transition: 0.6s;
+         transition: 0.6s;
+ -webkit-transform-style: preserve-3d;
+         transform-style: preserve-3d;
+ 
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   color: black;
+  z-index: 2;
+ -webkit-transform: rotateY(0deg);
+         transform: rotateY(0deg);
 }
 
 /* Style the back side */
 .flip-card-back {
   transform: rotateY(180deg);
   text-align: left !important;
+  -webkit-transform: rotateY(-180deg);
+         transform: rotateY(-180deg);
 }
