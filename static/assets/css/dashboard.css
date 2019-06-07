@@ -370,7 +370,7 @@ section.grabber {
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-  background-color: transparent;
+  background-color: #fff;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   height: 16em;
 }
@@ -396,6 +396,7 @@ section.grabber {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  background-color: #fff;
   position: absolute;
 }
 
