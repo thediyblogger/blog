@@ -7,7 +7,7 @@ social_media_text = "How to drive 4x more traffic to your blog using Pinterest S
 title = "How to drive 4x more traffic to your blog with Pinterest SEO"
 [images]
 name = "How to drive 4x more traffic to your blog with Pinterest SEO"
-src = "/uploads/drive-traffic.png"
+src = "/uploads/drive-traffic-1.png"
 [[pins]]
 pin_description = "How to drive 4x more traffic to your blog with Pinterest SEO. Learn the secrets to driving traffic and the important Pinterest strategies you need to be following to boost your website traffic - The DIY Blogger.\n#pinterestmarketing #pinteresttips #pinterestseo #seo "
 pin_image = "/uploads/drive-4x-more-traffic-1.png"
