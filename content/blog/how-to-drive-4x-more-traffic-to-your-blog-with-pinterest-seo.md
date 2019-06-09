@@ -2,13 +2,15 @@
 categories = ["Pinterest Tips"]
 date = "2019-03-16T00:00:00-04:00"
 description = "Do you want crazy traffic on your new website or blog?  Google may get you results in the long term, but Pinterest will drive traffic now.  Learn how to optimize SEO for Pinterest to get insane traffic to your website."
-pins = []
 social_media_images = ["/uploads/Drive 4x More Traffic.png"]
 social_media_text = "How to drive 4x more traffic to your blog using Pinterest SEO."
 title = "How to drive 4x more traffic to your blog with Pinterest SEO"
 [images]
 name = "How to drive 4x more traffic to your blog with Pinterest SEO"
-src = "/uploads/traffic.jpg"
+src = "/uploads/drive-traffic.png"
+[[pins]]
+pin_description = "How to drive 4x more traffic to your blog with Pinterest SEO. Learn the secrets to driving traffic and the important Pinterest strategies you need to be following to boost your website traffic - The DIY Blogger.\n#pinterestmarketing #pinteresttips #pinterestseo #seo "
+pin_image = "/uploads/drive-4x-more-traffic-1.png"
 
 +++
 If you found this page, you probably found it through Pinterest.  If you came here via Google, then awesome.
@@ -61,3 +63,5 @@ Once you determine the time of day your customers are clicking on your pins, the
 If you stop posting new content and pinning it, you may start to see a dip in your reach.  There are schedulers that can help with this by repining your pins at regular intervals.  But, don't repin the same pin to the same board within 4 months.  That is discouraged by Pinterest.  You can however, create multiple pin images for each blog post and pin those to your boards on a schedule.  A common scheduler you will see recommended by most Pinterest bloggers is Tailwinds.  This is due to a lot of the analytics they give you around your pins, as well as its scheduling and smart loop capabilities.
 
 I will go over each of these points in later blog posts to drill down into the details.  For now, this is just a teaser to get you started.  Follow me on Pinterest to stay up to date with how to improve your blog.
+
+Also, sign up below to my mailing list and get your free Pinterest Audit Checklist to get you started on the right track.
