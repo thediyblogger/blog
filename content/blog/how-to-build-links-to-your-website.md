@@ -9,7 +9,10 @@ title = "How to Build Links to Your Website"
 [images]
 is_pin_friendly = false
 name = "How to Build Links to Your Website"
-src = "/uploads/links.png"
+src = "/uploads/how-to-build-links-to-your-website.png"
+[[pins]]
+pin_description = "How to Build Effective Links to Your Blog - Link building is one of the hardest things to do when it comes to Search Engine Optimization (SEO). Read our tips of how to do effective link building to help improve your rank on Google search. #seo #linkbuilding #bloggertips #bloggingforbeginners"
+pin_image = "/uploads/effective-link-building.png"
 
 +++
 _By this time, you should have already optimized your website with the_ [_Basic SEO Techniques_](/blog/introduction-to-seo-and-sem-for-beginners "Basic SEO Techniques") _I outlined in my previous post._
@@ -51,9 +54,11 @@ With the uptick in conversations moving from websites to instead happening on So
 
 Get your customers to link to you and talk about you (hopefully in a positive manner).  If their site is popular, you stand to benefit from it.
 
-Blog frequently, and make it interesting that others will want to share it and chat about it.  Blogs will generate fresh material on a consistent basis if you keep doing it.  It's also valuable to your customers and a way to give back to the community by sharing your knowledge.  Who knows, maybe one of your readers will one day become a customer.
+Blog frequently, and make it interesting that others will want to share it and chat about it.  Blogging will generate fresh material on a consistent basis if you keep doing it.  It's also valuable to your customers and a way to give back to the community by sharing your knowledge.  Who knows, maybe one of your readers will one day become a customer.
 
 Get on the forums (such as Reddit), and help others out.  Your goodwill can only help you.  Who knows, that person you helped out might just lead to a new customer.
+
+Podcasting is another great way to get free backlinks.  The podcaster gets free content by interviewing you, while you get free backlinks to your website and free exposure to your brand.
 
 ## BE IN THE NEWS
 
