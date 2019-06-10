@@ -1,16 +1,21 @@
 +++
+aliases = ["blog/2016/2/24/why-great-web-design-is-more-than-just-pretty-pictures", "blog/2016/02/24/why-great-web-design-is-more-than-just-pretty-pictures"]
 categories = ["blogging"]
 date = "2019-01-05"
 description = "Our mission is to help our readers build great web experiences through beautiful design.  We believe these great web experiences are achieved only by producing beautiful web design."
 title = "Why great Web Design is more than just pretty pictures"
-aliases = ["blog/2016/2/24/why-great-web-design-is-more-than-just-pretty-pictures","blog/2016/02/24/why-great-web-design-is-more-than-just-pretty-pictures"]
 [images]
 is_pin_friendly = false
-name = "Why great web design is more than just pretty pictures"
-src = "/uploads/webdesign.png"
+name = "Great web design is more than just pretty pictures on your website."
+src = "/uploads/web-design.png"
+[[pins]]
+pin_description = "It is critical for any beginner blogger to make an intuitive blog design. Too often we get caught up in making things look pretty, instead of making the blog useful and intuitive to the reader.  Read our blog post on how to balance pretty with intuitive. #blogging #bloggingforbeginners #bloggingtips #webdesign "
+pin_image = "/uploads/intuitive-blog-design.png"
+[[pins]]
+pin_description = "Great blog design is much more than just pretty pictures. Read our post on how to make your web design easy to use and intuitive, and other factors to make the best website experience for your users. #blogging #bloggingforbeginners #bloggingtips #webdesign "
+pin_image = "/uploads/great-web-design.png"
+
 +++
-
-
 But, what is a Beautiful Web Design?
 
 Web Design constitutes many aspects.  These are the qualities we think are important (and beautiful) when building a website:
