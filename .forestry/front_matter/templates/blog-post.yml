@@ -58,6 +58,7 @@ fields:
   config:
     labelField: pin_description
 pages:
+- content/blog/setting-up-dns.md
 - content/blog/introduction-to-ssl.md
 - content/blog/why-your-business-needs-a-cdn.md
 - content/blog/great-web-design.md
