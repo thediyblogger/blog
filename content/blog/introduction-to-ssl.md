@@ -1,37 +1,33 @@
-
 +++
-title = "Introduction to SSL"
-description = "The infamous question.  What is SSL?  Or, more importantly, why should I care about it?"
-date = "2019-01-03"
+aliases = ["blog/2016/2/16/introduction-to-ssl", "blog/2016/02/16/introduction-to-ssl"]
 categories = ["blogging"]
-aliases = ["blog/2016/2/16/introduction-to-ssl","blog/2016/02/16/introduction-to-ssl"]
+date = "2019-01-03"
+description = "The infamous question.  What is SSL?  Or, more importantly, why should I care about it?"
+pins = []
+title = "Introduction to SSL"
 [images]
 is_pin_friendly = false
-name = "Introduction to SSL"
-src = '/uploads/ssl.png'
+name = "Introduction to Website Security"
+src = "/uploads/ssl-1.png"
+
 +++
+SSL stands for Secure Socket Layer. It's actually a deprecated technology, now replaced by a newer acronym - TLS.  TLS stands for Transport Layer Security. But you will often hear people talking about SSL or TLS interchangeably.
 
-
-SSL stands for Secure Socket Layer. It's actually a deprecated technology, now replaced by a newer acronym - TLS.  TLS stands for Transport Layer Security.
-
-Okay, enough of this gobbledygook!  What do all these fancy words mean?!?!  In a nutshell, its all about security on the internet.
+Okay, enough of this technical gobbledygook!  What do all these fancy words mean?!?!  In a nutshell, it's all about security on the internet.
 
 When you visit your bank website, or these days even Facebook and Google, you will see a lock icon next to the URL in the address bar.
 
 {{< figure src="/uploads/ssl_lock.png" title="The Green Lock" >}}
 
+## THE GREEN LOCK
 
-THE GREEN LOCK
---------------
-
-The green lock, and the "https://" next to it means that the communication between your device (computer/iphone/ipad etc) is secure.  No one else can read the data that is sent and received, and no one can modify it.
+The green lock, and the "https://" next to it means that the communication between your device (computer/iPhone/iPad etc) is secure.  No one else can read the data that is sent and received, and no one can modify it while it is in transit between you and the website.
 
 This is important if you care about your privacy.  Obviously you don't want anyone else seeing your communication with your bank.  Your passwords should stay secret.  Your account numbers should stay secret.  Likewise your emails, and pretty much anything you do online should stay secret between you and the site you are visiting.
 
 When you see a green lock, what you are being told is that this domain has been verified with the owner and that your communication will be encrypted between you and this domain.  This means that if someone intercepts your traffic (also called a "man in the middle" attack), they cant see what is being transmitted, and they cannot change anything since all the data is encrypted.
 
-HOW DOES THE ENCRYPTION WORK?
------------------------------
+## HOW DOES THE ENCRYPTION WORK?
 
 First, the owner of the domain has to apply for a Secure Certificate.  There are a few Certificate Authorities (CA) that are approved CA's by the browser makers such as Google (Chrome) or Microsoft (Internet Explorer/Edge).  A Certificate Authority is a trusted authority who can issue Certificates.
 
@@ -43,22 +39,18 @@ The certificate consists of a public key and a private key.  The private key alw
 
 _For the more technical folks out there - I am simplifying this process and will go into deeper technical details in a later post._
 
-BUT HOW GOOD IS THE ENCRYPTION?  
--------------------------------
+## BUT HOW GOOD IS THE ENCRYPTION?
 
 Like all good encryption, eventually computers are powerful enough to break it.  That is why current TLS certificates are recommended to have public/private keys that are at least 2048 bits long.  The more bits, the harder it is to hack.  But the trade-off is it also requires faster and more powerful computers to use.
 
-WHY SHOULD I CARE?
-------------------
+## WHY SHOULD I CARE?
 
 Okay, back to the question, why should I care about all this?  Well, for starters, search engines are starting to look at HTTPS support as a ranking factor, where supporting HTTPS on your website will increase your rank.
 
 Also, why risk compromising your customers data?  Even if your website doesn't deal with sensitive data, everyone still has a right to privacy.
 
-ISN'T IT EXPENSIVE?
--------------------
+## ISN'T IT EXPENSIVE?
 
 Traditionally, SSL/TLS Certificates have been expensive.  Recently, cheap to free alternatives have emerged.  One option is LetsEncrypt who offer free certificates.  Another option is CloudFlare.  CloudFlare will give you a free SNI certificate along with their CDN services.
-
 
 Source: https://en.wikipedia.org/wiki/Transport_Layer_Security
