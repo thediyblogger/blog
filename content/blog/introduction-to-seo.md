@@ -11,6 +11,9 @@ is_pin_friendly = false
 name = "Introduction to SEO and SEM for Beginners"
 src = "/uploads/seo-sem-for-beginners.png"
 [[pins]]
+pin_description = "6 critical things bloggers should know when doing seo and sem search optimizations. Learn what page rank is and how to target keywords for strong seo to grow insane traffic to your blog. #seo #sem #seosem #blogging #learnhowtoblog #pinteresttraffic #pinterestmarketing "
+pin_image = "/uploads/6-critical-things-bloogers-should-know-when-doing-seo.png"
+[[pins]]
 pin_description = "How to SEO and SEM for Beginners. Learn the basics of SEO/SEM to get started driving traffic to your website. How to target keywords for strong seo and earn seo page rank. #seo #sem #seosem #blogging #learnhowtoblog"
 pin_image = "/uploads/how-to-seo-and-sem-for-beginners.png"
 
