@@ -3,12 +3,17 @@ aliases = ["blog/2016/2/16/introduction-to-ssl", "blog/2016/02/16/introduction-t
 categories = ["blogging"]
 date = "2019-01-03"
 description = "The infamous question.  What is SSL?  Or, more importantly, why should I care about it?"
-pins = []
 title = "Introduction to SSL"
 [images]
 is_pin_friendly = false
 name = "Introduction to Website Security"
 src = "/uploads/ssl-1.png"
+[[pins]]
+pin_description = "Our beginners guide to website security for beginner bloggers.  Don't make the beginner blogger mistake of launching your blog and it not being secure. Learn what SSL is and why your blog needs it. Read more in our post. #seo #bloggingtips #bloggingforbeginners #ssl"
+pin_image = "/uploads/website-security.png"
+[[pins]]
+pin_description = "Does you blog have https security?  Don't make the beginner blogger mistake of launching your blog and it not being secure. This will hurt your SEO rankings, and looks unprofessional.  It's even more critical if you collect user data (payments). Read more in our post. #seo #bloggingtips #bloggingforbeginners #ssl"
+pin_image = "/uploads/https.png"
 
 +++
 SSL stands for Secure Socket Layer. It's actually a deprecated technology, now replaced by a newer acronym - TLS.  TLS stands for Transport Layer Security. But you will often hear people talking about SSL or TLS interchangeably.
