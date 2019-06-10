@@ -11,6 +11,9 @@ is_pin_friendly = false
 name = "How to Build Links to Your Website"
 src = "/uploads/how-to-build-links-to-your-website.png"
 [[pins]]
+pin_description = "6 Tips for building links to your website - How to leverage social tools to expand your brand presence and gain critical high value back links to your website to build Google SEO. #seo #linkbuilding #bloggertips #bloggingforbeginners"
+pin_image = "/uploads/6-tips-for-link-building.png"
+[[pins]]
 pin_description = "How to Build Effective Links to Your Blog - Link building is one of the hardest things to do when it comes to Search Engine Optimization (SEO). Read our tips of how to do effective link building to help improve your rank on Google search. #seo #linkbuilding #bloggertips #bloggingforbeginners"
 pin_image = "/uploads/effective-link-building.png"
 

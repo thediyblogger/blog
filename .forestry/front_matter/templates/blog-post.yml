@@ -58,6 +58,7 @@ fields:
   config:
     labelField: pin_description
 pages:
+- content/blog/how-to-build-links-to-your-website.md
 - content/blog/how-to-blog.md
 - content/blog/introduction-to-seo.md
 - content/blog/how-to-drive-4x-more-traffic-to-your-blog-with-pinterest-seo.md
@@ -65,4 +66,3 @@ pages:
 - content/blog/how-to-set-up-rich-pins-on-pinterest-in-under-5-minutes.md
 - content/blog/how-to-claim-your-website-on-pinterest.md
 - content/blog/how-to-set-up-a-pinterest-business-account.md
-- content/blog/how-to-build-links-to-your-website.md
