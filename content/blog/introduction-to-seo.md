@@ -3,7 +3,6 @@ aliases = ["blog/2016/2/8/introduction-to-seo", "blog/2016/02/08/introduction-to
 categories = ["blogging", "seo/sem"]
 date = "2019-01-07"
 description = "Search Engine Optimization (SEO) is the art of optimizing your website for targeted keywords so that you rank as high as possible on search engines such as Google or Pinterest. Search Engine Marketing (SEM) is the art of marketing your page through paid ads or social awareness.  Learn the basics of SEO/SEM to get started driving traffic to your website."
-pins = []
 social_media_images = ["/uploads/seosem.png"]
 social_media_text = "Introduction to SEO and SEM for Beginners to start driving traffic to your website."
 title = "Introduction to SEO and SEM for Beginners"
@@ -11,6 +10,9 @@ title = "Introduction to SEO and SEM for Beginners"
 is_pin_friendly = false
 name = "Introduction to SEO and SEM for Beginners"
 src = "/uploads/seo-sem-for-beginners.png"
+[[pins]]
+pin_description = "How to SEO and SEM for Beginners. Learn the basics of SEO/SEM to get started driving traffic to your website. How to target keywords for strong seo and earn seo page rank. #seo #sem #seosem #blogging #learnhowtoblog"
+pin_image = "/uploads/how-to-seo-and-sem-for-beginners.png"
 
 +++
 Welcome to my first post on SEO and SEM.
