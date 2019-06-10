@@ -30,7 +30,7 @@ An A Record maps a fully qualified domain name (FQDN) to an IP Address.  This is
 
 ## CNAME RECORDS
 
-CNAME records stand for "Canonical Name Record".  It is used to indicated that the domain name is an alias for another domain name.  Here are drawbuildplay, we often create CNAME records to point to (alias) another domain owned by squarespace.
+CNAME records stand for "Canonical Name Record".  It is used to indicated that the domain name is an alias for another domain name.
 
 Another time we often use CNAME records is when integrating with a CDN (Content Delivery Network).  It allows us to point our domain to another domain owned by a CDN provider such as Akamai, Fastly, or Amazon CloudFront.
 
