@@ -3,14 +3,19 @@ aliases = ["blog/2016/3/1/blogging-about-your-business", "blog/2016/03/01/how-to
 categories = ["blogging"]
 date = "2019-01-08"
 description = "You just built a brand new sexy website.  It looks awesome.  Your existing clients are going to love it.  You are about to get a ton of new customers.  The world is great. A month later, you learn that your website traffic has not increased all that much.  Your rank in google is pretty much stationary."
-pins = []
 social_media_images = []
 social_media_text = ""
 title = "How to blog"
 [images]
 is_pin_friendly = false
-name = "How To Blog"
-src = "/uploads/blogging.png"
+name = "7 Reasons to Start a Blog"
+src = "/uploads/7-reasons-to-start-a-blog.png"
+[[pins]]
+pin_description = "How to attract new customers and engage existing customers by blogging and building a relationship. Drive traffic to your website and boost your sales with a trusted and engaged audience by starting a blog. #blogging #bloggingtips #bloggingforbeginners #seo"
+pin_image = "/uploads/attract-new-customers-by-blogging.png"
+[[pins]]
+pin_description = "7 reasons you should start a blog. Show your expertise and attract new customers.  What are you waiting for you have nothing to lose.  Read our reasons why blogging is important and why you need to start a blog for your website.  #blogging #seo #sem #bloggingtips #bloggingforbeginners"
+pin_image = "/uploads/7-reasons-to-start-a-blog-1.png"
 
 +++
 ## BLOGGING 101
