@@ -1,17 +1,21 @@
-
 +++
-title = "Why your business needs a CDN"
-description = "A CDN (Content Delivery Network) is a network of servers around the world that work together to provide a faster web experience for your users."
-date = "2019-01-04"
-categories = ["blogging"]
 aliases = ["blog/2016/2/22/why-your-business-needs-a-cdn", "blog/2016/02/22/why-your-business-needs-a-cdn"]
+categories = ["blogging"]
+date = "2019-01-04"
+description = "A CDN (Content Delivery Network) is a network of servers around the world that work together to provide a faster web experience for your users."
+title = "Why your business needs a CDN"
 [images]
 is_pin_friendly = false
-name = "Why your business needs a CDN"
-src = '/uploads/cdn.png'
+name = "Why you need a CDN for your blog or website"
+src = "/uploads/cdn-1.png"
+[[pins]]
+pin_description = "4 reasons you need to get a CDN for your blog. Learn how to improve SEO ranking, and why a fast website is essential for retaining users. Find out some of our other essential reasons for having a CDN on your blog. #bloggingtips #bloggingforbeginners #cdn #seo"
+pin_image = "/uploads/4-reasons-cdn-for-your-blog.png"
+[[pins]]
+pin_description = "Learn how to fix your slow website using a CDN. A fast user experience is essential to have users visit your website. Not only does it keep users on your site, but also helps with your SEO. Read our post to learn more about CDN's and why they are so important. #bloggingtips #bloggingforbeginners #cdn #seo"
+pin_image = "/uploads/slow-website.png"
+
 +++
-
-
 For example, lets say your website was hosted on a server in Atlanta GA.  Then, whenever your customer requested your website that did not use a CDN, the request would always come to your server in Atlanta.  Local customers may have a decent experience because they are local, but requests from customers on the west coast would have to travel the span of the US.  Even worse for global customers.
 
 With a CDN, the CDN provider will have servers in many places around the world.  They may have a few servers on the west coast, some in the midwest, some in the east coast, and some in Europe, Asia, Africa, and Australia for example.  When your users request your website that uses a CDN, their request only has to go to that local server, thus making the experience a lot faster.
@@ -48,4 +52,3 @@ WHICH CDN PROVIDER SHOULD YOU USE?
 ----------------------------------
 
 There are many CDN providers out there such as Akamai, Amazon CloudFront, CloudFlare, Verizon Edgecast, Fastly, MaxCDN, and the list can go on.  We are fans of CloudFlare if you are starting out due to their free plans and free SSL certificate options.
-
