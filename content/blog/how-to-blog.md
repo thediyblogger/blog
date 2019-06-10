@@ -3,6 +3,7 @@ aliases = ["blog/2016/3/1/blogging-about-your-business", "blog/2016/03/01/how-to
 categories = ["blogging"]
 date = "2019-01-08"
 description = "You just built a brand new sexy website.  It looks awesome.  Your existing clients are going to love it.  You are about to get a ton of new customers.  The world is great. A month later, you learn that your website traffic has not increased all that much.  Your rank in google is pretty much stationary."
+pins = []
 social_media_images = []
 social_media_text = ""
 title = "How to blog"
@@ -67,3 +68,13 @@ Once you have the basic bullet points, start typing.  Let the conversation flow 
 Use pictures if you have them.  Too much text can get boring.
 
 Add references if you have sources.  It will help to back up any claims you make with real data.
+
+## THE END GAME
+
+As you write your blog post, think about what your end game is.   What is it you want to accomplish out of this blog post?
+
+It could be something as simple as just sharing information.
+
+Often you may be trying to make a sale.  It may be to attract a new client, sell a product (physical or virtual), or gain a new subscriber for your service..  Keep this end game in mind as you write your blog.  Are you building trust?  And eventually after you have earned their trust, only then can you offer your sales pitch on why the reader should become a subscriber and potentially a paying customer.
+
+You blog post should aim to accomplish these goals.  But remember, you don't have to be constantly selling on each blog post.  Just earn their trust.  And if they trust you, then later it will become easier to sell your product to them.
