@@ -2,12 +2,16 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-11T00:00:00-04:00"
 description = "Have you seen other Pinterest accounts with keyword rich profile names, but struggle to enter more than 30 characters yourself? Well, continue reading below to find the secret tip to entering more than 30 characters and having your own keyword rich profile name."
-draft = true
-pins = []
 title = "How to get more than 30 characters in your Pinterest profile name"
 [images]
 name = "How to get a Pinterest profile name with more than 30 characters"
 src = "/uploads/profile-name-character-limit.png"
+[[pins]]
+pin_description = "Do you see other Pinterest accounts with longer profile names, but yours is limited to just 30 characters?  Check out our secret Pinterest tip so you too can have a longer keyword rich Pinterest profile name. #pinteresttips #pintereststrategy #bloggingtips #pinteresthacks"
+pin_image = "/uploads/pinterest-char-limit.png"
+[[pins]]
+pin_description = "Are you embarrassed by your short profile name on Pinterest.  See our secret Pinterest hack for getting a longer keyword rich Pinterest profile name that extends beyond the 30 character limit. #pinteresttips #pintereststrategy #bloggingtips #pinteresthacks"
+pin_image = "/uploads/pinterest-bigger-profile-name.png"
 
 +++
 Any serious blogger knows that to succeed on Pinterest you need to treat Pinterest as a Search Engine.  Why?  Because, **Pinterest is a search engine!**
