@@ -11,7 +11,7 @@ pin_description = "Do you see other Pinterest accounts with longer profile names
 pin_image = "/uploads/pinterest-char-limit.png"
 [[pins]]
 pin_description = "Are you embarrassed by your short profile name on Pinterest.  See our secret Pinterest hack for getting a longer keyword rich Pinterest profile name that extends beyond the 30 character limit. #pinteresttips #pintereststrategy #bloggingtips #pinteresthacks"
-pin_image = "/uploads/pinterest-bigger-profile-name.png"
+pin_image = "/uploads/pinterest-bigger-profile-name (1).png"
 
 +++
 Any serious blogger knows that to succeed on Pinterest you need to treat Pinterest as a Search Engine.  Why?  Because, **Pinterest is a search engine!**
