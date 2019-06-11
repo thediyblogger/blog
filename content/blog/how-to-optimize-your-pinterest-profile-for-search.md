@@ -2,11 +2,16 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-11T00:00:00-04:00"
 description = "It is essential for any business who wants to have a brand presence on Pinterest to have an SEO optimized Pinterest profile in order to be found in search.  Read our guide on how to easily optimize your profile and start enjoying free organic traffic from Pinterest."
-pins = []
 title = "How to Optimize your Pinterest Profile for Search"
 [images]
 name = "How to Optimize Your Pinterest Profile for Search"
 src = "/uploads/pinterest-profile-seo.png"
+[[pins]]
+pin_description = "8 Pinterest Tips on how to boost your profile rank in Pinterest search. Check out our Pinterest strategy and Pinterest Secret Tips on how to improve your profile SEO by targeting keywords in strategic places on your profile. #pinteresttips #pintereststrategy #bloggingforbeginners #bloggingtips"
+pin_image = "/uploads/8-hacks-to-boost-profile.png"
+[[pins]]
+pin_description = "Pinterest Tips on how to optimize your Pinterest profile for search. Check out our Pinterest strategy on how to improve your profile SEO by targeting keywords in strategic places on your profile. #pinteresttips #pintereststrategy #bloggingforbeginners #bloggingtips"
+pin_image = "/uploads/optimize-profile.png"
 
 +++
 ## Upgrade to a Business Account
