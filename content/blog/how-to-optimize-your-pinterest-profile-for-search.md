@@ -29,7 +29,7 @@ Having this detail enriched on the pin will help your pins be more visible in th
 
 For an in-depth explanation, please read my guide on [how to enable rich pins on Pinterest](https://www.thediyblogger.com/blog/how-to-set-up-rich-pins-on-pinterest-in-under-5-minutes/ "How to enable rich pins on Pinterest").
 
-Targeted Keywords
+## Targeting Keywords
 
 As we go into the next few sections, we will talk about targeted keywords.  These are keywords you are going after in order to appear in search.
 
@@ -48,6 +48,8 @@ Unless you are already famous, most users won't really care what your name or yo
 For example, The DIY Blogger Pinterest profile could have been named just "Amit Gandhi".  But that would not have told you what services I could provide you.  Likewise, a profile name of "The DIY Blogger" is a step in the right direction, but again its just a name and doesn't tell you too much about my services.
 
 Instead, we opted to go with "The DIY Blogger | Blogging Tips, How To Blog, Drive Traffic + SEO".  This tells the audience the name of my brand.  It provides a list of keyword terms that users are likely to search for, and tells the user what they can expect to see from my account if they follow me.
+
+{{<imgproc "/uploads/profilename.png" Resize "600x" >}}Optimized Profile and Description{{</imgproc>}} 
 
 > **Secret Tip:**
 >
