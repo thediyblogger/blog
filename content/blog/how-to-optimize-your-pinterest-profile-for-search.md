@@ -2,7 +2,6 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-11T00:00:00-04:00"
 description = "It is essential for any business who wants to have a brand presence on Pinterest to have an SEO optimized Pinterest profile in order to be found in search.  Read our guide on how to easily optimize your profile and start enjoying free organic traffic from Pinterest."
-draft = true
 pins = []
 title = "How to Optimize your Pinterest Profile for Search"
 [images]
@@ -74,4 +73,22 @@ Low quality pins that don't get saves will hurt your engagement scores for the b
 
 ## Optimize your Pins
 
+When you create pins on Pinterest, you have the option to enter a description for the pin.  These descriptions should be optimized, targeting keywords related to that pin.  This will significantly increase the chance of the pin appearing in a search, and thus improving your chance of getting engagement on the pin.
+
+If the pin is to your own content, then you need to spend the time optimizing this description with strong keywords so you can drive traffic to your blog.
+
+If you are pinning other peoples content, often they may already have a description set and you can save it without any changes.  However, other users may have little to no description, or a really poor one.  I recommend setting a description on these to help engagement on your board.  But it's not necessary to spend a lot of time on this since the traffic wont be coming to your site.  But it will help with engagement on your board.  You can save time by saving pins that are already going viral and are already keyword optimized.
+
+Also, to ensure high engagement on your pins, make sure the pins are vertical and look good.  Landscape pins will often be skipped on the mobile experience since they look so small.
+
+Experiment with different pin colors and fonts and images to see what works for your audience.  If you find a style that tends to get better engagement than others, then continue with that style.
+
 ## Follow Others in your Niche
+
+Another step in improving your profile to appear in search is to come across as having influence in your niche.  This can be done by having high engagement on your boards and pins, and also by having a large number of engaged followers.  The follower number itself is less critical (as Pinterest themselves have said that follower counts don't matter in exposing your pins).  But having an engaged follower list translates to better board and pin engagement which does help your pins rank higher in search.
+
+To get followers, I recommend following other users in your niche.  Since they blog about the same kind of topics, they are also likely interested in what you have to say, and may follow you back.  Also this helps populate your own feed with interesting content that you care about, so its a win win.
+
+But, don't follow others for the sake of increasing your counts.  If they aren't in your niche, then following someone sends a confusing signal (not to mention cluttering up your own feed).  Sometimes you may want to follow a few boards someone owns rather than their whole account.  
+
+Don't follow someone hoping to get a follow back, and then unfollow them!  That is a shady technique and is likely to get your account suspended by Pinterest.
