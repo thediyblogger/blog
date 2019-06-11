@@ -38,7 +38,7 @@ For an in-depth explanation, please read my guide on [how to enable rich pins on
 
 As we go into the next few sections, we will talk about targeted keywords.  These are keywords you are going after in order to appear in search.
 
-You want to choose keywords that users are searching on so that you can get a large audience.  
+You want to choose keywords that users are searching on so that you can get a large audience.
 
 A neat way to find out what keywords are popular is by typing it into the Pinterest Search Bar and see what comes up in the autocomplete suggestions.  Another way is to look in the Pinterest Ads tool and see roughly how many searches your keywords actually get.
 
@@ -54,15 +54,17 @@ For example, The DIY Blogger Pinterest profile could have been named just "Amit 
 
 Instead, we opted to go with "The DIY Blogger | Blogging Tips, How To Blog, Drive Traffic + SEO".  This tells the audience the name of my brand.  It provides a list of keyword terms that users are likely to search for, and tells the user what they can expect to see from my account if they follow me.
 
-{{<imgproc "/uploads/profilename.png" Resize "600x" >}}Optimized Profile and Description{{</imgproc>}} 
+{{<imgproc "/uploads/profilename.png" Resize "600x" >}}Optimized Profile and Description{{</imgproc>}}
 
 > **Secret Tip:**
 >
 > Currently on the desktop web version of Pinterest, your profile name is limited to only 30 characters long.  However, if you edit your name on your phone app (Pinterest App -> Settings -> Profile Name), then you can enter up to 65 characters.
 
+Read more about this secret [Pinterest tip to get more than 30 characters in your profile name.](https://www.thediyblogger.com/blog/how-to-get-more-than-30-characters-in-your-pinterest-profile-name/ "How to get more than 30 characters in your Pinterest profile name")
+
 ## Optimize your Profile Description
 
-Once you have optimized your Profile Name, the next step is to get a great description in there.  Your name is limited by only a few characters, but you can write much more in the description field.  The description is there to tell your audience who you are and what you are pinning about.  
+Once you have optimized your Profile Name, the next step is to get a great description in there.  Your name is limited by only a few characters, but you can write much more in the description field.  The description is there to tell your audience who you are and what you are pinning about.
 
 Again, it's a good idea to use strong targeted keywords in your description.  This way someone searching for "Pinterest tips and strategies" has the chance to see "The DIY Blogger" in their search results.
 
@@ -74,7 +76,7 @@ As you create Pinterest Boards, it is important that each board is optimized for
 
 **Board Category:** The board category is used to categorize the board into a specific topic.  Ie. is the board about Home Decor, or Education, or something else.  Again this helps your pins in the board be exposed to customers interested in those topics.
 
-Once you have your boards optimized for search, you will want to make sure you seed your boards with a number of high quality pins (pins that are vertical, look good, and are likely to get a good number of saves). Typically boards need at least 20 pins to start appearing on user feeds.  Over time, try to increase this to 50 pins.  But don't pin anything into the board.  Make sure its relevant content to the board, and that users find it interesting and those pins get good saves. 
+Once you have your boards optimized for search, you will want to make sure you seed your boards with a number of high quality pins (pins that are vertical, look good, and are likely to get a good number of saves). Typically boards need at least 20 pins to start appearing on user feeds.  Over time, try to increase this to 50 pins.  But don't pin anything into the board.  Make sure its relevant content to the board, and that users find it interesting and those pins get good saves.
 
 Low quality pins that don't get saves will hurt your engagement scores for the board, and affect the ability for other content on the board to rank well in search.
 
@@ -96,6 +98,6 @@ Another step in improving your profile to appear in search is to come across as 
 
 To get followers, I recommend following other users in your niche.  Since they blog about the same kind of topics, they are also likely interested in what you have to say, and may follow you back.  Also this helps populate your own feed with interesting content that you care about, so its a win win.
 
-But, don't follow others for the sake of increasing your counts.  If they aren't in your niche, then following someone sends a confusing signal (not to mention cluttering up your own feed).  Sometimes you may want to follow a few boards someone owns rather than their whole account.  
+But, don't follow others for the sake of increasing your counts.  If they aren't in your niche, then following someone sends a confusing signal (not to mention cluttering up your own feed).  Sometimes you may want to follow a few boards someone owns rather than their whole account.
 
 Don't follow someone hoping to get a follow back, and then unfollow them!  That is a shady technique and is likely to get your account suspended by Pinterest.
