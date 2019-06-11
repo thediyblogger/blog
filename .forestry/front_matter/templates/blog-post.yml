@@ -58,8 +58,8 @@ fields:
   config:
     labelField: pin_description
 pages:
-- content/blog/how-to-get-more-than-30-characters-in-your-pinterest-profile-name.md
 - content/blog/how-to-optimize-your-pinterest-profile-for-search.md
+- content/blog/how-to-get-more-than-30-characters-in-your-pinterest-profile-name.md
 - content/blog/setting-up-dns.md
 - content/blog/introduction-to-ssl.md
 - content/blog/why-your-business-needs-a-cdn.md
