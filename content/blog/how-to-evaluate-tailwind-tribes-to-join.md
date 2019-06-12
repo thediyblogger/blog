@@ -13,9 +13,11 @@ pin_image = "/uploads/evaluate-tailwind-tribes.png"
 +++
 Have you been pinning for a while now, but just struggling to get any real traffic?  Your pins just wont go viral, and the Group Boards have been next to useless for you?  Your website traffic is stagnating, and you don't know what to do?
 
-Well, I have news for you.  If you aren't already using Tailwinds, then you need to.
+Well, I have news for you.  If you aren't already using [Tailwinds](https://www.tailwindapp.com/i/thediyblogger "Sign up to Tailwinds!"), then you need to.
 
-Tailwinds is a web application that does a few really awesome things.
+Tailwinds is a web application that does a few really awesome things.  [Join with my referral code and you will get $15 off your plan!](https://www.tailwindapp.com/i/thediyblogger "Sign up to Tailwind")
+
+Before you [sign up to one of the Tailwind paid plans](https://www.tailwindapp.com/i/thediyblogger "Create your Tailwind Account"), I recommend trying it out for free first.  You get to schedule up to 100 pins for free, and 30 submissions per month to your tribes (choose 5 tribes).  Once you start using Tailwind for free, you'll see the value it provides and it is definitely worth upgrading to one of the paid plans at the end of your trial.
 
 ## Schedule your pins.
 
