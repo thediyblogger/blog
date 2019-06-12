@@ -22,7 +22,7 @@ This is by far a serious time saver.  To be a successful blogger on Pinterest an
 
 But really, who has time to be on Pinterest all day long pinning.  We all have a million other things to do right.
 
-That is where Pin schedulers come in.  Tailwinds is awesome for this.  
+That is where Pin schedulers come in.  Tailwinds is awesome for this.
 
 Instead of pinning directly on Pinterest, Tailwind allows you to schedule a pin.  They also analyze your account and find the most optimal times in a day to be pinning to reach your audience.
 
@@ -30,7 +30,7 @@ With this technique, you can spend a few minutes each day (or an hour at the sta
 
 ## Tribes
 
-Tailwind Tribes is the other big feature Pinterest bloggers use frequently.  
+Tailwind Tribes is the other big feature Pinterest bloggers use frequently.
 
 The concept of Tribes is similar to a secret Group Board on Pinterest.  It has a number of members that join a tribe focused on a particular niche topic.  Members post pins to the tribe related to that niche.  However, usually for every pin submitted, the member must re-share 1 or more pins from that tribe.
 
@@ -52,7 +52,7 @@ On the `Find a Tribe` tab, you can search for tribes in your niche.
 
 In the screenshot below, I performed a search for "Blogging" to find tribes related to the Blogging niche.
 
-{{<imgproc "/uploads/Tailwind-FindTribe.png" Resize "600x" >}}Tailwind - Find Tribe{{</imgproc>}} 
+{{<imgproc "/uploads/Tailwind-FindTribe.png" Resize "600x" >}}Tailwind - Find Tribe{{</imgproc>}}
 
 There are a few things to evaluate before deciding if you should join that tribe.
 
@@ -68,7 +68,7 @@ Okay, so this is a secret you wont read anywhere else.  I came up with this appr
 
 Engagement is essentially calculated as Virality / User, where Virality is Reshares/Pin.
 
-So for a Tailwind Tribe, I calculate Tribe Engagement as: 
+So for a Tailwind Tribe, I calculate Tribe Engagement as:
 
     Tribe Engagement = Num Reshares / Num Members
 
@@ -76,7 +76,7 @@ This will essentially tell you (on average) how many reshares you can expect per
 
 If there are many inactive members, then the engagement will be lower.  Likewise, if not much sharing is going on in the tribe, then engagement will also be lower.
 
-There is no magic number to look for with Tribe Engagement.  But what you can do is log these numbers in a spreadsheet for each tribe you join.  Compare them.  
+There is no magic number to look for with Tribe Engagement.  But what you can do is log these numbers in a spreadsheet for each tribe you join.  Compare them.
 
 Do you have Tribes that have a low engagement score?
 
@@ -84,7 +84,17 @@ If the answer is yes, and you have noticed your own pins get very little sharing
 
 When joining a new tribe, you can calculate these numbers before you join it by pulling the values from the Preview.  If the engagement value comes out higher than your current tribes, then it's a good indicator to get on that Tribe.
 
-{{<imgproc "/uploads/Tailwind-TrackingMetrics.png" Resize "600x" >}}Tailwind Tracking Metrics{{</imgproc>}} 
+{{<imgproc "/uploads/Tailwind-TrackingMetrics.png" Resize "600x" >}}Tailwind Tracking Metrics{{</imgproc>}}
+
+## Tracking Tribe Performance
+
+Before giving up on a Tribe, track your performance of it over the span of 4 weeks.  You may be getting shares but they are scheduled out so you don't get the repins or views from it for a while out.
+
+Tailwind will send out a weekly report.  Log those numbers into a spreadsheet to track the number of pins you scheduled that week, along with the number of reshares and repins you received and the potential reach.
+
+Over the span of 4 weeks, look at which of your tribes are performing well, and which ones are not.  Compare your performance with the performance of the Tribe overall.  Are you on par with the tribe, or is the tribe rejecting your content.
+
+If your performance is low, then consider joining other tribes at that point that may be better suited to your niche, or where there are more active members.
 
 ## When to post a new pin to a Tribe
 
@@ -95,13 +105,3 @@ A good indicator is most bloggers will probably be looking at Tailwind first thi
 I recommend posting at different times, and keep track of how many pins you get to find when the best time to post is.
 
 If you post when the members aren't very active, then chances are that by the time the majority of members log in and look at the tribe, your post will have already fallen down the feed and they simply wont scroll down far enough hurting your chances of getting more shares.
-
-## Tracking Tribe Performance
-
-Before giving up on a Tribe, track your performance on it over the span of 4 weeks.  You may be getting shares but they are scheduled out so you don't get the repins or views from it for a while out.  
-
-Tailwind will send out a weekly report.  Log those numbers into a spreadsheet to track the number of pins you scheduled that week, along with the number of reshares and repins you received and the potential reach.
-
-Over the span of 4 weeks, look at which of your tribes are performing well, and which ones are not.  Compare your performance with the performance of the Tribe overall.  Are you on par with the tribe, or is the tribe rejecting your content.  
-
-If your performance is low, then consider joining other tribes at that point that may be better suited to your niche, or where there are more active members.
