@@ -2,12 +2,13 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-12T00:00:00-04:00"
 description = "As part of any solid Pinterest strategy, Tailwind Tribes plays an integral part of it.  In fact, it is one of the major tools bloggers use to seriously accelerate traffic to their website.  But with so many tribes available, how do you choose which tribe to join.  Read our strategies to learn how to choose and evaluate your Tailwind Tribes."
-draft = true
-pins = []
 title = "How to evaluate Tailwind Tribes to join"
 [images]
-name = ""
-src = ""
+name = "How to evaluate the best Tailwind Tribes to join"
+src = "/uploads/tailwind-tribes-to-join.png"
+[[pins]]
+pin_description = "Stop waiting time on poor performing Tailwind Tribes. Learn how to evaluate which are the best Tailwind Tribes to join and skyrocket your blog traffic faster. #pinteresttips #tailwindtribes #tribes #pintereststrategies"
+pin_image = "/uploads/evaluate-tailwind-tribes.png"
 
 +++
 Have you been pinning for a while now, but just struggling to get any real traffic?  Your pins just wont go viral, and the Group Boards have been next to useless for you?  Your website traffic is stagnating, and you don't know what to do?
