@@ -1,8 +1,10 @@
 +++
+categories = []
 date = "2019-01-01"
 description = "This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase/sign up on https://www.thediyblogger.com (the “Site”)."
 title = "Privacy Policy"
-
+pins = []
+disableComments = true
 +++
 
 

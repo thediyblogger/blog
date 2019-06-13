@@ -187,11 +187,29 @@
 					</section>
 
 					<section>
-						<h2>From the blog</h2>
+						<h2 id="blog">From the blog</h2>
 					</section>
 
 					{{ partial "posts/preview.html" (dict "posts" $postsPaging "siteData" (index .Site.Data .Site.Language.Lang)) }}
 
+					<!-- Footer -->
+                    {{ if gt $postsPaging.TotalPages 1 }}
+                    <footer>
+                        <div class="pagination">
+                            {{ if $postsPaging.HasPrev }}
+                            <a href="{{ $postsPaging.Prev.URL }}#blog" class="previous"></a>
+                            {{ end }}
+                            {{ range $postsPaging.Pagers }}
+                            {{ if lt .PageNumber 10 }}
+                            <a href="{{ .URL }}#blog" class="page{{ if eq .PageNumber $postsPaging.PageNumber }} active{{ end }}">{{ .PageNumber }}</a>
+                            {{ end }}
+                            {{ end }}
+                            {{ if $postsPaging.HasNext }}
+                            <a href="{{ $postsPaging.Next.URL }}#blog" class="next">{{ i18n "NEXT" . }}</a>
+                            {{ end }}
+                        </div>
+                    </footer>
+                    {{ end }}
 
 
 				</div>
