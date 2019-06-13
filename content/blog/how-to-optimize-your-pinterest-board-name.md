@@ -1,24 +1,21 @@
 +++
 categories = ["Pinterest Tips"]
 date = "2019-06-13T00:00:00-04:00"
-description = ""
+description = "One of the great things about Pinterest is the ability to organize your pins into Pinterest Boards.  As a blogger aiming to increase their reach into the hundreds of thousands or even millions of readers, it is important that you get the basics right in naming your Pinterest Boards."
 draft = true
 pins = []
 title = "How to Optimize your Pinterest Board Name"
 [images]
-name = ""
-src = ""
+name = "How to optimize your board names on Pinterest to boost your traffic"
+src = "/uploads/optimize-board-name.png"
 
 +++
-One of the great things about Pinterest is the ability to organize your pins into Pinterest Boards.
-
-As a blogger aiming to increase their reach into the hundred thousand or even millions mark, it is important that you get the basics right.  One of those basics is having optimized Pinterest Board names.
 
 A Pinterest board name can be up to 100 characters long.  But be careful about using all that.  I'll tell you why, but first, let's go through how to create a well optimized board name.
 
 ## Forget Cutesy or Creative!
 
-Let's start with those cute or creative board names.  You know the ones I'm talking about.  The boards that you really want to name "Food for Thought" or "Mr Clean".  Sounds fun but it only makes sense to you and will perform very poorly in search.  
+Let's start with those cute or creative board names.  You know the ones I'm talking about.  The boards that you really want to name "Food for Thought" or "Mr Clean".  Sounds fun but it only makes sense to you and will perform very poorly in search.
 
 Better board names would be to use strong targeted keywords that perform well in search, and avoid unnecessary words.
 
@@ -33,9 +30,9 @@ In fact, I don't recommend board names to go over 25 characters.  Why?  Look at 
 
 The board name gets cut off.
 
-{{<imgproc "/uploads/board_image.png" Resize "600x" >}}Board Name Cut off{{</imgproc>}} 
+{{<imgproc "/uploads/board_image.png" Resize "600x" >}}Board Name Cut off{{</imgproc>}}
 
-{{<imgproc "/uploads/board_pin_image.png" Resize "600x" >}}Board Name Cut off{{</imgproc>}} 
+{{<imgproc "/uploads/board_pin_image.png" Resize "600x" >}}Board Name Cut off{{</imgproc>}}
 
 When looking at a list of pins, the board name listed again gets cut off.  This makes for a poor user experience as they cannot read the entirety of your board name.
 
@@ -45,7 +42,7 @@ Aim for less than 25 characters, targeting your keyword only and you should avoi
 
 Since our board names are short, you should create multiple board names, with variations of your keywords based on how people are searching on them.
 
-For example, we have boards named "Driving Pinterest Traffic", "Increasing Blog Traffic", "Pinterest Strategy", and "Increase Engagement".  These are all boards that are similar in nature, but we varied the keywords we were targeting.  
+For example, we have boards named "Driving Pinterest Traffic", "Increasing Blog Traffic", "Pinterest Strategy", and "Increase Engagement".  These are all boards that are similar in nature, but we varied the keywords we were targeting.
 
 This will help you rank in search for all of those different terms that users search on.
 
