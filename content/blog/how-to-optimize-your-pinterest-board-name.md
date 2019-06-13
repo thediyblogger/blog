@@ -32,13 +32,13 @@ Board names allow up to 100 characters in them.  But that doesn't mean you shoul
 
 In fact, I don't recommend board names to go over 25 characters.  Why?  Look at this image of a board:
 
-{{<imgproc "/uploads/board_image.png" Resize "600x" >}}Board Name Cut off{{</imgproc>}}
+{{<imgproc "/uploads/board_image.png" Resize "400x" >}}Board Name Cut off{{</imgproc>}}
 
 The board name gets cut off.
 
 Here's another image - of a pin this time:
 
-{{<imgproc "/uploads/board_pin_image.png" Resize "600x" >}}Board Name Cut off{{</imgproc>}}
+{{<imgproc "/uploads/board_pin_image.png" Resize "400x" >}}Board Name Cut off{{</imgproc>}}
 
 When looking at a list of pins, the board name listed gets cut off.  This makes for a poor user experience as they cannot read the entirety of your board name.
 
