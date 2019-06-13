@@ -48,17 +48,24 @@ Aim for less than 25 characters, targeting your keyword only and you should avoi
 
 Since our board names are short, you should create multiple board names, with variations of your keywords based on how people are searching on them.
 
-For example, we have boards named "Driving Pinterest Traffic", "Increasing Blog Traffic", "Pinterest Strategy", and "Increase Engagement".  These are all boards that are similar in nature, but we varied the keywords we were targeting.
+For example, we have boards named 
+
+* "Driving Pinterest Traffic"
+* "Increasing Blog Traffic"
+* "Pinterest Strategy" 
+* "Increase Engagement" 
+
+These are all boards that are similar in nature, but we varied the keywords we were targeting.
 
 This will help you rank in search for all of those different terms that users search on.
 
 ## Fill out your Board Descriptions
 
-Since our board names are heavily targeted to a single keyword, use your Board Description to fill out the details about the board.  Here you have up to 500 characters to work with.  Use them.  But keep it targeted to humans.  So it should still be complete sentences, but target your various related keywords in there.  This helps tie these boards together to give you a well rounded collection.
+Since our board names are heavily targeted to a single keyword, use your Board Description to fill out the details about the board.  Here you have up to 500 characters to work with.  Use them.  But keep it targeted to humans. In other words it should be human readable.  So it should still be complete sentences, but target your various related keywords in there.  This helps tie these boards together to give you a well rounded collection.
 
 ## Keep your board on topic!
 
-Now that you have named your board and described it, make sure you only pin relevant content to that board.  Whenever you pin something to the board, it strengthens the related keywords to that pin.  If you send a pin about "wedding rings" to a board named "Pinterest Tips", it sends a seriously confusing signal to Pinterest since the terms arent really related.  Also it gives your readers a confusing experience and they are unlikely to engage with it or the rest of the pins in your board/account as a result.
+Now that you have named your board and described it, make sure you only pin relevant content to that board.  Whenever you pin something to the board, it strengthens the related keywords to that pin.  If you send a pin about "wedding rings" to a board named "Pinterest Tips", it sends a seriously confusing signal to Pinterest since the terms aren't really related.  Also it gives your readers a confusing experience and they are unlikely to engage with it or the rest of the pins in your board/account as a result.
 
 So stay on topic with your boards.
 
