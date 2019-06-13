@@ -2,12 +2,16 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-13T00:00:00-04:00"
 description = "One of the great things about Pinterest is the ability to organize your pins into Pinterest Boards.  As a blogger aiming to increase their reach into the hundreds of thousands or even millions of readers, it is important that you get the basics right in naming your Pinterest Boards."
-draft = true
-pins = []
 title = "How to Optimize your Pinterest Board Name"
 [images]
 name = "How to optimize your board names on Pinterest to boost your traffic"
 src = "/uploads/optimize-board-name.png"
+[[pins]]
+pin_description = "Learn how to create killer Pinterest board names that will explode your Pinterest reach.  Don't suffer from a low Pinterest reach because you have lousy board names.  Having keyword rich Pinterest board names are essential to your Pinterest strategy and will help drive traffic to your blog. Read our tips to learn more. #pinteresttips #pintereststrategy #pinterestforbeginners #pinterestsecrets #bloggingtips"
+pin_image = "/uploads/5-tips-for-killer-board-names.png"
+[[pins]]
+pin_description = "Learn how to create better Pinterest board names.  Don't suffer from a low Pinterest reach because you have bad board names.  Having keyword rich Pinterest board names are essential to your Pinterest strategy and will help drive traffic to your blog. #pinteresttips #pintereststrategy #pinterestforbeginners #pinterestsecrets #bloggingtips"
+pin_image = "/uploads/crappy-board-names.png"
 
 +++
 
@@ -19,8 +23,8 @@ Let's start with those cute or creative board names.  You know the ones I'm talk
 
 Better board names would be to use strong targeted keywords that perform well in search, and avoid unnecessary words.
 
-* "Food for Thought" could be renamed "Best Recipes".
-* "Mr Clean" could be renamed "Home Cleaning Ideas".
+* "Food for Thought" could be better renamed as "Best Recipes".
+* "Mr Clean" could be better renamed as "Home Cleaning Ideas".
 
 ## Keep board names short!
 
