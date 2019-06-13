@@ -7,6 +7,9 @@ title = "How to evaluate Tailwind Tribes to join"
 name = "How to evaluate the best Tailwind Tribes to join"
 src = "/uploads/tailwind-tribes-to-join.png"
 [[pins]]
+pin_description = "Is it time to leave your tailwind tribe?  How do you know if the tribe is performing well enough? Stop wasting your time and tailwind limits on tribes that suck.  Learn how to evaluate which are the best Tailwind Tribes to join and increase your blog traffic faster. #pinteresttips #tailwindtribes #tribes #pintereststrategies"
+pin_image = "/uploads/leave-tribe.png"
+[[pins]]
 pin_description = "Stop waiting time on poor performing Tailwind Tribes. Learn how to evaluate which are the best Tailwind Tribes to join and skyrocket your blog traffic faster. #pinteresttips #tailwindtribes #tribes #pintereststrategies"
 pin_image = "/uploads/evaluate-tailwind-tribes.png"
 
