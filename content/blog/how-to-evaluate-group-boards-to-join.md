@@ -47,6 +47,10 @@ Another method to find Group Boards to join is through Facebook.  There are a nu
 
 If you are an active blogger and have more than 25 posts already, and is active on Pinterest, then a good group to join is [PinterestGroups](https://www.facebook.com/groups/pinterestboards/ "Facebook Pinterest Groups").
 
+#### HELPFUL TIP:
+
+You should aim to join a minimum of 3 group boards targeted in your niche so that you have a good wider audience to get your pins in front of.  Of course 3 is just a start, and you should join as many high quality group boards related to your niche as you can.  Over time you will find certain group boards perform a lot better than others, and you can prune your list of group boards as you go.
+
 ## How to request to join a Group Board
 
 Once you have found a board that looks interesting, follow the instructions (usually found in the group board description) on how to join.
