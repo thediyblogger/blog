@@ -98,6 +98,8 @@ It's a good idea to request access to many group boards (i recommend a couple ea
 
 Once you have been accepted to a group board, you may decide to unfollow the owners account and just follow certain boards on their account - if they have a bunch of boards unrelated to your niche.  If you decide to do that, wait a few days after joining the board.  And don't unfollow people all at once to avoid being caught up as a spammer.  I know a few people of have had their accounts suspended, usually soon after they joined a board then immediately unfollowed the owner.
 
+Pinterest also recently released an update to Group Boards to allow requesters to join by clicking a `REQUEST TO JOIN` button at the top right on the board.  This makes it much easier to join boards.  Not all group boards have that button as it requires the Group Board owner to enable the option.  
+
 ## Pinning to a Group Board
 
 Once you have joined a Group Board, smile!  May many more group boards come your way.
