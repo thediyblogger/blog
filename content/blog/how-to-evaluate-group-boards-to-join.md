@@ -121,7 +121,7 @@ See how your pins are doing on the group board.
 * Are your pins on the board getting repinned?
 * Using Tailwind, what is the virality and engagement scores for the board?
 
-{{<imgproc "/uploads/Tailwind-Group-Board.png" Resize "400x" >}}Tailwind Group Board Metrics{{</imgproc>}} 
+{{<imgproc "/uploads/Tailwind-Group-Board.png" Resize "800x" >}}Tailwind Group Board Metrics{{</imgproc>}} 
 
 If the group board has a virality score < 1, and you aren't getting many repins, then the board is probably not doing well.  Especially if your own boards have > 1 virality.
 
