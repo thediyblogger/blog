@@ -114,7 +114,7 @@ You can manually pin to these boards, or use a scheduler like Tailwind.
 
 ## How to evaluate a Group Board
 
-I suggest evaluate any group board you join over a 4 week period (similar to evaluating a [Tailwind Tribe](https://www.tailwindapp.com/i/thediyblogger "Sign up for Tailwind and get a $15 account credit")).
+I suggest evaluate any group board you join over a 4 week period (similar to [evaluating a Tailwind Tribe](https://www.thediyblogger.com/blog/how-to-evaluate-tailwind-tribes-to-join/ "Evaluating a Tailwind Tribe")).
 
 See how your pins are doing on the group board.
 
