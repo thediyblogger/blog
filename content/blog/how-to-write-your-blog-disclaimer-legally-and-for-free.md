@@ -7,8 +7,11 @@ title = "How to protect your blog from legal issues for free"
 name = "How to protect your blog with legal pages"
 src = "/uploads/protect-your-blog.png"
 [[pins]]
-pin_description = ""
-pin_image = ""
+pin_description = "When launching a new blog, it is super critical to have legal pages to protect yourself and your new business. If you don't, you could get sued and lose your business.  Read our guide on what legal pages you need to have and how you can get them for free. #bloggingtips #bloggingforbeginners #legalpages"
+pin_image = "/uploads/protect-your-blog-1.png"
+[[pins]]
+pin_description = "When starting an online business, it is essential to have legal pages to protect yourself and your new business. If you don't, you may get sued and lose everything.  Don't let that happen to you. Read our guide on what legal pages you need to have and how you can get generate quality terms of service, privacy policies, and disclaimers - for free. #bloggingtips #bloggingforbeginners #legalpages"
+pin_image = "/uploads/disclaimer.png"
 
 +++
 Regardless of what niche your blog is about, it is super important you have some standard legal pages on your blog to protect yourself.
