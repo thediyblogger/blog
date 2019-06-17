@@ -6,8 +6,8 @@ draft = true
 pins = []
 title = "Blogging Traffic Report - June 2019"
 [images]
-name = ""
-src = ""
+name = "The DIY Blogger - Traffic Report - June 2019"
+src = "/uploads/traffic-report-june2019.png"
 
 +++
 Hi
@@ -64,9 +64,9 @@ Amazon Affiliate: $0 (I deactivated my account due to traffic not being high eno
 
 The Page Views (which is the only metric that really counts at the end of the day) continues to grow at a rate of 60% - 70% month over month.
 
-During June, I also took a step back from focusing on DrawBuildPlay to focus on sharing my techniques and strategies through The DIY Blogger.  So I expect June to grow, but not at that same rate.
+During June, I also took a step back from focusing on DrawBuildPlay to focus on sharing my techniques and strategies through The DIY Blogger.  So I expect June to grow, but not at that same rate.  I need to keep up with my pin strategies for DrawBuildPlay and regularly post my popular pins to Tailwind Tribes (at least 2 per day), and continue to reshare other content to grow my reach and following, which in turn will increase my Page Views.
 
-I am planning on also turning off Adsense because the frankly the $6/mo income is worthless and the ads take away from the user experience.
+I am planning on also turning off Adsense because the frankly the $6/mo income is worthless to me, and the ads take away from the user experience.
 
 ## The DIY Blogger
 
@@ -105,4 +105,4 @@ Page Views: 96
 
 Pin Karma: $0
 
-I have not started selling Pin Karma subscriptions, or the course yet, so my income on The DIY Blogger currently is $0.  Once traffic to my blog increases and I open up Pin Karma I hope this generates a good passive income for me.
+I have not started selling Pin Karma subscriptions, or my Pinterest Perfection course yet, so my income on The DIY Blogger currently is $0.  Once traffic to my blog increases and I have an engaged audience, I will open up Pin Karma to that audience which should generate a good passive income by providing significant value to my audience.
