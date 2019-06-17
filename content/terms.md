@@ -70,7 +70,7 @@ We shall not be liable to you or to any third-party for any modification, price 
 SECTION 5 - PRODUCTS OR SERVICES (if applicable)
 -------------------------------------------------------------
 
-Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.
+Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our <a href="/returns/">Return Policy</a>.
 
 We have made every effort to display as accurately as possible the colors and images of our products that appear at the store. We cannot guarantee that your computer monitor's display of any color will be accurate.
 
@@ -86,7 +86,7 @@ We reserve the right to refuse any order you place with us. We may, in our sole 
 
 You agree to provide current, complete and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.
 
-For more detail, please review our Returns Policy.
+For more detail, please review our <a href="/returns/">Returns Policy</a>.
 
 
 SECTION 7 - OPTIONAL TOOLS

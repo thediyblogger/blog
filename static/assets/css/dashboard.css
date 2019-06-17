@@ -31,6 +31,17 @@ input[type="button"]:hover, button:hover, .button:hover {
     background-color: #c61118 !important;
 }
 
+a{
+  color: #e60023;
+  border-bottom: 0px;
+}
+
+.attributions .logo{
+    max-height: 70px;
+    max-width: 200px;
+    vertical-align: middle;
+}
+
 input[type="submit"].primary, 
 input[type="reset"].primary, 
 input[type="button"].primary, 
