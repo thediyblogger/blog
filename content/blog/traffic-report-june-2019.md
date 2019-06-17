@@ -1,7 +1,7 @@
 +++
 categories = ["Pinterest Tips", "Blogging"]
 date = "2019-06-30T00:00:00-04:00"
-description = ""
+description = "Blogging Traffic Report and Income Report for The DIY Blogger after one month of blogging.  Learn how much we grew in our first month of blogging and how our proven Pinterest strategies enabled this growth. #incomereports #trafficreports #bloggingforbeginners #pinteresttips"
 draft = true
 pins = []
 title = "Blogging Traffic Report - June 2019"
@@ -12,7 +12,7 @@ src = "/uploads/traffic-report-june2019.png"
 +++
 Hi
 
-This is my first traffic report for  [DrawBuildPlay](https://www.drawbuildplay.com "DrawBuildPlay - Home Decor and DIY Blog") and [TheDIYBlogger](https://www.thediyblogger.com "The DIY Blogger - Pinterest Strategies").  I've read many other bloggers post about their Income reports and Traffic reports.  Most of these reports show how successful they have become.  What is usually missing is the reports from the start of their journey.  Answers to questions like 
+This is my first traffic report for  [DrawBuildPlay](https://www.drawbuildplay.com "DrawBuildPlay - Home Decor and DIY Blog") and [TheDIYBlogger](https://www.thediyblogger.com "The DIY Blogger - Pinterest Strategies").  I've read many other bloggers post about their Income reports and Traffic reports.  Most of these reports show how successful they have become.  What is usually missing is the reports from the start of their journey.  Answers to questions like
 
 > How long did it take for you to see traffic and start making six figures from blogging?
 
@@ -20,7 +20,7 @@ So reading my first traffic report, it's not going to be a success story (yet!).
 
 First some background about me.
 
-I am from the software industry and have worked in IT for 20 years.  I have had previous roles where I worked on SEO and it became a passion of mine.  I love building websites and sharing my knowledge with others.  
+I am from the software industry and have worked in IT for 20 years.  I have had previous roles where I worked on SEO and it became a passion of mine.  I love building websites and sharing my knowledge with others.
 
 In January 2019, I made a few resolutions:
 
@@ -42,7 +42,7 @@ This was my first blog where I wanted to apply the knowledge I had about SEO and
 
 {{<imgproc "/uploads/drawbuildplay-pageviews-june2019.png" Resize "1200x" >}}Page Views{{</imgproc>}}
 
-These are the current stats for the DrawBuildPlay blog:
+These are my current stats for the DrawBuildPlay blog:
 
 ### **Month End: JUNE 2019 - DRAWBUILDPLAY**
 
