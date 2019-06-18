@@ -2,12 +2,11 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-18T00:00:00-04:00"
 description = "Are you struggling to improve your reach on Pinterest.  You have a lot of boards and pin regularly, but not getting the repins.  Learn my content marketing strategy to creating keyword rich Pinterest Board Names to help your Pinterest Boards rank well on Pinterest. #contentmarketing #pinteresttips #pintereststrategy #socialmediasavvy"
-draft = true
 pins = []
-title = "How to Create Keyword Rich Pinterest Board Names"
+title = "How to Create Keyword Rich Pinterest Board Names to Get More Repins"
 [images]
-name = ""
-src = ""
+name = "How to make keyword rich board names to get more repins"
+src = "/uploads/keyword-rich-boardnames.png"
 
 +++
 Choosing Board names is both an art and a skill. Often we as creators think we know what users are searching for, and name our Pinterest boards based on that gut feeling.
