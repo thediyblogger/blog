@@ -2,11 +2,16 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-18T00:00:00-04:00"
 description = "Are you struggling to improve your reach on Pinterest.  You have a lot of boards and pin regularly, but not getting the repins.  Learn my content marketing strategy to creating keyword rich Pinterest Board Names to help your Pinterest Boards rank well on Pinterest. #contentmarketing #pinteresttips #pintereststrategy #socialmediasavvy"
-pins = []
 title = "How to Create Keyword Rich Pinterest Board Names to Get More Repins"
 [images]
 name = "How to make keyword rich board names to get more repins"
 src = "/uploads/keyword-rich-boardnames.png"
+[[pins]]
+pin_description = "Do you pin regularly to a number of boards, but not getting repins? Is your reach on Pinterest stalling? Learn my secrets to optimizing your board names to get your pins in front of a much larger audience, translating into significantly more repins. #pinteresttips #pintereststrategy #contentmarketing #seo #pinterestforbeginners"
+pin_image = "/uploads/secret-board-name-tip.png"
+[[pins]]
+pin_description = "Are you struggling to reach your readers on Pinterest? Learn how to use categories with your board names, plus other secret tips to get your pins in front of more readers. #pinteresttips #pintereststrategy #contentmarketing #seo #pinterestforbeginners"
+pin_image = "/uploads/category-secrets.png"
 
 +++
 Choosing Board names is both an art and a skill. Often we as creators think we know what users are searching for, and name our Pinterest boards based on that gut feeling.
@@ -17,19 +22,19 @@ In my previous post, I talked about [how to optimize your board name on Pinteres
 
 In that post, I only briefly touched on making sure your board names were keyword targeted.  In this post, I am going to go into a lot more detail about how to choose keyword rich names for your boards.
 
-## Categories
+## Pinterest Categories
 
 The first trick to choosing keyword rich board names is to look at the categories and topics that Pinterest already has.  You can find them on the [Pinterest Categories](https://www.pinterest.com/categories/ "Pinterest Categories") page.
 
-{{<imgproc "/uploads/pinterest-categories.png" Resize "1200x" >}}Pinterest Categories{{</imgproc>}} 
+{{<imgproc "/uploads/pinterest-categories.png" Resize "1200x" >}}Pinterest Categories{{</imgproc>}}
 
 Find a category that represents your niche well.  If you need to, you can also drill down into these categories and choose one of the sub categories.
 
-{{<imgproc "/uploads/pinterest-subcategories.png" Resize "1200x" >}}Pinterest Sub Categories{{</imgproc>}} 
+{{<imgproc "/uploads/pinterest-subcategories.png" Resize "1200x" >}}Pinterest Sub Categories{{</imgproc>}}
 
 As you drill into each sub category, you get insight into how many users follow that topic on Pinterest to get a gauge on how popular it is.
 
-{{<imgproc "/uploads/pinterest-subcategories-followers.png" Resize "1200x" >}}Pinterest Category Followers{{</imgproc>}} 
+{{<imgproc "/uploads/pinterest-subcategories-followers.png" Resize "1200x" >}}Pinterest Category Followers{{</imgproc>}}
 
 Once you have chosen your category (or sub category), create a board with that exact name.  And then pin relevant content into that board.  Also give that board a keyword rich description describing the type of content that will be in the board, of course mentioning the category name in the description.
 
@@ -49,7 +54,7 @@ Click on `Ads` > `Create Ad` and then `Continue` to create your campaign.  Don't
 
 Scroll down the page to where you see the Keyword section.
 
-{{<imgproc "/uploads/keyword-search.png" Resize "1200x" >}}Keyword Search{{</imgproc>}} 
+{{<imgproc "/uploads/keyword-search.png" Resize "1200x" >}}Keyword Search{{</imgproc>}}
 
 In this field, you can start to search for your board names and related terms.  In the right hand column, you will see the approximate number of Monthly Searches that occur on that term according to Pinterest.
 
@@ -61,7 +66,7 @@ You can also create board names for the same topic but with variations in the na
 
 I strongly suggest you create a spreadsheet and list out all of your board names, and their potential monthly searches.  This will help you keep track of what names you have used, and if they have adequate search volume.  For any boards with low search volume, I recommend renaming the board and descriptions with better targeted keywords.
 
-{{<imgproc "/uploads/board-analysis.png" Resize "1200x" >}}Board Analysis{{</imgproc>}} 
+{{<imgproc "/uploads/board-analysis.png" Resize "1200x" >}}Board Analysis{{</imgproc>}}
 
 In the screenshot above, on the right you can see a list of my board names (before I fully optimized them).  Some of the boards I had done keyword research on, and then got lazy and made up the rest.  You can see many boards with <1K in searches.  That would mean those boards and their pins wouldn't be coming up in user searches, hurting my engagement on those pins.  If users don't see my pins, they can't repin it right!
 
