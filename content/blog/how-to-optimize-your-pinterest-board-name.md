@@ -14,7 +14,6 @@ pin_description = "Learn how to create better Pinterest board names.  Don't suff
 pin_image = "/uploads/crappy-board-names.png"
 
 +++
-
 A Pinterest board name can be up to 100 characters long.  But be careful about using all that.  I'll tell you why, but first, let's go through how to create a well optimized board name.
 
 ## Forget Cutesy or Creative!
@@ -48,12 +47,12 @@ Aim for less than 25 characters, targeting your keyword only and you should avoi
 
 Since our board names are short, you should create multiple board names, with variations of your keywords based on how people are searching on them.
 
-For example, we have boards named 
+For example, we have boards named
 
 * "Driving Pinterest Traffic"
 * "Increasing Blog Traffic"
-* "Pinterest Strategy" 
-* "Increase Engagement" 
+* "Pinterest Strategy"
+* "Increase Engagement"
 
 These are all boards that are similar in nature, but we varied the keywords we were targeting.
 
@@ -80,3 +79,9 @@ Once the pin is submitted, you can click on the `EDIT` pencil icon to edit your 
 If you do this for all of your boards, it will give your profile a more professional and cleaner look, potentially inviting more followers.
 
 Experience is mixed on how truly effective this is, so I don't recommend spending too much time making board covers.  There's more impactful optimizations to make first to boost your Pinterest reach.
+
+## Advanced Techniques
+
+If you have got this far, awesome!  You are well on your way to Pinterest stardom.  Next I want to take you through some amazing techniques I recently learned to take your boards to the next level.
+
+Read my post on [how to create keyword rich board names](https://www.thediyblogger.com/blog/how-to-create-keyword-rich-pinterest-board-names-to-get-more-repins/ "How to create Keyword Rich Board Names to get more repins") to get more repins and explode your Pinterest reach.
