@@ -1,16 +1,16 @@
 +++
 categories = ["Pinterest Tips"]
 date = "2019-06-18T00:00:00-04:00"
-description = "Are you struggling to improve your reach on Pinterest.  You have a lot of boards and pin regularly, but not getting the repins.  Learn my content marketing strategy to creating keyword rich Pinterest Board Names to help your Pinterest Boards rank well on Pinterest. #contentmarketing #pinteresttips #pintereststrategy #socialmediasavvy"
+description = "Are you struggling to improve your reach on Pinterest.  You have a lot of boards and pin regularly, but not getting the repins.  Learn my content marketing strategy to creating keyword rich Pinterest Board Names to help your Pinterest Boards rank well on Pinterest."
 title = "How to Create Keyword Rich Pinterest Board Names to Get More Repins"
 [images]
 name = "How to make keyword rich board names to get more repins"
 src = "/uploads/keyword-rich-boardnames.png"
 [[pins]]
-pin_description = "Do you pin regularly to a number of boards, but not getting repins? Is your reach on Pinterest stalling? Learn my secrets to optimizing your board names to get your pins in front of a much larger audience, translating into significantly more repins. #pinteresttips #pintereststrategy #contentmarketing #seo #pinterestforbeginners"
+pin_description = "Do you pin regularly to a number of boards, but not getting repins? Is your reach on Pinterest stalling? Learn my secrets to optimizing your board names to get your pins in front of a much larger audience, translating into significantly more repins. #pinteresttips #pintereststrategy #contentmarketing #seo #pinterestforbeginners #socialmediasavvy"
 pin_image = "/uploads/secret-board-name-tip.png"
 [[pins]]
-pin_description = "Are you struggling to reach your readers on Pinterest? Learn how to use categories with your board names, plus other secret tips to get your pins in front of more readers. #pinteresttips #pintereststrategy #contentmarketing #seo #pinterestforbeginners"
+pin_description = "Are you struggling to reach your readers on Pinterest? Learn how to use categories with your board names, plus other secret tips to get your pins in front of more readers. #pinteresttips #pintereststrategy #contentmarketing #seo #pinterestforbeginners #socialmediasavvy"
 pin_image = "/uploads/category-secrets.png"
 
 +++
