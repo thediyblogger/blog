@@ -20,7 +20,7 @@ However, every now and then we may accidentally pin the wrong article.  Maybe we
 
 It is important to note that removing a pin from your board will not remove it from the board of any other user who has repinned the image.
 
-Fortunately, removing a pin is super easy.
+Fortunately, removing a pin is super easy.  According to the[ Pinterest guide to edit or delete a pin](https://help.pinterest.com/en/article/edit-or-delete-a-pin "Pinterest - Edit or Delete a Pin"), you can do it in 4 easy steps.
 
 ## How to Unpin a Pin on Pinterest
 
