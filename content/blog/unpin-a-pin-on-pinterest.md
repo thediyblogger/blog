@@ -1,18 +1,17 @@
 +++
 categories = ["Pinterest Tips"]
 date = "2019-06-19T00:00:00-04:00"
-description = "Do you need to know how to unpin a pin on Pinterest.  Did you accidentally pin something by mistake? Learn how to easily delete a pin from your board, or bulk delete pins if you have duplicates images or broken links on your Pinterest board.."
-draft = true
+description = "Do you need to know how to unpin a pin on Pinterest.  Did you accidentally pin something by mistake? Learn how to easily delete a pin from your board, or bulk delete pins if you have duplicates images or broken links on your Pinterest board."
 title = "Unpin a Pin on Pinterest"
 [images]
 name = "How to unpin a pin on Pinterest"
 src = "/uploads/how-to-unpin-a-pin.png"
 [[pins]]
-pin_description = ""
-pin_image = ""
+pin_description = "Do you have a bunch of low quality pins or duplicate pins. These might be impacting your Pinterest reach. Learn how to quickly bulk delete pins if you have duplicates images or broken links on your Pinterest board. #pinterestforbeginners #pinteresttips #pintereststrategy"
+pin_image = "/uploads/bulk-delete-pins.png"
 [[pins]]
-pin_description = ""
-pin_image = ""
+pin_description = "Do you want to unpin a pin on Pinterest?  Did you accidentally pin something by mistake? Learn how to easily delete a pin from your board, or bulk delete pins if you have duplicates images or broken links on your Pinterest board. #pinteresttips #pinterestmarketing #pintereststrategy #pinterestforbeginners"
+pin_image = "/uploads/unpin-a-pin.png"
 
 +++
 As a Pinterest Business, it is good practice to pin other people's content alongside your content.  Sharing is caring, and it gives your audience more information to help them solve their problem.
