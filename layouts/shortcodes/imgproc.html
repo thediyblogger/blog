@@ -13,7 +13,7 @@
 {{ end }}
 {{ $image := .Scratch.Get "image" }}
 <figure>
-	<img style="max-width: 100%; height: auto;" alt="{{ with .Inner }}{{ . }}{{ end }}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+	<img  data-pin-nopin="true" style="max-width: 100%; height: auto;" alt="{{ with .Inner }}{{ . }}{{ end }}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
 	<figcaption>
 	<h4>
 	{{ with .Inner }}

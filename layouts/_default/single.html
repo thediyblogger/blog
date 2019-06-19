@@ -25,13 +25,26 @@
                                 {{ $resized := $imageResource.Fit "1200x800" }}
 
                                 <div class="image main">
-                                    <img src="{{ $resized.Permalink }}" alt="{{ $imageName }}">
+                                    <img src="{{ $resized.Permalink }}" alt="{{ $imageName }}" data-pin-nopin="true">
                                 </div>
                             {{ end }}
 
+                            <div class="box">
+                                <ul class="icons alt">
+                                        {{ range first 1 .Params.pins }}
+                                        <li>
+                                            <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-custom="true" data-pin-media="{{ .pin_image }}" data-pin-description="{{ .pin_description }}">
+                                                <span class="button primary" id="btnShare">Pin This For Later</span>
+                                            </a>
+                                        </li>
+                                        {{ end }}
+                                </ul>
+                            </div>
+
+
                             {{ .Content }}
 
-                            {{ partial "postcustom" . }}
+                            {{ partial "sharing" . }}
                             
                             {{ if not (eq .Params.disableComments true) }}
                             {{ template "_internal/disqus.html" . }}
