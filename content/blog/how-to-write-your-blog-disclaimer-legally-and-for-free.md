@@ -2,6 +2,7 @@
 categories = ["blogging"]
 date = "2019-06-17T00:00:00-04:00"
 description = "Blogging is an exciting online adventure, and whether you plan to make money with it or not, it is essential your blog is protected with legal pages! Don't get sued because someone tried following your advice, causing something unfortunate to happen. Read our easy blogging guide on how to generate the legal pages, terms of service, privacy policy, and disclaimers you need."
+keywords = ["legal", "starting a blog"]
 title = "How to protect your blog from legal issues for free"
 [images]
 name = "How to protect your blog with legal pages"

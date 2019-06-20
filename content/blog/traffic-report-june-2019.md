@@ -3,6 +3,7 @@ categories = ["Pinterest Tips", "Blogging"]
 date = "2019-06-30T00:00:00-04:00"
 description = "Blogging Traffic Report and Income Report for The DIY Blogger after one month of blogging.  Learn how much we grew in our first month of blogging and how our proven Pinterest strategies enabled this growth. #incomereports #trafficreports #bloggingforbeginners #pinteresttips"
 draft = true
+keywords = ["income reports"]
 pins = []
 title = "Blogging Traffic Report - June 2019"
 [images]
