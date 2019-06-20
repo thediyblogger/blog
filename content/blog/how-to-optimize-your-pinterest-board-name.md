@@ -2,9 +2,8 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-13T00:00:00-04:00"
 description = "One of the great things about Pinterest is the ability to organize your pins into Pinterest Boards.  As a blogger aiming to increase their reach into the hundreds of thousands or even millions of readers, it is important that you get the basics right in naming your Pinterest Boards."
+keywords = ["boards", "seo", "profile"]
 title = "How to Optimize your Pinterest Board Name"
-keywords = ["boards"]
-
 [images]
 name = "How to optimize your board names on Pinterest to boost your traffic"
 src = "/uploads/optimize-board-name.png"
