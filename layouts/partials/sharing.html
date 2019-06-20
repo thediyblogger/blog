@@ -4,7 +4,7 @@
 {{ $body := print .Title " - " .Params.description }}
 {{ $pins := .Params.pins }}
 
-    {{ if $pins }}
+{{ if $pins }}
     {{ with $data.social }}
     <section id="sharing" class="panelShare">
         <div class="box">
@@ -39,7 +39,27 @@
 
     </section>
     {{ end }}
+{{ end }}
+
+{{ $related := .Site.Pages.Related . | first 4 }}
+{{ with $related }}
+<h3>Related Tips</h3>
+<div class="row">
+    {{ range . }}
+    <div class="col-sm-3">
+         <a href="{{ .Permalink }}" class="image fit">
+            {{ $imageResources := .Site.GetPage "/uploads" }}
+            {{ with .Params.images }}
+                {{ $imageName := .name }}
+                {{ $imgToFind := strings.TrimPrefix "/uploads/" .src }}
+                {{ $imageResource := $imageResources.Resources.GetMatch ($imgToFind) }}
+                {{ $resized := $imageResource.Fit "600x400" }}
+
+                <img data-pin-nopin="true" src="{{ $resized.Permalink }}" alt="{{ $imageName }}">
+            {{ end }}
+        </a>   
+    </div>
     {{ end }}
-
-
+</div>
+{{ end }}
 

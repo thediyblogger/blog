@@ -58,6 +58,6 @@ Click on the `Organize` button at the top of the page.
 
 You will now be able to select (up to 50) pins that you want to delete (or move).  Once you have selected them, click on the `Delete` button and confirm the deletion.
 
-{{<imgproc "/uploads/pin-bulk-delete-confirm-window.png" Resize "400x" >}}Caption{{</imgproc>}}
+{{<imgproc "/uploads/pin-bulk-delete-confirm-window.png" Resize "400x" >}}Delete Pin Confirmation{{</imgproc>}}
 
 The pins will be deleted and you will not be able to recover them.  If any other user has repinned any of the deleted pins to their own boards, the pins will still be available to them, and will not be deleted from their boards.

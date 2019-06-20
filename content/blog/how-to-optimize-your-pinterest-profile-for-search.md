@@ -3,6 +3,8 @@ categories = ["Pinterest Tips"]
 date = "2019-06-11T00:00:00-04:00"
 description = "It is essential for any business who wants to have a brand presence on Pinterest to have an SEO optimized Pinterest profile in order to be found in search.  Read our guide on how to easily optimize your profile and start enjoying free organic traffic from Pinterest."
 title = "How to Optimize your Pinterest Profile for Search"
+keywords = ["boards"]
+
 [images]
 name = "How to Optimize Your Pinterest Profile for Search"
 src = "/uploads/pinterest-profile-seo.png"
