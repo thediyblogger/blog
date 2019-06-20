@@ -2,8 +2,8 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-14T00:00:00-04:00"
 description = "Pinterest Group Boards have been around for many years and are a great way to boost traffic to your blog. But there are critical strategies to Group Boards that you need to follow to be successful with them on Pinterest.  Learn our killer Pinterest strategies for Group Boards and increase your website traffic."
+keywords = ["group boards", "boards"]
 title = "How to find and join Group Boards on Pinterest"
-keywords = ["boards"]
 [images]
 name = "How to Find and Join Group Boards To Get Killer Traffic on Pinterest"
 src = "/uploads/find-and-join-group-boards.png"
