@@ -41,9 +41,10 @@
     {{ end }}
 {{ end }}
 
-{{ $related := .Site.Pages.Related . | first 4 }}
+{{ $related := .Site.Pages.Related . | first 8 }}
 {{ with $related }}
 <h3>Related Tips</h3>
+<p><i>If you loved the post above, please pin it to your boards.  Then check out some of our other related Pinterest strategies below.</i></p>
 <div class="row">
     {{ range . }}
     <div class="col-sm-3">
