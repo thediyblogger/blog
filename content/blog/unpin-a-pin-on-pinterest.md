@@ -2,6 +2,7 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-19T00:00:00-04:00"
 description = "Do you need to know how to unpin a pin on Pinterest.  Did you accidentally pin something by mistake? Learn how to easily delete a pin from your board, or bulk delete pins if you have duplicates images or broken links on your Pinterest board."
+keywords = ["boards"]
 title = "Unpin a Pin on Pinterest"
 [images]
 name = "How to unpin a pin on Pinterest"

@@ -2,8 +2,8 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-12T00:00:00-04:00"
 description = "As part of any solid Pinterest strategy, Tailwind Tribes plays an integral part of it.  In fact, it is one of the major tools bloggers use to seriously accelerate traffic to their website.  But with so many tribes available, how do you choose which tribe to join.  Read our strategies to learn how to choose and evaluate your Tailwind Tribes."
+keywords = ["tailwind", "tribes", "boards"]
 title = "How to evaluate Tailwind Tribes to join"
-keywords = ["boards"]
 [images]
 name = "How to evaluate the best Tailwind Tribes to join"
 src = "/uploads/tailwind-tribes-to-join.png"
