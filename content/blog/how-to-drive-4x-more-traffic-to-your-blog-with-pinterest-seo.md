@@ -2,6 +2,7 @@
 categories = ["Pinterest Tips"]
 date = "2019-03-16T00:00:00-04:00"
 description = "Do you want crazy traffic on your new website or blog?  Google may get you results in the long term, but Pinterest will drive traffic now.  Learn how to optimize SEO for Pinterest to get insane traffic to your website."
+keywords = ["seo", "starting a blog"]
 social_media_images = ["/uploads/Drive 4x More Traffic.png"]
 social_media_text = "How to drive 4x more traffic to your blog using Pinterest SEO."
 title = "How to drive 4x more traffic to your blog with Pinterest SEO"
