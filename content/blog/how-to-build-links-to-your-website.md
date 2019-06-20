@@ -3,6 +3,7 @@ aliases = ["blog/2016/2/26/how-to-build-links-to-your-website", "blog/2016/02/26
 categories = ["blogging", "seo/sem"]
 date = "2019-01-06"
 description = "Link building is one of the hardest things to do when it comes to Search Engine Optimization (SEO)."
+keywords = ["seo", "starting a blog"]
 social_media_images = ["/uploads/pinterest-links.png"]
 social_media_text = "6 Tips for building links to your blog or website"
 title = "How to Build Links to Your Website"

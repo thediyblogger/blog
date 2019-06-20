@@ -3,6 +3,7 @@ aliases = ["blog/2016/2/24/why-great-web-design-is-more-than-just-pretty-picture
 categories = ["blogging"]
 date = "2019-01-05"
 description = "Our mission is to help our readers build great web experiences through beautiful design.  We believe these great web experiences are achieved only by producing beautiful web design."
+keywords = ["starting a blog", "design", "seo"]
 title = "Why great Web Design is more than just pretty pictures"
 [images]
 is_pin_friendly = false

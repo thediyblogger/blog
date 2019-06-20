@@ -64,6 +64,7 @@ fields:
   config:
     labelField: pin_description
 pages:
+- content/blog/how-to-build-links-to-your-website.md
 - content/blog/how-to-evaluate-group-boards-to-join.md
 - content/blog/unpin-a-pin-on-pinterest.md
 - content/blog/how-to-create-keyword-rich-pinterest-board-names.md
@@ -77,7 +78,6 @@ pages:
 - content/blog/introduction-to-ssl.md
 - content/blog/why-your-business-needs-a-cdn.md
 - content/blog/great-web-design.md
-- content/blog/how-to-build-links-to-your-website.md
 - content/blog/how-to-blog.md
 - content/blog/introduction-to-seo.md
 - content/blog/how-to-drive-4x-more-traffic-to-your-blog-with-pinterest-seo.md
