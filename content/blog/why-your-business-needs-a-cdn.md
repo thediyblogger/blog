@@ -3,6 +3,7 @@ aliases = ["blog/2016/2/22/why-your-business-needs-a-cdn", "blog/2016/02/22/why-
 categories = ["blogging"]
 date = "2019-01-04"
 description = "A CDN (Content Delivery Network) is a network of servers around the world that work together to provide a faster web experience for your users."
+keywords = ["starting a blog", "seo"]
 title = "Why your business needs a CDN"
 [images]
 is_pin_friendly = false
