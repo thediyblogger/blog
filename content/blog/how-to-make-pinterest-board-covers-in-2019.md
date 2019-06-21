@@ -65,9 +65,9 @@ Here are some examples of board covers that work well:
 
 {{<imgproc "/uploads/empty-space-board-cover.png" Resize "300x" >}}Good use of whitespace{{</imgproc>}}
 
-{{<imgproc "/uploads/readable-board-cover.png" Resize "300x" >}}Easy to read text{{</imgproc>}}
+{{<imgproc "/uploads/readable-board-cover.png" Resize "300x" >}}Minimalist Board Cover{{</imgproc>}}
 
-{{<imgproc "/uploads/clean-board-cover.png" Resize "300x" >}}Minimalist Board Cover{{</imgproc>}}
+{{<imgproc "/uploads/clean-board-cover.png" Resize "300x" >}}Easy to read text{{</imgproc>}}
 
 And here is an example of a board cover that looks pretty, but is harder to read due to the chosen font.
 
