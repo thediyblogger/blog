@@ -63,11 +63,15 @@ That being said, I am a big fan of minimalism. I like to use a lot of whitespace
 
 Here are some examples of board covers that work well:
 
-{{<imgproc "/uploads/the-diy-blogger.png" Resize "600x" >}}Clean Board Covers{{</imgproc>}}
+{{<imgproc "/uploads/empty-space-board-cover.png" Resize "600x" >}}Good use of whitespace{{</imgproc>}}
 
-{{<imgproc "/uploads/the-diy-blogger.png" Resize "600x" >}}Clean Board Covers{{</imgproc>}}
+{{<imgproc "/uploads/readable-board-cover.png" Resize "600x" >}}Easy to read text{{</imgproc>}}
 
-{{<imgproc "/uploads/the-diy-blogger.png" Resize "600x" >}}Clean Board Covers{{</imgproc>}}
+{{<imgproc "/uploads/clean-board-cover.png" Resize "600x" >}}Minimalist Board Cover{{</imgproc>}}
+
+And here is an example of a board cover that looks pretty, but is harder to read due to the chosen font.
+
+{{<imgproc "/uploads/hard-to-read-board-cover.png" Resize "600x" >}}Busy background with hard to read font{{</imgproc>}}
 
 ## How to create your own Board Covers
 
