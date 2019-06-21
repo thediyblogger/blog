@@ -1,11 +1,11 @@
 +++
-categories = []
+categories = ["Pinterest Tips"]
 date = "2019-06-20T00:00:00-04:00"
 description = "Don't judge a book by its cover they said!  Well they never heard of Pinterest.  And your boards and pins will be judged by its cover.  Learn why board covers are still relevant in 2019, and the latest tips on how to create stunning board covers."
 draft = true
 keywords = ["boards", "design", "seo"]
 pins = []
-title = "How to make Pinterest Board Covers in 2019"
+title = "How to Create Branded Pinterest Board Covers in 2019"
 [images]
 name = ""
 src = ""
