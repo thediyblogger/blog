@@ -28,10 +28,11 @@ src = "/uploads/free-pinterest-checklist-cover.png"
 			</ul>
 			<div class="row">
 				<div class="col-12">
-					<a href="https://courses.thediyblogger.com/courses/free-pinterest-audit-checklist" target="_blank" class="button primary">Get your free list</a>
+       				<button type="button" class="button primary" data-toggle="modal" data-target="#signupModal">Get my free list</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
 

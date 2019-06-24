@@ -1,36 +1,59 @@
 <!-- Modal -->
 <div class="modal fade" id="signupModal" tabindex="1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="signupModalLabel">Create Profile</h2>
-      </div>
-      <div class="modal-body">
-        <form method="post" action="#">
-          <div class="fields">
-              <div class="field">
-                <label for="email" data-toggle="tooltip" data-placement="left" title="We'll never share your email with anyone else.">
-                  Email
-                </label>
-                <input type="text" name="email" id="signup_email" placeholder="Your Email Address" />
-              </div>
-              <div class="field">
-                <label for="password" data-toggle="tooltip" data-placement="left" title="Please enter a secure password that is at least 8 characters, contains uppercase and lowercase letters, numbers, and a special character.">Password</label>
-                <input type="password" name="password" id="signup_password" placeholder="Create a secure password"/>
-                <input type="hidden" name="code" id="signup_code" />
+      <div class="modal-body freeProduct">
+        <div class="row">
+          <div class="col-12">
+            <h2>struggling to get page views?</h2>
+            <p>Join our Mailing List and get free valuable updates on strategies that actually work to gain page views to your blog.  As a bonus, just for signing up today we are giving away our free Pinterest Audit Checklist to help you get started.
+          </div>
+        </div>
+         <div class="row leadgen">
+          <div class="col-md-4">
+            <img src="/images/free-audit-checklist-cover.png" />
+          </div>
+          <div class="col-md-8 ml-auto">
+            <!-- Begin Mailchimp Signup Form -->
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+              #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+              /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <style type="text/css">
+              #mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
+            </style>
 
-              </div>
-              <div class="field">
-                <label for="website" data-toggle="tooltip" data-placement="left" title="Please enter your website url (e.g. https://www.yourdomain.com).">Website</label>
-                <input type="text" name="website" id="signup_website" placeholder="https://www.yourdomain.com" />
-              </div>
+            <div id="mc_embed_signup">
+            <form action="https://thediyblogger.us7.list-manage.com/subscribe/post?u=12399181fb539534b4cf8657c&amp;id=4164d441fe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                  </div>    
+
+                  <div class="mc-field-group">
+                    <input type="text" placeholder="First Name" value="" name="FIRSTNAME" class="required" id="mce-FIRSTNAME">
+                  </div>
+                  <div class="mc-field-group">
+                    <input type="email" placeholder="Email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                  </div>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_12399181fb539534b4cf8657c_4164d441fe" tabindex="-1" value=""></div>
+                  <div class="clear">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button primary">
+                  </div>
+                </div>
+              </form>
             </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FIRSTNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            <!--End mc_embed_signup-->
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="button small" data-dismiss="modal">Close</button>
-          <button type="button" class="button primary small" onclick="submitSignup();">Complete Sign Up</button>
-        </div>
-      </form>
+
+        
     </div>
   </div>
 </div>
+

@@ -12,7 +12,7 @@
 		<meta name="description" content="{{ if (.Description) }}{{ .Description }}{{ else }}Your DIY Guide to Building a Blog{{ end }}">
 		<meta name="p:domain_verify" content="33586c70c7c22eb964eecdf59d0cb90e"/>
 		<meta name="msvalidate.01" content="3E5C24AE74957914451DD85E5044D9E0" />
-		
+
 		{{ template "_internal/google_analytics_async.html" . }}
 
 		    
@@ -47,11 +47,14 @@
 	    {{ $imageResources := .Site.GetPage "/uploads" }}
         {{ with .Params.images }}
             {{ $imageName := .name }}
-            {{ $imgToFind := strings.TrimPrefix "/uploads/" .src }}
-            {{ $imageResource := $imageResources.Resources.GetMatch ($imgToFind) }}
-	    <meta property="og:image" content="{{ $imageResource.Permalink }}">
-	    {{ end }}
 
+            {{ if not (eq .src "") }}
+	            {{ $imgToFind := strings.TrimPrefix "/uploads/" .src }}
+	            {{ $imageResource := $imageResources.Resources.GetMatch ($imgToFind) }}
+				    <meta property="og:image" content="{{ $imageResource.Permalink }}">
+	    	{{ end }}
+		{{ end }}
+		
 	    {{ range .Params.categories }}
 	    <meta property="og:tags" content="{{ . }}">
 	    {{ end }}

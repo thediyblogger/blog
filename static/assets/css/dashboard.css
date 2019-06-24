@@ -6,9 +6,15 @@ figure{
 }
 #intro{
     color: #444;
+    justify-content: flex-start;
 }
 #intro h1{
     color: #c61118;
+}
+#intro .lead{
+  background-color: #fff7f7;
+  padding: 2em;
+  border-radius: 25px;
 }
 #intro .actions .button{
     color: #444 !important;
@@ -18,6 +24,10 @@ figure{
     box-shadow: inset 0 0 0 2px #444 !important;
 
 }
+#intro .button.primary {
+    color: #fff !important;
+}
+
 #copyright a{
     color: #444 !important;
 }
@@ -96,6 +106,7 @@ button.primary:hover,
     padding-top: 40px;
 }
 
+
 #testimonials img{
     height: 100px;
 }
@@ -113,6 +124,10 @@ button.primary:hover,
     font-size: 1.3em;
     text-align: center;
     padding: 4rem;
+}
+
+#signupModal .leadgen {
+  background-color: #fff !important;
 }
 
 .freeProduct div{

@@ -10,11 +10,13 @@
             {{ $imageResources := .Site.GetPage "/uploads" }}
             {{ with .Params.images }}
                 {{ $imageName := .name }}
-                {{ $imgToFind := strings.TrimPrefix "/uploads/" .src }}
-                {{ $imageResource := $imageResources.Resources.GetMatch ($imgToFind) }}
-                {{ $resized := $imageResource.Fit "600x400" }}
+                {{ if not (eq .src "") }}
+                    {{ $imgToFind := strings.TrimPrefix "/uploads/" .src }}
+                    {{ $imageResource := $imageResources.Resources.GetMatch ($imgToFind) }}
+                    {{ $resized := $imageResource.Fit "600x400" }}
 
-                <img src="{{ $resized.Permalink }}" alt="{{ $imageName }}">
+                    <img src="{{ $resized.Permalink }}" alt="{{ $imageName }}">
+                {{ end }}
             {{ end }}
 
         </a>   

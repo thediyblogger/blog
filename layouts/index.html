@@ -54,11 +54,21 @@
 						<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 						  <div class="carousel-inner">
 						    <div class="carousel-item active">
-					      		<p>
+					      		<quote>
+					      			<a href="https://www.drawbuildplay.com">DrawBuildPlay</a> boosted their traffic by 600% using these Pinterest Strategies in their first 3 months!
+					      		</quote>
+								<p>
 					      			<img src="/images/logo-drawbuildplay.png" />
 					      		</p>
-					      		<quote><a href="https://www.drawbuildplay.com">DrawBuildPlay</a> boosted their traffic by 600% using these Pinterest Strategies in their first 3 months!</quote>
-
+						    </div>
+						    
+						    <div class="carousel-item">
+					      		<quote>
+					      			“Marketing is about spreading ideas, and spreading ideas is the single most important output of our civilization.” - Seth Godin
+					      		</quote>
+					      		<p>
+						    		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAQAAADtJZLrAAAAD0lEQVR42mNkYGAcRcQhADxaAGWhD8eHAAAAAElFTkSuQmCC">
+					      		</p>
 						    </div>
 						  </div>
 						</div>
@@ -179,7 +189,7 @@
 
 								<div class="row">
 									<div class="col-12">
-										<a href="/free-pinterest-audit-checklist" class="button primary">Get Your Free List</a>
+        								<button type="button" class="button primary" data-toggle="modal" data-target="#signupModal">Get my free list</a>
 									</div>
 								</div>
 							</div>
@@ -219,6 +229,7 @@
 			</div>
 
 			{{ template "_internal/google_analytics.html" . }}
+			{{ partial "signup.html" }}
 			{{ partial "scripts/index" . }}
 
 	</body>

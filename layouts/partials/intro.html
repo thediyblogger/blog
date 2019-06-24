@@ -1,18 +1,17 @@
-{{ $data := index .Site.Data .Site.Language.Lang }}
-{{ with $data.intro }}
 <div id="intro">
     <h1>
-        {{ range $i, $e := .title }}
-            {{ if $i }} <br/> {{ end }} {{ .line }}
-        {{ end }}
+        Get More Page Views!
     </h1>
-    <p>
-        {{ range $i, $e := .description }}
-            {{ if $i }} <br/> {{ end }} {{ .line }}
-        {{ end }}
-    </p>
-    <ul class="actions">
-        <li><a href="#header" class="button icon solo fa-arrow-down scrolly">{{ i18n "INTRO_CONTINUE" . }}</a></li>
-    </ul>
+    <div class="lead">
+        <p>
+            What are the successful bloggers doing to drive insane traffic to their website?
+        </p>
+        <p>
+            Discover our proven Pinterest strategies and SEO techniques to start driving traffic to your website now!
+        </p>
+        <p>
+            Click the button below to get started with your free Pinterest Audit Checklist.
+        </p>
+        <button type="button" class="button primary" data-toggle="modal" data-target="#signupModal">Get my free list</a>
+    </div>
 </div>
-{{ end }}
