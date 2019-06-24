@@ -1,9 +1,9 @@
 +++
 categories = ["Pinterest Tips"]
 date = "2019-06-22T00:00:00-04:00"
-description = ""
+description = "Daily pinning is more about quality over quantity. Are you unsure of how much you should pin each day to grow your Pinterest reach? Stop wasting time sharing hundreds of articles every day with Tailwind or manual pinning. Instead, focus on pinning only high quality content that gets repins and your reach will explode. Continue reading about our pinning strategy and pin frequency."
 draft = true
-keywords = []
+keywords = ["tailwind", "pinterest strategy"]
 pins = []
 title = "How much content should I be pinning"
 [images]
@@ -13,32 +13,43 @@ src = ""
 +++
 ## Establish your Pinterest presence
 
-When starting out with blogging and marketing your blog on Pinterest, the goal should be to fill your boards with relevant and engaging content to help build an audience.
+When starting out with blogging and marketing your blog on Pinterest, the goal should be to fill your boards with relevant and engaging content to help build an audience.  Pinterest generally will only start to rank pins in a board once the board has about 20 pins in it.  Over time as the board gains more pins and has high engagement, it will rank even better.
 
 If you just started your blog, chances are you haven't published a whole lot of content yet.  So the balance of what you pin will lean more to other peoples content, while you build out and share yours.
 
-Let's say you have 20 posts on your blog.  You want to create 5 pin images for each post, giving you 100 pin images total.  Now, let's say you have 10 boards that you want to share these images to.  That means you have 1000 pins you can publish (each image pinned to a board is a unique pin) without duplicating a pin to a board.
+## Starting out on Pinterest
 
-Since we are aiming to do at least 10 pins per day, you should aim for the following:
+When starting out with Pinterest, the focus needs to be on building your presence and building out your content to share.  Try to get to at least 20 posts as quick as you can.
 
-* 3 of your own pins to your boards and to group boards
-* 7 of other peoples pin to your boards
+Let's say you only have 20 posts on your blog.  You want to create at least 5 pin images for each post, giving you 100 pin images total to publish.  Now, let's say you have 10 relevant boards that you want to share these images to.  That means you have 1000 pins you can publish (each image pinned to a board is a unique pin) without duplicating a pin to a board.
+
+In this example, we are aiming to do at least 10 pins per day.  Note - it doesn't really matter how much you pin per day.  What is more important is that you pin consistently, and that you pin engaging content that will get you repins.  Its quality over quantity.  If you pin lots of other peoples content, then you are increasing chances that those pins don't get many (if any) repins, thus hurting your overall engagement.  Pinterest will then limit how many people are exposed to your pins since they don't see high engagement on them.
+
+With a target of 10 pins per day, you should aim for the following:
+
+* 3 of your own pins each day to your boards and to group boards
+* 7 of other peoples pin each day to your boards
 * 2 of your pins to Tailwind Tribes
-* Each image for a post should be scheduled to your boards with an interval at least 4 weeks apart to avoid spamming your users with the same pin.  In other words, don't publish all images for an article within the same week.  Prioritize your schedule to publish to your most important boards first that the content relates to best.
 
-Under this approach, it will take you 50 weeks to have each of your pins circulated to each board without duplicating, and you will be pinning 30% of your own content.
+> **Useful Tip**: Each single pin image for a post can be scheduled to your boards with an interval at least 4 - 5 weeks apart (using Tailwind) to avoid spamming your users too much with the same pin. Since each post has 5 images, each image should be scheduled starting 1 week apart.
+
+In other words, don't publish all images for an article within the same week.  Prioritize your schedule to publish to your most important boards first that the content relates to the most, as that will help signal to Pinterest how to categorize the pin.  This usually means choose 2 boards that are most relevant, followed by your blog board, followed by the rest in relevance order.  
+
+With the above tip, you essentially have an image for your post being published every week, cycling through each image to the first board, before cycling through the images to the second board, until you get to the tenth board.
+
+Under this approach, it will take you 50 weeks to have each of your pins circulated to each board without duplicating, and 30% of the content pinned will be articles to your website.
 
 Since you are starting out, you will also want to be filling out your boards with relevant and highly engaging content.  So to help fill up your boards faster, you may want to pin more of other peoples content for that purpose.  Just remember to choose pins that already have shown high engagement so you can piggy back of already successful pins.
 
-The long term goal is to be pinning much more of your own content though.
+The long term goal is to be pinning much more of your own content though. You will find that usually you get repins on your own content more than getting repins on other peoples content.  This may have something to do with how Pinterest exposes pins to other users, prioritizing the owner's pins over a re-share when each pin is optimized for similar SEO terms.
 
 ## Create more content
 
 Your focus initially should be on generating lots of highly engaging and useful content that your readers will love and want to repin.  Starting out with 20 posts gets you in the door, but to grow your reach with good engagement, you need to be creating new and interesting content consistently.  Try to publish a new blog post every couple of days, getting your blog count up to 50 posts fairly quickly.
 
-With 50 posts, with 5 pin images per post, and 10 boards to publish on, we now have 2500 unique pins that we can publish.
+With 50 posts, and 5 pin images per post, and 10 boards to publish on, we now have 2500 unique pins that we can publish.
 
-Once you have 50 posts, and we still aim to pin at least 10 pins per day, aim for the following:
+Once you have 50 posts, and we still aim to pin at least 10 pins per day, aim for the following each day:
 
 * 5 of your own pins to your boards and group boards
 * 5 of other peoples pins to your boards
@@ -60,6 +71,6 @@ Again, we are aiming to pin at least 10 pins per day.  Aim for the following eac
 * 4 of your pins to Tailwind Tribes
 * Each image for a post should be scheduled to your boards with an interval at least 4 weeks apart to avoid spamming your users with the same pin.
 
-Under this approach, it will take you 21 months to have each of your pins circulated to each board without duplicating, and you will be pinning 80% of your own content.
+Under this approach, it will take you 21 months (yikes thats almost 2 years worth of pinning!) to have each of your pins circulated to each board without duplicating, and you will be pinning 80% of your own content.
 
-Here we are pinning far less content in general, but that content will likely be far more engaging and will help you extend your reach far more in the long term.  The content that is pinned is mostly to your website, also helping you improve your reach on Pinterest and traffic to your website.
+Here we are pinning far less content in general, but that content will likely be way more engaging and will help you extend your reach a lot more in the long term.  The content that is pinned is mostly to your website, also helping you improve your reach on Pinterest, and most importantly, traffic to your website.
