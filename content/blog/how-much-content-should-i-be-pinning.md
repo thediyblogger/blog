@@ -55,11 +55,13 @@ With a target of 10 pins per day, you should aim for the following:
 
 In other words, don't publish all images for an article within the same week.  Prioritize your schedule to publish to your most important boards first that the content relates to the most, as that will help signal to Pinterest how to categorize the pin.  This usually means choosing 2 boards that are most relevant, followed by your blog board, followed by the rest in relevance order.
 
-When choosing guest boards to post to, share it to your most popular group boards where it's likely to get reshared more.  This will help the pin go more viral and bump up in popularity faster
+When choosing guest boards to post to, share it to your most popular group boards where it's likely to get reshared more.  This will help the pin go more viral and bump up in popularity faster.
 
 With the above tip, you essentially have an image for your post being published every week, cycling through each image to the first board, before cycling through the images to the second board, until you get to the tenth board.
 
 {{<imgproc "/uploads/pin-schedule.png" Resize "1200x" >}}Example Pin Schedule{{</imgproc>}} 
+
+In this example: "1A -> Board 1" means for Blog Post #1, you have 5 pin images (A, B, C, D, E).  So 1A -> Board 1 means "Image A for Blog Post #1 is pinned to Board #1".
 
 Under this approach, it will take you 50 weeks to have each of your pins circulated to each board without duplicating, and 30% of the content pinned will be articles to your own website.  In the above example, we have the pins going down each board in sequential order.  That is not necessary and you should schedule it based on what boards are most relevant to a post.  
 
