@@ -1,12 +1,18 @@
 +++
 categories = ["Pinterest Tips"]
 date = "2019-06-04T00:00:00-04:00"
-description = "Pinterest is the place to be to market your website.  It has the ability to drive an insane amount of immediate traffic to your website. If you are a business, an important step is to show the world you are legit by claiming and verifying your website on Pinterest. "
+description = "Pinterest is the place to be to do content marketing for your website.  Pinterest has the ability to drive an insane amount of traffic to your website. If you are a business, an important step is to show the world you are legit by claiming and verifying your website on Pinterest. "
 keywords = ["pinterest basics", "seo"]
 title = "How to claim your website on Pinterest"
 [images]
 name = "How to claim your website on Pinterest"
 src = "/uploads/claim-website.png"
+[[pins]]
+pin_description = "If you have a have a website you want to market on Pinterest with content marketing strategies, then the first thing you need to do is claim your website. It will help drive more traffic to your blog and you get great analytics. And you dont need to be super technical to do it. Follow our easy how to guide to claim your website on Pinterest. #pinteresttips #pinterestmarketing #pinteresthacks #pinterestforbeginners #businesstips #blogging #pinkarma"
+pin_image = "/uploads/easy-guide-claim-website.png"
+[[pins]]
+pin_description = "If you have a have a business you want to market on Pinterest with digital marketing strategies, then read why you must claim your website on Pinterest. It will help drive more traffic to your blog and you will get really great analytics. Don't miss out on reaching your audience by skipping this step. Follow our easy how to guide to claim your website on Pinterest. #pinteresttips #pinterestmarketing #pinteresthacks #pinterestforbeginners #businesstips #blogging #pinkarma"
+pin_image = "/uploads/claim-website-1.png"
 [[pins]]
 pin_description = "Claiming your website on Pinterest is a great way to make your brand official and grow brand awareness. It will help drive more traffic to your website. You will also get access to Pinterest Analytics to help make smarter decisions on what pins work and which don't. Find out why claiming your website is so critical to building your Pinterest traffic strategy, and how to claim your website. #pinteresttips #pinterestmarketing #pinteresthacks #businesstips #blogging #pinkarma"
 pin_image = "/uploads/how-to-claim-your-website-on-pinterest.png"
