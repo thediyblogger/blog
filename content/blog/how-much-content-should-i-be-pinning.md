@@ -3,11 +3,22 @@ categories = ["Pinterest Tips"]
 date = "2019-06-25T00:00:00-04:00"
 description = "Daily pinning is more about quality over quantity. Are you worried about how much you should pin each day to grow your Pinterest reach? Are you wasting time sharing hundreds of articles every day with Tailwind or manual pinning? Instead, focus on pinning only high quality content that gets you repins and your reach will explode. Continue reading about our pinning strategy and learn how many pins you should pin per day."
 keywords = ["tailwind", "pinterest strategy"]
-pins = []
 title = "How many pins should you pin per day"
 [images]
 name = "How many pins should you pin per day for improved Pinterest Reach"
 src = "/uploads/pins-per-day.png"
+[[pins]]
+pin_description = "Are you pinning too much on Pinterest?  Is this causing your reach to suffer?  You may need to stop pinning like a crazy person.  10 pins per day is ideal.  Learn our strategy on how to schedule your pins strategically and consistently to improve your reach on Pinterest. #pinteresttips #pintereststrategy #tailwind #pinsperday"
+pin_image = "/uploads/pin-crazy.png"
+[[pins]]
+pin_description = "Are you a beginner on Pinterest?  Don't make the mistake of pinning too much or too little, killing your reach. Learn our strategy on how to schedule your pins strategically and consistently to improve your reach on Pinterest. #pinterestforbeginners #pinterestbeginner #pinteresttips #pintereststrategy #tailwind #pinsperday"
+pin_image = "/uploads/grow-traffic.png"
+[[pins]]
+pin_description = "Did you know that pinning too much every day or being inconsistent will hurt your reach on Pinterest. Learn our awesome tips on how to schedule your pins strategically and consistently to improve your reach on Pinterest. #pinterestforbeginners #pinterestbeginner #pinteresttips #pintereststrategy #tailwind #pinsperday"
+pin_image = "/uploads/pinning-too-much.png"
+[[pins]]
+pin_description = "Learn how to pin more strategically and get way better Pinterest traffic.  Don't let poor scheduling choices hurt your reach and engagement.  Less is more, and following a more consistent and targeted strategy will help you grow your reach.  Check it our strategy to learn the best pinning frequency you should use to grow your reach and get more Pinterest Traffic. #pinteresttips #contentmarketing #pinterestforbeginners #pintereststrategies "
+pin_image = "/uploads/pin-strategically.png"
 
 +++
 ## Establish your Pinterest presence
