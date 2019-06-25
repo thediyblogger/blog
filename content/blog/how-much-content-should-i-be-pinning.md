@@ -1,14 +1,13 @@
 +++
 categories = ["Pinterest Tips"]
-date = "2019-06-22T00:00:00-04:00"
-description = "Daily pinning is more about quality over quantity. Are you unsure of how much you should pin each day to grow your Pinterest reach? Stop wasting time sharing hundreds of articles every day with Tailwind or manual pinning. Instead, focus on pinning only high quality content that gets you repins and your reach will explode. Continue reading about our pinning strategy and learn how many pins you should pin per day."
-draft = true
+date = "2019-06-25T00:00:00-04:00"
+description = "Daily pinning is more about quality over quantity. Are you worried about how much you should pin each day to grow your Pinterest reach? Are you wasting time sharing hundreds of articles every day with Tailwind or manual pinning? Instead, focus on pinning only high quality content that gets you repins and your reach will explode. Continue reading about our pinning strategy and learn how many pins you should pin per day."
 keywords = ["tailwind", "pinterest strategy"]
 pins = []
 title = "How many pins should you pin per day"
 [images]
-name = ""
-src = ""
+name = "How many pins should you pin per day for improved Pinterest Reach"
+src = "/uploads/pins-per-day.png"
 
 +++
 ## Establish your Pinterest presence
