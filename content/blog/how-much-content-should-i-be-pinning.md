@@ -1,11 +1,11 @@
 +++
 categories = ["Pinterest Tips"]
 date = "2019-06-22T00:00:00-04:00"
-description = "Daily pinning is more about quality over quantity. Are you unsure of how much you should pin each day to grow your Pinterest reach? Stop wasting time sharing hundreds of articles every day with Tailwind or manual pinning. Instead, focus on pinning only high quality content that gets repins and your reach will explode. Continue reading about our pinning strategy and pin frequency."
+description = "Daily pinning is more about quality over quantity. Are you unsure of how much you should pin each day to grow your Pinterest reach? Stop wasting time sharing hundreds of articles every day with Tailwind or manual pinning. Instead, focus on pinning only high quality content that gets you repins and your reach will explode. Continue reading about our pinning strategy and learn how many pins you should pin per day."
 draft = true
 keywords = ["tailwind", "pinterest strategy"]
 pins = []
-title = "How much content should I be pinning"
+title = "How many pins should you pin per day"
 [images]
 name = ""
 src = ""
@@ -17,7 +17,7 @@ When starting out with blogging and marketing your blog on Pinterest, the goal s
 
 If you just started your blog, chances are you haven't published a whole lot of content yet.  So the balance of what you pin will lean more to other peoples content, while you build out and share yours.
 
-## Are you pinning too much?
+## Are you pinning way too much?
 
 This is a question that has pondered bloggers from the start of the time.  The gut wants to tell us to pin a whole bunch of content to grow a reach and following.  The problem is, a lot of that content that gets pinned doesn't end up getting much engagement.  And that ends up hurting your reach.
 
@@ -27,7 +27,7 @@ If you are sharing more than 25 pins per day, you are probably pinning too much 
 
 Aim to pin around 10 - 15 times per day.  That's it!  But make sure those pins are high quality engaging posts.  The more repins you start getting on these posts, the more Pinterest will put your pins forward to other readers.  When pinning other peoples content, reshare posts you find interesting, but see if others have repinned that post also.  If it's already popular, then it increases the chance someone will repin it from you also.
 
-## Starting out on Pinterest
+## How much to pin per day when starting out on Pinterest
 
 When starting out with Pinterest, the focus needs to be on building your presence and building out your content to share.  Try to get to at least 21 posts published as quick as you can so you can start pinning them and forming your presence on Pinterest.
 
