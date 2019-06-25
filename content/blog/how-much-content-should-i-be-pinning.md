@@ -17,9 +17,19 @@ When starting out with blogging and marketing your blog on Pinterest, the goal s
 
 If you just started your blog, chances are you haven't published a whole lot of content yet.  So the balance of what you pin will lean more to other peoples content, while you build out and share yours.
 
+## Are you pinning too much?
+
+This is a question that has pondered bloggers from the start of the time.  The gut wants to tell us to pin a whole bunch of content to grow a reach and following.  The problem is, a lot of that content that gets pinned doesn't end up getting much engagement.  And that ends up hurting your reach.
+
+If you are sharing more than 25 pins per day, you are probably pinning too much (if you are getting a ton of reshares on each of those pins every day then I want to know your secret!).  If most of your pins are getting 0 or 1 repin only, then Pinterest isn't going to put your pins forward because it doesn't think your content is very popular.
+
+> Less Is More!
+
+Aim to pin around 10 - 15 times per day.  That's it!  But make sure those pins are high quality engaging posts.  The more repins you start getting on these posts, the more Pinterest will put your pins forward to other readers.  When pinning other peoples content, reshare posts you find interesting, but see if others have repinned that post also.  If it's already popular, then it increases the chance someone will repin it from you also.
+
 ## Starting out on Pinterest
 
-When starting out with Pinterest, the focus needs to be on building your presence and building out your content to share.  Try to get to at least 21 posts as quick as you can.
+When starting out with Pinterest, the focus needs to be on building your presence and building out your content to share.  Try to get to at least 21 posts published as quick as you can so you can start pinning them and forming your presence on Pinterest.
 
 Let's say you only have 21 posts on your blog (makes math easier).  You want to create at least 5 pin images for each post, giving you 105 pin images total to publish.  Now, let's say you have 10 relevant boards that you want to share these images to.  That means you have 1050 pins you can publish (each image pinned to a board is a unique pin) without duplicating a pin to a board.
 
@@ -34,6 +44,8 @@ With a target of 10 pins per day, you should aim for the following:
 > **Useful Tip**: Each single pin image for a post can be scheduled to your boards with an interval at least 4 - 5 weeks apart (using Tailwind) to avoid spamming your users too much with the same pin. Since each post has 5 images, each image should be scheduled to go out 1 week apart.
 
 In other words, don't publish all images for an article within the same week.  Prioritize your schedule to publish to your most important boards first that the content relates to the most, as that will help signal to Pinterest how to categorize the pin.  This usually means choosing 2 boards that are most relevant, followed by your blog board, followed by the rest in relevance order.
+
+When choosing guest boards to post to, share it to your most popular group boards where it's likely to get reshared more.  This will help the pin go more viral and bump up in popularity faster
 
 With the above tip, you essentially have an image for your post being published every week, cycling through each image to the first board, before cycling through the images to the second board, until you get to the tenth board.
 
@@ -77,4 +89,4 @@ Again, we are aiming to pin at least 10 pins per day.  Aim for the following eac
 
 Under this approach, it will take you 21 months (yikes thats almost 2 years worth of pinning!) to have each of your pins circulated to each board without duplicating, and you will be pinning 80% of your own content.
 
-Here we are pinning far less content in general, but that content will likely be way more engaging and will help you extend your reach a lot more in the long term.  The content that is pinned is mostly to your website, also helping you improve your reach on Pinterest, and most importantly, traffic to your website.
+Here we are pinning mainly just your own content, but that content will likely be way more engaging and will help you extend your reach a lot more in the long term.  The content that is pinned is from your website, also helping you improve your reach on Pinterest, and most importantly, traffic to your website.
