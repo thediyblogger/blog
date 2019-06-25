@@ -126,9 +126,16 @@ button.primary:hover,
     padding: 4rem;
 }
 
-#signupModal .leadgen {
-  background-color: #fff !important;
+.modal-header{
+  padding: 2rem !important;
+  padding-left: 4rem !important;
+  background-color: #fff7f7 !important;
+  text-align: center !important;
 }
+
+
+
+
 
 .freeProduct div{
     padding: 0;
@@ -150,6 +157,41 @@ button.primary:hover,
     height: 300px;
     vertical-align: middle;
 }
+
+#signupModal div.modal-body{
+    margin: 0;
+    background-color: #fff7f7;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 2rem 4rem 4rem 4rem;
+}
+
+#signupModal p{
+  text-align: left;
+  font-size: 0.6em;
+}
+
+#signupModal .signupFields {
+  background-color: #fff;
+}
+
+#signupModal .leadgen img{
+    height: 300px;
+    vertical-align: middle;
+}
+
+
+#signupModal button.close{
+  box-shadow: none !important;
+  background-color: #fff7f7 !important;
+  font-size: 2em;
+}
+#signupModal button.close:hover{
+  box-shadow: none !important;
+  background-color: #fff7f7 !important;
+  color: #000 !important;
+}
+
 
 .salesPitchList, .salesPitchList li{
     text-align: left !important;
