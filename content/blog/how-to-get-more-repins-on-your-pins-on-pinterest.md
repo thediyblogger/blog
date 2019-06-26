@@ -3,11 +3,28 @@ categories = ["Pinterest Tips"]
 date = "2019-06-26T00:00:00-04:00"
 description = "Do you want to know what goes into creating a successful pin on Pinterest. Do you wonder how others get hundreds of reshares and you want to do the same? Our 8 steps to creating a winning pin on Pinterest will set you up for that success. "
 keywords = ["pinterest basics", "pinterest strategy"]
-pins = []
 title = "How to create a winning pin on Pinterest that will get repins"
 [images]
 name = "How to create viral pins in 8 easy steps"
 src = "/uploads/how-to-create-winning-pins-on-pinterest.png"
+[[pins]]
+pin_description = "Do you want to have winning pins on Pinterest? Learn how to create pins that makes the reader curious so they click through and want to read more. Viral pins create curiosity and you can too.  #pinteresttips #pintereststrategy #pinterestmarketing #contentmarketing #pinkarma #pinimages"
+pin_image = "/uploads/curiosity.png"
+[[pins]]
+pin_description = "Do you want to create winning pins on Pinterest that gets you repins? Learn how to create successful pins that get clickthroughs and generate traffic to your website. You can still go viral with the right strategy.  #pinteresttips #pintereststrategy #pinterestmarketing #contentmarketing #pinkarma #pinimages"
+pin_image = "/uploads/winning-pin.png"
+[[pins]]
+pin_description = "Follow our 8 easy steps to creating viral pins on Pinterest that will explode your traffic. Learn how to create viral pins that get clickthroughs and generate traffic to your website. You can still go viral with the right strategy.  #pinteresttips #pintereststrategy #pinterestmarketing #contentmarketing #pinkarma #pinimages"
+pin_image = "/uploads/viral-pin.png"
+[[pins]]
+pin_description = "Learn our secret to getting a lot of repins on Pinterest to generate traffic to your website. You can still get repins in 2019 if you follow the right strategy.  #pinteresttips #pintereststrategy #pinterestmarketing #contentmarketing #pinkarma #pinimages"
+pin_image = "/uploads/get-repins.png"
+[[pins]]
+pin_description = "With our 8 simple ways to creating Pinterest images, you can easily earn clickthroughs and generate traffic to your website. Learn what makes a winning Pinterest image that will drive lots of repins and clicks.  #pinteresttips #pintereststrategy #pinterestmarketing #contentmarketing #pinkarma #pinimages"
+pin_image = "/uploads/drive-clicks.png"
+[[pins]]
+pin_description = "Are your pins optimized to go viral?  If you are getting single digit repins, then read our clever tricks to make Pins that get clickthroughs and generate traffic to your website. You can still go viral with the right strategy.  #pinteresttips #pintereststrategy #pinterestmarketing #contentmarketing #pinkarma #pinimages"
+pin_image = "/uploads/8-clever-things-to-go-viral.png"
 
 +++
 ## Target keywords so users can find your pins with Pinterest search
