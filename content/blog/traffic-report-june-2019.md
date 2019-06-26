@@ -19,9 +19,11 @@ This is my first traffic report for  [DrawBuildPlay](https://www.drawbuildplay.c
 
 So reading my first traffic report, it's not going to be a success story (yet!).  I am working on it.  But this is the start of my journey with this blog.  And I want you to be part of my journey as we grow our blogs together.
 
-First some background about me.
+I also feel that many bloggers who post income reports only do so once they are successful, and make it sound like they earned $100k after just one month of blogging.  The reality is they spent probably a year or so, and some failed blog attempts before that, before they became successful.  I want to show you some of the pain that goes into blogging to become successful (fingers cross that I do) in real time.
 
-I am from the software industry and have worked in IT for 20 years.  I have had previous roles where I worked on SEO and it became a passion of mine.  I love building websites and sharing my knowledge with others.
+First, some background about me.
+
+I am from the software industry and have worked in IT for 20 years.  I have had previous roles where I worked on SEO and it became a passion of mine.  I love building things, as well as mentoring others to be successful in their roles.
 
 In January 2019, I made a few resolutions:
 
@@ -31,9 +33,9 @@ In January 2019, I made a few resolutions:
 
 It is now June 2019, and here is my progress report on each goal:
 
-1. I am down 25 pounds (after just 5 months).  I did this following the Keto diet which has not only made me physically leaner, but I feel I think more clearly and given me more energy to focus on my blogs.
-2. I started two blogs - [DrawBuildPlay](https://www.drawbuildplay.com "DrawBuildPlay - Home Decor and DIY Blog") and [TheDIYBlogger](https://www.thediyblogger.com "The DIY Blogger - Pinterest Strategies").
-3. I left my job of 8 years, and currently am not in full time employment - but that may change in the next few months once my blogs are mostly on Autopilot but not enough to replace a full time income.
+1. <span class="fa fa-icon-check"/> Lose 30 pounds: I am down 25 pounds (after just 5 months).  I did this following the Keto diet which has not only made me physically leaner, but I feel I think more clearly and given me more energy to focus on my blogs.
+2. <span class="fa fa-icon-check"/> Start my own business: I started two blogs - [DrawBuildPlay](https://www.drawbuildplay.com "DrawBuildPlay - Home Decor and DIY Blog") and [TheDIYBlogger](https://www.thediyblogger.com "The DIY Blogger - Pinterest Strategies").
+3. <span class="fa fa-icon-check"/> Leave my full time employment: I left my job of 8 years, and currently am not in full time employment. But that may change in the next few months once my blogs are mostly on Autopilot but not yet generating enough to replace a full time income.
 
 So, let's go into the second goal here - the blogs, and how they are doing.
 
@@ -55,8 +57,8 @@ Followers: 123
 
 #### GOOGLE ANALYTICS
 
-Sessions: 1,235  
-Page Views: 3,005
+Sessions: 2,000  
+Page Views: 6,000
 
 #### INCOME
 
@@ -85,7 +87,7 @@ I am also increasing the amount of daily pins I submit (both manual pinning and 
 
 Finally, I am also generating lots of new content through interesting and compelling blog posts.  These posts are based on some of the basics to go along with the Pin Karma strategy guides, but also based on lessons I am applying along my own journey.  Each new blog post is new content for Pinterest, which helps build my reach.
 
-Currently, each pin averages 1 - 2 images that are pinned to multiple boards.  I will be aiming to increase this to at least 5 pin images per blog post, which will then be posted to each of my boards over an interval (usually 6 days apart).
+Currently, each pin averages 1 - 2 images that are pinned to multiple boards.  I will be aiming to increase this to at least 5 pin images per blog post, which will then be posted to each of my boards over an interval (usually 1 week apart for each image, with the same image going to another board once every 5 weeks).
 
 By the end of my first month engaging Pinterest for TheDIYBlogger, my stats are:
 
@@ -93,17 +95,19 @@ By the end of my first month engaging Pinterest for TheDIYBlogger, my stats are:
 
 #### PINTEREST STATS
 
-Impressions: 5,108  
-Engagement: 205  
-Followers: 62
+Impressions: 13,446  
+Engagement: 374  
+Followers: 81
 
 #### GOOGLE ANALYTICS
 
-Sessions: 22  
-Page Views: 96
+Sessions: 58  
+Page Views: 200
 
 #### INCOME
 
-Pin Karma: $0
+Mailing List Subscribers: 0  
+Pin Karma: $0  
+Pin Perfection Course: $0
 
 I have not started selling Pin Karma subscriptions, or my Pinterest Perfection course yet, so my income on The DIY Blogger currently is $0.  Once traffic to my blog increases and I have an engaged audience, I will open up Pin Karma to that audience which should generate a good passive income by providing significant value to my audience.
