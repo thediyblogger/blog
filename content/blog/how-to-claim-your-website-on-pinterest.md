@@ -2,7 +2,7 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-04T00:00:00-04:00"
 description = "Pinterest is the place to be to do content marketing for your website or blog.  Pinterest has the ability to drive an insane amount of traffic to your website. If you are a business, an important step is to show the world you are legit by claiming and verifying your website on Pinterest. "
-keywords = ["pinterest basics", "seo"]
+keywords = ["pinterest basics"]
 title = "How to claim your website on Pinterest"
 [images]
 name = "How to claim your website on Pinterest"
