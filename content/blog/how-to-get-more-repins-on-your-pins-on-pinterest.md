@@ -1,7 +1,7 @@
 +++
 categories = ["Pinterest Tips"]
 date = "2019-06-26T00:00:00-04:00"
-description = "Do you want to know what goes into creating a successful pin on Pinterest. Do you wonder how somebody got hundreds of reshares and want to do the same? Our 8 steps to creating a winning pin on Pinterest will set you up for that success. "
+description = "Do you want to know what goes into creating a successful pin on Pinterest. Do you wonder how somebody got hundreds of reshares and you want to do the same? Our 8 steps to creating a winning pin on Pinterest will set you up for that success. "
 draft = true
 keywords = ["pinterest basics", "pinterest strategy"]
 pins = []
@@ -35,6 +35,7 @@ src = ""
     * "...love..."
   * Call to action that attracts users to click (and delivering on that)
   * Highlights the pain or problem the user has, or the solution being offered by the article to solve the pain
+* Aim to create at least 5 images for each post to share on Pinterest.  Each image should target different keywords with different text.  This gives you more chances for having one of those images go viral.  If one does go viral, then some of that virality also helps feed its sibling images.
 
 ## Measure engagement levels of your boards
 
