@@ -102,10 +102,6 @@ The easiest way to verify your website for Pinterest in Wordpress is to use the 
 
 1. Visit SEO > Social in your Wordpress Admin area.
 2. Enable Opengraph in the Facebook settings.
-3. Go to the Pinterest tab, and paste in the meta tag that Pinterest provides you with (see above)
-
-       <meta name="p:domain_verify" content="32586c70c7c42eb964eacdf69d0cb90e"/>
-
-    
+3. Go to the Pinterest tab, and paste in the meta tag that Pinterest provides you with (see above).
 4. Save Changes.
 5. Go to Pinterest and click **Submit** to verify your website.
