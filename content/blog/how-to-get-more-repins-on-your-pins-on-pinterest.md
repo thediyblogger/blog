@@ -1,17 +1,16 @@
 +++
 categories = ["Pinterest Tips"]
 date = "2019-06-26T00:00:00-04:00"
-description = "Do you want to know what goes into creating a successful pin on Pinterest. Do you wonder how somebody got hundreds of reshares and you want to do the same? Our 8 steps to creating a winning pin on Pinterest will set you up for that success. "
-draft = true
+description = "Do you want to know what goes into creating a successful pin on Pinterest. Do you wonder how others get hundreds of reshares and you want to do the same? Our 8 steps to creating a winning pin on Pinterest will set you up for that success. "
 keywords = ["pinterest basics", "pinterest strategy"]
 pins = []
 title = "How to create a winning pin on Pinterest that will get repins"
 [images]
-name = ""
-src = ""
+name = "How to create viral pins in 8 easy steps"
+src = "/uploads/how-to-create-winning-pins-on-pinterest.png"
 
 +++
-## Create targeted SEO so your users can find your pins with Pinterest search
+## Target keywords so users can find your pins with Pinterest search
 
 * Update your board names and board descriptions to [create keyword rich boards](/blog/how-to-create-keyword-rich-pinterest-board-names-to-get-more-repins/ "Create keyword rich board names and board descriptions") that actually get searched for by users on Pinterest. 
 * Make sure your pins link to interesting content so that your followers will want to repin it.
@@ -65,7 +64,7 @@ src = ""
   Pinterest will suggest you as a business to follow the more repins you start to get.  Pinterest has also said that having a high follower count isn't as important any more to get your pins seen.
 * Don't "buy" followers or do "follow for follow" schemes just for the numbers, as those followers will be of low quality who aren't interested in your content - leading to lower engagement for your pins.  This is turn will cause your pins to be less widely shared by Pinterest.
 
-##  Sharing other peoples content
+##  Share other peoples content
 
 * Try to pin content that is already going viral (lots of repins) as chances are you will get some of those repins.
 * Make sure content you share are high quality pins 
