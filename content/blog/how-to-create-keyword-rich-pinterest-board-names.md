@@ -2,7 +2,7 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-18T00:00:00-04:00"
 description = "Are you struggling to improve your reach on Pinterest.  You have a lot of boards and pin regularly, but not getting the repins.  Learn my content marketing strategy to creating keyword rich Pinterest Board Names to help your Pinterest Boards rank well on Pinterest."
-keywords = ["boards", "seo", "pinterest basics"]
+keywords = ["boards", "seo", "pinterest basics", "pinterest strategy"]
 title = "How to Create Keyword Rich Pinterest Board Names to Get More Repins"
 [images]
 name = "How to make keyword rich board names to get more repins"

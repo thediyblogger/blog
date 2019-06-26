@@ -2,7 +2,7 @@
 categories = ["Pinterest Tips"]
 date = "2019-06-26T00:00:00-04:00"
 description = "Do you want to know what goes into creating a successful pin on Pinterest. Do you wonder how others get hundreds of reshares and you want to do the same? Our 8 steps to creating a winning pin on Pinterest will set you up for that success. "
-keywords = ["pinterest basics", "pinterest strategy"]
+keywords = ["pinterest strategy", "tailwind", "boards"]
 title = "How to create a winning pin on Pinterest that will get repins"
 [images]
 name = "How to create viral pins in 8 easy steps"
