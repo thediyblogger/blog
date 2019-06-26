@@ -59,7 +59,7 @@ Use sentimental words that get more repins:
 
 Create a call to action that attracts users to click (and delivering on that). This could be on the image or in the pin description.
 
-Highlights the pain or problem the user has, or the solution being offered by the article to solve the pain.
+Highlight the pain or problem the user has, or the solution being offered by the article to solve the pain.
 
 Aim to create at least 5 images for each post to share on Pinterest.  Each image should target different keywords with different text.  This gives you more chances for having one of those images go viral.  If one does go viral, then some of that virality also helps feed its sibling images.
 
