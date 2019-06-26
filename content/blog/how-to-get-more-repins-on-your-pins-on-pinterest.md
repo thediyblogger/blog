@@ -42,15 +42,15 @@ pin_image = "/uploads/8-clever-things-to-go-viral.png"
   * SEO optimized file name (don't use IMG1234.jpg)
   * Text overlay with easy to read fonts
   * Red, Yellow, and Orange hues tend to perform better than darker hues
-  * Invite curiosity in the text overlay:
-    * "How To ...", 
-    * "5 ways to ..."
-  * Use sentimental words that get more repins:
-    * "...recipe..."
-    * "...in 3 minutes..."
-    * "...love..."
-  * Call to action that attracts users to click (and delivering on that)
-  * Highlights the pain or problem the user has, or the solution being offered by the article to solve the pain
+* Invite curiosity in the text overlay:
+  * "How To ...", 
+  * "5 ways to ..."
+* Use sentimental words that get more repins:
+  * "...recipe..."
+  * "...in 3 minutes..."
+  * "...love..."
+* Create a call to action that attracts users to click (and delivering on that). This could be on the image or in the pin description.
+* Highlights the pain or problem the user has, or the solution being offered by the article to solve the pain
 * Aim to create at least 5 images for each post to share on Pinterest.  Each image should target different keywords with different text.  This gives you more chances for having one of those images go viral.  If one does go viral, then some of that virality also helps feed its sibling images.
 
 ## Measure engagement levels of your boards
