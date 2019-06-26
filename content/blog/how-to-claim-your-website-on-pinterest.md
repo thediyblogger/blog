@@ -11,6 +11,9 @@ src = "/uploads/claim-website.png"
 pin_description = "If you have a have a website you want to market on Pinterest with content marketing strategies, then the first thing you need to do is claim your website. It will help drive more traffic to your blog and you get great analytics. And you dont need to be super technical to do it. Follow our easy how to guide to claim your website on Pinterest. #pinteresttips #pinterestmarketing #pinteresthacks #pinterestforbeginners #businesstips #blogging #pinkarma"
 pin_image = "/uploads/easy-guide-claim-website.png"
 [[pins]]
+pin_description = "If you have a Squarespace website, you need to claim your website on Pinterest.  Once your Squarespace website has been claimed and verified, you will get rich analytics, can enable rich pins, and see stats on your pins.  Your pins will be attributed to you, expanding your reach.  Learn more how to verify your Squarespace website with Pinterest and increase traffic to your brand. #squarespace #contentmarketing #pinteresttips #pinterestmarketing #pinterestforbeginners #businesstips #blogging #pinkarma"
+pin_image = "/uploads/squarespace-verify-blog.png"
+[[pins]]
 pin_description = "If you have a Wordpress site, you need to verify your website on Pinterest.  Once your Wordpress website has been claimed, you will get rich analytics, can enable rich pins, and see stats on your pins.  Your pins will be attributed to you, expanding your reach.  Learn more how to verify your Wordpress blog with Pinterest and increase traffic to your blog. #wordpress #pinteresttips #pinterestmarketing #pinteresthacks #pinterestforbeginners #businesstips #blogging #pinkarma"
 pin_image = "/uploads/wordpress-verify-blog.png"
 [[pins]]
