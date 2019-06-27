@@ -401,47 +401,43 @@
                     return report.levels[a].order - report.levels[b].order
                 });
 
+
+                var card_container = $("<div class='container'>");
+                var card_row = $("<div class='card-columns'>");
+
                 for (i = 0; i < sorted_levels.length; i++){
                     level = sorted_levels[i];
                     metrics = report.levels[level]
-
-                    level_header = $("<header>");
-                    level_header.html("<h4>" + level + "</h4>");
-
-                    level_metrics = $("<p>");
-
                     level_complete = true;
+
+
+                    var card_template = $("#hidden-card-recommendation-summary-template").html();
+                    var card = $(card_template).clone();
+
+                    $(card).find('.card-title').html(level);
 
                     $.each(metrics, function (m, a){
                         if (m != "order"){
 
-                            level_item_icon = $("<i>");
-                            level_item_icon.addClass("fa");
-                            level_item_icon.attr("aria-hidden", true);
+                            var achieved_template = $("#hidden-card-achieved-template").html();
+                            var achieved_row = $(achieved_template).clone()
 
+                            $(achieved_row).find('.metric').html(m)
+                            
                             if (a){
-                                level_item_icon.addClass("fa-check");
+                                $(achieved_row).find('.fa').addClass("fa-check")
+                                $(achieved_row).addClass("text-muted")
                             }
                             else{
-                                level_item_icon.addClass("fa-times");
-                            }
-
-                            level_item = $("<div>")
-                            level_item.append(level_item_icon);
-
-                            level_item.append($("<span>").html(" " + m  +  "<br/>"));
-
-                            level_metrics.append(level_item);
-
-                            if (!a){
-                                // not achieved this level yet
+                                $(achieved_row).find('.fa').addClass("fa-times")
                                 level_complete = false;
                             }
+
+                            $(card).find('.metriclist').append(achieved_row)
                         }
                     });
 
-                    level_header.append(level_metrics);
-                    carouselitem.append(level_header);
+                    
 
                     if (level_complete){
                         num_badges_earned++;
@@ -473,25 +469,66 @@
                         }
                         badge.attr("src", src)
 
-                        $("#badges").append(badge);
+                        $(card).find(".card-footer").append(badge);
+                    }
+                    else{
+                        $(card).find(".card-footer").remove();
                     }
 
+                    card_row.append(card);
                 }
 
+                card_container.append(card_row);
+                carouselitem.append(card_container);
+
+                
+
                 recommendationsElement.append(carouselitem);
+
                 $("#currentLevel").text("BADGES: " + num_badges_earned);
+
+                
+
+
 
                 // render the recommendations
                 $.each(report.recommendations, function(index, r){
                     carouselitem = $("<div>");
                     carouselitem.addClass("carousel-item");
 
-                    metric = $("<header>");
-                    metric.html("<h4>" + r.metric + "</h4>");
-                    subtitle = $("<p>");
+                    var card_container = $("<div class='container'>");
+                    var card_row = $("<div class='card-deck'>");
+
+                    // render the recommendation summary card
+                    var card_template = $("#hidden-card-recommendation-template").html();
+                    var card_rec = $(card_template).clone();
+                    $(card_rec).find('.card-title').html(r.metric);
+                    $(card_rec).find('.hint').html(r.details);
+                    $(card_rec).find('.impact').html("<strong>Impact: " + r.impact + "</strong>");
+                    $(card_rec).find('.goal').html("<strong>Goal: " + r.level + "</strong>");
+
+                    // learn more button
+                    link = $("<a>");
+                    link.attr("href", r.link);
+                    link.attr("target", "_blank");
+                    link.addClass("button");
+                    link.text("Learn More");
+                    $(card_rec).find('.card-footer').append(link);
+
+
+                    // render the issues for this metric
+                    var card_list_template = $("#hidden-card-recommendation-issues-template").html();
+                    var card_examples = $(card_list_template).clone();
+                    $(card_examples).find('.card-title').html("Issues Detected");
+
                     $.each(r.value, function (index, v){
-                        value_item = $("<span>");
-                        value_item.html(v.value);
+                        var achieved_template = $("#hidden-card-recommendation-issue-template").html();
+                        var achieved_row = $(achieved_template).clone()
+
+                        $(achieved_row).find('.metric').html(v.value)
+                        $(achieved_row).find('.fa').addClass("fa-times")
+                        
+
 
                         if (v.examples.length > 0){
                             examples = $("<ul>");
@@ -506,39 +543,19 @@
                                 examples.append(li);
                             });
 
-                            value_item.append(examples);
+                            achieved_row.append(examples);
                         }
-                        else{
-                            value_item.append($("<br/>"));
-                        }
-
-                        subtitle.append(value_item);
+                            
+                        $(card_examples).find('.issues-list').append(achieved_row)
                     });
-                    metric.append(subtitle);
 
-                    message = $("<p>");
-                    message.text(r.details)
-
-                    impact = $("<p>");
-                    impact.html("<strong>Impact: " + r.impact + "</strong>");
-
-
-                    link = $("<a>");
-                    link.attr("href", r.link);
-                    link.attr("target", "_blank");
-                    link.addClass("button");
-                    link.text("Learn More");
-
-                    carouselitem.append(metric);
-                    carouselitem.append(message);
-                    carouselitem.append(impact);
-                    
-                    if (r.link != ""){
-                        carouselitem.append(link);
-                    }
-
+                    card_row.append(card_examples);
+                    card_row.append(card_rec);
+                    card_container.append(card_row);
+                    carouselitem.append(card_container);
                     recommendationsElement.append(carouselitem);
                 });
+
                 $("#carousel").append(recommendationsElement);
 
 
@@ -568,6 +585,15 @@
                     carouselindicators.append(button);
                 }
 
+                refreshButton = $("<button>");
+                refreshButton.addClass("small")
+                refreshButton.id = "btnForceRefresh";
+                refreshButton.html("<i class='fa fa-refresh'></i>");
+                refreshButton.click(forceRefresh);
+                addTooltip(refreshButton, "Refresh Data", false, "top");
+
+                carouselindicators.append(refreshButton);
+
                 $("#carousel").prepend(carouselindicators);
                 $('#carousel').carousel({interval: 5000});
 
@@ -587,11 +613,66 @@
                 sortedboards = report.boards.sort(function(a, b){
                     aName = a.name.toLowerCase();
                     bName = b.name.toLowerCase();
-                    return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
+                    
+                    return a.counts.collaborators - b.counts.collaborators || (aName < bName ? -1 : (aName > bName ? 1 : 0 )) ;
                 })
 
+                var card_row = $("<div class='card-columns'>");
+                
                 $.each(sortedboards, function (index, board){
 
+                    var card_template = $("#hidden-card-board-template").html();
+                    var card = $(card_template).clone();
+
+                    title = $("<span>");
+                    title.html("&nbsp;" + board.name);
+
+                    if (board.counts.collaborators > 0){
+                        // add a group icon
+                        icon = createIcon("fa-group", "Group Board with " + board.counts.collaborators + " collaborators", true);
+                        title.prepend(icon);
+                    }
+
+                    var checkmark = $("<i class='fa fa-check'>");
+                    var timesmark = $("<i class='fa fa-times'>");
+
+                    $(card).find('.title').append(title);
+                    $(card).find('.followers').html(board.counts.followers);
+                    $(card).find('.pins').html(board.counts.pins);
+                    $(card).find('.repins').html(board.counts.repins);
+                    $(card).find('.virality').html(board.counts.virality);
+                    $(card).find('.engagement').html(board.counts.engagement);
+
+                    if (board.counts.pins < 20) 
+                        $(card).find('.pins-fa').addClass("fa-times")
+                    else
+                        $(card).find('.pins-fa').addClass("fa-check");
+                    
+                    if (board.counts.repins < board.counts.pins) 
+                        $(card).find('.repins-fa').addClass("fa-times")
+                    else
+                        $(card).find('.repins-fa').addClass("fa-check");
+
+                    if (board.counts.virality < 1) 
+                        $(card).find('.virality-fa').addClass("fa-times")
+                    else
+                        $(card).find('.virality-fa').addClass("fa-check");
+
+                    if (board.counts.engagement < 1) 
+                        $(card).find('.engagement-fa').addClass("fa-times")
+                    else
+                        $(card).find('.engagement-fa').addClass("fa-check");
+
+                    if (board.stats == "in_progress"){
+                        // we dont have complete stats yet for the pins.
+                        $(card).find('.populating').html("<img data-toggle='tooltip' data-placement='right' src='/images/loading-hz.svg' alt='-' title='Hold Tight.  We are still downloading your data.  Check back in a few hours.' />");
+
+                    }
+
+
+                    card_row.append(card);
+
+                    /*
                     name_cell = $("<td>");
                     name_element = createTooltip(board.description, true, board.name + " ");
                     name_cell.append(name_element);
@@ -655,8 +736,9 @@
                     }
 
                     $('#boardRows').append(row);
+                    */
 
-                        
+                    $('#board-cards').append(card_row);
                 });
 
                 $('[data-toggle="tooltip"]').tooltip()
@@ -824,19 +906,13 @@
                         <!-- Engagement -->
                         <section id="engagementResults" style="display: none;">
                             <div class="row">
-                                <div id="missions" class="col-12 box">
+                                <div id="missions" class="col-12">
                                     <header>
-                                        <h2 id="missionHeader">Your Missions:</h2>
+                                        <h2 id="missionHeader"></h2>
                                     </header>
-                                    <div id="badges" class="badges"></div>
-
                                     <div id="carousel" class="carousel slide" data-interval="false" data-ride="carousel">
-                                        
-                                            <!-- dynamically populated -->
-                                        
+                                        <!-- dynamically populated -->
                                     </div>
-                                            <button id="btnForceRefresh" onclick="forceRefresh(); return false;">Refresh Report</button>
-                                    
                                 </div>
                             </div>
                         </section>
@@ -847,8 +923,8 @@
                             <div class="row">
                                 <div class="col-12">
                                     <h2>Boards</h2>
-                                    <div class="table-wrapper">
-                                        <table class="alt">
+                                    <div id="board-cards" class="table-wrapper">
+                                        <table class="alt" style="display: none">
                                             <thead>
                                                 <tr>
                                                     <th>Board</th>
@@ -978,6 +1054,89 @@
                     initializePage();
                 });
             </script>
+
+            <script id="hidden-card-template" type="text/x-custom-template">
+                    <div class="card mb-5 mb-lg-5">
+                      <div class="card-body">
+                        <h5 class="card-title text-muted text-uppercase text-center"></h5>
+                        <hr>
+                        <ul class="fa-ul metriclist">
+                        </ul>
+                      </div>
+                    </div>
+            </script>
+
+            <script id="hidden-card-recommendation-summary-template" type="text/x-custom-template">
+                    <div class="card mb-5 mb-lg-5">
+                      <div class="card-header">
+                          <h5 class="card-title text-muted text-uppercase text-center"></h5>
+                      </div>
+                      <div class="card-body">
+                        <ul class="fa-ul metriclist">
+                        </ul>
+                      </div>
+                      <div class="card-footer badges">
+
+                      </div>
+                    </div>
+            </script>
+
+            <script id="hidden-card-recommendation-issues-template" type="text/x-custom-template">
+                    <div class="card mb-5 mb-lg-5">
+                      <div class="card-header">
+                          <h5 class="card-title text-muted text-uppercase text-center"></h5>
+                      </div>
+                      <div class="card-body">
+                        <ul class="scrollable issues-list">
+                        </ul>
+                      </div>
+                    </div>
+            </script>
+
+            <script id="hidden-card-recommendation-issue-template" type="text/x-custom-template">
+                  <li><i class="fa"></i> <span class="metric"></span></li>
+            </script>
+
+            <script id="hidden-card-recommendation-template" type="text/x-custom-template">
+                    <div class="card mb-5 mb-lg-5">
+                      <div class="card-header">
+                          <h5 class="card-title text-muted text-uppercase text-center"></h5>
+                      </div>
+                      <div class="card-body">
+                        <p class="goal"></p>
+                        <p class="impact"></p>
+                        <p class="hint"></p>
+                      </div>
+                      <div class="card-footer">
+
+                      </div>
+                    </div>
+            </script>
+
+            <script id="hidden-card-achieved-template" type="text/x-custom-template">
+                  <li><span class="fa-li"><i class="fa"></i></span><span class="metric"></span></li>
+            </script>
+
+            <script id="hidden-card-board-template" type="text/x-custom-template">
+                        <div class="card">
+                          <div class="card-header">
+                              <h5 class="card-title title text-muted text-uppercase text-center">
+
+                              </h5>
+                          </div>
+                          <div class="card-body">
+                            <ul class="fa-ul metriclist">
+                                <li><span class="fa pins-fa"></span> Pins: <span class="pins">1234</span></li>
+                                <li><span class="fa repins-fa"></span> Repins: <span class="repins">1</span> <span class="populating"></span> </li>
+                                <li><span class="fa virality-fa"></span> Virality: <span class="virality">0.01</span><span class="populating"></span> </li>
+                                <li><span class="fa engagement-fa"></span> Engagement: <span class="engagement">2.3</span><span class="populating"></span> </li>
+                                <li><span class="fa followers-fa fa-arrow-right"></span> Followers: <span class="followers">123</span></li>
+                            </ul>
+                          </div>
+                        </div>
+            </script>
+
+
     </body>
 
 </html>

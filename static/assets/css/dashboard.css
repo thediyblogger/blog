@@ -265,7 +265,6 @@ div.signupBox{
 }
 
 .badges {
-    padding: 10px;
     text-align: center;
 }
 
@@ -372,12 +371,28 @@ a:hover{
     height: 2rem;
     vertical-align: top;
 }
+.incomereport th{
+  padding: 2em 1em;
+}
+.incomereport tr.months th{
+  padding: 1em;
+  text-align: right;
+}
+.incomereport td{
+  text-align: right;
+}
+
+.incomereport .currentmonth{
+  color: #e60023;
+}
 
 
 section.grabber {
   background: #c61118;
 }
 
+#recommendations .card,
+#boardResults .card,
 .pricing .card, 
 .features .card,
 .grabber .card, 
@@ -386,6 +401,7 @@ section.grabber {
   border-radius: 1rem;
   transition: all 0.2s;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
 }
 
 .card hr {
@@ -421,9 +437,41 @@ section.grabber {
   width: 100%;
 }
 
+#missionHeader{
+  text-align: center;
+}
+
+ul.metric_values_list{
+  list-style: none;
+}
+ul.metric_values_list li{
+  font-style: italic;
+  font-size: 0.8em;
+}
+#recommendations p{
+  margin: 0;
+}
+
+#recommendations ul.scrollable{
+  max-height: 25em;
+  overflow:hidden; 
+  overflow-y:scroll;
+}
+#recommendations ul.issues-list{
+  list-style: none;
+}
+#recommendations ul.issues-list li{
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.carousel-buttons button{
+  border-radius: 5px;
+}
 /* Hover Effects on Card */
 
 @media (min-width: 992px) {
+  #recommendations .card:hover,
   .pricing .card:hover,
   .features .card:hover,
   .grabber .card:hover{
@@ -434,6 +482,16 @@ section.grabber {
   .pricing .card:hover .btn {
     opacity: 1;
   }
+}
+
+#boardResults .card-header{
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#boardResults .populating img{
+  height: 2em;
+  vertical-align: top;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
