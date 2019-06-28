@@ -12,6 +12,15 @@ is_pin_friendly = false
 name = "How to Build Links to Your Website"
 src = "/uploads/how-to-do-effective-link-building.png"
 [[pins]]
+pin_description = "Check out our 4 easy ways to build links to your blog.  It's simpler than you think to do, you just have to look in the right places.  Check out our free blogging advice and start building those backlinks now for long term dividends. #blogging #backlinks #seo #boost #traffic"
+pin_image = "/uploads/blogging-advice-building-links-2.png"
+[[pins]]
+pin_description = "How to boost traffic to your blog and get blog traffic with our best link building strategies. Take advantage of all the latest social content marketing techniques available, and get a measurable long term boost in your traffic #seo #linkbuilding #blogging #boost #bloggertips #bloggingforbeginners"
+pin_image = "/uploads/blog-boost-traffic-link-building.png"
+[[pins]]
+pin_description = "Learn our super helpful blog info tips on building links to get free google traffic to your website.  Google SEO is only half the work doing on page SEO.  The rest of the work is building high quality links from other websites back to yours.  Learn how to build quality backlinks with our helpful blog info tips. #blogging #boost #backlinks #seo #bloggingforbeginners #traffic"
+pin_image = "/uploads/blog-info-building-links-for-free-traffic.png"
+[[pins]]
 pin_description = "6 Tips for building links to your website - How to leverage social tools to expand your brand presence and gain critical high value back links to your website to build Google SEO. #seo #linkbuilding #bloggertips #bloggingforbeginners"
 pin_image = "/uploads/6-tips-for-link-building.png"
 [[pins]]
