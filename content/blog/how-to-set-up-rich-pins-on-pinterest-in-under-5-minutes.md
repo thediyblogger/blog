@@ -1,12 +1,24 @@
 +++
 categories = ["Pinterest Tips"]
 date = "2019-06-04T00:00:00-04:00"
-description = "No matter the kind of content you are creating (eBooks, physical products, blog posts, recipes, DIY instructions, podcasts, etc), Pinterest is an essential platform to market your ideas for your business.  Rich Pins takes that marketing to the next level by pulling extra details from your website and exposing it on the pin. "
+description = "Rich Pins help take Pinterest content marketing to the next level by pulling extra details from your website and exposing it on the pin. No matter the kind of content you are creating (eBooks, physical products, blog posts, recipes, DIY instructions, podcasts, etc), Pinterest is an essential platform to market your ideas for your business and rich pins are essential for marketing success. Learn how to set up rich pins and why they are so important. "
 keywords = ["pinterest basics"]
 title = "How to set up Rich Pins on Pinterest (in under 5 minutes)"
 [images]
 name = "How to set up rich pins on Pinterest (in under 5 minutes)"
 src = "/uploads/richpins.png"
+[[pins]]
+pin_description = "How to set up rich pins for your business or blog to gain more traffic to your website.  Learn what rich pins are, what they look like, and why you need them. #richpins #pinterestmarketing #pinterestforbeginners #contentmarketing #digitalmarketing #bloggingforbeginners #seo #pinterest #blogging"
+pin_image = "/uploads/how-to-setup-rich-pins-what-are-they.png"
+[[pins]]
+pin_description = "If you want to have the next viral pin, or just get repinned by other pinners, then you need to have rich pins enabled.  Learn how rich pins work, and why you need rich pins to be successful with your Pinterest Marketing. #richpins #pinterestmarketing #pinterestforbeginners #contentmarketing #digitalmarketing #bloggingforbeginners #seo #pinterest #blogging"
+pin_image = "/uploads/why-you-need-rich-pins-to-go-viral.png"
+[[pins]]
+pin_description = "Your complete guide to Rich Pins on Pinterest. Learn what rich pins are, why you need them, and how to set them up for your business. If you aren't using rich pins, you are missing out on capturing your audiences attention! Activate them today!. #richpins #pinterestmarketing #pinterestforbeginners #contentmarketing #digitalmarketing #bloggingforbeginners #seo #pinterest #blogging"
+pin_image = "/uploads/complete-guide-to-rich-pins.png"
+[[pins]]
+pin_description = "How to set up Rich Pins on Pinterest in 2 really simple steps. Rich Pins will improve the reach of your pins by exposing more details and keywords to your audience. This will help drive more traffic to your website. Learn how to set up Rich Pins - its really easy. #richpins #pinterestmarketing #bloggingforbeginners #seo #pinterest #blogging"
+pin_image = "/uploads/how-to-setup-rich-pins-in-2-simple-steps.png"
 [[pins]]
 pin_description = "How to set up Rich Pins on Pinterest in under 5 minutes. Rich Pins supercharge your pins by bringing in contextual information from your website, making your Product Pins, Article Pins, Blog Pins, and Recipe Pins much more useful. This in turn will help drive more traffic to your website from your engaged audience. #richpins #blogtraffic #seo #pinterest #blogging"
 pin_image = "/uploads/how-to-set-up-rich-pins.png"
@@ -24,7 +36,7 @@ This has the effect of giving your potential audience more information to look a
 
 As you can see in the two rich pins posted above, the article has meta data from the blog post pulled into it such as the page title/description, author, and published date.  Meanwhile, the recipe has the ingredients list pulled in.
 
-This results in a more well rounded pin with the information your audience needs to see to make a decision on clicking through to the website.  The pin looks more professional and more engaging.
+This results in a more well rounded pin with the information your audience needs to see to make a decision on clicking through to the website.  The pin looks more professional and more engaging.  It will help your pin appear to more readers on Pinterest as the extra information helps feed the search terms that users search on (SEO).  And, the more people that get to see your pin, the better the chances of your pins going viral, leading to more traffic to your website.
 
 There are currently 4 categories of Rich Pins:
 
