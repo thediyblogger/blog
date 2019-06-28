@@ -404,6 +404,10 @@ section.grabber {
   margin-bottom: 2em;
 }
 
+.card-header:first-child{
+  border-radius: 1rem 1rem 0 0;
+}
+
 .card hr {
   margin: 1.5rem 0;
 }
