@@ -33,6 +33,10 @@ You want your website to get as much high quality juice as possible to boost you
 
 Alternatively, if a website which doesn't have a high (or decent) page rank linked to you, you can still get some benefit. This website can still be valuable if they are relevant to your business, may be popular in your local area, and links to you in a relevant and meaningful way.
 
+**Domain Authority**
+
+When looking for websites to link back to you, be sure to check out their Domain Authority (DA).  Domain Authority is a score between 1 and 100 (new sites will be a 1, sites with a lot of authority (eg CNN) will be closer to 100).  You want sites that have a higher DA than yours to link back to you, to get some of their reputation passed to you.
+
 **Caution:**  Do not, ever, and I mean EVER, pay shady websites that have nothing to do with your industry/topic/focus to host a link to your website.  This will get you in trouble.  Google will find you, and punish your page rank as a result.  Its online suicide. Don't listen to any SEO "experts" who say this is fine.  It is not!  Don't do it. Ever.
 
 Okay, so how do we build these links in an ethical (white-hat) manner?
@@ -50,22 +54,24 @@ Here are some basic directories to get started:
 
 ## LOOK AT YOUR COMPETITORS
 
-The next step in finding where to add links to your website is see what your competitors are doing.  There are some useful tools such as the moztool which allows you to check backlinks (sites that are linking to you).  This will be a good indicator to target where and how you could be spending your time getting your links added to other relevant websites.
+The next step in finding where to add links to your website is see what your competitors are doing.  There are some useful tools such as the moztool and [ubersuggest](https://neilpatel.com/ubersuggest/ "Uber Suggest") which allows you to check backlinks (sites that are linking to a domain) and their domain authority.  This will be a good indicator to target where and how you could be spending your time getting your links added to other relevant websites.
 
 ## BE SOCIAL
 
-With the uptick in conversations moving from websites to instead happening on Social Media sites such as Facebook and Twitter, Search Engines are now using these as signals in your page rank.  Be sure to engage your community on your Facebook and Twitter pages.  If there is a lot of discussion about a post you just made, chances are that page will start to rank higher.  Your domain will also start to earn more trust (since lots of people are talking about it). Also, dont underestimate the power of Pinterest.  Pin your pages to pinterest and to group boards to spread the word.  Every time someone pins your post, its another link generated back to your website.
+With the uptick in conversations moving from websites to instead happening on Social Media sites such as **Facebook** and **Twitter**, Search Engines are now using these as signals in your page rank.  Be sure to engage your community on your Facebook and Twitter pages.  If there is a lot of discussion about a post you just made, chances are that page will start to rank higher.  Your domain will also start to earn more trust (since lots of people are talking about it). Also, don't underestimate the power of **Pinterest**.  Pin your pages to Pinterest and to group boards to spread the word.  Every time someone pins your post, its another link generated back to your website.
 
 Get your customers to link to you and talk about you (hopefully in a positive manner).  If their site is popular, you stand to benefit from it.
 
 Blog frequently, and make it interesting that others will want to share it and chat about it.  Blogging will generate fresh material on a consistent basis if you keep doing it.  It's also valuable to your customers and a way to give back to the community by sharing your knowledge.  Who knows, maybe one of your readers will one day become a customer.
 
-Get on the forums (such as Reddit), and help others out.  Your goodwill can only help you.  Who knows, that person you helped out might just lead to a new customer.
+Get on the forums (such as **Reddit**), and help others out.  Your goodwill can only help you.  Who knows, that person you helped out might just lead to a new customer.
 
-Podcasting is another great way to get free backlinks.  The podcaster gets free content by interviewing you, while you get free backlinks to your website and free exposure to your brand.
+**Podcasting** is another great way to get free backlinks.  The podcaster gets free content by interviewing you, while you get free backlinks to your website and free exposure to your brand.
+
+**Commenting** in other peoples blog posts usually have a nofollow on any links posted, but some still allow following.  This can sometimes be an easy way to get backlinks, but don't spend too much time doing this as Google knows when it's a comment and you don't really get a lot of link juice out of it.
 
 ## BE IN THE NEWS
 
-Okay, calm down.  Lets make our own news, and not do anything we would be embarrassed if our mom's found out.  But if you do something newsworthy, then tell the press.  They will publish the press release, and usually have a link back to your website.
+Okay, calm down.  Let's make our own news, and not do anything we would be embarrassed if our mom's found out.  But if you do something newsworthy, then tell the press.  They will publish the press release, and usually have a link back to your website.
 
 Source: https://moz.com/beginners-guide-to-seo/growing-popularity
