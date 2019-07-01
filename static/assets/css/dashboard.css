@@ -456,6 +456,14 @@ ul.metric_values_list li{
   margin: 0;
 }
 
+#recommendations a{
+  color: #000;
+}
+
+#recommendations a:hover{
+  color: #e60023 !important;
+}
+
 #recommendations ul.scrollable{
   max-height: 25em;
   overflow:hidden; 
@@ -475,7 +483,6 @@ ul.metric_values_list li{
 /* Hover Effects on Card */
 
 @media (min-width: 992px) {
-  #recommendations .card:hover,
   .pricing .card:hover,
   .features .card:hover,
   .grabber .card:hover{

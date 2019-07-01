@@ -375,117 +375,15 @@
                 $('#current_score_pct').text(report.engagement_score.percentage);
                 $("#badges").empty();
 
-                
-
                 profileName = report.profile.name;
 
                 $('#missionHeader').text(profileName);
                 $("#carousel").empty();
                 $("#carousel").empty();
 
-
-                recommendationsElement = $("<div>");
+                var recommendationsElement = $("<div>");
                 recommendationsElement.attr("id", "recommendations");
                 recommendationsElement.addClass("carousel-inner")
-
-                // render the levels
-                carouselitem = $("<div>");
-                carouselitem.addClass("carousel-item");
-                carouselitem.addClass("active");
-
-                var num_badges_earned = 0;
-
-                //$.each(report.levels, function(level, metrics){
-                level_keys = Object.keys(report.levels);
-                sorted_levels = level_keys.sort(function(a, b){
-                    return report.levels[a].order - report.levels[b].order
-                });
-
-
-                var card_container = $("<div class='container'>");
-                var card_row = $("<div class='card-columns'>");
-
-                for (i = 0; i < sorted_levels.length; i++){
-                    level = sorted_levels[i];
-                    metrics = report.levels[level]
-                    level_complete = true;
-
-
-                    var card_template = $("#hidden-card-recommendation-summary-template").html();
-                    var card = $(card_template).clone();
-
-                    $(card).find('.card-title').html(level);
-
-                    $.each(metrics, function (m, a){
-                        if (m != "order"){
-
-                            var achieved_template = $("#hidden-card-achieved-template").html();
-                            var achieved_row = $(achieved_template).clone()
-
-                            $(achieved_row).find('.metric').html(m)
-                            
-                            if (a){
-                                $(achieved_row).find('.fa').addClass("fa-check")
-                                $(achieved_row).addClass("text-muted")
-                            }
-                            else{
-                                $(achieved_row).find('.fa').addClass("fa-times")
-                                level_complete = false;
-                            }
-
-                            $(card).find('.metriclist').append(achieved_row)
-                        }
-                    });
-
-                    
-
-                    if (level_complete){
-                        num_badges_earned++;
-                        // show the badge for this level
-                        badge = $("<img>")
-
-                        switch (level){
-                            case "Account Basics":
-                                src = "/images/badge-account-basics.png";
-                                break;
-                            case "Group Board Strategy":
-                                src = "/images/badge-groupie.png";
-                                break;
-                            case "Pinning Strategy":
-                                src = "/images/badge-strategist-1.png";
-                                break;
-                            case "Profile SEO":
-                                src = "/images/badge-pinterest-seo.png";
-                                break;
-                            case "Pinning Frequency":
-                                src = "/images/badge-strategist-2.png";
-                                break;
-                            case "Blogging Superstar":
-                                src = "/images/badge-superstar.png";
-                                break;
-                            default:
-                                src = "";
-                                break;
-                        }
-                        badge.attr("src", src)
-
-                        $(card).find(".card-footer").append(badge);
-                    }
-                    else{
-                        $(card).find(".card-footer").remove();
-                    }
-
-                    card_row.append(card);
-                }
-
-                card_container.append(card_row);
-                carouselitem.append(card_container);
-
-                
-
-                recommendationsElement.append(carouselitem);
-
-                $("#currentLevel").text("BADGES: " + num_badges_earned);
 
                 
 
@@ -502,6 +400,8 @@
                     // render the recommendation summary card
                     var card_template = $("#hidden-card-recommendation-template").html();
                     var card_rec = $(card_template).clone();
+                    $(carouselitem).attr("metric", r.metric);
+                    $(carouselitem).attr("slide_number", index + 1);
                     $(card_rec).find('.card-title').html(r.metric);
                     $(card_rec).find('.hint').html(r.details);
                     $(card_rec).find('.impact').html("<strong>Impact: " + r.impact + "</strong>");
@@ -556,55 +456,131 @@
                     recommendationsElement.append(carouselitem);
                 });
 
+                // render the carousel summary slide
+                var carouselitem = $("<div>");
+                carouselitem.addClass("carousel-item");
+                carouselitem.addClass("active");
+                
+
+                // sort the levels
+                level_keys = Object.keys(report.levels);
+                sorted_levels = level_keys.sort(function(a, b){
+                    return report.levels[a].order - report.levels[b].order
+                });
+
+                var card_container = $("<div class='container'>");
+                var card_row = $("<div class='card-columns'>");
+
+                // iterate through the sorted levels adding the metrics
+                for (i = 0; i < sorted_levels.length; i++){
+                    level = sorted_levels[i];
+                    metrics = report.levels[level]
+                    level_complete = true;
+
+
+                    var card_template = $("#hidden-card-recommendation-summary-template").html();
+                    var card = $(card_template).clone();
+
+                    $(card).find('.card-title').html(level);
+
+                    $.each(metrics, function (m, a){
+                        if (m != "order"){
+
+                            var achieved_template = $("#hidden-card-achieved-template").html();
+                            var achieved_row = $(achieved_template).clone()
+
+                            $(achieved_row).find('.metric').html(m)
+                            
+                            if (a){
+                                $(achieved_row).find('.fa').addClass("fa-check")
+                                $(achieved_row).addClass("text-muted")
+                            }
+                            else{
+                                items = $(recommendationsElement);
+                                slide_number = items.find('div.carousel-item[metric = "' + m + '"]').attr("slide_number");
+
+                                var carousel_link = $("<a>");
+                                carousel_link.attr("href", "");
+                                carousel_link.text(m);
+                                carousel_link.attr("data-slide-to", slide_number);
+                                carousel_link.attr("data-target", "#carousel");
+
+                                $(achieved_row).find('.fa').addClass("fa-times")
+                                $(achieved_row).find('.metric').html(carousel_link)
+                                level_complete = false;
+                            }
+
+                            $(card).find('.metriclist').append(achieved_row)
+                        }
+                    });
+
+                    
+
+                    if (level_complete){
+                        switch (level){
+                            case "Account Basics":
+                                src = "/images/badge-account-basics.png";
+                                break;
+                            case "Group Board Strategy":
+                                src = "/images/badge-groupie.png";
+                                break;
+                            case "Pinning Strategy":
+                                src = "/images/badge-strategist-1.png";
+                                break;
+                            case "Profile SEO":
+                                src = "/images/badge-pinterest-seo.png";
+                                break;
+                            case "Pinning Frequency":
+                                src = "/images/badge-strategist-2.png";
+                                break;
+                            case "Blogging Superstar":
+                                src = "/images/badge-superstar.png";
+                                break;
+                            default:
+                                src = "";
+                                break;
+                        }
+
+                        // show the badge for this level
+                        var badge = $("<img>");
+                        badge.attr("src", src)
+
+                        $(card).find(".card-footer").append(badge);
+                    }
+                    else{
+                        $(card).find(".card-footer").remove();
+                    }
+
+                    card_row.append(card);
+                }
+
+                card_container.append(card_row);
+                carouselitem.append(card_container);
+
+                // add the summary slide to the start of the carousel
+                recommendationsElement.prepend(carouselitem);
+
+
+                // append all carousel slides to the carousel
                 $("#carousel").append(recommendationsElement);
 
-
-                // add buttons for navigating the carousel items
+                // add tool buttons
                 carouselindicators = $("<div>");
                 carouselindicators.addClass("carousel-buttons");
                 
-                for (i = 0; i < $(".carousel-item").length; i++){
-                    button = $("<button>");
-                    button.attr("data-target", "#carousel");
-                    button.attr("data-slide-to", i);
-                    var tooltipText = "Overall Progress";
-
-                    if (i > 0) {
-                        tooltipText = report.recommendations[i - 1]["metric"];
-                    }
-
-                    button.addClass("small")
-                    button.text(i + 1);
-
-                    addTooltip(button, tooltipText, false, "top");
-
-                    if (i == 0){ 
-                        button.addClass("active");
-                    }
-
-                    carouselindicators.append(button);
-                }
-
                 refreshButton = $("<button>");
                 refreshButton.addClass("small")
                 refreshButton.id = "btnForceRefresh";
                 refreshButton.html("<i class='fa fa-refresh'></i>");
                 refreshButton.click(forceRefresh);
                 addTooltip(refreshButton, "Refresh Data", false, "top");
-
                 carouselindicators.append(refreshButton);
+
 
                 $("#carousel").prepend(carouselindicators);
                 $('#carousel').carousel({interval: 5000});
 
-                var $carouselIndicators = $(".carousel-buttons > button");
-                $('#carousel').on('slide.bs.carousel', function(e) {
-                      var currentSlideNo = e.to;
-                      var newItem = $(".carousel-buttons > button[data-slide-to='" + currentSlideNo + "']");
-                      
-                      $carouselIndicators.removeClass("active");
-                      newItem.addClass("active");
-                });
+
 
 
 
@@ -671,72 +647,6 @@
 
 
                     card_row.append(card);
-
-                    /*
-                    name_cell = $("<td>");
-                    name_element = createTooltip(board.description, true, board.name + " ");
-                    name_cell.append(name_element);
-
-                    if (board.scan.length > 0){
-                        var warnings = "";
-                        var num_warnings = 0;
-
-                        $.each(board.scan, function (index, scan){
-                            if (!scan.achieved){
-
-                                warning_icon = $("<i>");
-                                warning_icon.attr("class", "fa fa-times");
-                                warning_icon.attr("aria-hidden", "true");
-                                
-                                warning_span = $("<span>");
-                                warning_span.html(" " + scan.metric + "<br/>");
-
-                                warning = $("<span>");
-                                warning.append(warning_icon);
-                                warning.append(warning_span);
-
-                                warnings += warning.prop('outerHTML');
-                                num_warnings++;
-                            }
-                        });
-
-                        if (num_warnings > 0){
-                            // add a warning icon
-                            icon = createIcon("fa-warning", warnings, true);
-                            name_cell.append(icon);
-                        }
-                    }
-
-                    if (board.counts.collaborators > 0){
-                        // add a group icon
-                        icon = createIcon("fa-group", "Group Board with " + board.counts.collaborators + " collaborators", true);
-                        name_cell.append(icon);
-                    }
-
-                    if (board.privacy != "public"){
-                        // add a lock icon for secret boards
-                        icon = createIcon("fa-lock", "Secret Board", true);
-                        name_cell.append(icon);
-                    }
-
-                    row = $("<tr>")
-                    row.append(name_cell);
-                    row.append($("<td>").text(board.counts.pins + " pins"));
-                    row.append($("<td>").text(board.counts.followers + " followers"));
-
-                    if (board.stats != "in_progress"){
-                        row.append($("<td>").text(board.counts.repins + " repins"));
-                        row.append($("<td>").text(board.counts.virality.toFixed(2)));
-                        row.append($("<td>").text(board.counts.engagement.toFixed(2)));
-                        // row.append($("<td>").text(board.counts.quality.toFixed(0)));
-                    }
-                    else{
-                        // we dont have stats yet for the pins.
-                        row.append($("<td colspan='3' class='loading'>").html("<img data-toggle='tooltip' data-placement='right' src='/images/loading-hz.svg' alt='-' title='Hold Tight.  We are still downloading your data.  Check back in a few hours.' />"));
-                    }
-
-                    $('#boardRows').append(row);
-                    */
 
                     $('#board-cards').append(card_row);
                 });
@@ -1090,6 +1000,9 @@
                         <ul class="scrollable issues-list">
                         </ul>
                       </div>
+                      <div class="card-footer">
+                        <a href="#" class='button' data-slide-to='0' data-target='#carousel'><i class='fa fa-arrow-circle-left' /> Back</a>
+                      </div>
                     </div>
             </script>
 
@@ -1126,11 +1039,11 @@
                           </div>
                           <div class="card-body">
                             <ul class="fa-ul metriclist">
-                                <li><span class="fa pins-fa"></span> Pins: <span class="pins">1234</span></li>
-                                <li><span class="fa repins-fa"></span> Repins: <span class="repins">1</span> <span class="populating"></span> </li>
-                                <li><span class="fa virality-fa"></span> Virality: <span class="virality">0.01</span><span class="populating"></span> </li>
-                                <li><span class="fa engagement-fa"></span> Engagement: <span class="engagement">2.3</span><span class="populating"></span> </li>
-                                <li><span class="fa followers-fa fa-arrow-right"></span> Followers: <span class="followers">123</span></li>
+                                <li><span class="fa pins-fa"></span> Pins: <span class="pins">-</span></li>
+                                <li><span class="fa repins-fa"></span> Repins: <span class="repins">-</span> <span class="populating"></span> </li>
+                                <li><span class="fa virality-fa"></span> Virality: <span class="virality">-</span><span class="populating"></span> </li>
+                                <li><span class="fa engagement-fa"></span> Engagement: <span class="engagement">-</span><span class="populating"></span> </li>
+                                <li><span class="fa followers-fa fa-arrow-right"></span> Followers: <span class="followers">-</span></li>
                             </ul>
                           </div>
                         </div>
