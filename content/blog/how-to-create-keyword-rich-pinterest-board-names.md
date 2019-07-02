@@ -67,6 +67,10 @@ You can also create board names for the same topic but with variations in the na
 
 I strongly suggest you create a spreadsheet and list out all of your board names, and their potential monthly searches.  This will help you keep track of what names you have used, and if they have adequate search volume.  For any boards with low search volume, I recommend renaming the board and descriptions with better targeted keywords.
 
+> **FREE OFFER:** Sign up now to my mailing list, and I will send you my free google spreadsheet to help you track your board name keywords!
+
+<button type="button" class="button primary" data-toggle="modal" data-target="#signupModal" onClick="ga('send', 'event', 'Email Signup', 'Click', 'Keyword Planning Sheet');">Get my free keyword planning sheet</a>
+
 {{<imgproc "/uploads/board-analysis.png" Resize "1200x" >}}Board Analysis{{</imgproc>}}
 
 In the screenshot above, on the right you can see a list of my board names (before I fully optimized them).  Some of the boards I had done keyword research on, and then got lazy and made up the rest.  You can see many boards with <1K in searches.  That would mean those boards and their pins wouldn't be coming up in user searches, hurting my engagement on those pins.  If users don't see my pins, they can't repin it right!
