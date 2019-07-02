@@ -165,6 +165,8 @@ I completed my initial implementation of <a href="/pinkarma" alt="Pin Karma - Pi
 
 So, the first step was to enable Rich Pins on my account.  Unfortunately, Pinterest seems to have a glitch currently where they say rich pins are enabled but the rich data doesn't actually get populated.  I have an open ticket with Pinterest, but no doubt this is currently impacting my ability to gain a targeted audience quicker as not having rich pins affects your SEO.
 
+<i><strong>Update:</strong> As of July 1st, looks like Pinterest fixed their bug and Rich Pins are now displaying.</i>
+
 {{<imgproc "/uploads/thediyblogger-pinkarma-june2019.png" Resize "1200x" >}}Pin Karma recommendations for June 2019{{</imgproc>}}
 
 I have optimized my profile and boards based on my targeted keywords and got some of my boards up to at least 20 pins so that they can start ranking better on Pinterest.
