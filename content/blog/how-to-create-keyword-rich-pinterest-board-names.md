@@ -69,7 +69,7 @@ I strongly suggest you create a spreadsheet and list out all of your board names
 
 > **FREE OFFER:** Sign up now to my mailing list, and I will send you my free google spreadsheet to help you track your board name keywords!
 
-<button type="button" class="button primary" data-toggle="modal" data-target="#signupModal" onClick="ga('send', 'event', 'Email Signup', 'Click', 'Keyword Planning Sheet');">Get my free keyword planning sheet</a>
+<button type="button" class="button primary" data-toggle="modal" data-target="#signupModal" onClick="ga('send', 'event', 'Email Signup', 'Click', 'Keyword Planning Sheet');">Get my free keyword planning sheet</button>
 
 {{<imgproc "/uploads/board-analysis.png" Resize "1200x" >}}Board Analysis{{</imgproc>}}
 
