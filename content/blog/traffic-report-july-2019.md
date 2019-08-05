@@ -2,7 +2,6 @@
 categories = ["Blogging"]
 date = "2019-07-31T00:00:00-04:00"
 description = "Learn how we doubled our website traffic in July and how our proven Pinterest strategies enabled this growth."
-draft = true
 keywords = ["traffic reports"]
 pins = []
 title = "Blogging Traffic Report - July 2019"
