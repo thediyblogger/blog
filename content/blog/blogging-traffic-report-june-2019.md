@@ -1,11 +1,11 @@
 +++
 categories = ["Blogging"]
-date = "2019-06-30T00:00:00-04:00"
-description = "Learn how much we grew in our first month of blogging and how our proven Pinterest strategies enabled this growth."
+date = "2019-07-31T00:00:00-04:00"
+description = "Learn how much we grew in our second month of blogging and how our proven Pinterest strategies enabled this growth."
 draft = true
 keywords = ["traffic reports"]
 pins = []
-title = "Blogging Traffic Report - June 2019"
+title = "Blogging Traffic Report - July 2019"
 [images]
 name = "The DIY Blogger - Traffic Report - June 2019"
 src = "/uploads/traffic-report-june2019.png"
@@ -13,133 +13,112 @@ src = "/uploads/traffic-report-june2019.png"
 +++
 Hi
 
-This is my first traffic report for  [DrawBuildPlay](https://www.drawbuildplay.com "DrawBuildPlay - Home Decor and DIY Blog") and [TheDIYBlogger](https://www.thediyblogger.com "The DIY Blogger - Pinterest Strategies").  I have read many other posts by other bloggers about their Income reports and Traffic reports.  Most of these reports show how successful they have become.  What is usually missing is the reports from the start of their journey.  Answers to questions like
+Welcome to my second traffic report for  [DrawBuildPlay](https://www.drawbuildplay.com "DrawBuildPlay - Home Decor and DIY Blog") and [TheDIYBlogger](https://www.thediyblogger.com "The DIY Blogger - Pinterest Strategies").  
+
+I have read many posts by other bloggers about their Income reports and Traffic reports.  Most of these reports show how successful they have become.  What is usually missing is the reports from the start of their journey.  Answers to questions like
 
 > How long did it take for you to see traffic and start making six figures from blogging?
 
-So reading my first traffic report, it's not going to be a success story (yet!).  I am working on it.  But this is the start of my journey with this blog.  And I want you to be part of my journey as we grow our blogs together.
+So to continue building on my first traffic report, we are not a success story yet.  But July was a great month for traffic, with trends accelerating for my DrawBuildPlay blog, getting me closer to my first goal milestone - 100k page views/month.
 
-I feel that many bloggers who post income reports only do so once they are successful, and make it sound like they earned $100k after just one month of blogging.  The reality is they probably spent a year or so building their audience, and some had failed blog attempts before that, before they became successful.  I want to show you some of the pain that goes into blogging to become successful (fingers cross that I do) in real time, so you can see the work that goes into it.  Maybe along the way you will see some of the strategies I deploy and the impact of those changes.
-
-First, some background about me.
-
-I am from the software industry and have worked in IT for 20 years.  I have had previous roles where I worked on SEO and it became a passion of mine.  I love building things, as well as mentoring others to be successful in their roles.
-
-In January 2019, I made a few resolutions:
-
-1. Lose 30 pounds.
-2. Start my own business.
-3. Leave my full time employment.
-
-It is now June 2019, and here is my progress report on each goal:
-
-#### Lose 30 pounds <span class="fa fa-check" ></span> 
- I am down 25 pounds (after just 5 months).  I did this following the Keto diet which has not only made me physically leaner, but I feel I think more clearly and given me more energy to focus on my blogs.
-
-#### Start my own business <span class="fa fa-check" ></span> 
-I started two online businesses - [DrawBuildPlay](https://www.drawbuildplay.com "DrawBuildPlay - Home Decor and DIY Blog") and [TheDIYBlogger](https://www.thediyblogger.com "The DIY Blogger - Pinterest Strategies") with a software offering - <a href="/pinkarma" alt="Pin Karma - Pinterest Assistant">Pin Karma</a>.
-
-#### Leave my full time employment <span class="fa fa-check" ></span> 
-I left my job of 8 years, and currently am not in full time employment. But that may have to change in the next few months, once my online businesses are mostly on Autopilot but not generating enough revenue to replace a full time income.
-
-So, let's go into the second goal here - the online businesses, and how they are doing.
+I feel that many bloggers who post income reports only do so once they are successful, and make it sound like they earned six figures after just one month of blogging.  The reality is they probably spent a year or so building their audience, and some had failed blog attempts before that, before they became successful.  I want to show you some of the pain that goes into blogging to become successful (fingers cross that I do) in real time, so you can see the work that goes into it.  Maybe along the way you will see some of the strategies I deploy and the impact of those changes.
 
 ## Online Business 1: DrawBuildPlay
 
-This was my first blog where I wanted to apply the knowledge I had about SEO and the new Pinterest strategies I was learning about.  I have a passion for Home Decor DIY, so I launched my blog in February 2019, and started creating content about the many home renovation projects I have done.  In mid March I started applying the Pinterest strategies I now share on this blog and I started to experience some phenomenal growth in traffic.
+I have a passion for Home Decor DIY, so I launched this blog in February 2019, and started creating content about the many home renovation projects I have done.  In mid March I started applying the Pinterest strategies I now share on this blog and I started to experience some phenomenal growth in traffic.
 
-{{<imgproc "/uploads/drawbuildplay-pageviews-june2019.png" Resize "1200x" >}}Page Views{{</imgproc>}}
+{{<imgproc "/uploads/drawbuildplay-pageviews-july2019.png" Resize "1200x" >}}July Page Views{{</imgproc>}}
 
-These are my current stats for the DrawBuildPlay blog:
+Here are my current trends for the DrawBuildPlay blog:
 
-### **Month End: JUNE 2019 - DRAWBUILDPLAY**
+### **Month End: JULY 2019 - DRAWBUILDPLAY**
 
 <table class="incomereport">
-	<tr class="months">
-		<th></th>
-		<th>JAN</th>
-		<th>FEB</th>
-		<th>MAR</th>
-		<th>APR</th>
-		<th>MAY</th>
-		<th class="currentmonth">JUN</th>
-	</tr>
-	<tr>
-		<th colspan="13">Pinterest Stats</th>
-	</tr>
-	<tr>
-		<td>Impressions</td>
-		<td>18,073</td>
-		<td>46,412</td>
-		<td>39,901</td>
-		<td>121,129</td>
-		<td>129,000</td>
-		<td class="currentmonth">138,253</td>
-	</tr>
-	<tr>
-		<td>Engagement</td>
-		<td>504</td>
-		<td>1,431</td>
-		<td>1,646</td>
-		<td>3,533</td>
-		<td>5,705</td>
-		<td class="currentmonth">7,623</td>
-	</tr>
-	<tr>
-		<td>Followers</td>
-		<td></td>
-		<td></td>
-		<td>71</td>
-		<td>90</td>
-		<td>112</td>
-		<td class="currentmonth">137</td>
-	</tr>
-	<tr>
-		<th colspan="13">Google Analytics</th>
-	</tr>
-	<tr>
-		<td>Sessions</td>
-		<td></td>
-		<td>138</td>
-		<td>445</td>
-		<td>1,046</td>
-		<td>1,839</td>
-		<td class="currentmonth">2,676</td>
-	</tr>
-	<tr>
-		<td>Page Views</td>
-		<td></td>
-		<td>379</td>
-		<td>1,464</td>
-		<td>2,570</td>
-		<td>4,263</td>
-		<td class="currentmonth">6,357</td>
-	</tr>
-	<tr>
-		<td>New Posts</td>
-		<td>7</td>
-		<td>1</td>
-		<td>9</td>
-		<td>7</td>
-		<td>0</td>
-		<td class="currentmonth">0</td>
-	</tr>
-	<tr>
-		<th colspan="13">Income</th>
-	</tr>
-	<tr>
-		<td>Ad Sense</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td>$1.03</td>
-		<td>$6.17</td>
-		<td class="currentmonth">$20.57</td>
-	</tr>
+<tr class="months">
+<th></th>
+<th>JAN</th>
+<th>FEB</th>
+<th>MAR</th>
+<th>APR</th>
+<th>MAY</th>  
+<th>JUN</th>
+<th class="currentmonth">JUN</th>
+</tr>
+<tr>
+<th colspan="13">Pinterest Stats</th>
+</tr>
+<tr>
+<td>Impressions</td>
+<td>18,073</td>
+<td>46,412</td>
+<td>39,901</td>
+<td>121,129</td>
+<td>129,000</td>
+<td class="currentmonth">138,253</td>
+</tr>
+<tr>
+<td>Engagement</td>
+<td>504</td>
+<td>1,431</td>
+<td>1,646</td>
+<td>3,533</td>
+<td>5,705</td>
+<td class="currentmonth">7,623</td>
+</tr>
+<tr>
+<td>Followers</td>
+<td></td>
+<td></td>
+<td>71</td>
+<td>90</td>
+<td>112</td>
+<td class="currentmonth">137</td>
+</tr>
+<tr>
+<th colspan="13">Google Analytics</th>
+</tr>
+<tr>
+<td>Sessions</td>
+<td></td>
+<td>138</td>
+<td>445</td>
+<td>1,046</td>
+<td>1,839</td>
+<td class="currentmonth">2,676</td>
+</tr>
+<tr>
+<td>Page Views</td>
+<td></td>
+<td>379</td>
+<td>1,464</td>
+<td>2,570</td>
+<td>4,263</td>
+<td class="currentmonth">6,357</td>
+</tr>
+<tr>
+<td>New Posts</td>
+<td>7</td>
+<td>1</td>
+<td>9</td>
+<td>7</td>
+<td>0</td>
+<td class="currentmonth">0</td>
+</tr>
+<tr>
+<th colspan="13">Income</th>
+</tr>
+<tr>
+<td>Ad Sense</td>
+<td></td>
+<td></td>
+<td></td>
+<td>$1.03</td>
+<td>$6.17</td>
+<td class="currentmonth">$20.57</td>
+</tr>
 </table>
 
 {{<imgproc "/uploads/drawbuildplay-pinkarma-june2019.png" Resize "1200x" >}}Pin Karma - DrawBuildPlay recommendations for June 2019{{</imgproc>}}
-
 
 ### Retrospective
 
@@ -155,7 +134,7 @@ Mid month I revamped the SEO for many of my boards which resulted in increased t
 2. Pin less (10 times per day, more of my content), with higher quality content that get repins to boost my engagement scores.
 3. Fix the poor quality descriptions I have on some of my older pins.
 4. Create fresh content (either more pin images for existing posts, and try to publish some new posts)
-5. Boost the pages/session metric which is currently averaging about 2.4 pages/session, by displaying related posts to the reader.  
+5. Boost the pages/session metric which is currently averaging about 2.4 pages/session, by displaying related posts to the reader.
 
 ## Online Business 2: The DIY Blogger
 
@@ -182,105 +161,105 @@ By the end of my first month engaging Pinterest for TheDIYBlogger, my stats are:
 ### **Month End: JUNE 2019 - THE DIY BLOGGER**
 
 <table class="incomereport">
-	<tr class="months">
-		<th></th>
-		<th>JAN</th>
-		<th>FEB</th>
-		<th>MAR</th>
-		<th>APR</th>
-		<th>MAY</th>
-		<th class="currentmonth">JUN</th>
-	</tr>
-	<tr>
-		<th colspan="7">Pinterest Stats</th>
-	</tr>
-	<tr>
-		<td>Impressions</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td>35</td>
-		<td class="currentmonth">14,556</td>
-	</tr>
-	<tr>
-		<td>Engagement</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td>0</td>
-		<td class="currentmonth">402</td>
-	</tr>
-	<tr>
-		<td>Followers</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td>5</td>
-		<td class="currentmonth">90</td>
-	</tr>
-	<tr>
-		<th colspan="7">Google Analytics</th>
-	</tr>
-	<tr>
-		<td>Sessions</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td>0</td>
-		<td class="currentmonth">72</td>
-	</tr>
-	<tr>
-		<td>Page Views</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td>0</td>
-		<td class="currentmonth">246</td>
-	</tr>
-	<tr>
-		<td>New Posts</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td>7</td>
-		<td class="currentmonth">16</td>
-	</tr>
-	<tr>
-		<th colspan="7">Income</th>
-	</tr>
-	<tr>
-		<td>Mailing List</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td class="currentmonth">0</td>
-	</tr>
-	<tr>
-		<td>Pin Karma</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td class="currentmonth">$0.00</td>
-	</tr>
-	<tr>
-		<td>Pin Perfection</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td class="currentmonth">$0.00</td>
-	</tr>
+<tr class="months">
+<th></th>
+<th>JAN</th>
+<th>FEB</th>
+<th>MAR</th>
+<th>APR</th>
+<th>MAY</th>
+<th class="currentmonth">JUN</th>
+</tr>
+<tr>
+<th colspan="7">Pinterest Stats</th>
+</tr>
+<tr>
+<td>Impressions</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>35</td>
+<td class="currentmonth">14,556</td>
+</tr>
+<tr>
+<td>Engagement</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td class="currentmonth">402</td>
+</tr>
+<tr>
+<td>Followers</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>5</td>
+<td class="currentmonth">90</td>
+</tr>
+<tr>
+<th colspan="7">Google Analytics</th>
+</tr>
+<tr>
+<td>Sessions</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td class="currentmonth">72</td>
+</tr>
+<tr>
+<td>Page Views</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td class="currentmonth">246</td>
+</tr>
+<tr>
+<td>New Posts</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>7</td>
+<td class="currentmonth">16</td>
+</tr>
+<tr>
+<th colspan="7">Income</th>
+</tr>
+<tr>
+<td>Mailing List</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="currentmonth">0</td>
+</tr>
+<tr>
+<td>Pin Karma</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="currentmonth">$0.00</td>
+</tr>
+<tr>
+<td>Pin Perfection</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="currentmonth">$0.00</td>
+</tr>
 </table>
 
 ### Retrospective
@@ -297,6 +276,5 @@ Towards the end of June I modified my home page to help generate subscribers (us
 2. Continue creating new and exciting content.
 3. Create at least 5 pin images for all existing posts and schedule them to publish with Tailwind, and submit to Tailwind Tribes.
 4. Build up my subscriber list.
-
 
 Let me know (below in the comments) how you are doing with the growth of your own websites, and if there have been any amazing tricks you have applied recently that showed a good increase in traffic.
