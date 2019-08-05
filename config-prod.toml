@@ -5,6 +5,18 @@ theme = "massively"
 disqusShortname = "thediyblogger"
 googleAnalytics = "UA-132745738-1"
 
+[related]
+threshold = 80
+includeNewer = true
+toLower = false
+[[related.indices]]
+name = "keywords"
+weight = 100
+[[related.indices]]
+name  = "date"
+weight = 10
+pattern = "2006"
+
 # set below parameter to define a favicon
 [params]
   favicon = "/favicon.png"

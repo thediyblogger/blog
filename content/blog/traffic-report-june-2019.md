@@ -138,7 +138,7 @@ These are my current stats for the DrawBuildPlay blog:
 	</tr>
 </table>
 
-{{<imgproc "/uploads/drawbuildplay-pinkarma-june2019.png" Resize "1200x" >}}Pin Karma - DrawBuildPlay recommendations for June 2019{{</imgproc>}}
+{{<imgproc "/uploads/drawbuildplay-pinkarma-june2019.png" Resize "500x" >}}Pin Karma - DrawBuildPlay recommendations for June 2019{{</imgproc>}}
 
 
 ### Retrospective
@@ -147,7 +147,7 @@ The Page Views (which is the only metric that really counts at the end of the da
 
 During June, I took a step back from focusing on DrawBuildPlay to focus on sharing my techniques and strategies through The DIY Blogger.  So I expected June to grow, but not at that same rate.  I need to keep up with my pin strategies for DrawBuildPlay and regularly post my popular pins to Tailwind Tribes (at least 2 per day), and continue to reshare other content to grow my reach and following, which in turn will increase my Page Views.
 
-Mid month I revamped the SEO for many of my boards which resulted in increased traffic to my website.
+Mid month I revamped the [Board SEO](/blog/how-to-create-keyword-rich-pinterest-board-names-to-get-more-repins/ "Board SEO") for many of my boards which resulted in increased traffic to my website.
 
 ### Goals for July
 
@@ -163,9 +163,9 @@ At the start of June, I officially launched The DIY Blogger and started focusing
 
 I completed my initial implementation of <a href="/pinkarma" alt="Pin Karma - Pinterest Assistant">Pin Karma</a> - which automates the auditing of your Pinterest account on a regular basis and makes recommendations based on proven Pinterest strategies.  I can't wait to open this up to you all to use.  For now, it's limited to a few early access customers only.  In fact, I drink my own champagne and use <a href="/pinkarma" alt="Pin Karma - Pinterest Assistant">Pin Karma</a> to guide to strategies for growing traffic to The DIY Blogger.  How awesome is that!
 
-So, the first step was to enable Rich Pins on my account.  Unfortunately, Pinterest seems to have a glitch currently where they say rich pins are enabled but the rich data doesn't actually get populated.  I have an open ticket with Pinterest, but no doubt this is currently impacting my ability to gain a targeted audience quicker as not having rich pins affects your SEO.
+So, the first step was to <a href="/blog/how-to-set-up-rich-pins-on-pinterest-in-under-5-minutes/" alt="How to Enable Rich Pins for your Business Account">enable Rich Pins on my account</a>.  Unfortunately, Pinterest seems to have a glitch currently where they say rich pins are enabled but the rich data doesn't actually get populated.  I have an open ticket with Pinterest, but no doubt this is currently impacting my ability to gain a targeted audience quicker as not having rich pins affects your SEO.
 
-<i><strong>Update:</strong> As of July 1st, looks like Pinterest fixed their bug and Rich Pins are now displaying.</i>
+<i><strong>Update:</strong> As of July 1st, looks like Pinterest fixed their bug and Rich Pins are now displaying correctly for me.</i>
 
 {{<imgproc "/uploads/thediyblogger-pinkarma-june2019.png" Resize "1200x" >}}Pin Karma recommendations for June 2019{{</imgproc>}}
 
