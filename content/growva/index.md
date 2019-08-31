@@ -1,4 +1,0 @@
----
-title: "Growva"
-type: "growva"
----
