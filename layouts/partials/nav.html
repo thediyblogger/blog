@@ -17,14 +17,14 @@
             {{ end }}
         {{ end }}
 
-        <li class='{{if or (eq .URL "/dashboard/") (eq .URL "/pinkarma/")}}active{{end}}'>
-            <a href='{{ "/pinkarma/" | relLangURL }}'>PIN KARMA</a>
+        <li class='{{if or (eq .URL "/dashboard/") (eq .URL "/growva/")}}active{{end}}'>
+            <a href='{{ "/dashboard/" | relLangURL }}'>Tools</a>
         </li>
     </ul>
 
     <ul class="icons">
         {{if not (eq .URL "/dashboard/")}}
-        <li><a href="/dashboard/" class="button small">Dashboard</a></li>
+        <li><a href="/dashboard/" class="button small">Log In</a></li>
         {{end}}
 
         {{if eq .URL "/dashboard/"}}
@@ -34,7 +34,6 @@
         -->
         <li id="btnLogout" style="display:none;">
             <button type="button" class="button small" onclick="logout(); return false;">
-                <img id="avatar" src="/images/avatar.png" alt="Avatar" class="avatar">
                 Log Out
             </button>
         </li>

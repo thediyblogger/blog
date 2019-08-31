@@ -42,6 +42,8 @@
                 }
             }
 
+
+
             function handleResponse (response) {
               let contentType = response.headers.get('content-type')
               if (contentType.includes('application/json')) {
@@ -74,6 +76,27 @@
                   }
                 })
             }
+
+            function handleTextResponse (response) {
+              return response.body()
+                .then(text => {
+                  if (response.ok) {
+                    return text
+                  } 
+                  else {
+                    return Promise.reject(
+                        Object.assign(
+                            {}, 
+                            { "responseBody": text }, 
+                            {
+                              "status": response.status,
+                              "statusText": response.statusText
+                            }
+                        )
+                    )
+                  }
+                })
+            }
             
 
 
@@ -84,30 +107,56 @@
 
                 if (urlParam('code')) {
                     var code = urlParam('code');
-                    window.opener.displaySignup(code);
+                    window.opener.storeOAuthCode("google", code);
                     window.close();
                 } 
 
+                /*
+                else {
+                    var code = urlParam('code');
+                    window.opener.storeOAuthCode("pinterest", code);
+                    window.close();
+                } 
+                */
+
                 if (loggedIn()){
+                    // change the login button to logout.
+                    $('#btnLogin').hide();
+                    $('#btnLogout').show();
+                }
+
+                if (urlParam('domain')){
+                    var domain = urlParam('domain');
+                    $('#website_domain').val(domain);
+                    runAnalysis();
+
+                }
+                else if (loggedIn()){
                     // if user is logged in,  
                     // user has a complete profile, so run the analysis.
-                    $("#loading").show();
-                    analyzePinterest();   
+                    runAnalysis();   
                 }
                 else{
                     // else show the signup intro page
-                    $("#signup").show();
+                    $("#search").show();
+                    $("#growvaHeader").show();
+                    $(".marketingContent").show();
                 }
             }
 
             function hideAll(){
                 $("#loading").hide();
-                $('#signup').hide();
+                $("#growvaHeader").hide();
+                $('#search').hide();
                 $('#signupForm').hide();
+                $(".marketingContent").hide();
                 $('#loginSection').hide();
+                $("#linkAccounts").hide();
                 $("#engagementResults").hide();
                 $("#boardResults").hide();
                 $("#boardPins").hide();
+                $("#pages").hide();
+                $("#analytics").hide();
 
                 if (($("#loginModal").data('bs.modal') || {})._isShown){
                     $('#loginModal').modal('hide');
@@ -115,6 +164,13 @@
             }
 
             function signup(){
+                hideAll();
+                $("#search").hide();
+                $('#signupForm').show();
+                $(".marketingContent").show();
+            }
+
+            function pinterest_signup(){
 
 
                 var CLIENT_ID = "{{ .Site.Params.pinterest_client_id }}";
@@ -123,24 +179,38 @@
                     "?response_type=code" + 
                     "&client_id=" + CLIENT_ID +
                     "&scope=read_public,write_public" + 
-                    "&redirect_uri=" + window.location;
+                    "&redirect_uri=" + window.location + "#pinterest";
 
                 popup = window.open(
                   AUTHORIZATION_URL,
-                  'Sign up with Pinterest',
+                  'Authorize access to Pinterest',
                   'width=800,height=600'
                 )
+            }
 
+            function googleanalytics_signup(){
+
+
+                var CLIENT_ID = "{{ .Site.Params.google_client_id }}";
+
+                AUTHORIZATION_URL = "https://accounts.google.com/o/oauth2/auth" + 
+                    "?response_type=code" + 
+                    "&client_id=" + CLIENT_ID +
+                    "&scope=https://www.googleapis.com/auth/analytics.readonly" + 
+                    "&access_type=offline" +
+                    "&prompt=consent" +
+                    "&redirect_uri=" + window.location
+                    
+                console.log(AUTHORIZATION_URL)
+
+                popup = window.open(
+                  AUTHORIZATION_URL,
+                  'Authorize access to Google Analytics',
+                  'width=800,height=600'
+                )
             }
 
 
-           
-
-            function displaySignup(code){
-                $("#signup").hide();
-                $('#signupForm').show();
-                $('#signup_code').val(code);
-            }
 
             function submitSignup(){
                 // save the users access token for future use
@@ -148,11 +218,11 @@
 
                 // store a permenant access token using this temporary access code
                 url = buildEndpoint("/accounts");
+
                 payload = {
                     "email": $('#signup_email').val(),
                     "password": $('#signup_password').val(),
-                    "website": $('#signup_website').val(),
-                    "pinterest_access_code": $('#signup_code').val()
+                    "website": $('#signup_website').val()
                 }
 
                 // call out to the endpoint to complete the signup
@@ -208,17 +278,21 @@
                 });
             }
 
+            function reloadPage(){
+                location.reload(true);
+            }
+
             function storeSession(session){
                 // store in the session with the token and expiration
-                localStorage.setItem('pinkarma_token', JSON.stringify(session));
+                localStorage.setItem('token', JSON.stringify(session));
 
 
                 // refresh the page (user is now logged in)
-                initializePage();
+                document.location.href = "/dashboard/"
             }
 
             function getSession(){
-                token = JSON.parse(localStorage.getItem("pinkarma_token"));
+                token = JSON.parse(localStorage.getItem("token"));
 
                 return token;
             }
@@ -241,7 +315,7 @@
                     {
                         headers: {
                           'Accept': 'application/json',
-                          'Content-Type': 'application/json'
+                          'Content-Type': 'application/json',
                         },
                         method: 'post', 
                         body: JSON.stringify(payload)
@@ -292,10 +366,11 @@
 
             function logout(){
                 // delete the session
-                localStorage.removeItem('pinkarma_token');
+                localStorage.removeItem('token');
 
                 // refresh the page
-                location.reload(true);
+                document.location.href = "/dashboard/"
+                 
             }
 
             function loggedIn(){
@@ -303,9 +378,98 @@
             }
 
 
+
+            function storeOAuthCode(service, code){
+                // store the code
+                console.log("storing oAuth2 code for " + service + ": " + code);
+
+                // store a permenant access token using this temporary access code
+                url = buildEndpoint("/accounts");
+                token = JSON.parse(localStorage.getItem("token")).token
+                
+                payload = {
+                    "service_code": code,
+                    "service": service
+                }
+
+                // call out to the endpoint to complete the signup
+                fetch(
+                    url, 
+                    {
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json',
+                            'Authorization': token
+                        },
+                        method: 'post', 
+                        body: JSON.stringify(payload)
+                    })
+                .then(handleResponse)
+                .then(data => listGAViews(data))
+
+            }
+
+            function listGAViews(gaViews){
+                // store the view
+                $("#googleAnalyticsConnectMessage").hide();
+                console.log("allow user to select the view", gaViews);
+                
+                $('#gaPropertiesList').empty();
+
+                $.each(gaViews, function(idx, item){
+                    $.each(item.webProperties, function (i, prop){
+                        $.each(prop.profiles, function (j, profile){
+                            var view_id = profile.id;
+                            var name = prop.name + " - " + profile.name + " (" + view_id + ")";
+
+                            // display this to the user to select
+                            console.log(view_id, name)
+                            var viewElement = $("<a class='dropdown-item' href='#'>");
+                            viewElement.text(name);
+                            viewElement.attr("view_id", view_id);
+                            viewElement.click({"view_id": view_id}, storeGAViewID);
+                            
+                            $('#gaPropertiesList').append(viewElement)
+                        })
+                    })
+
+                })
+
+                $("#googleAnalyticsViewSelector").show();
+
+            }
+
+            function storeGAViewID(event){
+                // store the selected view id
+                var view_id = event.data.view_id;
+                console.log("connecting to viewid for this user: " + view_id);
+                url = buildEndpoint("/accounts");
+                token = JSON.parse(localStorage.getItem("token")).token
+                
+                payload = {
+                    "view_id": view_id,
+                    "service": "google"
+                }
+
+                // call out to the endpoint to complete the signup
+                fetch(
+                    url, 
+                    {
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json',
+                            'Authorization': token
+                        },
+                        method: 'post', 
+                        body: JSON.stringify(payload)
+                    })
+                .then(handleResponse)
+                .then(data => reloadPage())
+            }
+
             function forceRefresh(){
                 url = buildEndpoint("/report");
-                token = JSON.parse(localStorage.getItem("pinkarma_token")).token
+                token = JSON.parse(localStorage.getItem("token")).token
 
                 // call out to the endpoint to get the results
                 fetch(
@@ -327,18 +491,16 @@
                 .catch(error => console.error);
             }
 
-            function analyzePinterest(){
-                $("#signup").hide();
-                $("#engagementResults").hide();
-                $("#boardResults").hide();
-
-                // change the login button to logout.
-                $('#btnLogin').hide();
-                $('#btnFreeTrial').hide();
-                $('#btnLogout').show();
-
+            function runAnalysis(){
+                hideAll();
+                $("#loading").show();
 
                 this.analyze();
+            }
+
+            function search(){
+                domain = $('#website_domain').val()
+                document.location.href = "/dashboard/?domain=" + domain
             }
 
 
@@ -348,183 +510,421 @@
             }
 
             function analyze(){
+                headers = {}
                 url = buildEndpoint("/report");
-                token = JSON.parse(localStorage.getItem("pinkarma_token")).token
+                token = "";
 
-                // call out to the endpoint to get the results
-                fetch(url, 
-                    { 
+                domain = $('#website_domain').val()
+                if (domain != ""){
+                    url = url + "?domain=" + domain;
+                }
+                else{
+                    // only use the login token if not doing a manual domain lookup
+                    if (localStorage.getItem("token") != null){
+                        token = JSON.parse(localStorage.getItem("token")).token
+                    }
+                }
+
+
+                headers = { 
                         'headers': {
                             'Authorization': token
                         }
-                    })
-                .then(function(response){
-                    if (response.status == 200) { return response.json() }
-                    else if (response.status == 401) { logout(); }
-                    else { throw Error(`Request rejected with status ${res.status}`); }
-                })
-                .then(json => renderResults(json))
-                .catch(error => console.error);
+                    }
+
+                // call out to the endpoint to get the results
+                fetch(url, headers)
+                    .then(handleJSONResponse)
+                    .then(json => renderResults(json))
+                    .catch(error => {
+                        if (error.status === 400){
+                            displaySearchErrors(error.responseBody);
+                            console.log("Exception occurred", error)
+                        }
+                        else if (error.status === 401){
+                            logout();
+                        }
+                        else{
+                            displayError("There was an error analyzing your site.  Please try again later.", error);
+                        }
+                    });
+            }
+
+            function displaySearchErrors(errors){
+                displayError(errors[0].message, errors[0]);
+            }
+
+            function displayError(message, error){
+                hideAll();
+                $("#search").show();
+                $(".marketingContent").show();
+
+                $('.searcherror').remove();
+                
+                var errorMessage = $("<span class='searcherror'>");
+                errorMessage.html(message);
+                errorMessage.insertBefore($(".searchbox"))
+
+                console.log("Exception occurred", error)
+
             }
 
 
             function renderResults(report) {
-                $('#avatar').attr("src", report.profile.image['60x60']['url'])
-                    
-                $('#current_score').text(report.engagement_score.score);
-                $('#current_score_pct').text(report.engagement_score.percentage);
+               
+
+                $("#search").show();
                 $("#badges").empty();
-
-                profileName = report.profile.name;
-
-                $('#missionHeader').text(profileName);
                 $("#carousel").empty();
-                $("#carousel").empty();
+                $("#loading").hide();
 
-                var recommendationsElement = $("<div>");
-                recommendationsElement.attr("id", "recommendations");
-                recommendationsElement.addClass("carousel-inner")
+                 // update the search box value
+                if (report.domain){
+                    $("#website_domain").val(report.domain);
+                }
 
                 
+                // render the progress bar
+                if (report.state){
+                    renderProgressBar(report.state);
+                }
+
+                // render the analytics
+                if (report.analytics){
+                    renderAnalytics(report.analytics);
+                }
+
+            
+                // render the guidance + summary carousal for the user
+                if (report.recommendations){
+                    var carousal = $("<div>");
+                    carousal.attr("id", "recommendations");
+                    carousal.addClass("carousel-inner");
 
 
-
-                // render the recommendations
-                $.each(report.recommendations, function(index, r){
-                    carouselitem = $("<div>");
-                    carouselitem.addClass("carousel-item");
-
-                    var card_container = $("<div class='container'>");
-                    var card_row = $("<div class='card-deck'>");
-
-                    // render the recommendation summary card
-                    var card_template = $("#hidden-card-recommendation-template").html();
-                    var card_rec = $(card_template).clone();
-                    $(carouselitem).attr("metric", r.metric);
-                    $(carouselitem).attr("slide_number", index + 1);
-                    $(card_rec).find('.card-title').html(r.metric);
-                    $(card_rec).find('.hint').html(r.details);
-                    $(card_rec).find('.impact').html("<strong>Impact: " + r.impact + "</strong>");
-                    $(card_rec).find('.goal').html("<strong>Goal: " + r.level + "</strong>");
-
-                    // learn more button
-                    link = $("<a>");
-                    link.attr("href", r.link);
-                    link.attr("target", "_blank");
-                    link.addClass("button");
-                    link.text("Learn More");
-                    $(card_rec).find('.card-footer').append(link);
-
-
-                    // render the issues for this metric
-                    var card_list_template = $("#hidden-card-recommendation-issues-template").html();
-                    var card_examples = $(card_list_template).clone();
-                    $(card_examples).find('.card-title').html("Issues Detected");
-
-                    $.each(r.value, function (index, v){
-                        var achieved_template = $("#hidden-card-recommendation-issue-template").html();
-                        var achieved_row = $(achieved_template).clone()
-
-                        $(achieved_row).find('.metric').html(v.value)
-                        $(achieved_row).find('.fa').addClass("fa-times")
-                        
-
-
-                        if (v.examples.length > 0){
-                            examples = $("<ul>");
-
-                            $.each(v.examples, function (i, e){
-                                li = $("<li>");
-                                link = $("<a>");
-                                link.attr("href", e.url);
-                                link.attr("target", "_blank");
-                                link.text(e.text);
-                                li.append(link);
-                                examples.append(li);
-                            });
-
-                            achieved_row.append(examples);
-                        }
-                            
-                        $(card_examples).find('.issues-list').append(achieved_row)
+                    $.each(report.recommendations, function(index, r){
+                       renderGuidance(carousal, r, index);
                     });
 
-                    card_row.append(card_examples);
-                    card_row.append(card_rec);
-                    card_container.append(card_row);
-                    carouselitem.append(card_container);
-                    recommendationsElement.append(carouselitem);
+                    renderSummarySlide(carousal, report.recommendations);
+
+                    // append all carousel slides to the carousel
+                    $("#carousel").append(carousal);
+                    // $('#carousel').carousel({interval: 5000});
+                }
+
+                
+                // render the list of pages
+                if (report.top_pages){
+                    renderPages(report.top_pages);
+                }       
+
+                $('[data-toggle="tooltip"]').tooltip();
+                $("#engagementResults").show();
+            }
+
+            function renderProgressBar(state){
+                if (state == null){
+                    completion = 10;
+                    $("#progress").show();
+                    $("#report_progress").css('width', completion + "%");
+                    $("#progress .message").text(state.message);
+
+                    // since we are not complete yet, get the report again after n seconds
+                    setTimeout(analyze, 3000)
+                }
+                else if (state.state == "IN_PROGRESS"){
+                    completion = Math.ceil((state.steps_completed / state.steps_total) * 100);
+
+                    $("#progress").show();
+                    $("#report_progress").css('width', completion + "%");
+                    $("#progress .message").text(state.message);
+
+                    // since we are not complete yet, get the report again after n seconds
+                    setTimeout(analyze, 3000)
+
+                }
+                else{
+                    $("#progress").hide()
+                }
+            }
+
+
+
+            function renderAnalytics(analytics){
+                if (analytics.length > 0){
+                    $.each(analytics, function(i, stat){
+                        if (stat.metric == "Page Speed"){
+                            renderAnalyticStat($('#analyticsPageSpeed'), stat.value[0].value, stat.value[0].delta, false)
+                        }
+
+                        else if (stat.metric == "Page Views"){
+                            renderAnalyticStat($('#analyticsPageViews'), stat.value[0].value, stat.value[0].delta, true)
+                        }
+
+                        else if (stat.metric == "Bounce Rate"){
+                            renderAnalyticStat($('#analyticsBounces'), stat.value[0].value, stat.value[0].delta, false)
+                        }
+
+                        else if (stat.metric == "Users"){
+                            renderAnalyticStat($('#analyticsUsers'), stat.value[0].value, stat.value[0].delta, true)
+                        }
+                    });
+                
+                    $('#analytics').show();
+                }
+                else{
+                    // no analytics so we need to connect Google Analytics
+                    renderAnalyticStat($('#analyticsPageViews'), 123456, 20, true);
+                    renderAnalyticStat($('#analyticsUsers'), 9845, 12.5, true);
+                    renderAnalyticStat($('#analyticsBounces'), "1%", 0, false);
+                    renderAnalyticStat($('#analyticsPageSpeed'), "2.1s", "-10", false);
+
+                    if (!loggedIn()){
+                        showSignUpMessage();
+                    }
+                    else{
+                        showConnectAnalyticsMessage();
+                    }
+                }
+
+            }
+
+            function showSignUpMessage(){
+                $('#analytics').hide()
+                
+                $("#linkAccounts .message").hide();
+                $("#accountSignupMessage").show();
+                $("#linkAccounts").show();
+            }
+
+            function showConnectAnalyticsMessage(){
+                $('#analytics').hide()
+               
+                $("#linkAccounts .message").hide();
+                $("#googleAnalyticsConnectMessage").show();
+                $("#linkAccounts").show();
+            }
+
+            function renderAnalyticStat(element, value, delta, up_is_good){
+                element.find('.card-body').text(value.toLocaleString("en"));
+
+                element.find('.card-footer').empty();
+                renderDelta(element.find('.card-footer'), delta, up_is_good);
+               
+            }
+
+            function renderDelta(parentElement, delta_stat, up_is_good){
+                delta = $("<span>");
+
+                if (delta_stat == "Infinity"){
+                    delta.html(" " + "&#8734;");
+                }
+                else{
+                    delta.text(" " + delta_stat + "%");
+                }                    
+
+                arrow = $("<i>");
+                arrow.addClass("fa");
+
+                if (delta_stat > 0) {
+                    arrow.addClass("fa-arrow-up")
+                }
+                else{
+                    arrow.addClass("fa-arrow-down")
+                }
+
+                if (up_is_good && delta_stat >= 0){
+                    parentElement.addClass("good")
+                }
+                else if (!up_is_good && delta_stat <= 0){
+                    parentElement.addClass("good")
+                }
+                else{
+                    parentElement.addClass("bad")
+                }
+
+                    
+                parentElement.append(arrow);
+                parentElement.append(delta);
+            }
+
+           
+
+            function renderGuidance(parentElement, r, index){
+                
+                carouselitem = $("<div>");
+                carouselitem.addClass("carousel-item");
+
+                var card_container = $("<div class='container'>");
+                var card_row = $("<div class='card-deck'>");
+
+                // render the guidance card
+                var card_template = $("#hidden-card-recommendation-template").html();
+                var card_rec = $(card_template).clone();
+                $(carouselitem).attr("metric", r.metric);
+                $(carouselitem).attr("slide_number", index + 1);
+                $(card_rec).find('.card-title').html(r.metric);
+                $(card_rec).find('.hint').html(r.details);
+                $(card_rec).find('.impact').html("<strong>Impact: " + r.impact + "</strong>");
+                $(card_rec).find('.goal').html("<strong>Goal: " + r.level + "</strong>");
+
+                // learn more button
+                link = $("<a>");
+                link.attr("href", r.link);
+                link.attr("target", "_blank");
+                link.addClass("button");
+                link.text("Learn More");
+                $(card_rec).find('.card-footer').append(link);
+
+
+                // render the issues for this metric
+                var card_list_template = $("#hidden-card-recommendation-issues-template").html();
+                var card_examples = $(card_list_template).clone();
+                $(card_examples).find('.card-title').html("Issues Detected");
+
+                $.each(r.value, function (index, v){
+                    var achieved_template = $("#hidden-card-recommendation-issue-template").html();
+                    var achieved_row = $(achieved_template).clone()
+
+                    $(achieved_row).find('.metric').html(v.value)
+                    $(achieved_row).find('.fa').addClass("fa-times")
+                    
+
+
+                    if (v.examples.length > 0){
+                        examples = $("<ul>");
+
+                        $.each(v.examples, function (i, e){
+                            li = $("<li>");
+                            link = $("<a>");
+                            link.attr("href", e.url);
+                            link.attr("target", "_blank");
+                            link.text(e.text);
+                            li.append(link);
+                            examples.append(li);
+                        });
+
+                        achieved_row.append(examples);
+                    }
+                        
+                    $(card_examples).find('.issues-list').append(achieved_row)
                 });
 
-                // render the carousel summary slide
+                card_row.append(card_examples);
+                card_row.append(card_rec);
+                card_container.append(card_row);
+                carouselitem.append(card_container);
+                
+                parentElement.append(carouselitem);
+            }
+
+            function renderSummarySlide(recommendationsElement, recommendations){
+                // render the summary slide
                 var carouselitem = $("<div>");
                 carouselitem.addClass("carousel-item");
                 carouselitem.addClass("active");
                 
-
                 // sort the levels
-                level_keys = Object.keys(report.levels);
-                sorted_levels = level_keys.sort(function(a, b){
-                    return report.levels[a].order - report.levels[b].order
+                // level_keys = Object.keys(report.levels);
+                // sorted_levels = level_keys.sort(function(a, b){
+                //    return report.levels[a].order - report.levels[b].order
+                //}); 
+
+                // create a dict of {level: [recommendations]}
+                levels = {}
+                $.each(recommendations, function(i, r){
+                    key = r.level;
+                    if (!levels[key]){
+                        // add the key
+                        levels[key] = [];
+                    }
+                    levels[key].push(r)
                 });
 
                 var card_container = $("<div class='container'>");
                 var card_row = $("<div class='card-columns'>");
 
-                // iterate through the sorted levels adding the metrics
-                for (i = 0; i < sorted_levels.length; i++){
-                    level = sorted_levels[i];
-                    metrics = report.levels[level]
-                    level_complete = true;
+                // iterate through the recommendations 
+                // I manually control this instead of blind looping for greater UX control
+                renderSummaryCard(card_row, recommendationsElement, 'Website', levels['Website']);
+                renderSummaryCard(card_row, recommendationsElement, 'On Page SEO', levels['On Page SEO']);
+                renderSummaryCard(card_row, recommendationsElement, 'Growth Strategy', levels['Growth Strategy']);
+                   
 
+                card_container.append(card_row);
+                carouselitem.append(card_container);
+               
 
-                    var card_template = $("#hidden-card-recommendation-summary-template").html();
-                    var card = $(card_template).clone();
+                // add the summary slide to the start of the carousel
+                recommendationsElement.prepend(carouselitem);
+            }
 
-                    $(card).find('.card-title').html(level);
+            function renderSummaryCard(parentElement, recommendationsElement, level, metrics){
+                level_complete = true;
 
-                    $.each(metrics, function (m, a){
-                        if (m != "order"){
+                var card_template = $("#hidden-card-recommendation-summary-template").html();
+                var card = $(card_template).clone();
 
-                            var achieved_template = $("#hidden-card-achieved-template").html();
-                            var achieved_row = $(achieved_template).clone()
+                $(card).find('.card-title').html(level);
 
-                            $(achieved_row).find('.metric').html(m)
-                            
-                            if (a){
-                                $(achieved_row).find('.fa').addClass("fa-check")
-                                $(achieved_row).addClass("text-muted")
-                            }
-                            else{
-                                items = $(recommendationsElement);
-                                slide_number = items.find('div.carousel-item[metric = "' + m + '"]').attr("slide_number");
+                if (metrics !== undefined){
+                    // sort the metrics by achieved=false, and impact
+                    sortedMetrics = metrics.sort(function(a, b){
+                        impact = ["HIGH", "MEDIUM", "LOW"]
 
-                                var carousel_link = $("<a>");
-                                carousel_link.attr("href", "");
-                                carousel_link.text(m);
-                                carousel_link.attr("data-slide-to", slide_number);
-                                carousel_link.attr("data-target", "#carousel");
+                        bIx = impact.indexOf(b.impact);
+                        aIx = impact.indexOf(a.impact);
 
-                                $(achieved_row).find('.fa').addClass("fa-times")
-                                $(achieved_row).find('.metric').html(carousel_link)
-                                level_complete = false;
-                            }
+                        bAc = b.achieved;
+                        aAc = a.achieved;
 
-                            $(card).find('.metriclist').append(achieved_row)
-                        }
+                        console.log(a.metric, 'vs', b.metric, aIx, bIx, bAc, aAc)
+
+                        return aAc - bAc || aIx - bIx;
                     });
 
-                    
+
+                    $.each(sortedMetrics, function (index, m){
+                        var achieved_template = $("#hidden-card-achieved-template").html();
+                        var achieved_row = $(achieved_template).clone()
+
+                        $(achieved_row).find('.metric').html(m.metric)
+                        
+                        if (m.achieved){
+                            $(achieved_row).find('.fa').addClass("fa-check")
+                            $(achieved_row).addClass("text-muted")
+                        }
+                        else{
+                            items = $(recommendationsElement);
+                            slide_number = items.find('div.carousel-item[metric = "' + m.metric + '"]').attr("slide_number");
+
+                            var carousel_link = $("<a>");
+                            carousel_link.attr("href", "");
+                            carousel_link.text(m.metric);
+                            carousel_link.attr("data-slide-to", slide_number);
+                            carousel_link.attr("data-target", "#carousel");
+
+                            $(achieved_row).find('.fa').addClass("fa-times")
+                            $(achieved_row).find('.metric').html(carousel_link)
+                            $(achieved_row).addClass("issue");
+                            $(achieved_row).addClass(m.impact);
+
+                            level_complete = false;
+                        }
+
+                        $(card).find('.metriclist').append(achieved_row)
+                    });
 
                     if (level_complete){
                         switch (level){
-                            case "Account Basics":
+                            case "Basics":
                                 src = "/images/badge-account-basics.png";
                                 break;
                             case "Group Board Strategy":
                                 src = "/images/badge-groupie.png";
                                 break;
-                            case "Pinning Strategy":
+                            case "SEO":
                                 src = "/images/badge-strategist-1.png";
                                 break;
                             case "Profile SEO":
@@ -550,43 +950,204 @@
                     else{
                         $(card).find(".card-footer").remove();
                     }
-
-                    card_row.append(card);
                 }
 
-                card_container.append(card_row);
-                carouselitem.append(card_container);
+                parentElement.append(card);
+            }
 
-                // add the summary slide to the start of the carousel
-                recommendationsElement.prepend(carouselitem);
+            
 
-
-                // append all carousel slides to the carousel
-                $("#carousel").append(recommendationsElement);
-
-                // add tool buttons
-                carouselindicators = $("<div>");
-                carouselindicators.addClass("carousel-buttons");
+            function renderPages(pages){
+                // get the list of values from the dictionary
+                var page_values = $.map(pages, function(value, key) { return value });
                 
-                refreshButton = $("<button>");
-                refreshButton.addClass("small")
-                refreshButton.id = "btnForceRefresh";
-                refreshButton.html("<i class='fa fa-refresh'></i>");
-                refreshButton.click(forceRefresh);
-                addTooltip(refreshButton, "Refresh Data", false, "top");
-                carouselindicators.append(refreshButton);
+                // sort the page values
+                sortedPages = page_values.sort(function(a, b){
+                    if (b.current_page_views !== undefined && a.current_page_views !== undefined){
+                        bc = b.current_page_views !== undefined ? b.current_page_views : 0;
+                        ac = a.current_page_views !== undefined ? a.current_page_views : 0;
+
+                        return bc - ac ;
+                    }
+                    else{
+                        bc = b.pin_count !== undefined ? b.pin_count : 0;
+                        ac = a.pin_count !== undefined ? a.pin_count : 0;
+
+                        return bc - ac ;
+                        
+                    }
+                })
+
+                var table_body = $('#pages').find("tbody");
+                table_body.empty();
+
+                var siteAvgLoadTime = $("")
+
+                $.each(sortedPages, function(i, data){
+                    var pageRow = $("<tr>");
+                    var pageTitleCell = $("<td>");
+                    pageTitleCell.addClass("page_name");
+                    
+                    var pageTitleLink = $("<a>");
+                    pageTitleLink.text(data.path);
+                    // pageTitleLink.attr("href", page.link);
+                    // pageTitleLink.attr("target", "_blank");
+
+                    var externalLink = $("<i>");
+                    externalLink.addClass("fa fa-external-link");
+                    externalLink.attr("aria-hidden", "true");
+
+                    pageTitleCell.append(pageTitleLink);
+                    // pageTitleCell.append(externalLink);
+
+                    var fbShares = Math.floor((Math.random() * 100) + 1)
+                   
+                    var pageFBCell = $("<td class='page_fb'>");
+                    pageFBCell.attr("data-value", fbShares);
+
+                    var currShares = $("<div data-toggle='tooltip' data-placement='right' title='Facebook: " + fbShares + "'>");
+                    currShares.text(fbShares);
+                    pageFBCell.append(currShares);
 
 
-                $("#carousel").prepend(carouselindicators);
-                $('#carousel').carousel({interval: 5000});
+                    pin_count = data.pin_count ? data.pin_count : 0
+                    var pagePinsCell = $("<td class='page_pinterest'>");
+                    pagePinsCell.attr("data-value", pin_count);
+
+                    var currPins = $("<div>");
+                    if (data.delta_page_views > 30){
+                        currPins = $("<div data-toggle='tooltip' data-placement='right' title='This page is going viral.  Take immediate advantage and share this page across all of your social media channels, create more pins for this page, and create new related content.'>");
+                    }
+                    currPins.text(pin_count.toLocaleString("en"));
+                    pagePinsCell.append(currPins);
+
+                    var gaDataAvailable = data.current_page_views != null;
+
+                    var pageViewsCell = $("<td class='page_views'>");
+                    var currViews = $("<div>");
+                    if (gaDataAvailable){
+                        pageViewsCell.attr("data-value", data.current_page_views)
+                        currViews.text(data.current_page_views.toLocaleString("en"));
+                    }
+                    else{
+                        pageViewsCell.addClass("ga_needed");
+                        pageViewsCell.attr("title", "Log in and connect your Google Analytics Account to see your trends.");
+                        pageViewsCell.attr("data-toggle", "tooltip");
+                        pageViewsCell.attr("data-placement", "top");
+                    }
+                    pageViewsCell.append(currViews);
+
+                    var deltaViews = $("<div>")
+                    if (data.delta_page_views != null){
+                        renderDelta(deltaViews, data.delta_page_views, true);
+                    }
+                    pageViewsCell.append(deltaViews);
 
 
+                    var pageLoadTimeCell = $("<td class='page_load_times'>");
+                    var currTime = $("<div>");
+                    if (gaDataAvailable){
+                        pageLoadTimeCell.attr("data-value", data.load_time_delta)
+                        if (data.load_time_delta > 0){
+                            pageLoadTimeCell.attr("title", "Page speed average load time of " + data.avg_load_time + "s, which is " + data.load_time_delta +  "% slower than the site average. Click to learn what is slowing down your page speed.");
+                        }
+                        else{
+                            pageLoadTimeCell.attr("title", "Page speed average load time of " + data.avg_load_time + "s, which is " + -1 * data.load_time_delta +  "% faster than the site average.");
+                        }
+                        pageLoadTimeCell.attr("data-toggle", "tooltip");
+                        pageLoadTimeCell.attr("data-placement", "top");
+                    }
+                    else{
+                        pageLoadTimeCell.addClass("ga_needed");
+                        pageLoadTimeCell.attr("title", "Log in and connect your Google Analytics Account to see your trends.");
+                        pageLoadTimeCell.attr("data-toggle", "tooltip");
+                        pageLoadTimeCell.attr("data-placement", "top");
+                    }
+                    pageLoadTimeCell.append(currTime);
+
+                    var deltaTime = $("<div>")
+                    if (gaDataAvailable && data.load_time_delta != null){
+                        renderDelta(deltaTime, data.load_time_delta, false);
+                         if (data.load_time_delta > 0){
+                            deltaTime.find('span').wrap("<a target='_blank' href='https://developers.google.com/speed/pagespeed/insights/?url="+ data.full_path + "'></a>");
+                        }
+                    }
+                    pageLoadTimeCell.append(deltaTime);
 
 
+                    pageRow.append(pageTitleCell);
+                    //pageRow.append(pageFBCell);
+                    pageRow.append(pagePinsCell);
+                    pageRow.append(pageViewsCell);
+                    pageRow.append(pageLoadTimeCell);
 
-                // render the list of boards
-                $("#boardRows").empty();
-                sortedboards = report.boards.sort(function(a, b){
+                    table_body.append(pageRow);
+
+                });
+
+                radiateHeat('.page_views', '#0f9d58'); // google green
+                radiateHeat('.page_pinterest', '#e60023'); // pinterest red
+                radiateHeat('.page_load_times', '#F4B400'); // google yellow
+                //radiateHeat('.page_fb', '#3b5998'); // fb blue
+
+                $('#pages').show();
+
+            }
+
+            function hexToRgb(hex) {
+              var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+              return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+              } : null;
+            }
+
+            function radiateHeat(column_selector, startcolor_hex){
+                // http://www.designchemical.com/blog/index.php/jquery/jquery-tutorial-create-a-flexible-data-heat-map/
+                // Function to get the max value in an Array
+                Array.max = function(array){
+                    return Math.max.apply(Math,array);
+                };
+             
+                // Get all data values from our table cells making sure to ignore the first column of text
+                // Use the parseInt function to convert the text string to a number
+             
+                var counts= $(column_selector).map(function() {
+                    return parseInt($(this).attr('data-value'));
+                }).get();
+             
+                // run max value function and store in variable
+                var max = Array.max(counts);
+
+                n = 100; // Declare the number of groups
+             
+                // Define the ending colour, which is white
+                xr = 255; // Red value
+                xg = 255; // Green value
+                xb = 255; // Blue value
+             
+                // Define the starting colour #f32075
+                color = hexToRgb(startcolor_hex)
+                yr = color.r; //32; // Red value
+                yg = color.g //243; // Green value
+                yb = color.b; //109; // Blue value
+             
+                // Loop through each data point and calculate its % value
+                $(column_selector).each(function(){
+                    var val = parseInt($(this).attr('data-value'));
+                    var pos = parseInt((Math.round((val/max)*100)).toFixed(0));
+                    red = parseInt((xr + (( pos * (yr - xr)) / (n-1))).toFixed(0));
+                    green = parseInt((xg + (( pos * (yg - xg)) / (n-1))).toFixed(0));
+                    blue = parseInt((xb + (( pos * (yb - xb)) / (n-1))).toFixed(0));
+                    clr = 'rgb('+red+','+green+','+blue+')';
+
+                    $(this).css({backgroundColor:clr});
+                });
+            }
+
+            function renderPinterestBoards(boards){
+                sortedboards = boards.sort(function(a, b){
                     aName = a.name.toLowerCase();
                     bName = b.name.toLowerCase();
                     
@@ -651,14 +1212,7 @@
                     $('#board-cards').append(card_row);
                 });
 
-                $('[data-toggle="tooltip"]').tooltip()
-
-                $("#loading").hide();
-                $("#engagementResults").show();
                 $("#boardResults").show();
-
-                $("#btnAnalyze").html("Analyze Pinterest");
-
             }
 
             function createIcon(icon_class, tooltip_title, is_tooltip_html){
@@ -708,35 +1262,32 @@
                     <div id="main">
 
                         <!-- Scan -->
-                        <section id="signup" style="display: none;">
-                             <div id="banner" class="row">
-                                <div class="col-12">
-                                    Join our limited time Early Access Program for free today!
-                                </div>
-                            </div>
+                        <section id="growvaHeader" style="display: none;">
+                            
                             <header class="major">
-                                <h1><a href="/pinkarma">Pin Karma</a></h1>
-                                <p>Your guide to winning on Pinterest and growing traffic to your blog. <a href="/pinkarma">Learn More.</a></p>
+                                <h1><a href="/pinkarma">GROWVA</a></h1>
+                                <p>Your personal  <a href="/growva" title="AI-powered virtual assistant">AI-powered virtual assistant</a> for growing traffic to your blog.</p>
                             </header>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <button type="button" class="button primary" data-toggle="modal" data-target="#signupModal" onClick="ga('send', 'event', 'Pin Karma Signup', 'Click', 'PinKarma Dashboard');">Join Pin Karma</button>
-                                    <!--
-                                    <button type="button" class="btn btn-pin" onclick="signup();"><i class="fa fa-pinterest"></i> Sign up With Pinterest</button>
-                                    -->
-                                    <p>Get Started Free Today</p>
-                                    <p>Already a member?  <a href="#" onclick="showLogin(); return false;">Log In now!</a></p>
-                                </div>
-                            </div>
                         </section>
 
+                         <section id="search" style="display: none;">
+                            <form>
+                                <div class="row searchbox">
+                                    <div class="col-9">
+                                        <input type="text" name="website_domain" id="website_domain" value="" placeholder="Your Website URL">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="submit" value="RUN FREE AUDIT" id="btnAnalyze" class="button" onclick="search(); return false;"/>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
 
                         <section id="signupForm" style="display: none;">
                             <form id="completeSignupForm" method="post" action="#">
                                 <div class="row">
                                     <div class="col-12">
-                                        <h2>Complete Sign Up</h2>
+                                        <h2>Sign Up For Free</h2>
                                     </div>
                                 </div>
                                 <div class="fields">
@@ -759,18 +1310,108 @@
                                 </div>
                                 <ul class="actions">
                                     <li>
-                                        <input type="submit" value="Complete Sign Up" name="signup" id="signup_button" class="button" onclick="submitSignup(); return false;">
+                                        <input type="submit" value="Sign Up" name="signup" id="signup_button" class="button" onclick="submitSignup(); return false;">
                                     </li>
                                 </ul>
                             </form>
                         </section>
 
+                        <section class="marketingContent">
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2>Growva</h2>
+                                    <p>Get your <strong>personal AI-powered virtual assistant</strong> to analyze and monitor your website for you, and help you tailor your content to get real page views and earn more revenue.</p>
+                                    <p>Growva is a new content marketing platform that helps online businesses grow website traffic and revenue by leveraging artificial intelligence, data and behavioral science, and virtual assistant bots, to help you to connect with your audience.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="marketingContent">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <h2>SEO Analysis</h2>
+                                    <p>Run our free site audit and within minutes Growva will find all the SEO errors you should fix to improve your search rankings.</p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <img class="marketing_image" src="/images/seo_analysis.png" />
+                                </div>
+                            </div>
+                        </section>
+
+                         <section class="marketingContent">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <img class="marketing_image" src="/images/growth_strategy.png" />
+                                </div>
+                                <div class="col-lg-5">
+                                    <h2>Growth Recommendations</h2>
+                                    <p>As part of our audit, Growva will find ways for you to optimize your website and pages to gain more traffic and rank better in search.  Growva provides you with easy to follow guides for fixing issues yourself, and getting into a strong position for accelerating growth.</p>
+                                </div>
+                                
+                            </div>
+                        </section>
+
+
+                         <section class="marketingContent">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <h2>Page Speed Analysis</h2>
+                                    <p>Did you know that 80% of searches now happen on mobile devices.  Page speed is critical to the user experience and plays a significant factor in your search rankings.  Growva will analyze your site for free and find opportunities for speed improvements based on your actual customer data.</p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <img class="marketing_image" src="/images/page_speed.png" />
+                                </div>
+                            </div>
+                        </section>
+
+                         <section class="marketingContent">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <img class="marketing_image" src="/images/virality.png" />
+                                </div>
+                                <div class="col-lg-4">
+                                    <h2>Viral Content</h2>
+                                    <p>Ranking on Google is not the only major source of traffic for many websites.  It is important your customers are finding you on social platforms such as Pinterest, Facebook, Instagram, and Twitter.  Growva will analyze the social popularity of your pages and make recommendations on how you can boost your social traffic through these platforms.</p>
+                                </div>
+                                
+                            </div>
+                        </section>
+
+                        <section class="marketingContent">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <h2>What's Trending</h2>
+                                    <p>Sometimes a page will take off and go viral.  Growva will monitor your Google Analytics data and social links, and let you know when this happens.  Growva, our virtual assistant, will make recommendations to take advantage of any virality, as well as make suggestions to improve pages that aren't popular yet.</p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <img class="marketing_image" src="/images/trending.png" />
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="marketingContent">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img class="marketing_image" src="/images/ai_forecasting.png" />
+                                </div>
+                                <div class="col-lg-6">
+                                    <h2>AI Forecasting</h2>
+                                    <p>Our super advanced AI forecasting engine (Super Growva) will evaluate how your pages are trending, and like any good super hero, Super Growva will jump in and tell you when something is happening that is out of the ordinary.</p>
+                                </div>
+                                
+                            </div>
+                        </section>
+
+
+                        
+
 
                         <section id="loginSection" style="display: none;">
                             <form id="loginForm" method="post" action="#">
                                 <header class="major">
-                                    <h1>Pin Karma</h1>
-                                    <p>Your guide to winning on Pinterest and growing traffic to your blog.</p>
+                                    <h1>Growva</h1>
+                                    <p>Your Virtual Assistant to help you grow traffic to your blog.</p>
                                 </header>
 
                                 <div class="row">
@@ -800,15 +1441,103 @@
                         </section>
 
 
+
+
                         <section id="loading" style="display: none;">
                             <header class="major">
-                                <h1>Pin Karma</h1>
-                                <p>Hang tight while we check out your pins.</p>
+                                <h1>GROWVA</h1>
+                                <p>Hang tight while we check out your current traffic.</p>
                             </header>
 
                             <div class="row">
                                 <div class="col-12 icon">
                                     <img src="/images/loading.svg" alt="Loading" />
+                                </div>
+                            </div>
+                        </section>
+
+                        
+
+                         <!-- Engagement -->
+                        <section id="progress" style="display: none">
+                            <div><h3 class="message"></h3></div>
+                            <div class="progress">
+                              <div id="report_progress" class="progress-bar" style="width: 0%" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </section>
+
+                        <section id="analytics" style="display: none">
+                            <div class="row" id="analytics_row">
+                                <div class="col-12 card-group">
+                                    <div  id="analyticsPageViews" class="card mb-5 mb-sm-5">
+                                      <div class="card-header">
+                                          <h5 class="card-title text-muted text-uppercase text-center ">Page Views</h5>
+                                      </div>
+                                      <div class="card-body">
+                                      </div>
+                                      <div class="card-footer">
+                                      </div>
+                                    </div>
+
+                                    <div id="analyticsUsers" class="card mb-5 mb-lg-5">
+                                      <div class="card-header">
+                                          <h5 class="card-title text-muted text-uppercase text-center">Users</h5>
+                                      </div>
+                                      <div class="card-body">
+                                      </div>
+                                      <div class="card-footer">
+                                      </div>
+                                    </div>
+
+                                    <div id="analyticsBounces" class="card mb-5 mb-lg-5">
+                                      <div class="card-header">
+                                          <h5 class="card-title text-muted text-uppercase text-center">Bounces</h5>
+                                      </div>
+                                      <div class="card-body">
+                                      </div>
+                                      <div  class="card-footer">
+                                      </div>
+                                    </div>
+
+                                    <div id="analyticsPageSpeed" class="card mb-5 mb-lg-5">
+                                      <div class="card-header">
+                                          <h5 class="card-title text-muted text-uppercase text-center">Page Speed</h5>
+                                      </div>
+                                      <div class="card-body">
+                                      </div>
+                                      <div class="card-footer">
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+
+                        <section id="linkAccounts" style="display: none;">
+                        
+                            <div class="row highlighted_row">
+                                <div id="accountSignupMessage" class="col-12 message" style="display: none">
+                                    <p>Is this your website?<br/>
+                                        <h2>Sign up now for smarter intelligence with Growva AI!</h2></p>
+                                    <a class="button" href="#" onclick="signup(); return false;">Free Sign Up</a>
+                                    <p class="small">Already a member?  <a href="#" onclick="showLogin(); return false;">Log In now!</a></p>
+                                </div>
+                                <div id="googleAnalyticsConnectMessage" class="col-12 message" style="display: none">
+                                    <p>Is this your website?<br/>
+                                        Link your <a href="#" onclick="googleanalytics_signup(); return false;">Google Analytics</a> Account to see your trends.</p>
+                                    <a class="primary button" href="#" onclick="googleanalytics_signup(); return false;">Connect Now</a>
+                                </div>
+
+                                <div id="googleAnalyticsViewSelector" class="col-12" style="display: none">
+                                    <div class="dropdown">
+                                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Connect your Google Analytics Web Property
+                                      </button>
+                                      <div id="gaPropertiesList" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        
+                                      </div>
+                                     </div>
                                 </div>
                             </div>
                         </section>
@@ -826,6 +1555,29 @@
                                 </div>
                             </div>
                         </section>
+
+                        <!-- Webpages  -->
+                        <section id="pages" style="display: none;" >
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="table-wrapper">
+                                        <table class="alt heat-map">
+                                            <thead>
+                                                <tr>
+                                                    <th>Top Pages</th>
+                                                    <th>Pinterest</th>
+                                                    <th>Page Views</th>
+                                                    <th>Speed</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section> 
 
 
                         <!-- Boards -->
@@ -948,7 +1700,6 @@
                         </section> 
                     </div>
 
-                    {{ partial "footer/index" . }}
                     {{ partial "copyright" . }}
 
 

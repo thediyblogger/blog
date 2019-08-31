@@ -1,4 +1,4 @@
 ---
-title: "PinKarma Dashboard"
+title: "Growva - Virtual Assistant"
 type: "dashboard"
 ---

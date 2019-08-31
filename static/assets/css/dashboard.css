@@ -15,17 +15,19 @@ figure{
   background-color: #fff7f7;
   padding: 2em;
   border-radius: 25px;
+  color: #000;
+  width: 100%;
 }
-#intro .actions .button{
-    color: #444 !important;
-}
-#intro .actions .button:hover{
-    color: #fff !important; 
-    box-shadow: inset 0 0 0 2px #444 !important;
 
+#intro .searchbox input,
+#intro .searchbox .button{
+    color: #000 !important;
 }
-#intro .button.primary {
-    color: #fff !important;
+
+#intro .searchbox .button:hover{
+    color: #fff !important; 
+    background-color: #000 !important;
+    box-shadow: inset 0 0 0 2px #444 !important;
 }
 
 #copyright a{
@@ -135,8 +137,6 @@ button.primary:hover,
 
 
 
-
-
 .freeProduct div{
     padding: 0;
     margin: 0;
@@ -198,14 +198,25 @@ button.primary:hover,
     font-size: 0.7em;
 }
 
+#signupForm{
+  background-color: #c61118;
+  color: #fff;
+}
+#signupForm h2,
+#signupForm label
+{
+  color: #fff;
+}
 
+#signupForm input{
+  background-color: #fff;
+}
 
 #signup div{
     text-align: center;
 }
 #signup p{
     text-align: center;
-    font-size: 0.7em;
 }
 #banner{
     background-color: #4259D2;
@@ -223,6 +234,34 @@ div.signupBox{
     background-color: #fff7f7;
 }
 
+#search{
+  border-top: 0;
+}
+
+#analytics{
+  display: block;
+  position: relative;
+}
+.no-access #analytics_row{
+  opacity: 0.1;
+}
+
+#linkAccounts{
+  z-index: 10;
+  display: relative;
+  text-align: center;
+}
+#linkAccounts p{
+  text-align: center;
+}
+
+.ga_needed{
+  background-image: url('/images/ga.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+}
 
 .btn-pin{
     background-color: #c61118 !important;
@@ -236,16 +275,68 @@ div.signupBox{
     box-shadow: inset 0 0 0 2px #333 !important;
 }
 
+.searchbox{
+  background-color: #c61118;
+  padding: 2rem 1.5rem;
+}
+
+.highlighted_row{
+  background-color: #c61118;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.searchbox input{
+  background-color: #fff
+}
+
+.highlighted_row .dropdown,
+.highlighted_row button,
+.highlighted_row .dropdown .dropdown-menu
+{
+  width: 100%;
+  background-color: #fff
+}
+
+.highlighted_row h2{
+  color: #fff;
+}
+
+.highlighted_row .button{
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #000;
+}
+.searchbox .button:hover,
+.highlighted_row .button:hover{
+    color: #fff !important; 
+    background-color: #000 !important;
+    box-shadow: inset 0 0 0 2px #444 !important;
+}
+
+.highlighted_row p,
+.highlighted_row a{
+  color: #fff;
+  text-align: center;
+}
+
 /* Tooltip container */
 .tooltip-inner {
   text-align: left;
   padding: 20px 20px;
 }
 
+.progress-bar{
+  background-color: #c61118;
+}
 
 #boardPins img{
     width: 100px;
     display: block;
+}
+
+.marketing_image{
+  width: 100%;
 }
 
 
@@ -306,6 +397,35 @@ div.signupBox{
     text-align: left !important;
 }
 
+.issue a{
+  color: #fff !important;
+}
+.issue a:hover{
+  color: #fff !important;
+
+}
+
+.issue{
+  color: #c61118;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  margin-bottom: 5px;
+}
+
+.issue.HIGH, .issue.HIGH span{
+  background-color: rgb(230, 0, 33)
+}
+.issue.MEDIUM, .issue.MEDIUM span{
+  background-color: rgb(240, 106, 126)
+}
+.issue.LOW, .issue.LOW span{
+  background-color: rgb(249, 191, 199)
+}
+.issue span{
+  top: 0;
+  background-color: #c61118;
+  color: #fff;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
 
 button:hover,
 .button:hover,
@@ -404,6 +524,56 @@ section.grabber {
   margin-bottom: 2em;
 }
 
+#analytics .card-group
+{
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
+  padding: 0px;
+}
+#analytics .card
+{
+  border: none;
+  padding: 0px;
+  margin-bottom: 0px !important;
+}
+#analytics .card-body
+{
+  text-align: center;
+  font-size: 2em;
+}
+
+#analytics .card-footer
+{
+  text-align: center;
+}
+
+.good{
+  color: green;
+}
+
+.bad{
+  color: red;
+}
+#pages td.page_name{
+  overflow-x: hidden;
+  max-width: 500px;
+}
+
+#pages td{
+  white-space: nowrap;
+}
+#pages td div{
+  display: inline;
+  padding-right: 1em;
+}
+
+#analytics .card-body .delta{
+  font-size: 0.5em;
+}
+
 .card-header:first-child{
   border-radius: 1rem 1rem 0 0;
 }
@@ -460,9 +630,7 @@ ul.metric_values_list li{
   color: #000;
 }
 
-#recommendations a:hover{
-  color: #e60023 !important;
-}
+
 
 #recommendations ul.scrollable{
   max-height: 25em;
