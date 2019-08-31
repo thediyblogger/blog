@@ -9,6 +9,7 @@ googleAnalytics = "UA-132745738-1"
 threshold = 80
 includeNewer = true
 toLower = false
+
 [[related.indices]]
 name = "keywords"
 weight = 100
@@ -16,6 +17,7 @@ weight = 100
 name  = "date"
 weight = 10
 pattern = "2006"
+
 
 # set below parameter to define a favicon
 [params]
@@ -26,6 +28,7 @@ pattern = "2006"
   pinkarma_api = "https://api.thediyblogger.com"
   pinterest_client_id = "5034711914840639840"
   pinterest_scope = "read_public, write_public"
+  google_client_id = "664460789922-qb5om6sjeqk9uruv4iq0fgkvmceljtls.apps.googleusercontent.com"
 
 [outputs]
   home = ["HTML", "RSS"]
