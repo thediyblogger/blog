@@ -770,13 +770,17 @@
                 $(card_rec).find('.goal').html("<strong>Goal: " + r.level + "</strong>");
 
                 // learn more button
-                link = $("<a>");
-                link.attr("href", r.link);
-                link.attr("target", "_blank");
-                link.addClass("button");
-                link.text("Learn More");
-                $(card_rec).find('.card-footer').append(link);
-
+                if (r.link !== ""){
+                    link = $("<a>");
+                    link.attr("href", r.link);
+                    link.attr("target", "_blank");
+                    link.addClass("button");
+                    link.text("Learn More");
+                    $(card_rec).find('.card-footer').append(link);
+                }
+                else{
+                    $(card_rec).find('.card-footer').hide()
+                }
 
                 // render the issues for this metric
                 var card_list_template = $("#hidden-card-recommendation-issues-template").html();
