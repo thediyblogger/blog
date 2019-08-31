@@ -22,7 +22,7 @@ We collect Device Information using the following technologies:
   - `Web beacons`, `tags` and `pixels` are electronic files used to record information about how you browse the Site.
   
 
-When you sign up and connect your Pinterest account to our `PinKarma` product, we start to periodically collect data from your Pinterest account including your name, bio, pinterest profile url, list of boards, and a list of pins saved in your Pinterest account.
+When you sign up and connect your Google Analytics account to our `Growva` product, we start to periodically collect data from your Google Analytics account associated to the view you linked to Growva.  We will only ever ask for read only access to your Google Analytics and will not share that information directly with any other user.  In the future we may analyze the data we read to detect patterns in the data to help teach our AI.
 
 Additionally when you make a purchase or attempt to make a purchase through the Site, or subscribe to our mailing list, we may collect certain information from you, including your name, billing address, shipping address, payment information (including credit card numbers), email address, and phone number.  We refer to this information as “Order Information.”
 
