@@ -43,9 +43,9 @@ When in line with the preferences you have shared with us, provide you with info
 We use the Device Information that we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimize our Site (for example, by generating analytics about how our customers browse and interact with the Site, and to assess the success of our marketing and advertising campaigns).
 
 
-We use your Pinterest information that we collect to provide recommendations to you via the PinKarma application to help you improve your SEO and traffic to your website.  We will not share information we collect from Pinterest with any third party for advertising purposes or any other purpose.  
+We use your Google Analytics information that we collect to provide recommendations to you via the Growva application to help you improve your SEO and traffic to your website.  We will not share information we collect from Google Analytics with any third party for advertising purposes or any other purpose.  
 
-The storage and processing of your personal Pinterest data within "PinKarma" will utilize third party providers (e.g. Amazon Web Services) in order to store the data and run the application to provide you with recommendations.  Your personal Pinterest information is not shared with other third parties for any other purpose other than activities directly related to the running of the "PinKarma" product.
+The storage and processing of your personal Google Analytics data within "Growva" will utilize third party providers (e.g. Amazon Web Services) in order to store the data and run the application to provide you with recommendations.  Your personal Google Analytics information is not shared with other third parties for any other purpose other than activities directly related to the running of the "Growva" product.
 
 
 SHARING YOUR PERSONAL INFORMATION
@@ -97,12 +97,12 @@ DATA RETENTION
 
 When you place an order through the Site, we will maintain your Order Information for our records unless and until you ask us to delete this information.  
 
-Likewise, we will continue to collect your Pinterest data until such time that access to the PinKarma application is revoked by your Pinterest account, or you ask us to delete your account.
+Likewise, we will continue to collect your Google Analytics data until such time that access to the Growva application is revoked, or you ask us to delete your account.
 
 MINORS
 ------
 
-The Site and PinKarma is not intended for individuals under the age of 13.
+The Site and Growva is not intended for individuals under the age of 13.
 
 CHANGES
 -------
