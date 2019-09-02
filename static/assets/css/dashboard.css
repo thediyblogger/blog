@@ -299,6 +299,9 @@ div.signupBox{
   background-color: #fff
   color: #000;
 }
+.highlighted_row .dropdown .dropdown-menu a{
+  color: #000;
+}
 
 .highlighted_row h2{
   color: #fff;
