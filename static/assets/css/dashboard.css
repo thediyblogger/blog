@@ -219,13 +219,23 @@ button.primary:hover,
 #signup p{
     text-align: center;
 }
-#banner{
-    background-color: #4259D2;
-    color: #fff;
-    border-radius: 20px;
+.banner{
+    background-color: #fff7f7;
+    color: #e60023;
+    border-radius: 10px;
     margin: 0px 0px 50px 0px;
     font-family: "Merriweather";
     text-align: center;
+    vertical-align: middle;
+}
+.banner a{
+  color: #e60023;
+  text-decoration: underline;
+}
+.banner .fa{
+  font-size: 2.5em;
+  vertical-align: middle;
+  padding:  1rem;
 }
 
 div.signupBox{

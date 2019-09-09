@@ -4,6 +4,7 @@ title = "The DIY Blogger"
 theme = "massively"
 disqusShortname = "thediyblogger"
 googleAnalytics = "UA-132745738-1"
+enableRobotsTXT = true
 
 [related]
 threshold = 80
