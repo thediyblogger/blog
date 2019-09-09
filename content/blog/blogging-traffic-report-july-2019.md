@@ -1,7 +1,7 @@
 +++
 categories = ["Blogging"]
 date = "2019-07-31T00:00:00-04:00"
-description = "Learn how we doubled our website traffic in July and how our proven Pinterest strategies enabled this growth."
+description = "Learn how we doubled our website traffic in August and how our proven Pinterest strategies enabled this growth."
 draft = true
 keywords = ["traffic reports"]
 pins = []
@@ -13,13 +13,13 @@ src = "/uploads/traffic-report-july2019.png"
 +++
 Hi
 
-Welcome to my second traffic report for  [DrawBuildPlay](https://www.drawbuildplay.com "DrawBuildPlay - Home Decor and DIY Blog") and [TheDIYBlogger](https://www.thediyblogger.com "The DIY Blogger - Pinterest Strategies").  
+Welcome to my August traffic report for  [DrawBuildPlay](https://www.drawbuildplay.com "DrawBuildPlay - Home Decor and DIY Blog") and [TheDIYBlogger](https://www.thediyblogger.com "The DIY Blogger - Pinterest Strategies").
 
 I have read many posts by other bloggers about their Income reports and Traffic reports.  Most of these reports show how successful they have become.  What is usually missing is the reports from the start of their journey.  Answers to questions like
 
 > How long did it take for you to see traffic and start making six figures from blogging?
 
-So to continue building on my first traffic report - [June Traffic Report](/blog/blogging-traffic-report-june-2019/ "June Traffic Report"), we are not a success story yet.  But July was a great month for traffic, with trends accelerating for my DrawBuildPlay blog, getting me closer to my first goal milestone - 100k page views/month.
+So to continue building on my previous traffic reports, we are still not quite a success story yet.  But August was an excellent month for traffic, with trends accelerating for my DrawBuildPlay blog, getting me closer than I expected to my first goal milestone - 100k page views/month.
 
 I feel that many bloggers who post income reports only do so once they are successful, and make it sound like they earned six figures after just one month of blogging.  The reality is they probably spent a year or so building their audience, and some had failed blog attempts before that, before they became successful.  I want to show you some of the pain that goes into blogging to become successful (fingers cross that I do) in real time, so you can see the work that goes into it.  Maybe along the way you will see some of the strategies I deploy and the impact of those changes.
 
@@ -27,12 +27,11 @@ I feel that many bloggers who post income reports only do so once they are succe
 
 I have a passion for Home Decor DIY, so I launched this blog in February 2019, and started creating content about the many home renovation projects I have done.  In mid March I started applying the Pinterest strategies I now share on this blog and I started to experience some phenomenal growth in traffic.
 
-{{<imgproc "/uploads/drawbuildplay-pageviews-july2019.png" Resize "1200x" >}}July Weekly Page Views{{</imgproc>}}
-{{<imgproc "/uploads/drawbuildplay-pageviewsgoals-july2019.png" Resize "1200x" >}}Page Views Goals{{</imgproc>}}
+{{<imgproc "/uploads/drawbuildplay-pageviews-august2019.png" Resize "1200x" >}}August Weekly Page Views{{</imgproc>}} {{<imgproc "/uploads/drawbuildplay-pageviewsgoals-august2019.png" Resize "1200x" >}}Page View Goals{{</imgproc>}}
 
 Here are my current trends for the DrawBuildPlay blog:
 
-### **Month End: JULY 2019 - DRAWBUILDPLAY**
+### **Month End: AUGUST 2019 - DRAWBUILDPLAY**
 
 <table class="incomereport">
 <tr class="months">
@@ -42,8 +41,9 @@ Here are my current trends for the DrawBuildPlay blog:
 <th>MAR</th>
 <th>APR</th>
 <th>MAY</th>  
-<th>JUN</th>
-<th class="currentmonth">JUL</th>
+<th>JUN</th>  
+<th class="currentmonth">JUN</th>
+<th>JUL</th>
 </tr>
 <tr>
 <th colspan="13">Pinterest Stats</th>
@@ -126,12 +126,11 @@ Here are my current trends for the DrawBuildPlay blog:
 </tr>
 </table>
 
-
 ### Retrospective
 
 The Page Views (which is the only metric that really counts at the end of the day) grew 110% in July (slightly more than double what I did in June).
 
-As you recall from my last retrospective, towards the middle of June I revamped the Pinterest [Board SEO](/blog/how-to-create-keyword-rich-pinterest-board-names-to-get-more-repins/ "Board SEO") for many of my boards which had started to result in increased traffic to my website.  On July 14, I applied similar SEO techniques by creating new pins with better SEO targeting of the pin descriptions at higher searched terms.  Between the board optimizations from mid May, and the pin optimizations in mid June, it has resulted in a significant boost in page views as well as Pinterest impressions. 
+As you recall from my last retrospective, towards the middle of June I revamped the Pinterest [Board SEO](/blog/how-to-create-keyword-rich-pinterest-board-names-to-get-more-repins/ "Board SEO") for many of my boards which had started to result in increased traffic to my website.  On July 14, I applied similar SEO techniques by creating new pins with better SEO targeting of the pin descriptions at higher searched terms.  Between the board optimizations from mid May, and the pin optimizations in mid June, it has resulted in a significant boost in page views as well as Pinterest impressions.
 
 ### Goals from last month
 
@@ -141,7 +140,7 @@ As you recall from my last retrospective, towards the middle of June I revamped 
 4. ~~Create fresh content (either more pin images for existing posts, and try to publish some new posts)~~
 5. ~~Boost the pages/session metric which is currently averaging about 2.4 pages/session, by displaying related posts to the reader.~~
 
-I accomplished the goals I had set last month in my [June Traffic Report](/blog/blogging-traffic-report-june-2019/ "June Traffic Report").  I joined some more group boards, only pin my own content now with better SEO targeting.  I decided not to go back and redo my older pins, since its better to just focus on the newer ones aimed at the right audience.  
+I accomplished the goals I had set last month in my [June Traffic Report](/blog/blogging-traffic-report-june-2019/ "June Traffic Report").  I joined some more group boards, only pin my own content now with better SEO targeting.  I decided not to go back and redo my older pins, since its better to just focus on the newer ones aimed at the right audience.
 
 I attempted to boost the pages/session metric, but ended the month averaging 2.46 pages/session (up from 2.38 pages/session in June).  So it was a slight increase only. I may revisit this one in the future again.
 
@@ -154,11 +153,11 @@ I have just the one goal for August so I can see how much I can continue to ramp
 
 Once I get to around 100k page views per month, I plan to shift my focus to monetization (through Amazon Affiliates and Paid Courses).
 
-------------
+***
 
 ## Online Business 2: The DIY Blogger
 
-Unfortunately I did not spend much time focusing on The DIY Blogger blog during the month of July.  I was on vacation for the first half of the month.  When I returned, most of my focus was on DrawBuildPlay and building out some more tooling (stay tuned).  
+Unfortunately I did not spend much time focusing on The DIY Blogger blog during the month of July.  I was on vacation for the first half of the month.  When I returned, most of my focus was on DrawBuildPlay and building out some more tooling (stay tuned).
 
 By the end of my July, my stats are:
 
