@@ -852,7 +852,7 @@
                 // iterate through the recommendations 
                 // I manually control this instead of blind looping for greater UX control
                 renderSummaryCard(card_row, recommendationsElement, 'Website', levels['Website']);
-                renderSummaryCard(card_row, recommendationsElement, 'On Page SEO', levels['On Page SEO']);
+                renderSummaryCard(card_row, recommendationsElement, 'Search Discovery', levels['On Page SEO']);
                 renderSummaryCard(card_row, recommendationsElement, 'Growth Strategy', levels['Growth Strategy']);
                 renderSummaryCard(card_row, recommendationsElement, 'Revenue Opportunities', levels['Revenue']);
                    
@@ -955,9 +955,10 @@
                     else{
                         $(card).find(".card-footer").remove();
                     }
+                
+                parentElement.append(card);
                 }
 
-                parentElement.append(card);
             }
 
             
